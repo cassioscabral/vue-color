@@ -1,6 +1,6 @@
 {
   "name": "vue-color",
-  "version": "0.0.3",
+  "version": "0.0.4s",
   "description": "Color of Vue Components",
   "keywords": [
     "color",
@@ -9,8 +9,8 @@
   "main": "dist/vue-color.min.js",
   "scripts": {
     "dev": "webpack-dev-server --port 3004 --inline --hot --quiet",
-    "build": "NODE_ENV=production webpack --progress --hide-modules",
-    "dist": "webpack --progress --hide-modules --config  webpack.build.js && NODE_ENV=production webpack --progress --hide-modules --config  webpack.build.min.js",
+    "build": "SET \"NODE_ENV=production\" webpack --progress --hide-modules",
+    "dist": "webpack --progress --hide-modules --config  webpack.build.js && SET \"NODE_ENV=production\" webpack --progress --hide-modules --config  webpack.build.min.js",
     "lint": "eslint --ext .js,.vue src"
   },
   "repository": {

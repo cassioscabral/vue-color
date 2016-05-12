@@ -4,6 +4,7 @@ import Slider from './components/Slider.vue'
 import Swatches from './components/Swatches.vue'
 import Photoshop from './components/Photoshop.vue'
 import Sketch from './components/Sketch.vue'
+import CmykSketch from './components/CmykSketch.vue'
 import Chrome from './components/Chrome.vue'
 
 const VueColor = {
@@ -13,8 +14,8 @@ const VueColor = {
   Swatches,
   Photoshop,
   Sketch,
+  CmykSketch,
   Chrome
 }
 
 module.exports = VueColor
-
