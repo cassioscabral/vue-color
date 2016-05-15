@@ -1,4 +1,4144 @@
-!function(e,n){"object"==typeof exports&&"object"==typeof module?module.exports=n():"function"==typeof define&&define.amd?define([],n):"object"==typeof exports?exports.VueColor=n():e.VueColor=n()}(this,function(){return function(e){function n(r){if(t[r])return t[r].exports;var o=t[r]={exports:{},id:r,loaded:!1};return e[r].call(o.exports,o,o.exports,n),o.loaded=!0,o.exports}var t={};return n.m=e,n.c=t,n.p="",n(0)}([function(e,n,t){"use strict";function r(e){return e&&e.__esModule?e:{"default":e}}var o=t(66),i=r(o),a=t(67),A=r(a),s=t(70),p=r(s),l=t(71),c=r(l),d=t(68),h=r(d),f=t(69),x=r(f),u=t(65),g=r(u),b=t(64),C=r(b),m={Compact:i["default"],Material:A["default"],Slider:p["default"],Swatches:c["default"],Photoshop:h["default"],Sketch:x["default"],CmykSketch:g["default"],Chrome:C["default"]};e.exports=m},function(e,n){e.exports=function(){var e=[];return e.toString=function(){for(var e=[],n=0;n<this.length;n++){var t=this[n];t[2]?e.push("@media "+t[2]+"{"+t[1]+"}"):e.push(t[1])}return e.join("")},e.i=function(n,t){"string"==typeof n&&(n=[[null,n,""]]);for(var r={},o=0;o<this.length;o++){var i=this[o][0];"number"==typeof i&&(r[i]=!0)}for(o=0;o<n.length;o++){var a=n[o];"number"==typeof a[0]&&r[a[0]]||(t&&!a[2]?a[2]=t:t&&(a[2]="("+a[2]+") and ("+t+")"),e.push(a))}},e}},function(e,n,t){function r(e,n){for(var t=0;t<e.length;t++){var r=e[t],o=h[r.id];if(o){o.refs++;for(var i=0;i<o.parts.length;i++)o.parts[i](r.parts[i]);for(;i<r.parts.length;i++)o.parts.push(p(r.parts[i],n))}else{for(var a=[],i=0;i<r.parts.length;i++)a.push(p(r.parts[i],n));h[r.id]={id:r.id,refs:1,parts:a}}}}function o(e){for(var n=[],t={},r=0;r<e.length;r++){var o=e[r],i=o[0],a=o[1],A=o[2],s=o[3],p={css:a,media:A,sourceMap:s};t[i]?t[i].parts.push(p):n.push(t[i]={id:i,parts:[p]})}return n}function i(e,n){var t=u(),r=C[C.length-1];if("top"===e.insertAt)r?r.nextSibling?t.insertBefore(n,r.nextSibling):t.appendChild(n):t.insertBefore(n,t.firstChild),C.push(n);else{if("bottom"!==e.insertAt)throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");t.appendChild(n)}}function a(e){e.parentNode.removeChild(e);var n=C.indexOf(e);n>=0&&C.splice(n,1)}function A(e){var n=document.createElement("style");return n.type="text/css",i(e,n),n}function s(e){var n=document.createElement("link");return n.rel="stylesheet",i(e,n),n}function p(e,n){var t,r,o;if(n.singleton){var i=b++;t=g||(g=A(n)),r=l.bind(null,t,i,!1),o=l.bind(null,t,i,!0)}else e.sourceMap&&"function"==typeof URL&&"function"==typeof URL.createObjectURL&&"function"==typeof URL.revokeObjectURL&&"function"==typeof Blob&&"function"==typeof btoa?(t=s(n),r=d.bind(null,t),o=function(){a(t),t.href&&URL.revokeObjectURL(t.href)}):(t=A(n),r=c.bind(null,t),o=function(){a(t)});return r(e),function(n){if(n){if(n.css===e.css&&n.media===e.media&&n.sourceMap===e.sourceMap)return;r(e=n)}else o()}}function l(e,n,t,r){var o=t?"":r.css;if(e.styleSheet)e.styleSheet.cssText=m(n,o);else{var i=document.createTextNode(o),a=e.childNodes;a[n]&&e.removeChild(a[n]),a.length?e.insertBefore(i,a[n]):e.appendChild(i)}}function c(e,n){var t=n.css,r=n.media;if(r&&e.setAttribute("media",r),e.styleSheet)e.styleSheet.cssText=t;else{for(;e.firstChild;)e.removeChild(e.firstChild);e.appendChild(document.createTextNode(t))}}function d(e,n){var t=n.css,r=n.sourceMap;r&&(t+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(r))))+" */");var o=new Blob([t],{type:"text/css"}),i=e.href;e.href=URL.createObjectURL(o),i&&URL.revokeObjectURL(i)}var h={},f=function(e){var n;return function(){return"undefined"==typeof n&&(n=e.apply(this,arguments)),n}},x=f(function(){return/msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase())}),u=f(function(){return document.head||document.getElementsByTagName("head")[0]}),g=null,b=0,C=[];e.exports=function(e,n){n=n||{},"undefined"==typeof n.singleton&&(n.singleton=x()),"undefined"==typeof n.insertAt&&(n.insertAt="bottom");var t=o(e);return r(t,n),function(e){for(var i=[],a=0;a<t.length;a++){var A=t[a],s=h[A.id];s.refs--,i.push(s)}if(e){var p=o(e);r(p,n)}for(var a=0;a<i.length;a++){var s=i[a];if(0===s.refs){for(var l=0;l<s.parts.length;l++)s.parts[l]();delete h[s.id]}}}};var m=function(){var e=[];return function(n,t){return e[n]=t,e.filter(Boolean).join("\n")}}()},function(e,n,t){"use strict";function r(e){return e&&e.__esModule?e:{"default":e}}function o(e){function n(e){var n=255;return e/n}var t=e.r,r=e.g,o=e.b;t=n(t),r=n(r),o=n(o);var i=1-Math.max(t,o,o),a=(1-t-i)/(1-i),A=(1-r-i)/(1-i),s=(1-o-i)/(1-i);return{c:a,m:A,y:s,k:i}}function i(e,n){e.a&&e.a>1&&(e.a=1);var t=e.hex?(0,A["default"])(e.hex):(0,A["default"])(e),r=t.toHsl(),i=t.toHsv(),a=t.toRgb(),s=o(a);return 0===r.s&&(r.h=n||0,i.h=n||0),{hsl:r,hex:t.toHexString().toUpperCase(),rgba:a,hsv:i,oldHue:e.h||n||r.h,source:e.source,a:e.a||1,cmyk:s}}Object.defineProperty(n,"__esModule",{value:!0});var a=t(50),A=r(a);n["default"]={props:{colors:Object},created:function(){this.colors=i(this.colors)},methods:{colorChange:function(e,n){this.colors=i(e,n)},isValidHex:function(e){return(0,A["default"])(e).isValid()},simpleCheckForValidColor:function(e){for(var n=["r","g","b","a","h","s","a","v"],t=0,r=0,o=0;o<n.length;o++){var i=n[o];e[i]&&(t++,isNaN(e[i])||r++)}return t===r?e:void 0}}}},function(e,n,t){var r,o;t(48),r=t(18),o=t(61),e.exports=r||{},e.exports.__esModule&&(e.exports=e.exports["default"]),o&&(("function"==typeof e.exports?e.exports.options:e.exports).template=o)},function(e,n,t){var r,o;t(39),r=t(19),o=t(62),e.exports=r||{},e.exports.__esModule&&(e.exports=e.exports["default"]),o&&(("function"==typeof e.exports?e.exports.options:e.exports).template=o)},function(e,n,t){var r,o;t(45),r=t(16),o=t(59),e.exports=r||{},e.exports.__esModule&&(e.exports=e.exports["default"]),o&&(("function"==typeof e.exports?e.exports.options:e.exports).template=o)},function(e,n,t){var r,o;t(42),r=t(20),o=t(63),e.exports=r||{},e.exports.__esModule&&(e.exports=e.exports["default"]),o&&(("function"==typeof e.exports?e.exports.options:e.exports).template=o)},function(e,n,t){"use strict";function r(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(n,"__esModule",{value:!0});var o=t(3),i=r(o),a=t(4),A=r(a),s=t(7),p=r(s),l=t(5),c=r(l),d=t(6),h=r(d);n["default"]={name:"Chrome",mixins:[i["default"]],props:{},components:{saturation:p["default"],hue:c["default"],alpha:h["default"],"ed-in":A["default"]},data:function(){return{fields:["hex","rgba","hsla"],fieldsIndex:0,highlight:!1}},computed:{activeColor:function(){var e=this.colors.rgba;return"rgba("+[e.r,e.g,e.b,e.a].join(",")+")"}},methods:{handlePreset:function(e){this.colorChange({hex:e,source:"hex"})},childChange:function(e){this.colorChange(e)},inputChange:function(e){e&&(e.hex?this.isValidHex(e.hex)&&this.colorChange({hex:e.hex,source:"hex"}):(e.r||e.g||e.b||e.a)&&this.colorChange({r:e.r||this.colors.rgba.r,g:e.g||this.colors.rgba.g,b:e.b||this.colors.rgba.b,a:e.a||this.colors.rgba.a,source:"rgba"}))},toggleViews:function(){return this.fieldsIndex>=2?void(this.fieldsIndex=0):void(this.fieldsIndex=0)},showHighlight:function(){this.highlight=!0},hideHighlight:function(){this.highlight=!1}}}},function(e,n,t){"use strict";function r(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(n,"__esModule",{value:!0});var o=t(3),i=r(o),a=t(4),A=r(a),s=t(7),p=r(s),l=t(5),c=r(l),d=t(6),h=r(d),f=["#D0021B","#F5A623","#F8E71C","#8B572A","#7ED321","#417505","#BD10E0","#9013FE","#4A90E2","#50E3C2","#B8E986","#000000","#4A4A4A","#9B9B9B","#FFFFFF"];n["default"]={name:"CmykSketch",mixins:[i["default"]],components:{saturation:p["default"],hue:c["default"],alpha:h["default"],"ed-in":A["default"]},data:function(){return{presetColors:f}},computed:{activeColor:function(){var e=this.colors.rgba;return"rgba("+[e.r,e.g,e.b,e.a].join(",")+")"}},methods:{handlePreset:function(e){this.colorChange({hex:e,source:"hex"})},childChange:function(e){this.colorChange(e)},inputChange:function(e){e&&(e.hex?this.isValidHex(e.hex)&&this.colorChange({hex:e.hex,source:"hex"}):(e.r||e.g||e.b||e.a)&&this.colorChange({r:e.r||this.colors.rgba.r,g:e.g||this.colors.rgba.g,b:e.b||this.colors.rgba.b,a:e.a||this.colors.rgba.a,source:"rgba"}))}}}},function(e,n,t){"use strict";function r(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(n,"__esModule",{value:!0});var o=t(3),i=r(o),a=t(4),A=r(a),s=["#4D4D4D","#999999","#FFFFFF","#F44E3B","#FE9200","#FCDC00","#DBDF00","#A4DD00","#68CCCA","#73D8FF","#AEA1FF","#FDA1FF","#333333","#808080","#CCCCCC","#D33115","#E27300","#FCC400","#B0BC00","#68BC00","#16A5A5","#009CE0","#7B64FF","#FA28FF","#000000","#666666","#B3B3B3","#9F0500","#C45100","#FB9E00","#808900","#194D33","#0C797D","#0062B1","#653294","#AB149E"];n["default"]={name:"Compact",mixins:[i["default"]],props:{},components:{"ed-in":A["default"]},computed:{pick:function(){return this.colors.hex}},data:function(){return{defaultColors:s}},methods:{handlerClick:function(e){this.colorChange({hex:e,source:"hex"})},onChange:function(e){e&&(e.hex?this.isValidHex(e.hex)&&this.colorChange({hex:e.hex,source:"hex"}):(e.r||e.g||e.b)&&this.colorChange({r:e.r||this.colors.rgba.r,g:e.g||this.colors.rgba.g,b:e.b||this.colors.rgba.b,a:e.a||this.colors.rgba.a,source:"rgba"}))}}}},function(e,n,t){"use strict";function r(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(n,"__esModule",{value:!0});var o=t(4),i=r(o),a=t(3),A=r(a);n["default"]={name:"Material",mixins:[A["default"]],props:{},data:function(){return{}},components:{"ed-in":i["default"]},methods:{onChange:function(e){e&&(e.hex?this.isValidHex(e.hex)&&this.colorChange({hex:e.hex,source:"hex"}):(e.r||e.g||e.b)&&this.colorChange({r:e.r||this.colors.rgba.r,g:e.g||this.colors.rgba.g,b:e.b||this.colors.rgba.b,a:e.a||this.colors.rgba.a,source:"rgba"}))}}}},function(e,n,t){"use strict";function r(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(n,"__esModule",{value:!0});var o=t(3),i=r(o),a=t(4),A=r(a),s=t(7),p=r(s),l=t(5),c=r(l),d=t(6),h=r(d);n["default"]={name:"Photoshop",mixins:[i["default"]],props:{head:{type:String,"default":"Color Picker"}},components:{saturation:p["default"],hue:c["default"],alpha:h["default"],"ed-in":A["default"]},data:function(){return{currentColor:"#FFF"}},created:function(){this.currentColor=this.colors.hex},methods:{childChange:function(e){this.colorChange(e)},inputChange:function(e){e&&(e["#"]?this.isValidHex(e["#"])&&this.colorChange({hex:e["#"],source:"hex"}):(e.r||e.g||e.b||e.a)&&this.colorChange({r:e.r||this.colors.rgba.r,g:e.g||this.colors.rgba.g,b:e.b||this.colors.rgba.b,a:e.a||this.colors.rgba.a,source:"rgba"}))},handleAccept:function(){console.log("accept")},handleCancel:function(){console.log("cancel")}}}},function(e,n,t){"use strict";function r(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(n,"__esModule",{value:!0});var o=t(3),i=r(o),a=t(4),A=r(a),s=t(7),p=r(s),l=t(5),c=r(l),d=t(6),h=r(d),f=["#D0021B","#F5A623","#F8E71C","#8B572A","#7ED321","#417505","#BD10E0","#9013FE","#4A90E2","#50E3C2","#B8E986","#000000","#4A4A4A","#9B9B9B","#FFFFFF"];n["default"]={name:"Sketch",mixins:[i["default"]],components:{saturation:p["default"],hue:c["default"],alpha:h["default"],"ed-in":A["default"]},data:function(){return{presetColors:f}},computed:{activeColor:function(){var e=this.colors.rgba;return"rgba("+[e.r,e.g,e.b,e.a].join(",")+")"}},methods:{handlePreset:function(e){this.colorChange({hex:e,source:"hex"})},childChange:function(e){this.colorChange(e)},inputChange:function(e){e&&(e.hex?this.isValidHex(e.hex)&&this.colorChange({hex:e.hex,source:"hex"}):(e.r||e.g||e.b||e.a)&&this.colorChange({r:e.r||this.colors.rgba.r,g:e.g||this.colors.rgba.g,b:e.b||this.colors.rgba.b,a:e.a||this.colors.rgba.a,source:"rgba"}))}}}},function(e,n,t){"use strict";function r(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(n,"__esModule",{value:!0});var o=t(3),i=r(o),a=t(5),A=r(a);n["default"]={name:"Slider",mixins:[i["default"]],props:{direction:String},components:{hue:A["default"]},computed:{activeOffset:function(){return Math.round(100*this.colors.hsl.s)/100===.5?Math.round(100*this.colors.hsl.l)/100:0}},data:function(){return{swatches:[".80",".65",".50",".35",".20"]}},methods:{hueChange:function(e){this.colorChange(e)},handleSwClick:function(e,n){this.colorChange({h:this.colors.hsl.h,s:.5,l:n,source:"hsl"})}}}},function(e,n,t){"use strict";function r(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(n,"__esModule",{value:!0});var o=t(36),i=r(o),a=t(3),A=r(a),s=["red","pink","purple","deepPurple","indigo","blue","lightBlue","cyan","teal","green","lightGreen","lime","yellow","amber","orange","deepOrange","brown","blueGrey"],p=["900","700","500","300","100"],l=function(){var e=[];return s.forEach(function(n){var t=[];p.forEach(function(e){t.push(i["default"][n][e].toUpperCase())}),e.push(t)}),e}();n["default"]={name:"Swatches",mixins:[A["default"]],computed:{pick:function(){return this.colors.hex}},data:function(){return{defaultColors:l}},methods:{handlerClick:function(e){this.colorChange({hex:e,source:"hex"})}}}},function(e,n,t){"use strict";function r(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(n,"__esModule",{value:!0});var o=t(72),i=r(o);n["default"]={name:"Alpha",props:{colors:Object,onChange:Function},components:{checkboard:i["default"]},computed:{gradientColor:function(){var e=this.colors.rgba,n=[e.r,e.g,e.b].join(",");return"linear-gradient(to right, rgba("+n+", 0) 0%, rgba("+n+", 1) 100%)"}},methods:{handleChange:function(e,n){!n&&e.preventDefault();var t,r=this.$els.container,o=r.clientWidth,i=(e.pageX||e.touches[0].pageX)-(r.getBoundingClientRect().left+window.pageXOffset);t=0>i?0:i>o?1:Math.round(100*i/o)/100,this.colors.a!==t&&this.onChange({h:this.colors.hsl.h,s:this.colors.hsl.s,l:this.colors.hsl.l,a:t,source:"rgba"})},handleMouseDown:function(e){this.handleChange(e,!0),window.addEventListener("mousemove",this.handleChange),window.addEventListener("mouseup",this.handleMouseUp)},handleMouseUp:function(){this.unbindEventListeners()},unbindEventListeners:function(){window.removeEventListener("mousemove",this.handleChange),window.removeEventListener("mouseup",this.handleMouseUp)}}}},function(e,n){"use strict";function t(e,n,t){if("undefined"==typeof document)return null;var r=document.createElement("canvas");r.width=r.height=2*t;var o=r.getContext("2d");return o?(o.fillStyle=e,o.fillRect(0,0,r.width,r.height),o.fillStyle=n,o.fillRect(0,0,t,t),o.translate(t,t),o.fillRect(0,0,t,t),r.toDataURL()):null}function r(e,n,r){var i=e+","+n+","+r;if(o[i])return o[i];var a=t(e,n,r);return o[i]=a,a}Object.defineProperty(n,"__esModule",{value:!0});var o={};n["default"]={name:"Checkboard",props:{size:{type:[Number|String],"default":8},white:{type:String,"default":"#fff"},grey:{type:String,"default":"#e6e6e6"}},computed:{bgStyle:function(){return"url("+r(this.white,this.grey,this.size)+") center left"}}}},function(e,n){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n["default"]={name:"editableInput",props:{label:String,val:[String|Number],onChange:Function,max:Number,arrowOffset:{type:Number,"default":1}},filters:{maxFilter:{read:function(e){return this.max&&e>this.max?this.max:e},write:function(e,n){return e}}},methods:{handleChange:function(e){var n={};n[this.label]=this.val,this.onChange(n)},handleBlur:function(e){console.log(e)},handleKeyDown:function(e){var n=this.val,t=Number(n);if(t){var r=this.arrowOffset||1;38===e.keyCode&&(this.val=t+r,e.preventDefault()),40===e.keyCode&&(this.val=t-r,e.preventDefault()),this.handleChange()}},handleDrag:function(e){console.log(e)},handleMouseDown:function(e){console.log(e)}}}},function(e,n){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n["default"]={name:"Hue",props:{colors:Object,onChange:Function,direction:{type:String,"default":"horizontal"}},computed:{pointerTop:function(){return"vertical"===this.direction?-(100*this.colors.hsl.h/360)+100+"%":0},pointerLeft:function(){return"vertical"===this.direction?0:100*this.colors.hsl.h/360+"%"}},methods:{handleChange:function(e,n){!n&&e.preventDefault();var t,r,o=this.$els.container,i=o.clientWidth,a=o.clientHeight,A=(e.pageX||e.touches[0].pageX)-(o.getBoundingClientRect().left+window.pageXOffset),s=(e.pageY||e.touches[0].pageY)-(o.getBoundingClientRect().top+window.pageYOffset);"vertical"===this.direction?(0>s?t=359:s>a?t=0:(r=-(100*s/a)+100,t=360*r/100),this.colors.hsl.h!==t&&this.onChange({h:t,s:this.colors.hsl.s,l:this.colors.hsl.l,a:this.colors.hsl.a,source:"hsl"})):(0>A?t=0:A>i?t=359:(r=100*A/i,t=360*r/100),this.colors.hsl.h!==t&&this.onChange({h:t,s:this.colors.hsl.s,l:this.colors.hsl.l,a:this.colors.hsl.a,source:"hsl"}))},handleMouseDown:function(e){this.handleChange(e,!0),window.addEventListener("mousemove",this.handleChange),window.addEventListener("mouseup",this.handleMouseUp)},handleMouseUp:function(e){this.unbindEventListeners()},unbindEventListeners:function(){window.removeEventListener("mousemove",this.handleChange),window.removeEventListener("mouseup",this.handleMouseUp)}}}},function(e,n,t){"use strict";function r(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(n,"__esModule",{value:!0});var o=t(34),i=r(o);n["default"]={name:"Saturation",props:{colors:Object,onChange:Function},computed:{bgColor:function(){return"hsl("+this.colors.hsl.h+",100%, 50%)"},pointerTop:function(){return-(100*this.colors.hsv.v)+100+"%"},pointerLeft:function(){return 100*this.colors.hsv.s+"%"}},methods:{throttle:(0,i["default"])(function(e,n){e(n)},50),handleChange:function(e,n){!n&&e.preventDefault();var t=this.$els.container,r=t.clientWidth,o=t.clientHeight,i=(e.pageX||e.touches[0].pageX)-(t.getBoundingClientRect().left+window.pageXOffset),a=(e.pageY||e.touches[0].pageY)-(t.getBoundingClientRect().top+window.pageYOffset);0>i?i=0:i>r?i=r:0>a?a=0:a>o&&(a=o);var A=100*i/r,s=-(100*a/o)+100;this.throttle(this.onChange,{h:this.colors.hsl.h,s:A,v:s,a:this.colors.hsl.a,source:"rgb"})},handleMouseDown:function(e){this.handleChange(e,!0),window.addEventListener("mousemove",this.handleChange),window.addEventListener("mouseup",this.handleMouseUp)},handleMouseUp:function(e){this.unbindEventListeners()},unbindEventListeners:function(){window.removeEventListener("mousemove",this.handleChange),window.removeEventListener("mouseup",this.handleMouseUp)}}}},function(e,n,t){n=e.exports=t(1)(),n.push([e.id,".c-material{width:98px;height:98px;padding:16px;font-family:Roboto;position:relative;border-radius:2px;box-shadow:0 2px 10px rgba(0,0,0,.12),0 2px 5px rgba(0,0,0,.16)}.c-material .hex{border-bottom-width:2px;border-bottom-style:solid}.c-material .split{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin-right:-10px;padding-top:11px}.c-material .third{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;padding-right:10px}.c-material .input{width:100%;margin-top:12px;font-size:15px;color:#333;height:30px}.c-material .label{position:absolute;top:0;left:0;font-size:11px;color:#999;text-transform:capitalize}","",{version:3,sources:["/./src/components/Material.vue.style","/./src/components/Material.vue"],names:[],mappings:"AACA,YACE,WAAA,AACA,YAAA,AACA,aAAA,AACA,mBAAA,AACA,kBAAA,AACA,kBAAA,AACA,+DAAA,CCAD,ADCC,iBACE,wBAAA,AACA,yBAAA,CCCH,ADAC,mBACE,oBAAA,qBAAA,oBAAA,aAAA,AACA,mBAAA,AACA,gBAAA,CCEH,ADDC,mBACE,mBAAA,eAAA,WAAA,OAAA,AACA,kBAAA,CCGH,ADFC,mBACE,WAAA,AACA,gBAAA,AACA,eAAA,AACA,WAAA,AACA,WAAA,CCIH,ADHC,mBACE,kBAAA,AACA,MAAA,AACA,OAAA,AACA,eAAA,AACA,WAAA,AACA,yBAAA,CCKH",file:"Material.vue",sourcesContent:['\r\n.c-material\r\n  width 98px\r\n  height 98px\r\n  padding 16px\r\n  font-family "Roboto"\r\n  position relative\r\n  border-radius 2px\r\n  box-shadow 0 2px 10px rgba(0,0,0,.12), 0 2px 5px rgba(0,0,0,.16)\r\n  .hex\r\n    border-bottom-width 2px\r\n    border-bottom-style solid\r\n  .split\r\n    display flex\r\n    margin-right -10px\r\n    padding-top 11px\r\n  .third\r\n    flex 1\r\n    padding-right 10px\r\n  .input\r\n    width 100%\r\n    margin-top 12px\r\n    font-size 15px\r\n    color #333\r\n    height 30px\r\n  .label\r\n    position absolute\r\n    top 0\r\n    left 0\r\n    font-size 11px\r\n    color #999\r\n    text-transform capitalize\r\n','.c-material {\n  width: 98px;\n  height: 98px;\n  padding: 16px;\n  font-family: "Roboto";\n  position: relative;\n  border-radius: 2px;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.16);\n}\n.c-material .hex {\n  border-bottom-width: 2px;\n  border-bottom-style: solid;\n}\n.c-material .split {\n  display: flex;\n  margin-right: -10px;\n  padding-top: 11px;\n}\n.c-material .third {\n  flex: 1;\n  padding-right: 10px;\n}\n.c-material .input {\n  width: 100%;\n  margin-top: 12px;\n  font-size: 15px;\n  color: #333;\n  height: 30px;\n}\n.c-material .label {\n  position: absolute;\n  top: 0;\n  left: 0;\n  font-size: 11px;\n  color: #999;\n  text-transform: capitalize;\n}\n'],sourceRoot:"webpack://"}])},function(e,n,t){n=e.exports=t(1)(),n.push([e.id,'.c-photoshop{background:#dcdcdc;border-radius:4px;box-shadow:0 0 0 1px rgba(0,0,0,.25),0 8px 16px rgba(0,0,0,.15);box-sizing:initial;width:513px;font-family:Roboto}.c-photoshop .head{background-image:-webkit-linear-gradient(top,#f0f0f0,#d4d4d4);background-image:linear-gradient(-180deg,#f0f0f0,#d4d4d4);border-bottom:1px solid #b1b1b1;box-shadow:inset 0 1px 0 0 hsla(0,0%,100%,.2),inset 0 -1px 0 0 rgba(0,0,0,.02);height:23px;line-height:24px;border-radius:4px 4px 0 0;font-size:13px;color:#4d4d4d;text-align:center}.c-photoshop .body{padding:15px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.c-photoshop .saturation-wrap{width:256px;height:256px;position:relative;border:2px solid #b3b3b3;border-bottom:2px solid #f0f0f0;overflow:hidden}.c-photoshop .saturation-wrap .circle{width:12px;height:12px}.c-photoshop .hue-wrap{position:relative;height:256px;width:19px;margin-left:10px;border:2px solid #b3b3b3;border-bottom:2px solid #f0f0f0}.c-photoshop .hue-pointer{position:relative}.c-photoshop .hue-pointer .left,.c-photoshop .hue-pointer .right{position:absolute;width:0;height:0;border-style:solid;border-width:5px 0 5px 8px;border-color:transparent transparent transparent #555}.c-photoshop .hue-pointer .left:after,.c-photoshop .hue-pointer .right:after{content:"";width:0;height:0;border-style:solid;border-width:4px 0 4px 6px;border-color:transparent transparent transparent #fff;position:absolute;top:1px;left:1px;-webkit-transform:translate(-8px,-5px);transform:translate(-8px,-5px)}.c-photoshop .hue-pointer .left{-webkit-transform:translate(-13px,-4px);transform:translate(-13px,-4px)}.c-photoshop .hue-pointer .right{-webkit-transform:translate(20px,-4px) rotate(180deg);transform:translate(20px,-4px) rotate(180deg)}.c-photoshop .controls{width:180px;margin-left:10px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.c-photoshop .actions{margin-left:20px;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1}.c-photoshop .actions .ac-btn{background-image:-webkit-linear-gradient(top,#fff,#e6e6e6);background-image:linear-gradient(-180deg,#fff,#e6e6e6);border:1px solid #878787;border-radius:2px;height:20px;box-shadow:0 1px 0 0 #eaeaea;font-size:14px;color:#000;line-height:20px;text-align:center;margin-bottom:10px}.c-photoshop .previews{width:60px}.c-photoshop .previews .swatches{border:1px solid #b3b3b3;border-bottom:1px solid #f0f0f0;margin-bottom:2px;margin-top:1px}.c-photoshop .previews .pr-color{height:34px;box-shadow:inset 1px 0 0 #000,inset -1px 0 0 #000,inset 0 1px 0 #000}.c-photoshop .previews .label{font-size:14px;color:#000;text-align:center}.c-photoshop .fields{padding-top:5px;padding-bottom:9px;width:80px;position:relative}.c-photoshop .fields .divider{height:5px}.c-photoshop .fields .input{margin-left:40%;width:40%;height:18px;border:1px solid #888;box-shadow:inset 0 1px 1px rgba(0,0,0,.1),0 1px 0 0 #ececec;margin-bottom:5px;font-size:13px;padding-left:3px;margin-right:10px}.c-photoshop .fields .label{top:0;left:0;width:34px;text-transform:uppercase;font-size:13px;height:18px;line-height:22px;position:absolute}.c-photoshop .fields .hex .input{margin-left:20%;width:80%;height:18px;border:1px solid #888;box-shadow:inset 0 1px 1px rgba(0,0,0,.1),0 1px 0 0 #ececec;margin-bottom:6px;font-size:13px;padding-left:3px}.c-photoshop .fields .hex .label{position:absolute;top:0;left:0;width:14px;text-transform:uppercase;font-size:13px;height:18px;line-height:22px}',"",{version:3,sources:["/./src/components/Photoshop.vue.style","/./src/components/Photoshop.vue"],names:[],mappings:"AACA,aACE,mBAAA,AACA,kBAAA,AACA,gEAAA,AACA,mBAAA,AACA,YAAA,AACA,kBAAA,CCAD,ADCC,mBACE,8DAAA,0DAAA,AACA,gCAAA,AACA,+EAAA,AACA,YAAA,AACA,iBAAA,AACA,0BAAA,AACA,eAAA,AACA,cAAA,AACA,iBAAA,CCCH,ADAC,mBACE,aAAA,AACA,oBAAA,qBAAA,oBAAA,YAAA,CCEH,ADDC,8BACE,YAAA,AACA,aAAA,AACA,kBAAA,AACA,yBAAA,AACA,gCAAA,AACA,eAAA,CCGH,ADFG,sCACE,WAAA,AACA,WAAA,CCIL,ADHC,uBACE,kBAAA,AACA,aAAA,AACA,WAAA,AACA,iBAAA,AACA,yBAAA,AACA,+BAAA,CCKH,ADJC,0BACE,iBAAA,CCMH,ADLG,iEAEE,kBAAA,AACA,QAAA,AACA,SAAA,AACA,mBAAA,AACA,2BAAA,AACA,qDAAA,CCOL,ADNK,6EACE,WAAA,AACA,QAAA,AACA,SAAA,AACA,mBAAA,AACA,2BAAA,AACA,sDAAA,AACA,kBAAA,AACA,QAAA,AACA,SAAA,AACA,uCAAA,8BAAA,CCSP,ADRG,gCACE,wCAAA,+BAAA,CCUL,ADTG,iCACE,sDAAA,6CAAA,CCWL,ADVC,uBACE,YAAA,AACA,iBAAA,AACA,oBAAA,qBAAA,oBAAA,YAAA,CCYH,ADXC,sBACE,iBAAA,AACA,mBAAA,eAAA,WAAA,MAAA,CCaH,ADZG,8BACE,2DAAA,uDAAA,AACA,yBAAA,AACA,kBAAA,AACA,YAAA,AACA,6BAAA,AACA,eAAA,AACA,WAAA,AACA,iBAAA,AACA,kBAAA,AACA,kBAAA,CCcL,ADbC,uBACE,UAAA,CCeH,ADdG,iCACE,yBAAA,AACA,gCAAA,AACA,kBAAA,AACA,cAAA,CCgBL,ADfG,iCACE,YAAA,AACA,oEAAA,CCiBL,ADhBG,8BACE,eAAA,AACA,WAAA,AACA,iBAAA,CCkBL,ADhBC,qBACE,gBAAA,AACA,mBAAA,AACA,WAAA,AACA,iBAAA,CCkBH,ADjBG,8BACE,UAAA,CCmBL,ADlBG,4BACE,gBAAA,AACA,UAAA,AACA,YAAA,AACA,sBAAA,AACA,4DAAA,AACA,kBAAA,AACA,eAAA,AACA,iBAAA,AACA,iBAAA,CCoBL,ADnBG,4BACE,MAAA,AACA,OAAA,AACA,WAAA,AACA,yBAAA,AACA,eAAA,AACA,YAAA,AACA,iBAAA,AACA,iBAAA,CCqBL,ADnBK,iCACE,gBAAA,AACA,UAAA,AACA,YAAA,AACA,sBAAA,AACA,4DAAA,AACA,kBAAA,AACA,eAAA,AACA,gBAAA,CCqBP,ADpBK,iCACE,kBAAA,AACA,MAAA,AACA,OAAA,AACA,WAAA,AACA,yBAAA,AACA,eAAA,AACA,YAAA,AACA,gBAAA,CCsBP",file:"Photoshop.vue",sourcesContent:['\r\n.c-photoshop\r\n  background #DCDCDC\r\n  border-radius 4px\r\n  box-shadow 0 0 0 1px rgba(0,0,0,.25), 0 8px 16px rgba(0,0,0,.15)\r\n  box-sizing initial\r\n  width 513px\r\n  font-family Roboto\r\n  .head\r\n    background-image linear-gradient(-180deg, #F0F0F0 0%, #D4D4D4 100%)\r\n    border-bottom 1px solid #B1B1B1\r\n    box-shadow inset 0 1px 0 0 rgba(255,255,255,.2), inset 0 -1px 0 0 rgba(0,0,0,.02)\r\n    height 23px\r\n    line-height 24px\r\n    border-radius 4px 4px 0 0\r\n    font-size 13px\r\n    color #4D4D4D\r\n    text-align center\r\n  .body\r\n    padding 15px\r\n    display flex\r\n  .saturation-wrap\r\n    width 256px\r\n    height 256px\r\n    position relative\r\n    border 2px solid #B3B3B3\r\n    border-bottom 2px solid #F0F0F0\r\n    overflow hidden\r\n    .circle\r\n      width 12px\r\n      height 12px\r\n  .hue-wrap\r\n    position relative\r\n    height 256px\r\n    width 19px\r\n    margin-left 10px\r\n    border 2px solid #B3B3B3\r\n    border-bottom 2px solid #F0F0F0\r\n  .hue-pointer\r\n    position relative\r\n    .left\r\n    .right\r\n      position absolute\r\n      width 0\r\n      height 0\r\n      border-style solid\r\n      border-width 5px 0 5px 8px\r\n      border-color transparent transparent transparent #555\r\n      &:after\r\n        content ""\r\n        width 0\r\n        height 0\r\n        border-style solid\r\n        border-width 4px 0 4px 6px\r\n        border-color transparent transparent transparent #fff\r\n        position absolute\r\n        top 1px\r\n        left 1px\r\n        transform translate(-8px, -5px)\r\n    .left\r\n      transform translate(-13px, -4px)\r\n    .right\r\n      transform translate(20px, -4px) rotate(180deg)\r\n  .controls\r\n    width 180px\r\n    margin-left 10px\r\n    display flex\r\n  .actions\r\n    margin-left 20px\r\n    flex 1\r\n    .ac-btn\r\n      background-image linear-gradient(-180deg, #FFFFFF 0%, #E6E6E6 100%)\r\n      border 1px solid #878787\r\n      border-radius 2px\r\n      height 20px\r\n      box-shadow 0 1px 0 0 #EAEAEA\r\n      font-size 14px\r\n      color #000\r\n      line-height 20px\r\n      text-align center\r\n      margin-bottom 10px\r\n  .previews\r\n    width 60px\r\n    .swatches\r\n      border 1px solid #B3B3B3\r\n      border-bottom 1px solid #F0F0F0\r\n      margin-bottom 2px\r\n      margin-top 1px\r\n    .pr-color\r\n      height 34px\r\n      box-shadow inset 1px 0 0 #000, inset -1px 0 0 #000, inset 0 1px 0 #000\r\n    .label\r\n      font-size 14px\r\n      color #000\r\n      text-align center\r\n  \r\n  .fields\r\n    padding-top 5px\r\n    padding-bottom 9px\r\n    width 80px\r\n    position relative\r\n    .divider\r\n      height 5px\r\n    .input\r\n      margin-left 40%\r\n      width 40%\r\n      height 18px\r\n      border 1px solid #888888\r\n      box-shadow inset 0 1px 1px rgba(0,0,0,.1), 0 1px 0 0 #ECECEC\r\n      margin-bottom 5px\r\n      font-size 13px\r\n      padding-left 3px\r\n      margin-right 10px\r\n    .label\r\n      top 0\r\n      left 0\r\n      width 34px\r\n      text-transform uppercase\r\n      font-size 13px\r\n      height 18px\r\n      line-height 22px\r\n      position absolute\r\n    .hex \r\n      .input\r\n        margin-left 20%\r\n        width 80%\r\n        height 18px\r\n        border 1px solid #888888\r\n        box-shadow inset 0 1px 1px rgba(0,0,0,.1), 0 1px 0 0 #ECECEC\r\n        margin-bottom 6px\r\n        font-size 13px\r\n        padding-left 3px\r\n      .label\r\n        position absolute\r\n        top 0\r\n        left 0\r\n        width 14px\r\n        text-transform uppercase\r\n        font-size 13px\r\n        height 18px\r\n        line-height 22px\r\n','.c-photoshop {\n  background: #dcdcdc;\n  border-radius: 4px;\n  box-shadow: 0 0 0 1px rgba(0,0,0,0.25), 0 8px 16px rgba(0,0,0,0.15);\n  box-sizing: initial;\n  width: 513px;\n  font-family: Roboto;\n}\n.c-photoshop .head {\n  background-image: linear-gradient(-180deg, #f0f0f0 0%, #d4d4d4 100%);\n  border-bottom: 1px solid #b1b1b1;\n  box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.2), inset 0 -1px 0 0 rgba(0,0,0,0.02);\n  height: 23px;\n  line-height: 24px;\n  border-radius: 4px 4px 0 0;\n  font-size: 13px;\n  color: #4d4d4d;\n  text-align: center;\n}\n.c-photoshop .body {\n  padding: 15px;\n  display: flex;\n}\n.c-photoshop .saturation-wrap {\n  width: 256px;\n  height: 256px;\n  position: relative;\n  border: 2px solid #b3b3b3;\n  border-bottom: 2px solid #f0f0f0;\n  overflow: hidden;\n}\n.c-photoshop .saturation-wrap .circle {\n  width: 12px;\n  height: 12px;\n}\n.c-photoshop .hue-wrap {\n  position: relative;\n  height: 256px;\n  width: 19px;\n  margin-left: 10px;\n  border: 2px solid #b3b3b3;\n  border-bottom: 2px solid #f0f0f0;\n}\n.c-photoshop .hue-pointer {\n  position: relative;\n}\n.c-photoshop .hue-pointer .left,\n.c-photoshop .hue-pointer .right {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 5px 0 5px 8px;\n  border-color: transparent transparent transparent #555;\n}\n.c-photoshop .hue-pointer .left:after,\n.c-photoshop .hue-pointer .right:after {\n  content: "";\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 4px 0 4px 6px;\n  border-color: transparent transparent transparent #fff;\n  position: absolute;\n  top: 1px;\n  left: 1px;\n  transform: translate(-8px, -5px);\n}\n.c-photoshop .hue-pointer .left {\n  transform: translate(-13px, -4px);\n}\n.c-photoshop .hue-pointer .right {\n  transform: translate(20px, -4px) rotate(180deg);\n}\n.c-photoshop .controls {\n  width: 180px;\n  margin-left: 10px;\n  display: flex;\n}\n.c-photoshop .actions {\n  margin-left: 20px;\n  flex: 1;\n}\n.c-photoshop .actions .ac-btn {\n  background-image: linear-gradient(-180deg, #fff 0%, #e6e6e6 100%);\n  border: 1px solid #878787;\n  border-radius: 2px;\n  height: 20px;\n  box-shadow: 0 1px 0 0 #eaeaea;\n  font-size: 14px;\n  color: #000;\n  line-height: 20px;\n  text-align: center;\n  margin-bottom: 10px;\n}\n.c-photoshop .previews {\n  width: 60px;\n}\n.c-photoshop .previews .swatches {\n  border: 1px solid #b3b3b3;\n  border-bottom: 1px solid #f0f0f0;\n  margin-bottom: 2px;\n  margin-top: 1px;\n}\n.c-photoshop .previews .pr-color {\n  height: 34px;\n  box-shadow: inset 1px 0 0 #000, inset -1px 0 0 #000, inset 0 1px 0 #000;\n}\n.c-photoshop .previews .label {\n  font-size: 14px;\n  color: #000;\n  text-align: center;\n}\n.c-photoshop .fields {\n  padding-top: 5px;\n  padding-bottom: 9px;\n  width: 80px;\n  position: relative;\n}\n.c-photoshop .fields .divider {\n  height: 5px;\n}\n.c-photoshop .fields .input {\n  margin-left: 40%;\n  width: 40%;\n  height: 18px;\n  border: 1px solid #888;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), 0 1px 0 0 #ececec;\n  margin-bottom: 5px;\n  font-size: 13px;\n  padding-left: 3px;\n  margin-right: 10px;\n}\n.c-photoshop .fields .label {\n  top: 0;\n  left: 0;\n  width: 34px;\n  text-transform: uppercase;\n  font-size: 13px;\n  height: 18px;\n  line-height: 22px;\n  position: absolute;\n}\n.c-photoshop .fields .hex .input {\n  margin-left: 20%;\n  width: 80%;\n  height: 18px;\n  border: 1px solid #888;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), 0 1px 0 0 #ececec;\n  margin-bottom: 6px;\n  font-size: 13px;\n  padding-left: 3px;\n}\n.c-photoshop .fields .hex .label {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 14px;\n  text-transform: uppercase;\n  font-size: 13px;\n  height: 18px;\n  line-height: 22px;\n}\n'],
-sourceRoot:"webpack://"}])},function(e,n,t){n=e.exports=t(1)(),n.push([e.id,".c-hue{position:absolute;top:0;right:0;bottom:0;left:0;border-radius:2px}.c-hue.horizontal{background:-webkit-linear-gradient(left,red,#ff0 17%,#0f0 33%,#0ff 50%,#00f 67%,#f0f 83%,red);background:linear-gradient(90deg,red 0,#ff0 17%,#0f0 33%,#0ff 50%,#00f 67%,#f0f 83%,red)}.c-hue.vertical{background:-webkit-linear-gradient(bottom,red,#ff0 17%,#0f0 33%,#0ff 50%,#00f 67%,#f0f 83%,red);background:linear-gradient(0deg,red 0,#ff0 17%,#0f0 33%,#0ff 50%,#00f 67%,#f0f 83%,red)}.c-hue .container{margin:0 2px;position:relative;height:100%}.c-hue .pointer{z-index:2;position:absolute}.c-hue .picker{margin-top:1px;width:4px;border-radius:1px;height:8px;box-shadow:0 0 2px rgba(0,0,0,.6);background:#fff;-webkit-transform:translateX(-2px);transform:translateX(-2px)}","",{version:3,sources:["/./src/components/common/Hue.vue.style","/./src/components/common/Hue.vue"],names:[],mappings:"AACA,OACE,kBAAA,AACA,MAAA,AACA,QAAA,AACA,SAAA,AACA,OAAA,AACA,iBAAA,CCAD,ADCC,kBACE,8FAAA,wFAAA,CCCH,ADAC,gBACE,gGAAA,uFAAA,CCEH,ADDC,kBACE,aAAA,AACA,kBAAA,AACA,WAAA,CCGH,ADFC,gBACE,UAAA,AACA,iBAAA,CCIH,ADHC,eACE,eAAA,AACA,UAAA,AACA,kBAAA,AACA,WAAA,AACA,kCAAA,AACA,gBAAA,AACA,mCAAA,0BAAA,CCKH",file:"Hue.vue",sourcesContent:["\r\n.c-hue\r\n  position absolute\r\n  top 0px\r\n  right 0px\r\n  bottom 0px\r\n  left 0px\r\n  border-radius 2px\r\n  &.horizontal\r\n    background linear-gradient(to right, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%)\r\n  &.vertical\r\n    background linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%)\r\n  .container\r\n    margin 0 2px\r\n    position relative\r\n    height 100%\r\n  .pointer\r\n    z-index 2\r\n    position absolute\r\n  .picker\r\n    margin-top 1px\r\n    width 4px\r\n    border-radius 1px\r\n    height 8px\r\n    box-shadow 0 0 2px rgba(0, 0, 0, .6)\r\n    background #fff\r\n    transform translateX(-2px)\r\n",".c-hue {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n  border-radius: 2px;\n}\n.c-hue.horizontal {\n  background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n}\n.c-hue.vertical {\n  background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n}\n.c-hue .container {\n  margin: 0 2px;\n  position: relative;\n  height: 100%;\n}\n.c-hue .pointer {\n  z-index: 2;\n  position: absolute;\n}\n.c-hue .picker {\n  margin-top: 1px;\n  width: 4px;\n  border-radius: 1px;\n  height: 8px;\n  box-shadow: 0 0 2px rgba(0,0,0,0.6);\n  background: #fff;\n  transform: translateX(-2px);\n}\n"],sourceRoot:"webpack://"}])},function(e,n,t){n=e.exports=t(1)(),n.push([e.id,".c-sketch{position:relative;width:200px;padding:10px 10px 0;box-sizing:initial;background:#fff;border-radius:4px;box-shadow:0 0 0 1px rgba(0,0,0,.15),0 8px 16px rgba(0,0,0,.15)}.c-sketch .saturation-wrap{width:100%;padding-bottom:75%;position:relative;overflow:hidden}.c-sketch .controls{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.c-sketch .controls .sliders{padding:4px 0;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1}.c-sketch .controls .hue-wrap{position:relative;height:10px}.c-sketch .controls .alpha-wrap{position:relative;height:10px;margin-top:4px;overflow:hidden}.c-sketch .controls .color-wrap{width:24px;height:24px;position:relative;margin-top:4px;margin-left:4px;border-radius:3px}.c-sketch .controls .active-color{position:absolute;top:0;left:0;right:0;bottom:0;border-radius:2px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15),inset 0 0 4px rgba(0,0,0,.25);z-index:2}.c-sketch .field{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;padding-top:4px}.c-sketch .field .single{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;padding-left:6px}.c-sketch .field .double{-webkit-box-flex:2;-webkit-flex:2;-ms-flex:2;flex:2}.c-sketch .field .input{width:80%;padding:4px 10% 3px;border:none;box-shadow:inset 0 0 0 1px #ccc;font-size:11px}.c-sketch .field .label{display:block;text-align:center;font-size:11px;color:#222;padding-top:3px;padding-bottom:4px;text-transform:capitalize}.c-sketch .presets{margin-right:-10px;margin-left:-10px;padding-left:10px;padding-top:10px;border-top:1px solid #eee}.c-sketch .presets .presets-color{border-radius:3px;overflow:hidden;position:relative;display:inline-block;margin:0 10px 10px 0;vertical-align:top;cursor:pointer;width:16px;height:16px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}","",{version:3,sources:["/./src/components/CmykSketch.vue.style","/./src/components/CmykSketch.vue"],names:[],mappings:"AACA,UACE,kBAAA,AACA,YAAA,AACA,oBAAA,AACA,mBAAA,AACA,gBAAA,AACA,kBAAA,AACA,+DAAA,CCAD,ADCC,2BACE,WAAA,AACA,mBAAA,AACA,kBAAA,AACA,eAAA,CCCH,ADAC,oBACE,oBAAA,qBAAA,oBAAA,YAAA,CCEH,ADDG,6BACE,cAAA,AACA,mBAAA,eAAA,WAAA,MAAA,CCGL,ADFG,8BACE,kBAAA,AACA,WAAA,CCIL,ADHG,gCACE,kBAAA,AACA,YAAA,AACA,eAAA,AACA,eAAA,CCKL,ADJG,gCACE,WAAA,AACA,YAAA,AACA,kBAAA,AACA,eAAA,AACA,gBAAA,AACA,iBAAA,CCML,ADLG,kCACE,kBAAA,AACA,MAAA,AACA,OAAA,AACA,QAAA,AACA,SAAA,AACA,kBAAA,AACA,yEAAA,AACA,SAAA,CCOL,ADNC,iBACE,oBAAA,qBAAA,oBAAA,aAAA,AACA,eAAA,CCQH,ADPG,yBACE,mBAAA,eAAA,WAAA,OAAA,AACA,gBAAA,CCSL,ADRG,yBACE,mBAAA,eAAA,WAAA,MAAA,CCUL,ADTG,wBACE,UAAA,AACA,oBAAA,AACA,YAAA,AACA,gCAAA,AACA,cAAA,CCWL,ADVG,wBACE,cAAA,AACA,kBAAA,AACA,eAAA,AACA,WAAA,AACA,gBAAA,AACA,mBAAA,AACA,yBAAA,CCYL,ADXC,mBACE,mBAAA,AACA,kBAAA,AACA,kBAAA,AACA,iBAAA,AACA,yBAAA,CCaH,ADZG,kCACE,kBAAA,AACA,gBAAA,AACA,kBAAA,AACA,qBAAA,AACA,qBAAA,AACA,mBAAA,AACA,eAAA,AACA,WAAA,AACA,YAAA,AACA,0CAAA,CCcL",file:"CmykSketch.vue",sourcesContent:["\r\n.c-sketch\r\n  position relative\r\n  width 200px\r\n  padding 10px 10px 0\r\n  box-sizing initial\r\n  background #fff\r\n  border-radius 4px\r\n  box-shadow 0 0 0 1px rgba(0,0,0,.15), 0 8px 16px rgba(0,0,0,.15)\r\n  .saturation-wrap\r\n    width 100%\r\n    padding-bottom 75%\r\n    position relative\r\n    overflow hidden\r\n  .controls\r\n    display flex\r\n    .sliders\r\n      padding 4px 0\r\n      flex 1\r\n    .hue-wrap\r\n      position relative\r\n      height 10px\r\n    .alpha-wrap\r\n      position relative\r\n      height 10px\r\n      margin-top 4px\r\n      overflow hidden\r\n    .color-wrap\r\n      width 24px\r\n      height 24px\r\n      position relative\r\n      margin-top 4px\r\n      margin-left 4px\r\n      border-radius 3px\r\n    .active-color\r\n      position absolute\r\n      top 0\r\n      left 0\r\n      right 0\r\n      bottom 0\r\n      border-radius 2px\r\n      box-shadow inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)\r\n      z-index 2\r\n  .field\r\n    display flex\r\n    padding-top 4px\r\n    .single\r\n      flex 1\r\n      padding-left 6px\r\n    .double\r\n      flex 2\r\n    .input\r\n      width 80%\r\n      padding 4px 10% 3px\r\n      border none\r\n      box-shadow inset 0 0 0 1px #ccc\r\n      font-size 11px\r\n    .label\r\n      display block\r\n      text-align center\r\n      font-size 11px\r\n      color #222\r\n      padding-top 3px\r\n      padding-bottom 4px\r\n      text-transform capitalize\r\n  .presets\r\n    margin-right -10px\r\n    margin-left -10px\r\n    padding-left 10px\r\n    padding-top 10px\r\n    border-top 1px solid #eee\r\n    .presets-color\r\n      border-radius 3px\r\n      overflow hidden\r\n      position relative\r\n      display inline-block\r\n      margin 0 10px 10px 0\r\n      vertical-align top\r\n      cursor pointer\r\n      width 16px\r\n      height 16px\r\n      box-shadow inset 0 0 0 1px rgba(0,0,0,.15)\r\n",".c-sketch {\n  position: relative;\n  width: 200px;\n  padding: 10px 10px 0;\n  box-sizing: initial;\n  background: #fff;\n  border-radius: 4px;\n  box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 8px 16px rgba(0,0,0,0.15);\n}\n.c-sketch .saturation-wrap {\n  width: 100%;\n  padding-bottom: 75%;\n  position: relative;\n  overflow: hidden;\n}\n.c-sketch .controls {\n  display: flex;\n}\n.c-sketch .controls .sliders {\n  padding: 4px 0;\n  flex: 1;\n}\n.c-sketch .controls .hue-wrap {\n  position: relative;\n  height: 10px;\n}\n.c-sketch .controls .alpha-wrap {\n  position: relative;\n  height: 10px;\n  margin-top: 4px;\n  overflow: hidden;\n}\n.c-sketch .controls .color-wrap {\n  width: 24px;\n  height: 24px;\n  position: relative;\n  margin-top: 4px;\n  margin-left: 4px;\n  border-radius: 3px;\n}\n.c-sketch .controls .active-color {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border-radius: 2px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15), inset 0 0 4px rgba(0,0,0,0.25);\n  z-index: 2;\n}\n.c-sketch .field {\n  display: flex;\n  padding-top: 4px;\n}\n.c-sketch .field .single {\n  flex: 1;\n  padding-left: 6px;\n}\n.c-sketch .field .double {\n  flex: 2;\n}\n.c-sketch .field .input {\n  width: 80%;\n  padding: 4px 10% 3px;\n  border: none;\n  box-shadow: inset 0 0 0 1px #ccc;\n  font-size: 11px;\n}\n.c-sketch .field .label {\n  display: block;\n  text-align: center;\n  font-size: 11px;\n  color: #222;\n  padding-top: 3px;\n  padding-bottom: 4px;\n  text-transform: capitalize;\n}\n.c-sketch .presets {\n  margin-right: -10px;\n  margin-left: -10px;\n  padding-left: 10px;\n  padding-top: 10px;\n  border-top: 1px solid #eee;\n}\n.c-sketch .presets .presets-color {\n  border-radius: 3px;\n  overflow: hidden;\n  position: relative;\n  display: inline-block;\n  margin: 0 10px 10px 0;\n  vertical-align: top;\n  cursor: pointer;\n  width: 16px;\n  height: 16px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);\n}\n"],sourceRoot:"webpack://"}])},function(e,n,t){n=e.exports=t(1)(),n.push([e.id,".c-slider{position:relative;width:410px}.c-slider .hue-warp{height:12px;position:relative}.c-slider .hue-warp .picker{width:14px;height:14px;border-radius:6px;-webkit-transform:translate(-7px,-2px);transform:translate(-7px,-2px);background-color:#f8f8f8;box-shadow:0 1px 4px 0 rgba(0,0,0,.37)}.c-slider .swatches{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin-top:20px}.c-slider .swatches .swatch{margin-right:1px;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;width:20%}.c-slider .swatches .swatch:first-child .swatch-picker{border-radius:2px 0 0 2px}.c-slider .swatches .swatch:last-child{margin-right:0}.c-slider .swatches .swatch:last-child .swatch-picker{border-radius:0 2px 2px 0}.c-slider .swatches .swatch-picker{height:12px;cursor:pointer}.c-slider .swatches .swatch-picker.active{-webkit-transform:scaleY(1.8);transform:scaleY(1.8);border-radius:3.6px/2px}","",{version:3,sources:["/./src/components/Slider.vue.style","/./src/components/Slider.vue"],names:[],mappings:"AACA,UACE,kBAAA,AACA,WAAA,CCAD,ADCC,oBACE,YAAA,AACA,iBAAA,CCCH,ADAG,4BACE,WAAA,AACA,YAAA,AACA,kBAAA,AACA,uCAAA,+BAAA,AACA,yBAAA,AACA,sCAAA,CCEL,ADDC,oBACE,oBAAA,qBAAA,oBAAA,aAAA,AACA,eAAA,CCGH,ADFG,4BACE,iBAAA,AACA,mBAAA,eAAA,WAAA,OAAA,AACA,SAAA,CCIL,ADFO,uDACE,yBAAA,CCIT,ADHK,uCACE,cAAA,CCKP,ADJO,sDACE,yBAAA,CCMT,ADLG,mCACE,YAAA,AACA,cAAA,CCOL,ADNK,0CACE,8BAAA,sBAAA,AACA,uBAAA,CCQP",file:"Slider.vue",sourcesContent:["\r\n.c-slider\r\n  position relative\r\n  width 410px\r\n  .hue-warp\r\n    height 12px\r\n    position relative\r\n    .picker\r\n      width 14px\r\n      height 14px\r\n      border-radius 6px\r\n      transform translate(-7px, -2px)\r\n      background-color rgb(248, 248, 248)\r\n      box-shadow 0 1px 4px 0 rgba(0, 0, 0, 0.37)    \r\n  .swatches\r\n    display flex\r\n    margin-top 20px\r\n    .swatch\r\n      margin-right 1px\r\n      flex 1\r\n      width 20%\r\n      &:first-child\r\n        .swatch-picker\r\n          border-radius 2px 0px 0px 2px        \r\n      &:last-child\r\n        margin-right 0\r\n        .swatch-picker\r\n          border-radius 0px 2px 2px 0px\r\n    .swatch-picker\r\n      height 12px\r\n      cursor pointer\r\n      &.active\r\n        transform scaleY(1.8)\r\n        border-radius: 3.6px/2px\r\n",".c-slider {\n  position: relative;\n  width: 410px;\n}\n.c-slider .hue-warp {\n  height: 12px;\n  position: relative;\n}\n.c-slider .hue-warp .picker {\n  width: 14px;\n  height: 14px;\n  border-radius: 6px;\n  transform: translate(-7px, -2px);\n  background-color: #f8f8f8;\n  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);\n}\n.c-slider .swatches {\n  display: flex;\n  margin-top: 20px;\n}\n.c-slider .swatches .swatch {\n  margin-right: 1px;\n  flex: 1;\n  width: 20%;\n}\n.c-slider .swatches .swatch:first-child .swatch-picker {\n  border-radius: 2px 0px 0px 2px;\n}\n.c-slider .swatches .swatch:last-child {\n  margin-right: 0;\n}\n.c-slider .swatches .swatch:last-child .swatch-picker {\n  border-radius: 0px 2px 2px 0px;\n}\n.c-slider .swatches .swatch-picker {\n  height: 12px;\n  cursor: pointer;\n}\n.c-slider .swatches .swatch-picker.active {\n  transform: scaleY(1.8);\n  border-radius: 3.6px/2px;\n}\n"],sourceRoot:"webpack://"}])},function(e,n,t){n=e.exports=t(1)(),n.push([e.id,".black,.saturation,.white{position:absolute;top:0;left:0;right:0;bottom:0}.saturation .white{background:-webkit-linear-gradient(left,#fff,hsla(0,0%,100%,0));background:linear-gradient(90deg,#fff,hsla(0,0%,100%,0))}.saturation .black{background:-webkit-linear-gradient(bottom,#000,transparent);background:linear-gradient(0deg,#000,transparent)}.saturation .pointer{position:absolute}.saturation .circle{cursor:head;width:4px;height:4px;box-shadow:0 0 0 1.5px #fff,inset 0 0 1px 1px rgba(0,0,0,.3),0 0 1px 2px rgba(0,0,0,.4);border-radius:50%;-webkit-transform:translate(-2px,-2px);transform:translate(-2px,-2px)}","",{version:3,sources:["/./src/components/common/Saturation.vue.style","/./src/components/common/Saturation.vue"],names:[],mappings:"AACA,0BAGE,kBAAA,AACA,MAAA,AACA,OAAA,AACA,QAAA,AACA,QAAA,CCAD,ADGC,mBACE,gEAAA,wDAAA,CCDH,ADEC,mBACE,4DAAA,iDAAA,CCAH,ADCC,qBACE,iBAAA,CCCH,ADAC,oBACE,YAAA,AACA,UAAA,AACA,WAAA,AACA,wFAAA,AACA,kBAAA,AACA,uCAAA,8BAAA,CCEH",file:"Saturation.vue",sourcesContent:["\r\n.white\r\n.black\r\n.saturation\r\n  position absolute\r\n  top 0\r\n  left 0\r\n  right 0\r\n  bottom 0\r\n  \r\n.saturation\r\n  .white \r\n    background linear-gradient(to right, #fff, rgba(255,255,255,0))\r\n  .black\r\n    background linear-gradient(to top, #000, rgba(0,0,0,0))\r\n  .pointer\r\n    position absolute\r\n  .circle\r\n    cursor head\r\n    width 4px\r\n    height 4px\r\n    box-shadow 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3), 0 0 1px 2px rgba(0,0,0,.4)\r\n    border-radius 50%\r\n    transform translate(-2px, -2px)\r\n",".white,\n.black,\n.saturation {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n}\n.saturation .white {\n  background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n}\n.saturation .black {\n  background: linear-gradient(to top, #000, rgba(0,0,0,0));\n}\n.saturation .pointer {\n  position: absolute;\n}\n.saturation .circle {\n  cursor: head;\n  width: 4px;\n  height: 4px;\n  box-shadow: 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,0.3), 0 0 1px 2px rgba(0,0,0,0.4);\n  border-radius: 50%;\n  transform: translate(-2px, -2px);\n}\n"],sourceRoot:"webpack://"}])},function(e,n,t){n=e.exports=t(1)(),n.push([e.id,".c-sketch{position:relative;width:200px;padding:10px 10px 0;box-sizing:initial;background:#fff;border-radius:4px;box-shadow:0 0 0 1px rgba(0,0,0,.15),0 8px 16px rgba(0,0,0,.15)}.c-sketch .saturation-wrap{width:100%;padding-bottom:75%;position:relative;overflow:hidden}.c-sketch .controls{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.c-sketch .controls .sliders{padding:4px 0;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1}.c-sketch .controls .hue-wrap{position:relative;height:10px}.c-sketch .controls .alpha-wrap{position:relative;height:10px;margin-top:4px;overflow:hidden}.c-sketch .controls .color-wrap{width:24px;height:24px;position:relative;margin-top:4px;margin-left:4px;border-radius:3px}.c-sketch .controls .active-color{position:absolute;top:0;left:0;right:0;bottom:0;border-radius:2px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15),inset 0 0 4px rgba(0,0,0,.25);z-index:2}.c-sketch .field{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;padding-top:4px}.c-sketch .field .single{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;padding-left:6px}.c-sketch .field .double{-webkit-box-flex:2;-webkit-flex:2;-ms-flex:2;flex:2}.c-sketch .field .input{width:80%;padding:4px 10% 3px;border:none;box-shadow:inset 0 0 0 1px #ccc;font-size:11px}.c-sketch .field .label{display:block;text-align:center;font-size:11px;color:#222;padding-top:3px;padding-bottom:4px;text-transform:capitalize}.c-sketch .presets{margin-right:-10px;margin-left:-10px;padding-left:10px;padding-top:10px;border-top:1px solid #eee}.c-sketch .presets .presets-color{border-radius:3px;overflow:hidden;position:relative;display:inline-block;margin:0 10px 10px 0;vertical-align:top;cursor:pointer;width:16px;height:16px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}","",{version:3,sources:["/./src/components/Sketch.vue.style","/./src/components/Sketch.vue"],names:[],mappings:"AACA,UACE,kBAAA,AACA,YAAA,AACA,oBAAA,AACA,mBAAA,AACA,gBAAA,AACA,kBAAA,AACA,+DAAA,CCAD,ADCC,2BACE,WAAA,AACA,mBAAA,AACA,kBAAA,AACA,eAAA,CCCH,ADAC,oBACE,oBAAA,qBAAA,oBAAA,YAAA,CCEH,ADDG,6BACE,cAAA,AACA,mBAAA,eAAA,WAAA,MAAA,CCGL,ADFG,8BACE,kBAAA,AACA,WAAA,CCIL,ADHG,gCACE,kBAAA,AACA,YAAA,AACA,eAAA,AACA,eAAA,CCKL,ADJG,gCACE,WAAA,AACA,YAAA,AACA,kBAAA,AACA,eAAA,AACA,gBAAA,AACA,iBAAA,CCML,ADLG,kCACE,kBAAA,AACA,MAAA,AACA,OAAA,AACA,QAAA,AACA,SAAA,AACA,kBAAA,AACA,yEAAA,AACA,SAAA,CCOL,ADNC,iBACE,oBAAA,qBAAA,oBAAA,aAAA,AACA,eAAA,CCQH,ADPG,yBACE,mBAAA,eAAA,WAAA,OAAA,AACA,gBAAA,CCSL,ADRG,yBACE,mBAAA,eAAA,WAAA,MAAA,CCUL,ADTG,wBACE,UAAA,AACA,oBAAA,AACA,YAAA,AACA,gCAAA,AACA,cAAA,CCWL,ADVG,wBACE,cAAA,AACA,kBAAA,AACA,eAAA,AACA,WAAA,AACA,gBAAA,AACA,mBAAA,AACA,yBAAA,CCYL,ADXC,mBACE,mBAAA,AACA,kBAAA,AACA,kBAAA,AACA,iBAAA,AACA,yBAAA,CCaH,ADZG,kCACE,kBAAA,AACA,gBAAA,AACA,kBAAA,AACA,qBAAA,AACA,qBAAA,AACA,mBAAA,AACA,eAAA,AACA,WAAA,AACA,YAAA,AACA,0CAAA,CCcL",file:"Sketch.vue",sourcesContent:["\r\n.c-sketch\r\n  position relative\r\n  width 200px\r\n  padding 10px 10px 0\r\n  box-sizing initial\r\n  background #fff\r\n  border-radius 4px\r\n  box-shadow 0 0 0 1px rgba(0,0,0,.15), 0 8px 16px rgba(0,0,0,.15)\r\n  .saturation-wrap\r\n    width 100%\r\n    padding-bottom 75%\r\n    position relative\r\n    overflow hidden\r\n  .controls\r\n    display flex\r\n    .sliders\r\n      padding 4px 0\r\n      flex 1\r\n    .hue-wrap\r\n      position relative\r\n      height 10px\r\n    .alpha-wrap\r\n      position relative\r\n      height 10px\r\n      margin-top 4px\r\n      overflow hidden\r\n    .color-wrap\r\n      width 24px\r\n      height 24px\r\n      position relative\r\n      margin-top 4px\r\n      margin-left 4px\r\n      border-radius 3px\r\n    .active-color\r\n      position absolute\r\n      top 0\r\n      left 0\r\n      right 0\r\n      bottom 0\r\n      border-radius 2px\r\n      box-shadow inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)\r\n      z-index 2\r\n  .field\r\n    display flex\r\n    padding-top 4px\r\n    .single\r\n      flex 1\r\n      padding-left 6px\r\n    .double\r\n      flex 2\r\n    .input\r\n      width 80%\r\n      padding 4px 10% 3px\r\n      border none\r\n      box-shadow inset 0 0 0 1px #ccc\r\n      font-size 11px\r\n    .label\r\n      display block\r\n      text-align center\r\n      font-size 11px\r\n      color #222\r\n      padding-top 3px\r\n      padding-bottom 4px\r\n      text-transform capitalize\r\n  .presets\r\n    margin-right -10px\r\n    margin-left -10px\r\n    padding-left 10px\r\n    padding-top 10px\r\n    border-top 1px solid #eee\r\n    .presets-color\r\n      border-radius 3px\r\n      overflow hidden\r\n      position relative\r\n      display inline-block\r\n      margin 0 10px 10px 0\r\n      vertical-align top\r\n      cursor pointer\r\n      width 16px\r\n      height 16px\r\n      box-shadow inset 0 0 0 1px rgba(0,0,0,.15)\r\n",".c-sketch {\n  position: relative;\n  width: 200px;\n  padding: 10px 10px 0;\n  box-sizing: initial;\n  background: #fff;\n  border-radius: 4px;\n  box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 8px 16px rgba(0,0,0,0.15);\n}\n.c-sketch .saturation-wrap {\n  width: 100%;\n  padding-bottom: 75%;\n  position: relative;\n  overflow: hidden;\n}\n.c-sketch .controls {\n  display: flex;\n}\n.c-sketch .controls .sliders {\n  padding: 4px 0;\n  flex: 1;\n}\n.c-sketch .controls .hue-wrap {\n  position: relative;\n  height: 10px;\n}\n.c-sketch .controls .alpha-wrap {\n  position: relative;\n  height: 10px;\n  margin-top: 4px;\n  overflow: hidden;\n}\n.c-sketch .controls .color-wrap {\n  width: 24px;\n  height: 24px;\n  position: relative;\n  margin-top: 4px;\n  margin-left: 4px;\n  border-radius: 3px;\n}\n.c-sketch .controls .active-color {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border-radius: 2px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15), inset 0 0 4px rgba(0,0,0,0.25);\n  z-index: 2;\n}\n.c-sketch .field {\n  display: flex;\n  padding-top: 4px;\n}\n.c-sketch .field .single {\n  flex: 1;\n  padding-left: 6px;\n}\n.c-sketch .field .double {\n  flex: 2;\n}\n.c-sketch .field .input {\n  width: 80%;\n  padding: 4px 10% 3px;\n  border: none;\n  box-shadow: inset 0 0 0 1px #ccc;\n  font-size: 11px;\n}\n.c-sketch .field .label {\n  display: block;\n  text-align: center;\n  font-size: 11px;\n  color: #222;\n  padding-top: 3px;\n  padding-bottom: 4px;\n  text-transform: capitalize;\n}\n.c-sketch .presets {\n  margin-right: -10px;\n  margin-left: -10px;\n  padding-left: 10px;\n  padding-top: 10px;\n  border-top: 1px solid #eee;\n}\n.c-sketch .presets .presets-color {\n  border-radius: 3px;\n  overflow: hidden;\n  position: relative;\n  display: inline-block;\n  margin: 0 10px 10px 0;\n  vertical-align: top;\n  cursor: pointer;\n  width: 16px;\n  height: 16px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);\n}\n"],sourceRoot:"webpack://"}])},function(e,n,t){n=e.exports=t(1)(),n.push([e.id,".c-swatches{width:320px;height:240px;overflow-y:scroll;background-color:#fff;box-shadow:0 2px 10px rgba(0,0,0,.12),0 2px 5px rgba(0,0,0,.16)}.c-swatches .box{padding:16px 0 6px 16px;overflow:hidden}.c-swatches .color-group{padding-bottom:10px;width:40px;float:left;margin-right:10px}.c-swatches .color-it{width:40px;height:24px;cursor:pointer;background:#880e4f;margin-bottom:1px;overflow:hidden;border-radius:2px 2px 0 0}.c-swatches .pick{fill:#fff;margin-left:8px;display:block}","",{version:3,sources:["/./src/components/Swatches.vue.style","/./src/components/Swatches.vue"],names:[],mappings:"AACA,YACE,YAAA,AACA,aAAA,AACA,kBAAA,AACA,sBAAA,AACA,+DAAA,CCAD,ADCC,iBACE,wBAAA,AACA,eAAA,CCCH,ADAC,yBACE,oBAAA,AACA,WAAA,AACA,WAAA,AACA,iBAAA,CCEH,ADDC,sBACE,WAAA,AACA,YAAA,AACA,eAAA,AACA,mBAAA,AACA,kBAAA,AACA,gBAAA,AAKA,yBAAA,CCGH,ADFC,kBACE,UAAA,AACA,gBAAA,AACA,aAAA,CCIH",file:"Swatches.vue",sourcesContent:["\r\n.c-swatches\r\n  width 320px\r\n  height 240px\r\n  overflow-y scroll\r\n  background-color #fff\r\n  box-shadow 0 2px 10px rgba(0,0,0,.12), 0 2px 5px rgba(0,0,0,.16)\r\n  .box\r\n    padding 16px 0 6px 16px\r\n    overflow hidden\r\n  .color-group\r\n    padding-bottom 10px\r\n    width 40px\r\n    float left\r\n    margin-right 10px\r\n  .color-it\r\n    width 40px\r\n    height 24px\r\n    cursor pointer\r\n    background #880e4f\r\n    margin-bottom 1px\r\n    overflow hidden\r\n    -ms-border-radius 2px 2px 0 0\r\n    -moz-border-radius 2px 2px 0 0\r\n    -o-border-radius 2px 2px 0 0\r\n    -webkit-border-radius 2px 2px 0 0\r\n    border-radius 2px 2px 0 0\r\n  .pick\r\n    fill: rgb(255, 255, 255);\r\n    margin-left: 8px;\r\n    display: block;\r\n\r\n",".c-swatches {\n  width: 320px;\n  height: 240px;\n  overflow-y: scroll;\n  background-color: #fff;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.16);\n}\n.c-swatches .box {\n  padding: 16px 0 6px 16px;\n  overflow: hidden;\n}\n.c-swatches .color-group {\n  padding-bottom: 10px;\n  width: 40px;\n  float: left;\n  margin-right: 10px;\n}\n.c-swatches .color-it {\n  width: 40px;\n  height: 24px;\n  cursor: pointer;\n  background: #880e4f;\n  margin-bottom: 1px;\n  overflow: hidden;\n  -ms-border-radius: 2px 2px 0 0;\n  -moz-border-radius: 2px 2px 0 0;\n  -o-border-radius: 2px 2px 0 0;\n  -webkit-border-radius: 2px 2px 0 0;\n  border-radius: 2px 2px 0 0;\n}\n.c-swatches .pick {\n  fill: #fff;\n  margin-left: 8px;\n  display: block;\n}\n"],sourceRoot:"webpack://"}])},function(e,n,t){n=e.exports=t(1)(),n.push([e.id,".c-alpha,.c-alpha .checkboard-wrap{position:absolute;top:0;right:0;bottom:0;left:0}.c-alpha .checkboard-wrap{overflow:hidden}.c-alpha .gradient{position:absolute;top:0;right:0;bottom:0;left:0}.c-alpha .container{position:relative;z-index:2;height:100%;margin:0 3px}.c-alpha .pointer{z-index:2;position:absolute}.c-alpha .picker{width:4px;border-radius:1px;height:8px;box-shadow:0 0 2px rgba(0,0,0,.6);background:#fff;margin-top:1px;-webkit-transform:translateX(-2px);transform:translateX(-2px)}","",{version:3,sources:["/./src/components/common/Alpha.vue.style","/./src/components/common/Alpha.vue"],names:[],mappings:"AAOE,mCALA,kBAAA,AACA,MAAA,AACA,QAAA,AACA,SAAA,AACA,MAAA,CCQD,ADPC,0BAME,eAAA,CCCH,ADAC,mBACE,kBAAA,AACA,MAAA,AACA,QAAA,AACA,SAAA,AACA,MAAA,CCEH,ADDC,oBACE,kBAAA,AACA,UAAA,AACA,YAAA,AACA,YAAA,CCGH,ADFC,kBACE,UAAA,AACA,iBAAA,CCIH,ADHC,iBACE,UAAA,AACA,kBAAA,AACA,WAAA,AACA,kCAAA,AACA,gBAAA,AACA,eAAA,AACA,mCAAA,0BAAA,CCKH",file:"Alpha.vue",sourcesContent:["\r\n.c-alpha\r\n  position absolute\r\n  top 0px\r\n  right 0px\r\n  bottom 0px\r\n  left 0px\r\n  .checkboard-wrap\r\n    position absolute\r\n    top 0px\r\n    right 0px\r\n    bottom 0px\r\n    left 0px\r\n    overflow hidden\r\n  .gradient\r\n    position absolute\r\n    top 0px\r\n    right 0px\r\n    bottom 0px\r\n    left 0px\r\n  .container\r\n    position relative\r\n    z-index 2\r\n    height 100%\r\n    margin 0 3px\r\n  .pointer\r\n    z-index 2\r\n    position absolute\r\n  .picker\r\n    width 4px\r\n    border-radius 1px\r\n    height 8px\r\n    box-shadow 0 0 2px rgba(0, 0, 0, .6)\r\n    background #fff\r\n    margin-top 1px\r\n    transform translateX(-2px)\r\n",".c-alpha {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n.c-alpha .checkboard-wrap {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n  overflow: hidden;\n}\n.c-alpha .gradient {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n.c-alpha .container {\n  position: relative;\n  z-index: 2;\n  height: 100%;\n  margin: 0 3px;\n}\n.c-alpha .pointer {\n  z-index: 2;\n  position: absolute;\n}\n.c-alpha .picker {\n  width: 4px;\n  border-radius: 1px;\n  height: 8px;\n  box-shadow: 0 0 2px rgba(0,0,0,0.6);\n  background: #fff;\n  margin-top: 1px;\n  transform: translateX(-2px);\n}\n"],sourceRoot:"webpack://"}])},function(e,n,t){n=e.exports=t(1)(),n.push([e.id,".c-compact{padding-top:5px;padding-left:5px;width:240px;border-radius:2px;box-shadow:0 2px 10px rgba(0,0,0,.12),0 2px 5px rgba(0,0,0,.16)}.c-compact .colors{overflow:hidden;padding:0;margin:0}.c-compact .color-item{list-style:none;width:15px;height:15px;float:left;margin-right:5px;margin-bottom:5px;position:relative;cursor:pointer}.c-compact .color-item.white{box-shadow:inset 0 0 0 1px #ddd}.c-compact .color-item.white .dot{background:#000}.c-compact .dot{position:absolute;top:5px;right:5px;bottom:5px;left:5px;border-radius:50%;opacity:1;background:#fff}.c-compact .fields{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;padding-bottom:6px;padding-right:5px;position:relative}.c-compact .fields .pick-color{position:absolute;top:6px;left:5px;height:9px;width:9px}.c-compact .fields .col-hex{-webkit-box-flex:2;-webkit-flex:2;-ms-flex:2;flex:2}.c-compact .fields .col-hex .input{width:80%;padding-left:20%}.c-compact .fields .col-hex .label{display:none}.c-compact .fields .col-3{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1}.c-compact .fields .input{width:70%;padding-left:30%;background:none;font-size:12px;color:#333;height:16px}.c-compact .fields .label{position:absolute;top:3px;left:0;line-height:16px;text-transform:uppercase;font-size:12px;color:#999}","",{version:3,sources:["/./src/components/Compact.vue.style","/./src/components/Compact.vue"],names:[],mappings:"AACA,WACE,gBAAA,AACA,iBAAA,AACA,YAAA,AACA,kBAAA,AACA,+DAAA,CCAD,ADCC,mBACE,gBAAA,AACA,UAAA,AACA,QAAA,CCCH,ADAC,uBACE,gBAAA,AACA,WAAA,AACA,YAAA,AACA,WAAA,AACA,iBAAA,AACA,kBAAA,AACA,kBAAA,AACA,cAAA,CCEH,ADDG,6BACE,+BAAA,CCGL,ADFK,kCACE,eAAA,CCIP,ADHC,gBACE,kBAAA,AACA,QAAA,AACA,UAAA,AACA,WAAA,AACA,SAAA,AACA,kBAAA,AACA,UAAA,AACA,eAAA,CCKH,ADJC,mBACE,oBAAA,qBAAA,oBAAA,aAAA,AAEA,mBAAA,AACA,kBAAA,AACA,iBAAA,CCMH,ADLG,+BACE,kBAAA,AACA,QAAA,AACA,SAAA,AACA,WAAA,AACA,SAAA,CCOL,ADNG,4BACE,mBAAA,eAAA,WAAA,MAAA,CCQL,ADPK,mCACE,UAAA,AACA,gBAAA,CCSP,ADRK,mCACE,YAAA,CCUP,ADTG,0BACE,mBAAA,eAAA,WAAA,MAAA,CCWL,ADVG,0BACE,UAAA,AACA,iBAAA,AACA,gBAAA,AACA,eAAA,AACA,WAAA,AACA,WAAA,CCYL,ADXG,0BACE,kBAAA,AACA,QAAA,AACA,OAAA,AACA,iBAAA,AACA,yBAAA,AACA,eAAA,AACA,UAAA,CCaL",file:"Compact.vue",sourcesContent:["\r\n.c-compact\r\n  padding-top 5px\r\n  padding-left 5px\r\n  width 240px\r\n  border-radius 2px\r\n  box-shadow 0 2px 10px rgba(0,0,0,.12), 0 2px 5px rgba(0,0,0,.16)\r\n  .colors\r\n    overflow hidden\r\n    padding 0\r\n    margin 0\r\n  .color-item\r\n    list-style none\r\n    width 15px\r\n    height 15px\r\n    float left\r\n    margin-right 5px\r\n    margin-bottom 5px\r\n    position relative\r\n    cursor pointer\r\n    &.white\r\n      box-shadow inset 0 0 0 1px #ddd\r\n      .dot\r\n        background #000      \r\n  .dot\r\n    position absolute\r\n    top 5px\r\n    right 5px\r\n    bottom 5px\r\n    left 5px\r\n    border-radius 50%\r\n    opacity 1\r\n    background #fff\r\n  .fields\r\n    display flex\r\n    position relative\r\n    padding-bottom 6px\r\n    padding-right 5px\r\n    position relative\r\n    .pick-color\r\n      position absolute\r\n      top 6px\r\n      left 5px\r\n      height 9px\r\n      width 9px\r\n    .col-hex\r\n      flex 2\r\n      .input\r\n        width 80%\r\n        padding-left 20%  \r\n      .label\r\n        display none\r\n    .col-3\r\n      flex 1\r\n    .input\r\n      width 70%\r\n      padding-left 30%\r\n      background none\r\n      font-size 12px\r\n      color #333\r\n      height 16px\r\n    .label\r\n      position absolute\r\n      top 3px\r\n      left 0\r\n      line-height 16px\r\n      text-transform uppercase\r\n      font-size 12px\r\n      color #999\r\n",".c-compact {\n  padding-top: 5px;\n  padding-left: 5px;\n  width: 240px;\n  border-radius: 2px;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.16);\n}\n.c-compact .colors {\n  overflow: hidden;\n  padding: 0;\n  margin: 0;\n}\n.c-compact .color-item {\n  list-style: none;\n  width: 15px;\n  height: 15px;\n  float: left;\n  margin-right: 5px;\n  margin-bottom: 5px;\n  position: relative;\n  cursor: pointer;\n}\n.c-compact .color-item.white {\n  box-shadow: inset 0 0 0 1px #ddd;\n}\n.c-compact .color-item.white .dot {\n  background: #000;\n}\n.c-compact .dot {\n  position: absolute;\n  top: 5px;\n  right: 5px;\n  bottom: 5px;\n  left: 5px;\n  border-radius: 50%;\n  opacity: 1;\n  background: #fff;\n}\n.c-compact .fields {\n  display: flex;\n  position: relative;\n  padding-bottom: 6px;\n  padding-right: 5px;\n  position: relative;\n}\n.c-compact .fields .pick-color {\n  position: absolute;\n  top: 6px;\n  left: 5px;\n  height: 9px;\n  width: 9px;\n}\n.c-compact .fields .col-hex {\n  flex: 2;\n}\n.c-compact .fields .col-hex .input {\n  width: 80%;\n  padding-left: 20%;\n}\n.c-compact .fields .col-hex .label {\n  display: none;\n}\n.c-compact .fields .col-3 {\n  flex: 1;\n}\n.c-compact .fields .input {\n  width: 70%;\n  padding-left: 30%;\n  background: none;\n  font-size: 12px;\n  color: #333;\n  height: 16px;\n}\n.c-compact .fields .label {\n  position: absolute;\n  top: 3px;\n  left: 0;\n  line-height: 16px;\n  text-transform: uppercase;\n  font-size: 12px;\n  color: #999;\n}\n"],
-sourceRoot:"webpack://"}])},function(e,n,t){n=e.exports=t(1)(),n.push([e.id,".c-checkboard{position:absolute;top:0;right:0;bottom:0;left:0}","",{version:3,sources:["/./src/components/common/Checkboard.vue.style","/./src/components/common/Checkboard.vue"],names:[],mappings:"AACA,cACE,kBAAA,AACA,MAAA,AACA,QAAA,AACA,SAAA,AACA,MAAA,CCAD",file:"Checkboard.vue",sourcesContent:["\r\n.c-checkboard{\r\n  position absolute\r\n  top 0px\r\n  right 0px\r\n  bottom 0px\r\n  left 0px\r\n}\r\n",".c-checkboard {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n"],sourceRoot:"webpack://"}])},function(e,n,t){n=e.exports=t(1)(),n.push([e.id,".editable-input{position:relative}.editable-input .input{padding:0;border:0;outline:none}.editable-input .label{text-transform:capitalize}","",{version:3,sources:["/./src/components/common/EditableInput.vue.style","/./src/components/common/EditableInput.vue"],names:[],mappings:"AACA,gBACE,iBAAA,CCAD,ADCC,uBACE,UAAA,AACA,SAAA,AACA,YAAA,CCCH,ADAC,uBACE,yBAAA,CCEH",file:"EditableInput.vue",sourcesContent:["\r\n.editable-input\r\n  position relative\r\n  .input\r\n    padding 0\r\n    border 0\r\n    outline none\r\n  .label\r\n    text-transform capitalize\r\n",".editable-input {\n  position: relative;\n}\n.editable-input .input {\n  padding: 0;\n  border: 0;\n  outline: none;\n}\n.editable-input .label {\n  text-transform: capitalize;\n}\n"],sourceRoot:"webpack://"}])},function(e,n,t){n=e.exports=t(1)(),n.push([e.id,".c-chrome{background:#fff;border-radius:2px;box-shadow:0 0 2px rgba(0,0,0,.3),0 4px 8px rgba(0,0,0,.3);box-sizing:initial;width:225px;font-family:Menlo}.c-chrome .chrome-body{padding:16px 16px 12px}.c-chrome .saturation-wrap{width:100%;padding-bottom:55%;position:relative;border-radius:2px 2px 0 0;overflow:hidden}.c-chrome .saturation-wrap .circle{width:12px;height:12px}.c-chrome .controls{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.c-chrome .controls .c-alpha,.c-chrome .controls .c-hue{border-radius:2px}.c-chrome .controls .color-wrap{width:32px}.c-chrome .controls .active-color{margin-top:6px;width:16px;height:16px;border-radius:8px;position:relative;overflow:hidden}.c-chrome .controls .sliders{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1}.c-chrome .controls .sliders .picker{width:12px;height:12px;border-radius:6px;-webkit-transform:translate(-6px,-2px);transform:translate(-6px,-2px);background-color:#f8f8f8;box-shadow:0 1px 4px 0 rgba(0,0,0,.37)}.c-chrome .controls .hue-wrap{position:relative;height:10px;margin-bottom:8px}.c-chrome .controls .alpha-wrap{position:relative;height:10px}.c-chrome .fields-wrap{padding-top:16px}.c-chrome .fields,.c-chrome .fields-wrap{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.c-chrome .fields{margin-left:-6px;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1}.c-chrome .field{padding-left:6px;width:100%}.c-chrome .toggle-btn{width:32px;text-align:right;position:relative}.c-chrome .icon{margin-right:-4px;margin-top:12px;cursor:pointer;position:relative;z-index:2}.c-chrome .icon-highlight{position:absolute;width:24px;height:28px;background:#eee;border-radius:4px;top:10px;left:12px}.c-chrome .fields .input{font-size:11px;color:#333;width:100%;border-rradius:2px;border:none;box-shadow:inset 0 0 0 1px #dadada;height:21px;text-align:center}.c-chrome .fields .label{text-transform:uppercase;font-size:11px;line-height:11px;color:#969696;text-align:center;display:block;margin-top:12px}","",{version:3,sources:["/./src/components/Chrome.vue.style","/./src/components/Chrome.vue"],names:[],mappings:"AACA,UACE,gBAAA,AACA,kBAAA,AACA,2DAAA,AACA,mBAAA,AACA,YAAA,AACA,iBAAA,CCAD,ADCC,uBACE,sBAAA,CCCH,ADAC,2BACE,WAAA,AACA,mBAAA,AACA,kBAAA,AACA,0BAAA,AACA,eAAA,CCEH,ADDG,mCACE,WAAA,AACA,WAAA,CCGL,ADFC,oBACE,oBAAA,qBAAA,oBAAA,YAAA,CCIH,ADHG,wDAEE,iBAAA,CCKL,ADJG,gCACE,UAAA,CCML,ADLG,kCACE,eAAA,AACA,WAAA,AACA,YAAA,AACA,kBAAA,AACA,kBAAA,AACA,eAAA,CCOL,ADNG,6BACE,mBAAA,eAAA,WAAA,MAAA,CCQL,ADPK,qCACE,WAAA,AACA,YAAA,AACA,kBAAA,AACA,uCAAA,+BAAA,AACA,yBAAA,AACA,sCAAA,CCSP,ADRG,8BACE,kBAAA,AACA,YAAA,AACA,iBAAA,CCUL,ADTG,gCACE,kBAAA,AACA,WAAA,CCWL,ADVC,uBACE,gBAAA,CCaH,ADXC,yCADE,oBAAA,qBAAA,oBAAA,YAAA,CCiBH,ADhBC,kBAEE,iBAAA,AACA,mBAAA,eAAA,WAAA,MAAA,CCaH,ADZC,iBACE,iBAAA,AACA,UAAA,CCcH,ADbC,sBACE,WAAA,AACA,iBAAA,AACA,iBAAA,CCeH,ADdC,gBACE,kBAAA,AACA,gBAAA,AACA,eAAA,AACA,kBAAA,AACA,SAAA,CCgBH,ADfC,0BACE,kBAAA,AACA,WAAA,AACA,YAAA,AACA,gBAAA,AACA,kBAAA,AACA,SAAA,AACA,SAAA,CCiBH,ADdG,yBACE,eAAA,AACA,WAAA,AACA,WAAA,AACA,mBAAA,AACA,YAAA,AACA,mCAAA,AACA,YAAA,AACA,iBAAA,CCgBL,ADfG,yBACE,yBAAA,AACA,eAAA,AACA,iBAAA,AACA,cAAA,AACA,kBAAA,AACA,cAAA,AACA,eAAA,CCiBL",file:"Chrome.vue",sourcesContent:["\r\n.c-chrome\r\n  background #fff\r\n  border-radius 2px\r\n  box-shadow 0 0 2px rgba(0,0,0,.3), 0 4px 8px rgba(0,0,0,.3)\r\n  box-sizing initial\r\n  width 225px\r\n  font-family Menlo\r\n  .chrome-body\r\n    padding 16px 16px 12px\r\n  .saturation-wrap\r\n    width 100%\r\n    padding-bottom 55%\r\n    position relative\r\n    border-radius 2px 2px 0 0\r\n    overflow hidden\r\n    .circle\r\n      width 12px\r\n      height 12px\r\n  .controls\r\n    display flex\r\n    .c-hue\r\n    .c-alpha\r\n      border-radius 2px\r\n    .color-wrap\r\n      width 32px\r\n    .active-color\r\n      margin-top 6px\r\n      width 16px\r\n      height 16px\r\n      border-radius 8px\r\n      position relative\r\n      overflow hidden\r\n    .sliders\r\n      flex 1\r\n      .picker\r\n        width 12px\r\n        height 12px\r\n        border-radius 6px\r\n        transform translate(-6px, -2px)\r\n        background-color rgb(248, 248, 248)\r\n        box-shadow 0 1px 4px 0 rgba(0, 0, 0, 0.37)\r\n    .hue-wrap\r\n      position relative\r\n      height 10px\r\n      margin-bottom 8px\r\n    .alpha-wrap\r\n      position relative\r\n      height 10px\r\n  .fields-wrap\r\n    padding-top 16px\r\n    display flex\r\n  .fields\r\n    display flex\r\n    margin-left -6px\r\n    flex 1\r\n  .field\r\n    padding-left 6px\r\n    width 100%\r\n  .toggle-btn\r\n    width 32px\r\n    text-align right\r\n    position relative\r\n  .icon\r\n    margin-right -4px\r\n    margin-top 12px\r\n    cursor pointer\r\n    position relative\r\n    z-index 2\r\n  .icon-highlight\r\n    position absolute\r\n    width 24px\r\n    height 28px\r\n    background #eee\r\n    border-radius 4px\r\n    top 10px\r\n    left 12px\r\n  \r\n  .fields\r\n    .input\r\n      font-size 11px\r\n      color #333\r\n      width 100%\r\n      border-rradius 2px\r\n      border none\r\n      box-shadow inset 0 0 0 1px #dadada\r\n      height 21px\r\n      text-align center\r\n    .label\r\n      text-transform uppercase\r\n      font-size 11px\r\n      line-height 11px\r\n      color #969696\r\n      text-align center\r\n      display block\r\n      margin-top 12px\r\n\r\n",".c-chrome {\n  background: #fff;\n  border-radius: 2px;\n  box-shadow: 0 0 2px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.3);\n  box-sizing: initial;\n  width: 225px;\n  font-family: Menlo;\n}\n.c-chrome .chrome-body {\n  padding: 16px 16px 12px;\n}\n.c-chrome .saturation-wrap {\n  width: 100%;\n  padding-bottom: 55%;\n  position: relative;\n  border-radius: 2px 2px 0 0;\n  overflow: hidden;\n}\n.c-chrome .saturation-wrap .circle {\n  width: 12px;\n  height: 12px;\n}\n.c-chrome .controls {\n  display: flex;\n}\n.c-chrome .controls .c-hue,\n.c-chrome .controls .c-alpha {\n  border-radius: 2px;\n}\n.c-chrome .controls .color-wrap {\n  width: 32px;\n}\n.c-chrome .controls .active-color {\n  margin-top: 6px;\n  width: 16px;\n  height: 16px;\n  border-radius: 8px;\n  position: relative;\n  overflow: hidden;\n}\n.c-chrome .controls .sliders {\n  flex: 1;\n}\n.c-chrome .controls .sliders .picker {\n  width: 12px;\n  height: 12px;\n  border-radius: 6px;\n  transform: translate(-6px, -2px);\n  background-color: #f8f8f8;\n  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);\n}\n.c-chrome .controls .hue-wrap {\n  position: relative;\n  height: 10px;\n  margin-bottom: 8px;\n}\n.c-chrome .controls .alpha-wrap {\n  position: relative;\n  height: 10px;\n}\n.c-chrome .fields-wrap {\n  padding-top: 16px;\n  display: flex;\n}\n.c-chrome .fields {\n  display: flex;\n  margin-left: -6px;\n  flex: 1;\n}\n.c-chrome .field {\n  padding-left: 6px;\n  width: 100%;\n}\n.c-chrome .toggle-btn {\n  width: 32px;\n  text-align: right;\n  position: relative;\n}\n.c-chrome .icon {\n  margin-right: -4px;\n  margin-top: 12px;\n  cursor: pointer;\n  position: relative;\n  z-index: 2;\n}\n.c-chrome .icon-highlight {\n  position: absolute;\n  width: 24px;\n  height: 28px;\n  background: #eee;\n  border-radius: 4px;\n  top: 10px;\n  left: 12px;\n}\n.c-chrome .fields .input {\n  font-size: 11px;\n  color: #333;\n  width: 100%;\n  border-rradius: 2px;\n  border: none;\n  box-shadow: inset 0 0 0 1px #dadada;\n  height: 21px;\n  text-align: center;\n}\n.c-chrome .fields .label {\n  text-transform: uppercase;\n  font-size: 11px;\n  line-height: 11px;\n  color: #969696;\n  text-align: center;\n  display: block;\n  margin-top: 12px;\n}\n"],sourceRoot:"webpack://"}])},function(e,n,t){function r(e,n,t){var r=!0,A=!0;if("function"!=typeof e)throw new TypeError(a);return o(t)&&(r="leading"in t?!!t.leading:r,A="trailing"in t?!!t.trailing:A),i(e,n,{leading:r,maxWait:n,trailing:A})}function o(e){var n=typeof e;return!!e&&("object"==n||"function"==n)}var i=t(35),a="Expected a function";e.exports=r},function(e,n){function t(e,n,t){function r(n){var t=x,r=u;return x=u=void 0,y=n,b=e.apply(r,t)}function i(e){return y=e,C=setTimeout(l,n),B?r(e):b}function a(e){var t=e-k,r=e-y,o=n-t;return E?v(o,g-r):o}function p(e){var t=e-k,r=e-y;return!k||t>=n||0>t||E&&r>=g}function l(){var e=w();return p(e)?c(e):void(C=setTimeout(l,a(e)))}function c(e){return clearTimeout(C),C=void 0,D&&x?r(e):(x=u=void 0,b)}function d(){void 0!==C&&clearTimeout(C),k=y=0,x=u=C=void 0}function h(){return void 0===C?b:c(w())}function f(){var e=w(),t=p(e);if(x=arguments,u=this,k=e,t){if(void 0===C)return i(k);if(E)return clearTimeout(C),C=setTimeout(l,n),r(k)}return void 0===C&&(C=setTimeout(l,n)),b}var x,u,g,b,C,k=0,y=0,B=!1,E=!1,D=!0;if("function"!=typeof e)throw new TypeError(s);return n=A(n)||0,o(t)&&(B=!!t.leading,E="maxWait"in t,g=E?m(A(t.maxWait)||0,n):g,D="trailing"in t?!!t.trailing:D),f.cancel=d,f.flush=h,f}function r(e){var n=o(e)?C.call(e):"";return n==l||n==c}function o(e){var n=typeof e;return!!e&&("object"==n||"function"==n)}function i(e){return!!e&&"object"==typeof e}function a(e){return"symbol"==typeof e||i(e)&&C.call(e)==d}function A(e){if("number"==typeof e)return e;if(a(e))return p;if(o(e)){var n=r(e.valueOf)?e.valueOf():e;e=o(n)?n+"":n}if("string"!=typeof e)return 0===e?e:+e;e=e.replace(h,"");var t=x.test(e);return t||u.test(e)?g(e.slice(2),t?2:8):f.test(e)?p:+e}var s="Expected a function",p=NaN,l="[object Function]",c="[object GeneratorFunction]",d="[object Symbol]",h=/^\s+|\s+$/g,f=/^[-+]0x[0-9a-f]+$/i,x=/^0b[01]+$/i,u=/^0o[0-7]+$/i,g=parseInt,b=Object.prototype,C=b.toString,m=Math.max,v=Math.min,w=Date.now;e.exports=t},function(e,n,t){var r,o,i;!function(t,a){o=[],r=a,i="function"==typeof r?r.apply(n,o):r,!(void 0!==i&&(e.exports=i))}(this,function(){return{red:{50:"#ffebee",100:"#ffcdd2",200:"#ef9a9a",300:"#e57373",400:"#ef5350",500:"#f44336",600:"#e53935",700:"#d32f2f",800:"#c62828",900:"#b71c1c",a100:"#ff8a80",a200:"#ff5252",a400:"#ff1744",a700:"#d50000"},pink:{50:"#fce4ec",100:"#f8bbd0",200:"#f48fb1",300:"#f06292",400:"#ec407a",500:"#e91e63",600:"#d81b60",700:"#c2185b",800:"#ad1457",900:"#880e4f",a100:"#ff80ab",a200:"#ff4081",a400:"#f50057",a700:"#c51162"},purple:{50:"#f3e5f5",100:"#e1bee7",200:"#ce93d8",300:"#ba68c8",400:"#ab47bc",500:"#9c27b0",600:"#8e24aa",700:"#7b1fa2",800:"#6a1b9a",900:"#4a148c",a100:"#ea80fc",a200:"#e040fb",a400:"#d500f9",a700:"#aa00ff"},deepPurple:{50:"#ede7f6",100:"#d1c4e9",200:"#b39ddb",300:"#9575cd",400:"#7e57c2",500:"#673ab7",600:"#5e35b1",700:"#512da8",800:"#4527a0",900:"#311b92",a100:"#b388ff",a200:"#7c4dff",a400:"#651fff",a700:"#6200ea"},indigo:{50:"#e8eaf6",100:"#c5cae9",200:"#9fa8da",300:"#7986cb",400:"#5c6bc0",500:"#3f51b5",600:"#3949ab",700:"#303f9f",800:"#283593",900:"#1a237e",a100:"#8c9eff",a200:"#536dfe",a400:"#3d5afe",a700:"#304ffe"},blue:{50:"#e3f2fd",100:"#bbdefb",200:"#90caf9",300:"#64b5f6",400:"#42a5f5",500:"#2196f3",600:"#1e88e5",700:"#1976d2",800:"#1565c0",900:"#0d47a1",a100:"#82b1ff",a200:"#448aff",a400:"#2979ff",a700:"#2962ff"},lightBlue:{50:"#e1f5fe",100:"#b3e5fc",200:"#81d4fa",300:"#4fc3f7",400:"#29b6f6",500:"#03a9f4",600:"#039be5",700:"#0288d1",800:"#0277bd",900:"#01579b",a100:"#80d8ff",a200:"#40c4ff",a400:"#00b0ff",a700:"#0091ea"},cyan:{50:"#e0f7fa",100:"#b2ebf2",200:"#80deea",300:"#4dd0e1",400:"#26c6da",500:"#00bcd4",600:"#00acc1",700:"#0097a7",800:"#00838f",900:"#006064",a100:"#84ffff",a200:"#18ffff",a400:"#00e5ff",a700:"#00b8d4"},teal:{50:"#e0f2f1",100:"#b2dfdb",200:"#80cbc4",300:"#4db6ac",400:"#26a69a",500:"#009688",600:"#00897b",700:"#00796b",800:"#00695c",900:"#004d40",a100:"#a7ffeb",a200:"#64ffda",a400:"#1de9b6",a700:"#00bfa5"},green:{50:"#e8f5e9",100:"#c8e6c9",200:"#a5d6a7",300:"#81c784",400:"#66bb6a",500:"#4caf50",600:"#43a047",700:"#388e3c",800:"#2e7d32",900:"#1b5e20",a100:"#b9f6ca",a200:"#69f0ae",a400:"#00e676",a700:"#00c853"},lightGreen:{50:"#f1f8e9",100:"#dcedc8",200:"#c5e1a5",300:"#aed581",400:"#9ccc65",500:"#8bc34a",600:"#7cb342",700:"#689f38",800:"#558b2f",900:"#33691e",a100:"#ccff90",a200:"#b2ff59",a400:"#76ff03",a700:"#64dd17"},lime:{50:"#f9fbe7",100:"#f0f4c3",200:"#e6ee9c",300:"#dce775",400:"#d4e157",500:"#cddc39",600:"#c0ca33",700:"#afb42b",800:"#9e9d24",900:"#827717",a100:"#f4ff81",a200:"#eeff41",a400:"#c6ff00",a700:"#aeea00"},yellow:{50:"#fffde7",100:"#fff9c4",200:"#fff59d",300:"#fff176",400:"#ffee58",500:"#ffeb3b",600:"#fdd835",700:"#fbc02d",800:"#f9a825",900:"#f57f17",a100:"#ffff8d",a200:"#ffff00",a400:"#ffea00",a700:"#ffd600"},amber:{50:"#fff8e1",100:"#ffecb3",200:"#ffe082",300:"#ffd54f",400:"#ffca28",500:"#ffc107",600:"#ffb300",700:"#ffa000",800:"#ff8f00",900:"#ff6f00",a100:"#ffe57f",a200:"#ffd740",a400:"#ffc400",a700:"#ffab00"},orange:{50:"#fff3e0",100:"#ffe0b2",200:"#ffcc80",300:"#ffb74d",400:"#ffa726",500:"#ff9800",600:"#fb8c00",700:"#f57c00",800:"#ef6c00",900:"#e65100",a100:"#ffd180",a200:"#ffab40",a400:"#ff9100",a700:"#ff6d00"},deepOrange:{50:"#fbe9e7",100:"#ffccbc",200:"#ffab91",300:"#ff8a65",400:"#ff7043",500:"#ff5722",600:"#f4511e",700:"#e64a19",800:"#d84315",900:"#bf360c",a100:"#ff9e80",a200:"#ff6e40",a400:"#ff3d00",a700:"#dd2c00"},brown:{50:"#efebe9",100:"#d7ccc8",200:"#bcaaa4",300:"#a1887f",400:"#8d6e63",500:"#795548",600:"#6d4c41",700:"#5d4037",800:"#4e342e",900:"#3e2723"},grey:{50:"#fafafa",100:"#f5f5f5",200:"#eeeeee",300:"#e0e0e0",400:"#bdbdbd",500:"#9e9e9e",600:"#757575",700:"#616161",800:"#424242",900:"#212121"},blueGrey:{50:"#eceff1",100:"#cfd8dc",200:"#b0bec5",300:"#90a4ae",400:"#78909c",500:"#607d8b",600:"#546e7a",700:"#455a64",800:"#37474f",900:"#263238"},white:"#ffffff",black:"#000000"}})},function(e,n,t){var r=t(21);"string"==typeof r&&(r=[[e.id,r,""]]);t(2)(r,{});r.locals&&(e.exports=r.locals)},function(e,n,t){var r=t(22);"string"==typeof r&&(r=[[e.id,r,""]]);t(2)(r,{});r.locals&&(e.exports=r.locals)},function(e,n,t){var r=t(23);"string"==typeof r&&(r=[[e.id,r,""]]);t(2)(r,{});r.locals&&(e.exports=r.locals)},function(e,n,t){var r=t(24);"string"==typeof r&&(r=[[e.id,r,""]]);t(2)(r,{});r.locals&&(e.exports=r.locals)},function(e,n,t){var r=t(25);"string"==typeof r&&(r=[[e.id,r,""]]);t(2)(r,{});r.locals&&(e.exports=r.locals)},function(e,n,t){var r=t(26);"string"==typeof r&&(r=[[e.id,r,""]]);t(2)(r,{});r.locals&&(e.exports=r.locals)},function(e,n,t){var r=t(27);"string"==typeof r&&(r=[[e.id,r,""]]);t(2)(r,{});r.locals&&(e.exports=r.locals)},function(e,n,t){var r=t(28);"string"==typeof r&&(r=[[e.id,r,""]]);t(2)(r,{});r.locals&&(e.exports=r.locals)},function(e,n,t){var r=t(29);"string"==typeof r&&(r=[[e.id,r,""]]);t(2)(r,{});r.locals&&(e.exports=r.locals)},function(e,n,t){var r=t(30);"string"==typeof r&&(r=[[e.id,r,""]]);t(2)(r,{});r.locals&&(e.exports=r.locals)},function(e,n,t){var r=t(31);"string"==typeof r&&(r=[[e.id,r,""]]);t(2)(r,{});r.locals&&(e.exports=r.locals)},function(e,n,t){var r=t(32);"string"==typeof r&&(r=[[e.id,r,""]]);t(2)(r,{});r.locals&&(e.exports=r.locals)},function(e,n,t){var r=t(33);"string"==typeof r&&(r=[[e.id,r,""]]);t(2)(r,{});r.locals&&(e.exports=r.locals)},function(e,n,t){var r;!function(){function o(e,n){if(e=e?e:"",n=n||{},e instanceof o)return e;if(!(this instanceof o))return new o(e,n);var t=i(e);this._originalInput=e,this._r=t.r,this._g=t.g,this._b=t.b,this._a=t.a,this._roundA=q(100*this._a)/100,this._format=n.format||t.format,this._gradientType=n.gradientType,this._r<1&&(this._r=q(this._r)),this._g<1&&(this._g=q(this._g)),this._b<1&&(this._b=q(this._b)),this._ok=t.ok,this._tc_id=P++}function i(e){var n={r:0,g:0,b:0},t=1,r=!1,o=!1;return"string"==typeof e&&(e=R(e)),"object"==typeof e&&(e.hasOwnProperty("r")&&e.hasOwnProperty("g")&&e.hasOwnProperty("b")?(n=a(e.r,e.g,e.b),r=!0,o="%"===String(e.r).substr(-1)?"prgb":"rgb"):e.hasOwnProperty("h")&&e.hasOwnProperty("s")&&e.hasOwnProperty("v")?(e.s=S(e.s),e.v=S(e.v),n=l(e.h,e.s,e.v),r=!0,o="hsv"):e.hasOwnProperty("h")&&e.hasOwnProperty("s")&&e.hasOwnProperty("l")&&(e.s=S(e.s),e.l=S(e.l),n=s(e.h,e.s,e.l),r=!0,o="hsl"),e.hasOwnProperty("a")&&(t=e.a)),t=D(t),{ok:r,format:e.format||o,r:I(255,T(n.r,0)),g:I(255,T(n.g,0)),b:I(255,T(n.b,0)),a:t}}function a(e,n,t){return{r:255*_(e,255),g:255*_(n,255),b:255*_(t,255)}}function A(e,n,t){e=_(e,255),n=_(n,255),t=_(t,255);var r,o,i=T(e,n,t),a=I(e,n,t),A=(i+a)/2;if(i==a)r=o=0;else{var s=i-a;switch(o=A>.5?s/(2-i-a):s/(i+a),i){case e:r=(n-t)/s+(t>n?6:0);break;case n:r=(t-e)/s+2;break;case t:r=(e-n)/s+4}r/=6}return{h:r,s:o,l:A}}function s(e,n,t){function r(e,n,t){return 0>t&&(t+=1),t>1&&(t-=1),1/6>t?e+6*(n-e)*t:.5>t?n:2/3>t?e+(n-e)*(2/3-t)*6:e}var o,i,a;if(e=_(e,360),n=_(n,100),t=_(t,100),0===n)o=i=a=t;else{var A=.5>t?t*(1+n):t+n-t*n,s=2*t-A;o=r(s,A,e+1/3),i=r(s,A,e),a=r(s,A,e-1/3)}return{r:255*o,g:255*i,b:255*a}}function p(e,n,t){e=_(e,255),n=_(n,255),t=_(t,255);var r,o,i=T(e,n,t),a=I(e,n,t),A=i,s=i-a;if(o=0===i?0:s/i,i==a)r=0;else{switch(i){case e:r=(n-t)/s+(t>n?6:0);break;case n:r=(t-e)/s+2;break;case t:r=(e-n)/s+4}r/=6}return{h:r,s:o,v:A}}function l(e,n,t){e=6*_(e,360),n=_(n,100),t=_(t,100);var r=j.floor(e),o=e-r,i=t*(1-n),a=t*(1-o*n),A=t*(1-(1-o)*n),s=r%6,p=[t,a,i,i,A,t][s],l=[A,t,t,a,i,i][s],c=[i,i,A,t,t,a][s];return{r:255*p,g:255*l,b:255*c}}function c(e,n,t,r){var o=[z(q(e).toString(16)),z(q(n).toString(16)),z(q(t).toString(16))];return r&&o[0].charAt(0)==o[0].charAt(1)&&o[1].charAt(0)==o[1].charAt(1)&&o[2].charAt(0)==o[2].charAt(1)?o[0].charAt(0)+o[1].charAt(0)+o[2].charAt(0):o.join("")}function d(e,n,t,r){var o=[z(O(r)),z(q(e).toString(16)),z(q(n).toString(16)),z(q(t).toString(16))];return o.join("")}function h(e,n){n=0===n?0:n||10;var t=o(e).toHsl();return t.s-=n/100,t.s=M(t.s),o(t)}function f(e,n){n=0===n?0:n||10;var t=o(e).toHsl();return t.s+=n/100,t.s=M(t.s),o(t)}function x(e){return o(e).desaturate(100)}function u(e,n){n=0===n?0:n||10;var t=o(e).toHsl();return t.l+=n/100,t.l=M(t.l),o(t)}function g(e,n){n=0===n?0:n||10;var t=o(e).toRgb();return t.r=T(0,I(255,t.r-q(255*-(n/100)))),t.g=T(0,I(255,t.g-q(255*-(n/100)))),t.b=T(0,I(255,t.b-q(255*-(n/100)))),o(t)}function b(e,n){n=0===n?0:n||10;var t=o(e).toHsl();return t.l-=n/100,t.l=M(t.l),o(t)}function C(e,n){var t=o(e).toHsl(),r=(q(t.h)+n)%360;return t.h=0>r?360+r:r,o(t)}function m(e){var n=o(e).toHsl();return n.h=(n.h+180)%360,o(n)}function v(e){var n=o(e).toHsl(),t=n.h;return[o(e),o({h:(t+120)%360,s:n.s,l:n.l}),o({h:(t+240)%360,s:n.s,l:n.l})]}function w(e){var n=o(e).toHsl(),t=n.h;return[o(e),o({h:(t+90)%360,s:n.s,l:n.l}),o({h:(t+180)%360,s:n.s,l:n.l}),o({h:(t+270)%360,s:n.s,l:n.l})]}function k(e){var n=o(e).toHsl(),t=n.h;return[o(e),o({h:(t+72)%360,s:n.s,l:n.l}),o({h:(t+216)%360,s:n.s,l:n.l})]}function y(e,n,t){n=n||6,t=t||30;var r=o(e).toHsl(),i=360/t,a=[o(e)];for(r.h=(r.h-(i*n>>1)+720)%360;--n;)r.h=(r.h+i)%360,a.push(o(r));return a}function B(e,n){n=n||6;for(var t=o(e).toHsv(),r=t.h,i=t.s,a=t.v,A=[],s=1/n;n--;)A.push(o({h:r,s:i,v:a})),a=(a+s)%1;return A}function E(e){var n={};for(var t in e)e.hasOwnProperty(t)&&(n[e[t]]=t);return n}function D(e){return e=parseFloat(e),(isNaN(e)||0>e||e>1)&&(e=1),e}function _(e,n){L(e)&&(e="100%");var t=F(e);return e=I(n,T(0,parseFloat(e))),t&&(e=parseInt(e*n,10)/100),j.abs(e-n)<1e-6?1:e%n/parseFloat(n)}function M(e){return I(1,T(0,e))}function H(e){return parseInt(e,16)}function L(e){return"string"==typeof e&&-1!=e.indexOf(".")&&1===parseFloat(e)}function F(e){return"string"==typeof e&&-1!=e.indexOf("%")}function z(e){return 1==e.length?"0"+e:""+e}function S(e){return 1>=e&&(e=100*e+"%"),e}function O(e){return Math.round(255*parseFloat(e)).toString(16)}function W(e){return H(e)/255}function R(e){e=e.replace(Y,"").replace(U,"").toLowerCase();var n=!1;if(K[e])e=K[e],n=!0;else if("transparent"==e)return{r:0,g:0,b:0,a:0,format:"name"};var t;return(t=Q.rgb.exec(e))?{r:t[1],g:t[2],b:t[3]}:(t=Q.rgba.exec(e))?{r:t[1],g:t[2],b:t[3],a:t[4]}:(t=Q.hsl.exec(e))?{h:t[1],s:t[2],l:t[3]}:(t=Q.hsla.exec(e))?{h:t[1],s:t[2],l:t[3],a:t[4]}:(t=Q.hsv.exec(e))?{h:t[1],s:t[2],v:t[3]}:(t=Q.hsva.exec(e))?{h:t[1],s:t[2],v:t[3],a:t[4]}:(t=Q.hex8.exec(e))?{a:W(t[1]),r:H(t[2]),g:H(t[3]),b:H(t[4]),format:n?"name":"hex8"}:(t=Q.hex6.exec(e))?{r:H(t[1]),g:H(t[2]),b:H(t[3]),format:n?"name":"hex"}:(t=Q.hex3.exec(e))?{r:H(t[1]+""+t[1]),g:H(t[2]+""+t[2]),b:H(t[3]+""+t[3]),format:n?"name":"hex"}:!1}function G(e){var n,t;return e=e||{level:"AA",size:"small"},n=(e.level||"AA").toUpperCase(),t=(e.size||"small").toLowerCase(),"AA"!==n&&"AAA"!==n&&(n="AA"),"small"!==t&&"large"!==t&&(t="small"),{level:n,size:t}}var Y=/^\s+/,U=/\s+$/,P=0,j=Math,q=j.round,I=j.min,T=j.max,N=j.random;o.prototype={isDark:function(){return this.getBrightness()<128},isLight:function(){return!this.isDark()},isValid:function(){return this._ok},getOriginalInput:function(){return this._originalInput},getFormat:function(){return this._format},getAlpha:function(){return this._a},getBrightness:function(){var e=this.toRgb();return(299*e.r+587*e.g+114*e.b)/1e3},getLuminance:function(){var e,n,t,r,o,i,a=this.toRgb();return e=a.r/255,n=a.g/255,t=a.b/255,r=.03928>=e?e/12.92:Math.pow((e+.055)/1.055,2.4),o=.03928>=n?n/12.92:Math.pow((n+.055)/1.055,2.4),i=.03928>=t?t/12.92:Math.pow((t+.055)/1.055,2.4),.2126*r+.7152*o+.0722*i},setAlpha:function(e){return this._a=D(e),this._roundA=q(100*this._a)/100,this},toHsv:function(){var e=p(this._r,this._g,this._b);return{h:360*e.h,s:e.s,v:e.v,a:this._a}},toHsvString:function(){var e=p(this._r,this._g,this._b),n=q(360*e.h),t=q(100*e.s),r=q(100*e.v);return 1==this._a?"hsv("+n+", "+t+"%, "+r+"%)":"hsva("+n+", "+t+"%, "+r+"%, "+this._roundA+")"},toHsl:function(){var e=A(this._r,this._g,this._b);return{h:360*e.h,s:e.s,l:e.l,a:this._a}},toHslString:function(){var e=A(this._r,this._g,this._b),n=q(360*e.h),t=q(100*e.s),r=q(100*e.l);return 1==this._a?"hsl("+n+", "+t+"%, "+r+"%)":"hsla("+n+", "+t+"%, "+r+"%, "+this._roundA+")"},toHex:function(e){return c(this._r,this._g,this._b,e)},toHexString:function(e){return"#"+this.toHex(e)},toHex8:function(){return d(this._r,this._g,this._b,this._a)},toHex8String:function(){return"#"+this.toHex8()},toRgb:function(){return{r:q(this._r),g:q(this._g),b:q(this._b),a:this._a}},toRgbString:function(){return 1==this._a?"rgb("+q(this._r)+", "+q(this._g)+", "+q(this._b)+")":"rgba("+q(this._r)+", "+q(this._g)+", "+q(this._b)+", "+this._roundA+")"},toPercentageRgb:function(){return{r:q(100*_(this._r,255))+"%",g:q(100*_(this._g,255))+"%",b:q(100*_(this._b,255))+"%",a:this._a}},toPercentageRgbString:function(){return 1==this._a?"rgb("+q(100*_(this._r,255))+"%, "+q(100*_(this._g,255))+"%, "+q(100*_(this._b,255))+"%)":"rgba("+q(100*_(this._r,255))+"%, "+q(100*_(this._g,255))+"%, "+q(100*_(this._b,255))+"%, "+this._roundA+")"},toName:function(){return 0===this._a?"transparent":this._a<1?!1:X[c(this._r,this._g,this._b,!0)]||!1},toFilter:function(e){var n="#"+d(this._r,this._g,this._b,this._a),t=n,r=this._gradientType?"GradientType = 1, ":"";if(e){var i=o(e);t=i.toHex8String()}return"progid:DXImageTransform.Microsoft.gradient("+r+"startColorstr="+n+",endColorstr="+t+")"},toString:function(e){var n=!!e;e=e||this._format;var t=!1,r=this._a<1&&this._a>=0,o=!n&&r&&("hex"===e||"hex6"===e||"hex3"===e||"name"===e);return o?"name"===e&&0===this._a?this.toName():this.toRgbString():("rgb"===e&&(t=this.toRgbString()),"prgb"===e&&(t=this.toPercentageRgbString()),"hex"!==e&&"hex6"!==e||(t=this.toHexString()),"hex3"===e&&(t=this.toHexString(!0)),"hex8"===e&&(t=this.toHex8String()),"name"===e&&(t=this.toName()),"hsl"===e&&(t=this.toHslString()),"hsv"===e&&(t=this.toHsvString()),t||this.toHexString())},clone:function(){return o(this.toString())},_applyModification:function(e,n){var t=e.apply(null,[this].concat([].slice.call(n)));return this._r=t._r,this._g=t._g,this._b=t._b,this.setAlpha(t._a),this},lighten:function(){return this._applyModification(u,arguments)},brighten:function(){return this._applyModification(g,arguments)},darken:function(){return this._applyModification(b,arguments)},desaturate:function(){return this._applyModification(h,arguments)},saturate:function(){return this._applyModification(f,arguments)},greyscale:function(){return this._applyModification(x,arguments)},spin:function(){return this._applyModification(C,arguments)},_applyCombination:function(e,n){return e.apply(null,[this].concat([].slice.call(n)))},analogous:function(){return this._applyCombination(y,arguments)},complement:function(){return this._applyCombination(m,arguments)},monochromatic:function(){return this._applyCombination(B,arguments)},splitcomplement:function(){return this._applyCombination(k,arguments)},triad:function(){return this._applyCombination(v,arguments)},tetrad:function(){return this._applyCombination(w,arguments)}},o.fromRatio=function(e,n){if("object"==typeof e){var t={};for(var r in e)e.hasOwnProperty(r)&&("a"===r?t[r]=e[r]:t[r]=S(e[r]));e=t}return o(e,n)},o.equals=function(e,n){return e&&n?o(e).toRgbString()==o(n).toRgbString():!1},o.random=function(){return o.fromRatio({r:N(),g:N(),b:N()})},o.mix=function(e,n,t){t=0===t?0:t||50;var r,i=o(e).toRgb(),a=o(n).toRgb(),A=t/100,s=2*A-1,p=a.a-i.a;r=s*p==-1?s:(s+p)/(1+s*p),r=(r+1)/2;var l=1-r,c={r:a.r*r+i.r*l,g:a.g*r+i.g*l,b:a.b*r+i.b*l,a:a.a*A+i.a*(1-A)};return o(c)},o.readability=function(e,n){var t=o(e),r=o(n);return(Math.max(t.getLuminance(),r.getLuminance())+.05)/(Math.min(t.getLuminance(),r.getLuminance())+.05)},o.isReadable=function(e,n,t){var r,i,a=o.readability(e,n);switch(i=!1,r=G(t),r.level+r.size){case"AAsmall":case"AAAlarge":i=a>=4.5;break;case"AAlarge":i=a>=3;break;case"AAAsmall":i=a>=7}return i},o.mostReadable=function(e,n,t){var r,i,a,A,s=null,p=0;t=t||{},i=t.includeFallbackColors,a=t.level,A=t.size;for(var l=0;l<n.length;l++)r=o.readability(e,n[l]),r>p&&(p=r,s=o(n[l]));return o.isReadable(e,s,{level:a,size:A})||!i?s:(t.includeFallbackColors=!1,o.mostReadable(e,["#fff","#000"],t))};var K=o.names={aliceblue:"f0f8ff",antiquewhite:"faebd7",aqua:"0ff",aquamarine:"7fffd4",azure:"f0ffff",beige:"f5f5dc",bisque:"ffe4c4",black:"000",blanchedalmond:"ffebcd",blue:"00f",blueviolet:"8a2be2",brown:"a52a2a",burlywood:"deb887",burntsienna:"ea7e5d",cadetblue:"5f9ea0",chartreuse:"7fff00",chocolate:"d2691e",coral:"ff7f50",cornflowerblue:"6495ed",cornsilk:"fff8dc",crimson:"dc143c",cyan:"0ff",darkblue:"00008b",darkcyan:"008b8b",darkgoldenrod:"b8860b",darkgray:"a9a9a9",darkgreen:"006400",darkgrey:"a9a9a9",darkkhaki:"bdb76b",darkmagenta:"8b008b",darkolivegreen:"556b2f",darkorange:"ff8c00",darkorchid:"9932cc",darkred:"8b0000",darksalmon:"e9967a",darkseagreen:"8fbc8f",darkslateblue:"483d8b",darkslategray:"2f4f4f",darkslategrey:"2f4f4f",darkturquoise:"00ced1",darkviolet:"9400d3",deeppink:"ff1493",deepskyblue:"00bfff",dimgray:"696969",dimgrey:"696969",dodgerblue:"1e90ff",firebrick:"b22222",floralwhite:"fffaf0",forestgreen:"228b22",fuchsia:"f0f",gainsboro:"dcdcdc",ghostwhite:"f8f8ff",gold:"ffd700",goldenrod:"daa520",gray:"808080",green:"008000",greenyellow:"adff2f",grey:"808080",honeydew:"f0fff0",hotpink:"ff69b4",indianred:"cd5c5c",indigo:"4b0082",ivory:"fffff0",khaki:"f0e68c",lavender:"e6e6fa",lavenderblush:"fff0f5",lawngreen:"7cfc00",lemonchiffon:"fffacd",lightblue:"add8e6",lightcoral:"f08080",lightcyan:"e0ffff",lightgoldenrodyellow:"fafad2",lightgray:"d3d3d3",lightgreen:"90ee90",lightgrey:"d3d3d3",lightpink:"ffb6c1",lightsalmon:"ffa07a",lightseagreen:"20b2aa",lightskyblue:"87cefa",lightslategray:"789",lightslategrey:"789",lightsteelblue:"b0c4de",lightyellow:"ffffe0",lime:"0f0",limegreen:"32cd32",linen:"faf0e6",magenta:"f0f",maroon:"800000",mediumaquamarine:"66cdaa",mediumblue:"0000cd",mediumorchid:"ba55d3",mediumpurple:"9370db",mediumseagreen:"3cb371",mediumslateblue:"7b68ee",mediumspringgreen:"00fa9a",mediumturquoise:"48d1cc",mediumvioletred:"c71585",midnightblue:"191970",mintcream:"f5fffa",mistyrose:"ffe4e1",moccasin:"ffe4b5",navajowhite:"ffdead",navy:"000080",oldlace:"fdf5e6",olive:"808000",olivedrab:"6b8e23",orange:"ffa500",orangered:"ff4500",orchid:"da70d6",palegoldenrod:"eee8aa",palegreen:"98fb98",paleturquoise:"afeeee",palevioletred:"db7093",papayawhip:"ffefd5",peachpuff:"ffdab9",peru:"cd853f",pink:"ffc0cb",plum:"dda0dd",powderblue:"b0e0e6",purple:"800080",rebeccapurple:"663399",red:"f00",rosybrown:"bc8f8f",royalblue:"4169e1",saddlebrown:"8b4513",salmon:"fa8072",sandybrown:"f4a460",seagreen:"2e8b57",seashell:"fff5ee",sienna:"a0522d",silver:"c0c0c0",skyblue:"87ceeb",slateblue:"6a5acd",slategray:"708090",slategrey:"708090",snow:"fffafa",springgreen:"00ff7f",steelblue:"4682b4",tan:"d2b48c",teal:"008080",thistle:"d8bfd8",tomato:"ff6347",turquoise:"40e0d0",violet:"ee82ee",wheat:"f5deb3",white:"fff",whitesmoke:"f5f5f5",yellow:"ff0",yellowgreen:"9acd32"},X=o.hexNames=E(K),Q=function(){var e="[-\\+]?\\d+%?",n="[-\\+]?\\d*\\.\\d+%?",t="(?:"+n+")|(?:"+e+")",r="[\\s|\\(]+("+t+")[,|\\s]+("+t+")[,|\\s]+("+t+")\\s*\\)?",o="[\\s|\\(]+("+t+")[,|\\s]+("+t+")[,|\\s]+("+t+")[,|\\s]+("+t+")\\s*\\)?";return{rgb:new RegExp("rgb"+r),rgba:new RegExp("rgba"+o),hsl:new RegExp("hsl"+r),hsla:new RegExp("hsla"+o),hsv:new RegExp("hsv"+r),hsva:new RegExp("hsva"+o),hex3:/^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,hex6:/^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/,hex8:/^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/}}();"undefined"!=typeof e&&e.exports?e.exports=o:(r=function(){return o}.call(n,t,n,e),!(void 0!==r&&(e.exports=r)))}()},function(e,n){e.exports='<div class=c-chrome> <div class=saturation-wrap> <saturation :colors.sync=colors :on-change=childChange></saturation> </div> <div class=chrome-body> <div class=controls> <div class=color-wrap> <div class=active-color :style="{background: activeColor}"></div> </div> <div class=sliders> <div class=hue-wrap> <hue :colors.sync=colors :on-change=childChange></hue> </div> <div class=alpha-wrap> <alpha :colors.sync=colors :on-change=childChange></alpha> </div> </div> </div> <div class=fields-wrap> <div class=fields v-show="fieldsIndex === 0"> <div class=field> <ed-in label=hex :val.sync=colors.hex :on-change=inputChange></ed-in> </div> </div> <div class=fields v-show="fieldsIndex === 1"> <div class=field> <ed-in label=r :val.sync=colors.rgba.r :on-change=inputChange></ed-in> </div> <div class=field> <ed-in label=g :val.sync=colors.rgba.g :on-change=inputChange></ed-in> </div> <div class=field> <ed-in label=b :val.sync=colors.rgba.b :on-change=inputChange></ed-in> </div> <div class=field> <ed-in label=a :val.sync=colors.a :arrow-offset=0.01 :max=1 :on-change=inputChange></ed-in> </div> </div> <div class=fields v-show="fieldsIndex === 2"> <div class=field> <ed-in label=h :val.sync=colors.hsl.h :on-change=inputChange></ed-in> </div> <div class=field> <ed-in label=s :val.sync=colors.hsl.s :on-change=inputChange></ed-in> </div> <div class=field> <ed-in label=l :val.sync=colors.hsl.l :on-change=inputChange></ed-in> </div> <div class=field> <ed-in label=a :val.sync=colors.a :arrow-offset=0.01 :max=1 :on-change=inputChange></ed-in> </div> </div> <div class=toggle-btn> <div class=icon @click=toggleViews> <svg style="width:24px; height:24px" viewBox="0 0 24 24" @mouseover=showHighlight @mouseenter=showHighlight @mouseout=hideHighlight> <path fill=#333 d=M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z /> </svg> </div> <div class=icon-highlight v-show=highlight></div> </div> </div> </div> </div>';
-},function(e,n){e.exports='<div class=c-sketch> <div class=saturation-wrap> <saturation :colors.sync=colors :on-change=childChange></saturation> </div> <div class=controls> <div class=sliders> <div class=hue-wrap> <hue :colors.sync=colors :on-change=childChange></hue> </div> <div class=alpha-wrap> <alpha :colors.sync=colors :on-change=childChange></alpha> </div> </div> <div class=color-wrap> <div class=active-color :style="{background: activeColor}"></div> </div> </div> <div class=field> <div class=double> <ed-in label=hex :val.sync=colors.hex :on-change=inputChange></ed-in> </div> <div class=single> <ed-in label=r :val.sync=colors.rgba.r :on-change=inputChange></ed-in> </div> <div class=single> <ed-in label=g :val.sync=colors.rgba.g :on-change=inputChange></ed-in> </div> <div class=single> <ed-in label=b :val.sync=colors.rgba.b :on-change=inputChange></ed-in> </div> <div class=single> <ed-in label=a :val.sync=colors.a :arrow-offset=0.01 :max=1 :on-change=inputChange></ed-in> </div> </div> <div class=field> <div class=double> <ed-in label=name :val.sync=colors.name :on-change=inputChange></ed-in> </div> <div class=single> <ed-in label=C :val.sync=colors.cmyk.c :on-change=inputChange></ed-in> </div> <div class=single> <ed-in label=M :val.sync=colors.cmyk.m :on-change=inputChange></ed-in> </div> <div class=single> <ed-in label=Y :val.sync=colors.cmyk.y :on-change=inputChange></ed-in> </div> <div class=single> <ed-in label=K :val.sync=colors.cmyk.k :on-change=inputChange></ed-in> </div> </div> <div class=field> <div class=double> <ed-in label="Spot Color Name" :val.sync=colors.spotColorName :on-change=inputChange></ed-in> </div> <div class=single> <input type=checkbox name=is_spot_color v-model=colors.isSpotColor> </div> </div> <div class=field> <button type=button name=delete_color class=danger>Delete</button> </div> </div>'},function(e,n){e.exports='<div class=c-compact> <ul class=colors> <li class=color-item v-for="c in defaultColors" @click=handlerClick(c) :class="{white: c === \'#FFFFFF\' }" :style="{background: c}"> <div class=dot v-show="c === pick"></div> </li> </ul> <div class=fields> <div class=pick-color :style="{background: pick}"></div> <div class=col-hex> <ed-in label=hex :val.sync=colors.hex :style="{ borderColor: colors.hex }" :on-change=onChange></ed-in> </div> <div class=col-3> <ed-in label=r :val.sync=colors.rgba.r :on-change=onChange></ed-in> </div> <div class=col-3> <ed-in label=g :val.sync=colors.rgba.g :on-change=onChange></ed-in> </div> <div class=col-3> <ed-in label=b :val.sync=colors.rgba.b :on-change=onChange></ed-in> </div> </div> </div>'},function(e,n){e.exports='<div class=c-material> <ed-in class=hex label=hex :val.sync=colors.hex :style="{ borderColor: colors.hex }" :on-change=onChange></ed-in> <div class="split flexbox-fix"> <div class=third> <ed-in label=r :val.sync=colors.rgba.r :on-change=onChange></ed-in> </div> <div class=third> <ed-in label=g :val.sync=colors.rgba.g :on-change=onChange></ed-in> </div> <div class=third> <ed-in label=b :val.sync=colors.rgba.b :on-change=onChange></ed-in> </div> </div> </div>'},function(e,n){e.exports='<div class=c-photoshop> <div class=head>{{head}}</div> <div class=body> <div class=saturation-wrap> <saturation :colors.sync=colors :on-change=childChange></saturation> </div> <div class=hue-wrap> <hue :colors.sync=colors :on-change=childChange direction=vertical> <div class=hue-pointer> <i class=left></i><i class=right></i> </div> </hue> </div> <div class=controls> <div class=previews> <div class=label>new</div> <div class=swatches> <div class=pr-color :style="{background: colors.hex}"></div> <div class=pr-color :style="{background: currentColor}"></div> </div> <div class=label>current</div> </div> <div class=actions> <div class=ac-btn @click=handleAccept>OK</div> <div class=ac-btn @click=handleCancel>Cancel</div> <div class=fields> <ed-in label=h :val.sync=colors.hsl.h :on-change=inputChange></ed-in> <ed-in label=s :val.sync=colors.hsl.s :on-change=inputChange></ed-in> <ed-in label=v :val.sync=colors.hsl.l :on-change=inputChange></ed-in> <div class=divider></div> <ed-in label=r :val.sync=colors.rgba.r :on-change=inputChange></ed-in> <ed-in label=g :val.sync=colors.rgba.g :on-change=inputChange></ed-in> <ed-in label=b :val.sync=colors.rgba.b :on-change=inputChange></ed-in> <div class=divider></div> <ed-in label=# class=hex :val.sync=colors.hex :on-change=inputChange></ed-in> </div> </div> </div> </div> </div>'},function(e,n){e.exports='<div class=c-sketch> <div class=saturation-wrap> <saturation :colors.sync=colors :on-change=childChange></saturation> </div> <div class=controls> <div class=sliders> <div class=hue-wrap> <hue :colors.sync=colors :on-change=childChange></hue> </div> <div class=alpha-wrap> <alpha :colors.sync=colors :on-change=childChange></alpha> </div> </div> <div class=color-wrap> <div class=active-color :style="{background: activeColor}"></div> </div> </div> <div class=field> <div class=double> <ed-in label=hex :val.sync=colors.hex :on-change=inputChange></ed-in> </div> <div class=single> <ed-in label=r :val.sync=colors.rgba.r :on-change=inputChange></ed-in> </div> <div class=single> <ed-in label=g :val.sync=colors.rgba.g :on-change=inputChange></ed-in> </div> <div class=single> <ed-in label=b :val.sync=colors.rgba.b :on-change=inputChange></ed-in> </div> <div class=single> <ed-in label=a :val.sync=colors.a :arrow-offset=0.01 :max=1 :on-change=inputChange></ed-in> </div> </div> <div class=presets> <div class=presets-color v-for="c in presetColors" :style="{background: c}" @click=handlePreset(c)> </div> </div> </div>'},function(e,n){e.exports='<div class=c-slider> <div class=hue-warp> <hue :colors.sync=colors :on-change=hueChange></hue> </div> <div class=swatches> <div class=swatch v-for="offset in swatches" data-index={{$index}} @click="handleSwClick($index, offset)"> <div class=swatch-picker :class="{active: offset == activeOffset}" :style="{background: \'hsl(\' + colors.hsl.h + \', 50%, \' + (offset * 100) + \'%)\'}"></div> </div> </div> </div>'},function(e,n){e.exports='<div class=c-swatches data-pick={{pick}}> <div class=box> <div class=color-group v-for="group in defaultColors"> <div class=color-it v-for="c in group" data-color={{c}} @click=handlerClick(c) :style="{background: c}"> <div class=pick v-show="c == pick"> <svg style="width: 24px; height:24px" viewBox="0 0 24 24"> <path d=M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z /> </svg> </div> </div> </div> </div> </div>'},function(e,n){e.exports='<div class=c-alpha> <div class=checkboard-wrap> <checkboard></checkboard> </div> <div class=gradient :style="{background: gradientColor}"></div> <div class=container v-el:container @mousedown=handleMouseDown @touchmove=handleChange @touchstart=handleChange> <div class=pointer :style="{left: colors.a * 100 + \'%\'}"> <slot><div class=picker></div></slot> </div> </div> </div>'},function(e,n){e.exports='<div class=c-checkboard :style="{background:  bgStyle}"></div>'},function(e,n){e.exports='<div class=editable-input> <input class=input v-model="val | maxFilter" @keydown=handleKeyDown @input=handleChange> <span class=label @mousedown=handleMouseDown>{{label}}</span> </div>'},function(e,n){e.exports='<div class="c-hue {{direction}}"> <div class=container v-el:container @mousedown=handleMouseDown @touchmove=handleChange @touchstart=handleChange> <div class=pointer :style="{top: pointerTop, left: pointerLeft}"> <slot><div class=picker></div></slot> </div> </div> </div>'},function(e,n){e.exports='<div class=saturation :style="{background: bgColor}" v-el:container @mousedown=handleMouseDown> <div class=white></div> <div class=black></div> <div class=pointer :style="{top: pointerTop, left: pointerLeft}"> <slot><div class=circle></div></slot> </div> </div>'},function(e,n,t){var r,o;t(49),r=t(8),o=t(51),e.exports=r||{},e.exports.__esModule&&(e.exports=e.exports["default"]),o&&(("function"==typeof e.exports?e.exports.options:e.exports).template=o)},function(e,n,t){var r,o;t(40),r=t(9),o=t(52),e.exports=r||{},e.exports.__esModule&&(e.exports=e.exports["default"]),o&&(("function"==typeof e.exports?e.exports.options:e.exports).template=o)},function(e,n,t){var r,o;t(46),r=t(10),o=t(53),e.exports=r||{},e.exports.__esModule&&(e.exports=e.exports["default"]),o&&(("function"==typeof e.exports?e.exports.options:e.exports).template=o)},function(e,n,t){var r,o;t(37),r=t(11),o=t(54),e.exports=r||{},e.exports.__esModule&&(e.exports=e.exports["default"]),o&&(("function"==typeof e.exports?e.exports.options:e.exports).template=o)},function(e,n,t){var r,o;t(38),r=t(12),o=t(55),e.exports=r||{},e.exports.__esModule&&(e.exports=e.exports["default"]),o&&(("function"==typeof e.exports?e.exports.options:e.exports).template=o)},function(e,n,t){var r,o;t(43),r=t(13),o=t(56),e.exports=r||{},e.exports.__esModule&&(e.exports=e.exports["default"]),o&&(("function"==typeof e.exports?e.exports.options:e.exports).template=o)},function(e,n,t){var r,o;t(41),r=t(14),o=t(57),e.exports=r||{},e.exports.__esModule&&(e.exports=e.exports["default"]),o&&(("function"==typeof e.exports?e.exports.options:e.exports).template=o)},function(e,n,t){var r,o;t(44),r=t(15),o=t(58),e.exports=r||{},e.exports.__esModule&&(e.exports=e.exports["default"]),o&&(("function"==typeof e.exports?e.exports.options:e.exports).template=o)},function(e,n,t){var r,o;t(47),r=t(17),o=t(60),e.exports=r||{},e.exports.__esModule&&(e.exports=e.exports["default"]),o&&(("function"==typeof e.exports?e.exports.options:e.exports).template=o)}])});
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["VueColor"] = factory();
+	else
+		root["VueColor"] = factory();
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+/******/
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _Compact = __webpack_require__(1);
+	
+	var _Compact2 = _interopRequireDefault(_Compact);
+	
+	var _Material = __webpack_require__(15);
+	
+	var _Material2 = _interopRequireDefault(_Material);
+	
+	var _Slider = __webpack_require__(20);
+	
+	var _Slider2 = _interopRequireDefault(_Slider);
+	
+	var _Swatches = __webpack_require__(30);
+	
+	var _Swatches2 = _interopRequireDefault(_Swatches);
+	
+	var _Photoshop = __webpack_require__(36);
+	
+	var _Photoshop2 = _interopRequireDefault(_Photoshop);
+	
+	var _Sketch = __webpack_require__(58);
+	
+	var _Sketch2 = _interopRequireDefault(_Sketch);
+	
+	var _CmykSketch = __webpack_require__(63);
+	
+	var _CmykSketch2 = _interopRequireDefault(_CmykSketch);
+	
+	var _Chrome = __webpack_require__(68);
+	
+	var _Chrome2 = _interopRequireDefault(_Chrome);
+	
+	var _Alpha = __webpack_require__(47);
+	
+	var _Alpha2 = _interopRequireDefault(_Alpha);
+	
+	var _Checkboard = __webpack_require__(51);
+	
+	var _Checkboard2 = _interopRequireDefault(_Checkboard);
+	
+	var _EditableInput = __webpack_require__(9);
+	
+	var _EditableInput2 = _interopRequireDefault(_EditableInput);
+	
+	var _Hue = __webpack_require__(24);
+	
+	var _Hue2 = _interopRequireDefault(_Hue);
+	
+	var _Saturation = __webpack_require__(40);
+	
+	var _Saturation2 = _interopRequireDefault(_Saturation);
+	
+	var _color = __webpack_require__(7);
+	
+	var _color2 = _interopRequireDefault(_color);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var VueColor = {
+	  Compact: _Compact2.default,
+	  Material: _Material2.default,
+	  Slider: _Slider2.default,
+	  Swatches: _Swatches2.default,
+	  Photoshop: _Photoshop2.default,
+	  Sketch: _Sketch2.default,
+	  CmykSketch: _CmykSketch2.default,
+	  Chrome: _Chrome2.default,
+	  Alpha: _Alpha2.default,
+	  Checkboard: _Checkboard2.default,
+	  EditableInput: _EditableInput2.default,
+	  Hue: _Hue2.default,
+	  Saturation: _Saturation2.default,
+	  ColorMixin: _color2.default
+	};
+	
+	module.exports = VueColor;
+
+/***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(2)
+	__vue_script__ = __webpack_require__(6)
+	__vue_template__ = __webpack_require__(14)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "C:\\Users\\cassio\\Documents\\GitHub\\vue-color\\src\\components\\Compact.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(3);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ac420c66&file=Compact.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./Compact.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ac420c66&file=Compact.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./Compact.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".c-compact {\n  padding-top: 5px;\n  padding-left: 5px;\n  width: 240px;\n  border-radius: 2px;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.16);\n}\n.c-compact .colors {\n  overflow: hidden;\n  padding: 0;\n  margin: 0;\n}\n.c-compact .color-item {\n  list-style: none;\n  width: 15px;\n  height: 15px;\n  float: left;\n  margin-right: 5px;\n  margin-bottom: 5px;\n  position: relative;\n  cursor: pointer;\n}\n.c-compact .color-item.white {\n  box-shadow: inset 0 0 0 1px #ddd;\n}\n.c-compact .color-item.white .dot {\n  background: #000;\n}\n.c-compact .dot {\n  position: absolute;\n  top: 5px;\n  right: 5px;\n  bottom: 5px;\n  left: 5px;\n  border-radius: 50%;\n  opacity: 1;\n  background: #fff;\n}\n.c-compact .fields {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  position: relative;\n  padding-bottom: 6px;\n  padding-right: 5px;\n  position: relative;\n}\n.c-compact .fields .pick-color {\n  position: absolute;\n  top: 6px;\n  left: 5px;\n  height: 9px;\n  width: 9px;\n}\n.c-compact .fields .col-hex {\n  -webkit-box-flex: 2;\n  -webkit-flex: 2;\n      -ms-flex: 2;\n          flex: 2;\n}\n.c-compact .fields .col-hex .input {\n  width: 80%;\n  padding-left: 20%;\n}\n.c-compact .fields .col-hex .label {\n  display: none;\n}\n.c-compact .fields .col-3 {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.c-compact .fields .input {\n  width: 70%;\n  padding-left: 30%;\n  background: none;\n  font-size: 12px;\n  color: #333;\n  height: 16px;\n}\n.c-compact .fields .label {\n  position: absolute;\n  top: 3px;\n  left: 0;\n  line-height: 16px;\n  text-transform: uppercase;\n  font-size: 12px;\n  color: #999;\n}\n", "", {"version":3,"sources":["/./src/components/Compact.vue.style","/./src/components/Compact.vue"],"names":[],"mappings":"AACA;EACE,iBAAA;EACA,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,oEAAA;CCAD;ADCC;EACE,iBAAA;EACA,WAAA;EACA,UAAA;CCCH;ADAC;EACE,iBAAA;EACA,YAAA;EACA,aAAA;EACA,YAAA;EACA,kBAAA;EACA,mBAAA;EACA,mBAAA;EACA,gBAAA;CCEH;ADDG;EACE,iCAAA;CCGL;ADFK;EACE,iBAAA;CCIP;ADHC;EACE,mBAAA;EACA,SAAA;EACA,WAAA;EACA,YAAA;EACA,UAAA;EACA,mBAAA;EACA,WAAA;EACA,iBAAA;CCKH;ADJC;EACE,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;EACA,mBAAA;EACA,oBAAA;EACA,mBAAA;EACA,mBAAA;CCMH;ADLG;EACE,mBAAA;EACA,SAAA;EACA,UAAA;EACA,YAAA;EACA,WAAA;CCOL;ADNG;EACE,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;CCQL;ADPK;EACE,WAAA;EACA,kBAAA;CCSP;ADRK;EACE,cAAA;CCUP;ADTG;EACE,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;CCWL;ADVG;EACE,WAAA;EACA,kBAAA;EACA,iBAAA;EACA,gBAAA;EACA,YAAA;EACA,aAAA;CCYL;ADXG;EACE,mBAAA;EACA,SAAA;EACA,QAAA;EACA,kBAAA;EACA,0BAAA;EACA,gBAAA;EACA,YAAA;CCaL","file":"Compact.vue","sourcesContent":["\r\n.c-compact\r\n  padding-top 5px\r\n  padding-left 5px\r\n  width 240px\r\n  border-radius 2px\r\n  box-shadow 0 2px 10px rgba(0,0,0,.12), 0 2px 5px rgba(0,0,0,.16)\r\n  .colors\r\n    overflow hidden\r\n    padding 0\r\n    margin 0\r\n  .color-item\r\n    list-style none\r\n    width 15px\r\n    height 15px\r\n    float left\r\n    margin-right 5px\r\n    margin-bottom 5px\r\n    position relative\r\n    cursor pointer\r\n    &.white\r\n      box-shadow inset 0 0 0 1px #ddd\r\n      .dot\r\n        background #000      \r\n  .dot\r\n    position absolute\r\n    top 5px\r\n    right 5px\r\n    bottom 5px\r\n    left 5px\r\n    border-radius 50%\r\n    opacity 1\r\n    background #fff\r\n  .fields\r\n    display flex\r\n    position relative\r\n    padding-bottom 6px\r\n    padding-right 5px\r\n    position relative\r\n    .pick-color\r\n      position absolute\r\n      top 6px\r\n      left 5px\r\n      height 9px\r\n      width 9px\r\n    .col-hex\r\n      flex 2\r\n      .input\r\n        width 80%\r\n        padding-left 20%  \r\n      .label\r\n        display none\r\n    .col-3\r\n      flex 1\r\n    .input\r\n      width 70%\r\n      padding-left 30%\r\n      background none\r\n      font-size 12px\r\n      color #333\r\n      height 16px\r\n    .label\r\n      position absolute\r\n      top 3px\r\n      left 0\r\n      line-height 16px\r\n      text-transform uppercase\r\n      font-size 12px\r\n      color #999\r\n",".c-compact {\n  padding-top: 5px;\n  padding-left: 5px;\n  width: 240px;\n  border-radius: 2px;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.16);\n}\n.c-compact .colors {\n  overflow: hidden;\n  padding: 0;\n  margin: 0;\n}\n.c-compact .color-item {\n  list-style: none;\n  width: 15px;\n  height: 15px;\n  float: left;\n  margin-right: 5px;\n  margin-bottom: 5px;\n  position: relative;\n  cursor: pointer;\n}\n.c-compact .color-item.white {\n  box-shadow: inset 0 0 0 1px #ddd;\n}\n.c-compact .color-item.white .dot {\n  background: #000;\n}\n.c-compact .dot {\n  position: absolute;\n  top: 5px;\n  right: 5px;\n  bottom: 5px;\n  left: 5px;\n  border-radius: 50%;\n  opacity: 1;\n  background: #fff;\n}\n.c-compact .fields {\n  display: flex;\n  position: relative;\n  padding-bottom: 6px;\n  padding-right: 5px;\n  position: relative;\n}\n.c-compact .fields .pick-color {\n  position: absolute;\n  top: 6px;\n  left: 5px;\n  height: 9px;\n  width: 9px;\n}\n.c-compact .fields .col-hex {\n  flex: 2;\n}\n.c-compact .fields .col-hex .input {\n  width: 80%;\n  padding-left: 20%;\n}\n.c-compact .fields .col-hex .label {\n  display: none;\n}\n.c-compact .fields .col-3 {\n  flex: 1;\n}\n.c-compact .fields .input {\n  width: 70%;\n  padding-left: 30%;\n  background: none;\n  font-size: 12px;\n  color: #333;\n  height: 16px;\n}\n.c-compact .fields .label {\n  position: absolute;\n  top: 3px;\n  left: 0;\n  line-height: 16px;\n  text-transform: uppercase;\n  font-size: 12px;\n  color: #999;\n}\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	// css base code, injected by the css-loader
+	module.exports = function() {
+		var list = [];
+	
+		// return the list of modules as css string
+		list.toString = function toString() {
+			var result = [];
+			for(var i = 0; i < this.length; i++) {
+				var item = this[i];
+				if(item[2]) {
+					result.push("@media " + item[2] + "{" + item[1] + "}");
+				} else {
+					result.push(item[1]);
+				}
+			}
+			return result.join("");
+		};
+	
+		// import a list of modules into the list
+		list.i = function(modules, mediaQuery) {
+			if(typeof modules === "string")
+				modules = [[null, modules, ""]];
+			var alreadyImportedModules = {};
+			for(var i = 0; i < this.length; i++) {
+				var id = this[i][0];
+				if(typeof id === "number")
+					alreadyImportedModules[id] = true;
+			}
+			for(i = 0; i < modules.length; i++) {
+				var item = modules[i];
+				// skip already imported module
+				// this implementation is not 100% perfect for weird media query combinations
+				//  when a module is imported multiple times with different media queries.
+				//  I hope this will never occur (Hey this way we have smaller bundles)
+				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+					if(mediaQuery && !item[2]) {
+						item[2] = mediaQuery;
+					} else if(mediaQuery) {
+						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+					}
+					list.push(item);
+				}
+			}
+		};
+		return list;
+	};
+
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	var stylesInDom = {},
+		memoize = function(fn) {
+			var memo;
+			return function () {
+				if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+				return memo;
+			};
+		},
+		isOldIE = memoize(function() {
+			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+		}),
+		getHeadElement = memoize(function () {
+			return document.head || document.getElementsByTagName("head")[0];
+		}),
+		singletonElement = null,
+		singletonCounter = 0,
+		styleElementsInsertedAtTop = [];
+	
+	module.exports = function(list, options) {
+		if(false) {
+			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+		}
+	
+		options = options || {};
+		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+		// tags it will allow on a page
+		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
+	
+		// By default, add <style> tags to the bottom of <head>.
+		if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
+	
+		var styles = listToStyles(list);
+		addStylesToDom(styles, options);
+	
+		return function update(newList) {
+			var mayRemove = [];
+			for(var i = 0; i < styles.length; i++) {
+				var item = styles[i];
+				var domStyle = stylesInDom[item.id];
+				domStyle.refs--;
+				mayRemove.push(domStyle);
+			}
+			if(newList) {
+				var newStyles = listToStyles(newList);
+				addStylesToDom(newStyles, options);
+			}
+			for(var i = 0; i < mayRemove.length; i++) {
+				var domStyle = mayRemove[i];
+				if(domStyle.refs === 0) {
+					for(var j = 0; j < domStyle.parts.length; j++)
+						domStyle.parts[j]();
+					delete stylesInDom[domStyle.id];
+				}
+			}
+		};
+	}
+	
+	function addStylesToDom(styles, options) {
+		for(var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+			if(domStyle) {
+				domStyle.refs++;
+				for(var j = 0; j < domStyle.parts.length; j++) {
+					domStyle.parts[j](item.parts[j]);
+				}
+				for(; j < item.parts.length; j++) {
+					domStyle.parts.push(addStyle(item.parts[j], options));
+				}
+			} else {
+				var parts = [];
+				for(var j = 0; j < item.parts.length; j++) {
+					parts.push(addStyle(item.parts[j], options));
+				}
+				stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+			}
+		}
+	}
+	
+	function listToStyles(list) {
+		var styles = [];
+		var newStyles = {};
+		for(var i = 0; i < list.length; i++) {
+			var item = list[i];
+			var id = item[0];
+			var css = item[1];
+			var media = item[2];
+			var sourceMap = item[3];
+			var part = {css: css, media: media, sourceMap: sourceMap};
+			if(!newStyles[id])
+				styles.push(newStyles[id] = {id: id, parts: [part]});
+			else
+				newStyles[id].parts.push(part);
+		}
+		return styles;
+	}
+	
+	function insertStyleElement(options, styleElement) {
+		var head = getHeadElement();
+		var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
+		if (options.insertAt === "top") {
+			if(!lastStyleElementInsertedAtTop) {
+				head.insertBefore(styleElement, head.firstChild);
+			} else if(lastStyleElementInsertedAtTop.nextSibling) {
+				head.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);
+			} else {
+				head.appendChild(styleElement);
+			}
+			styleElementsInsertedAtTop.push(styleElement);
+		} else if (options.insertAt === "bottom") {
+			head.appendChild(styleElement);
+		} else {
+			throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
+		}
+	}
+	
+	function removeStyleElement(styleElement) {
+		styleElement.parentNode.removeChild(styleElement);
+		var idx = styleElementsInsertedAtTop.indexOf(styleElement);
+		if(idx >= 0) {
+			styleElementsInsertedAtTop.splice(idx, 1);
+		}
+	}
+	
+	function createStyleElement(options) {
+		var styleElement = document.createElement("style");
+		styleElement.type = "text/css";
+		insertStyleElement(options, styleElement);
+		return styleElement;
+	}
+	
+	function createLinkElement(options) {
+		var linkElement = document.createElement("link");
+		linkElement.rel = "stylesheet";
+		insertStyleElement(options, linkElement);
+		return linkElement;
+	}
+	
+	function addStyle(obj, options) {
+		var styleElement, update, remove;
+	
+		if (options.singleton) {
+			var styleIndex = singletonCounter++;
+			styleElement = singletonElement || (singletonElement = createStyleElement(options));
+			update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
+			remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
+		} else if(obj.sourceMap &&
+			typeof URL === "function" &&
+			typeof URL.createObjectURL === "function" &&
+			typeof URL.revokeObjectURL === "function" &&
+			typeof Blob === "function" &&
+			typeof btoa === "function") {
+			styleElement = createLinkElement(options);
+			update = updateLink.bind(null, styleElement);
+			remove = function() {
+				removeStyleElement(styleElement);
+				if(styleElement.href)
+					URL.revokeObjectURL(styleElement.href);
+			};
+		} else {
+			styleElement = createStyleElement(options);
+			update = applyToTag.bind(null, styleElement);
+			remove = function() {
+				removeStyleElement(styleElement);
+			};
+		}
+	
+		update(obj);
+	
+		return function updateStyle(newObj) {
+			if(newObj) {
+				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
+					return;
+				update(obj = newObj);
+			} else {
+				remove();
+			}
+		};
+	}
+	
+	var replaceText = (function () {
+		var textStore = [];
+	
+		return function (index, replacement) {
+			textStore[index] = replacement;
+			return textStore.filter(Boolean).join('\n');
+		};
+	})();
+	
+	function applyToSingletonTag(styleElement, index, remove, obj) {
+		var css = remove ? "" : obj.css;
+	
+		if (styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = replaceText(index, css);
+		} else {
+			var cssNode = document.createTextNode(css);
+			var childNodes = styleElement.childNodes;
+			if (childNodes[index]) styleElement.removeChild(childNodes[index]);
+			if (childNodes.length) {
+				styleElement.insertBefore(cssNode, childNodes[index]);
+			} else {
+				styleElement.appendChild(cssNode);
+			}
+		}
+	}
+	
+	function applyToTag(styleElement, obj) {
+		var css = obj.css;
+		var media = obj.media;
+	
+		if(media) {
+			styleElement.setAttribute("media", media)
+		}
+	
+		if(styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = css;
+		} else {
+			while(styleElement.firstChild) {
+				styleElement.removeChild(styleElement.firstChild);
+			}
+			styleElement.appendChild(document.createTextNode(css));
+		}
+	}
+	
+	function updateLink(linkElement, obj) {
+		var css = obj.css;
+		var sourceMap = obj.sourceMap;
+	
+		if(sourceMap) {
+			// http://stackoverflow.com/a/26603875
+			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+		}
+	
+		var blob = new Blob([css], { type: "text/css" });
+	
+		var oldSrc = linkElement.href;
+	
+		linkElement.href = URL.createObjectURL(blob);
+	
+		if(oldSrc)
+			URL.revokeObjectURL(oldSrc);
+	}
+
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _color = __webpack_require__(7);
+	
+	var _color2 = _interopRequireDefault(_color);
+	
+	var _EditableInput = __webpack_require__(9);
+	
+	var _EditableInput2 = _interopRequireDefault(_EditableInput);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var defaultColors = ['#4D4D4D', '#999999', '#FFFFFF', '#F44E3B', '#FE9200', '#FCDC00', '#DBDF00', '#A4DD00', '#68CCCA', '#73D8FF', '#AEA1FF', '#FDA1FF', '#333333', '#808080', '#CCCCCC', '#D33115', '#E27300', '#FCC400', '#B0BC00', '#68BC00', '#16A5A5', '#009CE0', '#7B64FF', '#FA28FF', '#000000', '#666666', '#B3B3B3', '#9F0500', '#C45100', '#FB9E00', '#808900', '#194D33', '#0C797D', '#0062B1', '#653294', '#AB149E'];
+	
+	exports.default = {
+	  name: 'Compact',
+	  mixins: [_color2.default],
+	  props: {},
+	  components: {
+	    'ed-in': _EditableInput2.default
+	  },
+	  computed: {
+	    pick: function pick() {
+	      return this.colors.hex;
+	    }
+	  },
+	  data: function data() {
+	    return {
+	      defaultColors: defaultColors
+	    };
+	  },
+	
+	  methods: {
+	    handlerClick: function handlerClick(c) {
+	      this.colorChange({
+	        hex: c,
+	        source: 'hex'
+	      });
+	    },
+	    onChange: function onChange(data) {
+	      if (!data) {
+	        return;
+	      }
+	      if (data.hex) {
+	        this.isValidHex(data.hex) && this.colorChange({
+	          hex: data.hex,
+	          source: 'hex'
+	        });
+	      } else if (data.r || data.g || data.b) {
+	        this.colorChange({
+	          r: data.r || this.colors.rgba.r,
+	          g: data.g || this.colors.rgba.g,
+	          b: data.b || this.colors.rgba.b,
+	          a: data.a || this.colors.rgba.a,
+	          source: 'rgba'
+	        });
+	      }
+	    }
+	  }
+	};
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _tinycolor = __webpack_require__(8);
+	
+	var _tinycolor2 = _interopRequireDefault(_tinycolor);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _convertRGBToCMYK(rgba) {
+	  var r = rgba.r;
+	  var g = rgba.g;
+	  var b = rgba.b;
+	
+	  r = _changeRange(r);
+	  g = _changeRange(g);
+	  b = _changeRange(b);
+	
+	  var k = 1 - Math.max(r, b, b);
+	  var c = (1 - r - k) / (1 - k);
+	  var m = (1 - g - k) / (1 - k);
+	  var y = (1 - b - k) / (1 - k);
+	
+	  return { c: c, m: m, y: y, k: k };
+	
+	  function _changeRange(colorValue) {
+	    var MAX_COLOR_VALUE = 255;
+	    return colorValue / MAX_COLOR_VALUE;
+	  }
+	}
+	
+	function _colorChange(data, oldHue) {
+	  if (data.a && data.a > 1) {
+	    data.a = 1;
+	  }
+	
+	  var color = data.hex ? (0, _tinycolor2.default)(data.hex) : (0, _tinycolor2.default)(data);
+	  var hsl = color.toHsl();
+	  var hsv = color.toHsv();
+	  var rgba = color.toRgb();
+	
+	  var cmyk = _convertRGBToCMYK(rgba);
+	  if (hsl.s === 0) {
+	    hsl.h = oldHue || 0;
+	    hsv.h = oldHue || 0;
+	  }
+	  return {
+	    hsl: hsl,
+	    hex: color.toHexString().toUpperCase(),
+	    rgba: rgba,
+	    hsv: hsv,
+	    oldHue: data.h || oldHue || hsl.h,
+	    source: data.source,
+	    a: data.a || 1,
+	    cmyk: cmyk
+	  };
+	}
+	
+	exports.default = {
+	  props: {
+	    colors: Object
+	  },
+	  created: function created() {
+	    this.colors = _colorChange(this.colors);
+	  },
+	
+	  methods: {
+	    colorChange: function colorChange(data, oldHue) {
+	      this.colors = _colorChange(data, oldHue);
+	    },
+	    isValidHex: function isValidHex(hex) {
+	      return (0, _tinycolor2.default)(hex).isValid();
+	    },
+	    simpleCheckForValidColor: function simpleCheckForValidColor(data) {
+	      var keysToCheck = ['r', 'g', 'b', 'a', 'h', 's', 'a', 'v'];
+	      var checked = 0;
+	      var passed = 0;
+	
+	      for (var i = 0; i < keysToCheck.length; i++) {
+	        var letter = keysToCheck[i];
+	        if (data[letter]) {
+	          checked++;
+	          if (!isNaN(data[letter])) {
+	            passed++;
+	          }
+	        }
+	      }
+	
+	      if (checked === passed) {
+	        return data;
+	      }
+	    }
+	  }
+	};
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_RESULT__;// TinyColor v1.3.0
+	// https://github.com/bgrins/TinyColor
+	// Brian Grinstead, MIT License
+	
+	(function() {
+	
+	var trimLeft = /^\s+/,
+	    trimRight = /\s+$/,
+	    tinyCounter = 0,
+	    math = Math,
+	    mathRound = math.round,
+	    mathMin = math.min,
+	    mathMax = math.max,
+	    mathRandom = math.random;
+	
+	function tinycolor (color, opts) {
+	
+	    color = (color) ? color : '';
+	    opts = opts || { };
+	
+	    // If input is already a tinycolor, return itself
+	    if (color instanceof tinycolor) {
+	       return color;
+	    }
+	    // If we are called as a function, call using new instead
+	    if (!(this instanceof tinycolor)) {
+	        return new tinycolor(color, opts);
+	    }
+	
+	    var rgb = inputToRGB(color);
+	    this._originalInput = color,
+	    this._r = rgb.r,
+	    this._g = rgb.g,
+	    this._b = rgb.b,
+	    this._a = rgb.a,
+	    this._roundA = mathRound(100*this._a) / 100,
+	    this._format = opts.format || rgb.format;
+	    this._gradientType = opts.gradientType;
+	
+	    // Don't let the range of [0,255] come back in [0,1].
+	    // Potentially lose a little bit of precision here, but will fix issues where
+	    // .5 gets interpreted as half of the total, instead of half of 1
+	    // If it was supposed to be 128, this was already taken care of by `inputToRgb`
+	    if (this._r < 1) { this._r = mathRound(this._r); }
+	    if (this._g < 1) { this._g = mathRound(this._g); }
+	    if (this._b < 1) { this._b = mathRound(this._b); }
+	
+	    this._ok = rgb.ok;
+	    this._tc_id = tinyCounter++;
+	}
+	
+	tinycolor.prototype = {
+	    isDark: function() {
+	        return this.getBrightness() < 128;
+	    },
+	    isLight: function() {
+	        return !this.isDark();
+	    },
+	    isValid: function() {
+	        return this._ok;
+	    },
+	    getOriginalInput: function() {
+	      return this._originalInput;
+	    },
+	    getFormat: function() {
+	        return this._format;
+	    },
+	    getAlpha: function() {
+	        return this._a;
+	    },
+	    getBrightness: function() {
+	        //http://www.w3.org/TR/AERT#color-contrast
+	        var rgb = this.toRgb();
+	        return (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000;
+	    },
+	    getLuminance: function() {
+	        //http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+	        var rgb = this.toRgb();
+	        var RsRGB, GsRGB, BsRGB, R, G, B;
+	        RsRGB = rgb.r/255;
+	        GsRGB = rgb.g/255;
+	        BsRGB = rgb.b/255;
+	
+	        if (RsRGB <= 0.03928) {R = RsRGB / 12.92;} else {R = Math.pow(((RsRGB + 0.055) / 1.055), 2.4);}
+	        if (GsRGB <= 0.03928) {G = GsRGB / 12.92;} else {G = Math.pow(((GsRGB + 0.055) / 1.055), 2.4);}
+	        if (BsRGB <= 0.03928) {B = BsRGB / 12.92;} else {B = Math.pow(((BsRGB + 0.055) / 1.055), 2.4);}
+	        return (0.2126 * R) + (0.7152 * G) + (0.0722 * B);
+	    },
+	    setAlpha: function(value) {
+	        this._a = boundAlpha(value);
+	        this._roundA = mathRound(100*this._a) / 100;
+	        return this;
+	    },
+	    toHsv: function() {
+	        var hsv = rgbToHsv(this._r, this._g, this._b);
+	        return { h: hsv.h * 360, s: hsv.s, v: hsv.v, a: this._a };
+	    },
+	    toHsvString: function() {
+	        var hsv = rgbToHsv(this._r, this._g, this._b);
+	        var h = mathRound(hsv.h * 360), s = mathRound(hsv.s * 100), v = mathRound(hsv.v * 100);
+	        return (this._a == 1) ?
+	          "hsv("  + h + ", " + s + "%, " + v + "%)" :
+	          "hsva(" + h + ", " + s + "%, " + v + "%, "+ this._roundA + ")";
+	    },
+	    toHsl: function() {
+	        var hsl = rgbToHsl(this._r, this._g, this._b);
+	        return { h: hsl.h * 360, s: hsl.s, l: hsl.l, a: this._a };
+	    },
+	    toHslString: function() {
+	        var hsl = rgbToHsl(this._r, this._g, this._b);
+	        var h = mathRound(hsl.h * 360), s = mathRound(hsl.s * 100), l = mathRound(hsl.l * 100);
+	        return (this._a == 1) ?
+	          "hsl("  + h + ", " + s + "%, " + l + "%)" :
+	          "hsla(" + h + ", " + s + "%, " + l + "%, "+ this._roundA + ")";
+	    },
+	    toHex: function(allow3Char) {
+	        return rgbToHex(this._r, this._g, this._b, allow3Char);
+	    },
+	    toHexString: function(allow3Char) {
+	        return '#' + this.toHex(allow3Char);
+	    },
+	    toHex8: function() {
+	        return rgbaToHex(this._r, this._g, this._b, this._a);
+	    },
+	    toHex8String: function() {
+	        return '#' + this.toHex8();
+	    },
+	    toRgb: function() {
+	        return { r: mathRound(this._r), g: mathRound(this._g), b: mathRound(this._b), a: this._a };
+	    },
+	    toRgbString: function() {
+	        return (this._a == 1) ?
+	          "rgb("  + mathRound(this._r) + ", " + mathRound(this._g) + ", " + mathRound(this._b) + ")" :
+	          "rgba(" + mathRound(this._r) + ", " + mathRound(this._g) + ", " + mathRound(this._b) + ", " + this._roundA + ")";
+	    },
+	    toPercentageRgb: function() {
+	        return { r: mathRound(bound01(this._r, 255) * 100) + "%", g: mathRound(bound01(this._g, 255) * 100) + "%", b: mathRound(bound01(this._b, 255) * 100) + "%", a: this._a };
+	    },
+	    toPercentageRgbString: function() {
+	        return (this._a == 1) ?
+	          "rgb("  + mathRound(bound01(this._r, 255) * 100) + "%, " + mathRound(bound01(this._g, 255) * 100) + "%, " + mathRound(bound01(this._b, 255) * 100) + "%)" :
+	          "rgba(" + mathRound(bound01(this._r, 255) * 100) + "%, " + mathRound(bound01(this._g, 255) * 100) + "%, " + mathRound(bound01(this._b, 255) * 100) + "%, " + this._roundA + ")";
+	    },
+	    toName: function() {
+	        if (this._a === 0) {
+	            return "transparent";
+	        }
+	
+	        if (this._a < 1) {
+	            return false;
+	        }
+	
+	        return hexNames[rgbToHex(this._r, this._g, this._b, true)] || false;
+	    },
+	    toFilter: function(secondColor) {
+	        var hex8String = '#' + rgbaToHex(this._r, this._g, this._b, this._a);
+	        var secondHex8String = hex8String;
+	        var gradientType = this._gradientType ? "GradientType = 1, " : "";
+	
+	        if (secondColor) {
+	            var s = tinycolor(secondColor);
+	            secondHex8String = s.toHex8String();
+	        }
+	
+	        return "progid:DXImageTransform.Microsoft.gradient("+gradientType+"startColorstr="+hex8String+",endColorstr="+secondHex8String+")";
+	    },
+	    toString: function(format) {
+	        var formatSet = !!format;
+	        format = format || this._format;
+	
+	        var formattedString = false;
+	        var hasAlpha = this._a < 1 && this._a >= 0;
+	        var needsAlphaFormat = !formatSet && hasAlpha && (format === "hex" || format === "hex6" || format === "hex3" || format === "name");
+	
+	        if (needsAlphaFormat) {
+	            // Special case for "transparent", all other non-alpha formats
+	            // will return rgba when there is transparency.
+	            if (format === "name" && this._a === 0) {
+	                return this.toName();
+	            }
+	            return this.toRgbString();
+	        }
+	        if (format === "rgb") {
+	            formattedString = this.toRgbString();
+	        }
+	        if (format === "prgb") {
+	            formattedString = this.toPercentageRgbString();
+	        }
+	        if (format === "hex" || format === "hex6") {
+	            formattedString = this.toHexString();
+	        }
+	        if (format === "hex3") {
+	            formattedString = this.toHexString(true);
+	        }
+	        if (format === "hex8") {
+	            formattedString = this.toHex8String();
+	        }
+	        if (format === "name") {
+	            formattedString = this.toName();
+	        }
+	        if (format === "hsl") {
+	            formattedString = this.toHslString();
+	        }
+	        if (format === "hsv") {
+	            formattedString = this.toHsvString();
+	        }
+	
+	        return formattedString || this.toHexString();
+	    },
+	    clone: function() {
+	        return tinycolor(this.toString());
+	    },
+	
+	    _applyModification: function(fn, args) {
+	        var color = fn.apply(null, [this].concat([].slice.call(args)));
+	        this._r = color._r;
+	        this._g = color._g;
+	        this._b = color._b;
+	        this.setAlpha(color._a);
+	        return this;
+	    },
+	    lighten: function() {
+	        return this._applyModification(lighten, arguments);
+	    },
+	    brighten: function() {
+	        return this._applyModification(brighten, arguments);
+	    },
+	    darken: function() {
+	        return this._applyModification(darken, arguments);
+	    },
+	    desaturate: function() {
+	        return this._applyModification(desaturate, arguments);
+	    },
+	    saturate: function() {
+	        return this._applyModification(saturate, arguments);
+	    },
+	    greyscale: function() {
+	        return this._applyModification(greyscale, arguments);
+	    },
+	    spin: function() {
+	        return this._applyModification(spin, arguments);
+	    },
+	
+	    _applyCombination: function(fn, args) {
+	        return fn.apply(null, [this].concat([].slice.call(args)));
+	    },
+	    analogous: function() {
+	        return this._applyCombination(analogous, arguments);
+	    },
+	    complement: function() {
+	        return this._applyCombination(complement, arguments);
+	    },
+	    monochromatic: function() {
+	        return this._applyCombination(monochromatic, arguments);
+	    },
+	    splitcomplement: function() {
+	        return this._applyCombination(splitcomplement, arguments);
+	    },
+	    triad: function() {
+	        return this._applyCombination(triad, arguments);
+	    },
+	    tetrad: function() {
+	        return this._applyCombination(tetrad, arguments);
+	    }
+	};
+	
+	// If input is an object, force 1 into "1.0" to handle ratios properly
+	// String input requires "1.0" as input, so 1 will be treated as 1
+	tinycolor.fromRatio = function(color, opts) {
+	    if (typeof color == "object") {
+	        var newColor = {};
+	        for (var i in color) {
+	            if (color.hasOwnProperty(i)) {
+	                if (i === "a") {
+	                    newColor[i] = color[i];
+	                }
+	                else {
+	                    newColor[i] = convertToPercentage(color[i]);
+	                }
+	            }
+	        }
+	        color = newColor;
+	    }
+	
+	    return tinycolor(color, opts);
+	};
+	
+	// Given a string or object, convert that input to RGB
+	// Possible string inputs:
+	//
+	//     "red"
+	//     "#f00" or "f00"
+	//     "#ff0000" or "ff0000"
+	//     "#ff000000" or "ff000000"
+	//     "rgb 255 0 0" or "rgb (255, 0, 0)"
+	//     "rgb 1.0 0 0" or "rgb (1, 0, 0)"
+	//     "rgba (255, 0, 0, 1)" or "rgba 255, 0, 0, 1"
+	//     "rgba (1.0, 0, 0, 1)" or "rgba 1.0, 0, 0, 1"
+	//     "hsl(0, 100%, 50%)" or "hsl 0 100% 50%"
+	//     "hsla(0, 100%, 50%, 1)" or "hsla 0 100% 50%, 1"
+	//     "hsv(0, 100%, 100%)" or "hsv 0 100% 100%"
+	//
+	function inputToRGB(color) {
+	
+	    var rgb = { r: 0, g: 0, b: 0 };
+	    var a = 1;
+	    var ok = false;
+	    var format = false;
+	
+	    if (typeof color == "string") {
+	        color = stringInputToObject(color);
+	    }
+	
+	    if (typeof color == "object") {
+	        if (color.hasOwnProperty("r") && color.hasOwnProperty("g") && color.hasOwnProperty("b")) {
+	            rgb = rgbToRgb(color.r, color.g, color.b);
+	            ok = true;
+	            format = String(color.r).substr(-1) === "%" ? "prgb" : "rgb";
+	        }
+	        else if (color.hasOwnProperty("h") && color.hasOwnProperty("s") && color.hasOwnProperty("v")) {
+	            color.s = convertToPercentage(color.s);
+	            color.v = convertToPercentage(color.v);
+	            rgb = hsvToRgb(color.h, color.s, color.v);
+	            ok = true;
+	            format = "hsv";
+	        }
+	        else if (color.hasOwnProperty("h") && color.hasOwnProperty("s") && color.hasOwnProperty("l")) {
+	            color.s = convertToPercentage(color.s);
+	            color.l = convertToPercentage(color.l);
+	            rgb = hslToRgb(color.h, color.s, color.l);
+	            ok = true;
+	            format = "hsl";
+	        }
+	
+	        if (color.hasOwnProperty("a")) {
+	            a = color.a;
+	        }
+	    }
+	
+	    a = boundAlpha(a);
+	
+	    return {
+	        ok: ok,
+	        format: color.format || format,
+	        r: mathMin(255, mathMax(rgb.r, 0)),
+	        g: mathMin(255, mathMax(rgb.g, 0)),
+	        b: mathMin(255, mathMax(rgb.b, 0)),
+	        a: a
+	    };
+	}
+	
+	
+	// Conversion Functions
+	// --------------------
+	
+	// `rgbToHsl`, `rgbToHsv`, `hslToRgb`, `hsvToRgb` modified from:
+	// <http://mjijackson.com/2008/02/rgb-to-hsl-and-rgb-to-hsv-color-model-conversion-algorithms-in-javascript>
+	
+	// `rgbToRgb`
+	// Handle bounds / percentage checking to conform to CSS color spec
+	// <http://www.w3.org/TR/css3-color/>
+	// *Assumes:* r, g, b in [0, 255] or [0, 1]
+	// *Returns:* { r, g, b } in [0, 255]
+	function rgbToRgb(r, g, b){
+	    return {
+	        r: bound01(r, 255) * 255,
+	        g: bound01(g, 255) * 255,
+	        b: bound01(b, 255) * 255
+	    };
+	}
+	
+	// `rgbToHsl`
+	// Converts an RGB color value to HSL.
+	// *Assumes:* r, g, and b are contained in [0, 255] or [0, 1]
+	// *Returns:* { h, s, l } in [0,1]
+	function rgbToHsl(r, g, b) {
+	
+	    r = bound01(r, 255);
+	    g = bound01(g, 255);
+	    b = bound01(b, 255);
+	
+	    var max = mathMax(r, g, b), min = mathMin(r, g, b);
+	    var h, s, l = (max + min) / 2;
+	
+	    if(max == min) {
+	        h = s = 0; // achromatic
+	    }
+	    else {
+	        var d = max - min;
+	        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+	        switch(max) {
+	            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+	            case g: h = (b - r) / d + 2; break;
+	            case b: h = (r - g) / d + 4; break;
+	        }
+	
+	        h /= 6;
+	    }
+	
+	    return { h: h, s: s, l: l };
+	}
+	
+	// `hslToRgb`
+	// Converts an HSL color value to RGB.
+	// *Assumes:* h is contained in [0, 1] or [0, 360] and s and l are contained [0, 1] or [0, 100]
+	// *Returns:* { r, g, b } in the set [0, 255]
+	function hslToRgb(h, s, l) {
+	    var r, g, b;
+	
+	    h = bound01(h, 360);
+	    s = bound01(s, 100);
+	    l = bound01(l, 100);
+	
+	    function hue2rgb(p, q, t) {
+	        if(t < 0) t += 1;
+	        if(t > 1) t -= 1;
+	        if(t < 1/6) return p + (q - p) * 6 * t;
+	        if(t < 1/2) return q;
+	        if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+	        return p;
+	    }
+	
+	    if(s === 0) {
+	        r = g = b = l; // achromatic
+	    }
+	    else {
+	        var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+	        var p = 2 * l - q;
+	        r = hue2rgb(p, q, h + 1/3);
+	        g = hue2rgb(p, q, h);
+	        b = hue2rgb(p, q, h - 1/3);
+	    }
+	
+	    return { r: r * 255, g: g * 255, b: b * 255 };
+	}
+	
+	// `rgbToHsv`
+	// Converts an RGB color value to HSV
+	// *Assumes:* r, g, and b are contained in the set [0, 255] or [0, 1]
+	// *Returns:* { h, s, v } in [0,1]
+	function rgbToHsv(r, g, b) {
+	
+	    r = bound01(r, 255);
+	    g = bound01(g, 255);
+	    b = bound01(b, 255);
+	
+	    var max = mathMax(r, g, b), min = mathMin(r, g, b);
+	    var h, s, v = max;
+	
+	    var d = max - min;
+	    s = max === 0 ? 0 : d / max;
+	
+	    if(max == min) {
+	        h = 0; // achromatic
+	    }
+	    else {
+	        switch(max) {
+	            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+	            case g: h = (b - r) / d + 2; break;
+	            case b: h = (r - g) / d + 4; break;
+	        }
+	        h /= 6;
+	    }
+	    return { h: h, s: s, v: v };
+	}
+	
+	// `hsvToRgb`
+	// Converts an HSV color value to RGB.
+	// *Assumes:* h is contained in [0, 1] or [0, 360] and s and v are contained in [0, 1] or [0, 100]
+	// *Returns:* { r, g, b } in the set [0, 255]
+	 function hsvToRgb(h, s, v) {
+	
+	    h = bound01(h, 360) * 6;
+	    s = bound01(s, 100);
+	    v = bound01(v, 100);
+	
+	    var i = math.floor(h),
+	        f = h - i,
+	        p = v * (1 - s),
+	        q = v * (1 - f * s),
+	        t = v * (1 - (1 - f) * s),
+	        mod = i % 6,
+	        r = [v, q, p, p, t, v][mod],
+	        g = [t, v, v, q, p, p][mod],
+	        b = [p, p, t, v, v, q][mod];
+	
+	    return { r: r * 255, g: g * 255, b: b * 255 };
+	}
+	
+	// `rgbToHex`
+	// Converts an RGB color to hex
+	// Assumes r, g, and b are contained in the set [0, 255]
+	// Returns a 3 or 6 character hex
+	function rgbToHex(r, g, b, allow3Char) {
+	
+	    var hex = [
+	        pad2(mathRound(r).toString(16)),
+	        pad2(mathRound(g).toString(16)),
+	        pad2(mathRound(b).toString(16))
+	    ];
+	
+	    // Return a 3 character hex if possible
+	    if (allow3Char && hex[0].charAt(0) == hex[0].charAt(1) && hex[1].charAt(0) == hex[1].charAt(1) && hex[2].charAt(0) == hex[2].charAt(1)) {
+	        return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0);
+	    }
+	
+	    return hex.join("");
+	}
+	
+	// `rgbaToHex`
+	// Converts an RGBA color plus alpha transparency to hex
+	// Assumes r, g, b and a are contained in the set [0, 255]
+	// Returns an 8 character hex
+	function rgbaToHex(r, g, b, a) {
+	
+	    var hex = [
+	        pad2(convertDecimalToHex(a)),
+	        pad2(mathRound(r).toString(16)),
+	        pad2(mathRound(g).toString(16)),
+	        pad2(mathRound(b).toString(16))
+	    ];
+	
+	    return hex.join("");
+	}
+	
+	// `equals`
+	// Can be called with any tinycolor input
+	tinycolor.equals = function (color1, color2) {
+	    if (!color1 || !color2) { return false; }
+	    return tinycolor(color1).toRgbString() == tinycolor(color2).toRgbString();
+	};
+	
+	tinycolor.random = function() {
+	    return tinycolor.fromRatio({
+	        r: mathRandom(),
+	        g: mathRandom(),
+	        b: mathRandom()
+	    });
+	};
+	
+	
+	// Modification Functions
+	// ----------------------
+	// Thanks to less.js for some of the basics here
+	// <https://github.com/cloudhead/less.js/blob/master/lib/less/functions.js>
+	
+	function desaturate(color, amount) {
+	    amount = (amount === 0) ? 0 : (amount || 10);
+	    var hsl = tinycolor(color).toHsl();
+	    hsl.s -= amount / 100;
+	    hsl.s = clamp01(hsl.s);
+	    return tinycolor(hsl);
+	}
+	
+	function saturate(color, amount) {
+	    amount = (amount === 0) ? 0 : (amount || 10);
+	    var hsl = tinycolor(color).toHsl();
+	    hsl.s += amount / 100;
+	    hsl.s = clamp01(hsl.s);
+	    return tinycolor(hsl);
+	}
+	
+	function greyscale(color) {
+	    return tinycolor(color).desaturate(100);
+	}
+	
+	function lighten (color, amount) {
+	    amount = (amount === 0) ? 0 : (amount || 10);
+	    var hsl = tinycolor(color).toHsl();
+	    hsl.l += amount / 100;
+	    hsl.l = clamp01(hsl.l);
+	    return tinycolor(hsl);
+	}
+	
+	function brighten(color, amount) {
+	    amount = (amount === 0) ? 0 : (amount || 10);
+	    var rgb = tinycolor(color).toRgb();
+	    rgb.r = mathMax(0, mathMin(255, rgb.r - mathRound(255 * - (amount / 100))));
+	    rgb.g = mathMax(0, mathMin(255, rgb.g - mathRound(255 * - (amount / 100))));
+	    rgb.b = mathMax(0, mathMin(255, rgb.b - mathRound(255 * - (amount / 100))));
+	    return tinycolor(rgb);
+	}
+	
+	function darken (color, amount) {
+	    amount = (amount === 0) ? 0 : (amount || 10);
+	    var hsl = tinycolor(color).toHsl();
+	    hsl.l -= amount / 100;
+	    hsl.l = clamp01(hsl.l);
+	    return tinycolor(hsl);
+	}
+	
+	// Spin takes a positive or negative amount within [-360, 360] indicating the change of hue.
+	// Values outside of this range will be wrapped into this range.
+	function spin(color, amount) {
+	    var hsl = tinycolor(color).toHsl();
+	    var hue = (mathRound(hsl.h) + amount) % 360;
+	    hsl.h = hue < 0 ? 360 + hue : hue;
+	    return tinycolor(hsl);
+	}
+	
+	// Combination Functions
+	// ---------------------
+	// Thanks to jQuery xColor for some of the ideas behind these
+	// <https://github.com/infusion/jQuery-xcolor/blob/master/jquery.xcolor.js>
+	
+	function complement(color) {
+	    var hsl = tinycolor(color).toHsl();
+	    hsl.h = (hsl.h + 180) % 360;
+	    return tinycolor(hsl);
+	}
+	
+	function triad(color) {
+	    var hsl = tinycolor(color).toHsl();
+	    var h = hsl.h;
+	    return [
+	        tinycolor(color),
+	        tinycolor({ h: (h + 120) % 360, s: hsl.s, l: hsl.l }),
+	        tinycolor({ h: (h + 240) % 360, s: hsl.s, l: hsl.l })
+	    ];
+	}
+	
+	function tetrad(color) {
+	    var hsl = tinycolor(color).toHsl();
+	    var h = hsl.h;
+	    return [
+	        tinycolor(color),
+	        tinycolor({ h: (h + 90) % 360, s: hsl.s, l: hsl.l }),
+	        tinycolor({ h: (h + 180) % 360, s: hsl.s, l: hsl.l }),
+	        tinycolor({ h: (h + 270) % 360, s: hsl.s, l: hsl.l })
+	    ];
+	}
+	
+	function splitcomplement(color) {
+	    var hsl = tinycolor(color).toHsl();
+	    var h = hsl.h;
+	    return [
+	        tinycolor(color),
+	        tinycolor({ h: (h + 72) % 360, s: hsl.s, l: hsl.l}),
+	        tinycolor({ h: (h + 216) % 360, s: hsl.s, l: hsl.l})
+	    ];
+	}
+	
+	function analogous(color, results, slices) {
+	    results = results || 6;
+	    slices = slices || 30;
+	
+	    var hsl = tinycolor(color).toHsl();
+	    var part = 360 / slices;
+	    var ret = [tinycolor(color)];
+	
+	    for (hsl.h = ((hsl.h - (part * results >> 1)) + 720) % 360; --results; ) {
+	        hsl.h = (hsl.h + part) % 360;
+	        ret.push(tinycolor(hsl));
+	    }
+	    return ret;
+	}
+	
+	function monochromatic(color, results) {
+	    results = results || 6;
+	    var hsv = tinycolor(color).toHsv();
+	    var h = hsv.h, s = hsv.s, v = hsv.v;
+	    var ret = [];
+	    var modification = 1 / results;
+	
+	    while (results--) {
+	        ret.push(tinycolor({ h: h, s: s, v: v}));
+	        v = (v + modification) % 1;
+	    }
+	
+	    return ret;
+	}
+	
+	// Utility Functions
+	// ---------------------
+	
+	tinycolor.mix = function(color1, color2, amount) {
+	    amount = (amount === 0) ? 0 : (amount || 50);
+	
+	    var rgb1 = tinycolor(color1).toRgb();
+	    var rgb2 = tinycolor(color2).toRgb();
+	
+	    var p = amount / 100;
+	    var w = p * 2 - 1;
+	    var a = rgb2.a - rgb1.a;
+	
+	    var w1;
+	
+	    if (w * a == -1) {
+	        w1 = w;
+	    } else {
+	        w1 = (w + a) / (1 + w * a);
+	    }
+	
+	    w1 = (w1 + 1) / 2;
+	
+	    var w2 = 1 - w1;
+	
+	    var rgba = {
+	        r: rgb2.r * w1 + rgb1.r * w2,
+	        g: rgb2.g * w1 + rgb1.g * w2,
+	        b: rgb2.b * w1 + rgb1.b * w2,
+	        a: rgb2.a * p  + rgb1.a * (1 - p)
+	    };
+	
+	    return tinycolor(rgba);
+	};
+	
+	
+	// Readability Functions
+	// ---------------------
+	// <http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef (WCAG Version 2)
+	
+	// `contrast`
+	// Analyze the 2 colors and returns the color contrast defined by (WCAG Version 2)
+	tinycolor.readability = function(color1, color2) {
+	    var c1 = tinycolor(color1);
+	    var c2 = tinycolor(color2);
+	    return (Math.max(c1.getLuminance(),c2.getLuminance())+0.05) / (Math.min(c1.getLuminance(),c2.getLuminance())+0.05);
+	};
+	
+	// `isReadable`
+	// Ensure that foreground and background color combinations meet WCAG2 guidelines.
+	// The third argument is an optional Object.
+	//      the 'level' property states 'AA' or 'AAA' - if missing or invalid, it defaults to 'AA';
+	//      the 'size' property states 'large' or 'small' - if missing or invalid, it defaults to 'small'.
+	// If the entire object is absent, isReadable defaults to {level:"AA",size:"small"}.
+	
+	// *Example*
+	//    tinycolor.isReadable("#000", "#111") => false
+	//    tinycolor.isReadable("#000", "#111",{level:"AA",size:"large"}) => false
+	tinycolor.isReadable = function(color1, color2, wcag2) {
+	    var readability = tinycolor.readability(color1, color2);
+	    var wcag2Parms, out;
+	
+	    out = false;
+	
+	    wcag2Parms = validateWCAG2Parms(wcag2);
+	    switch (wcag2Parms.level + wcag2Parms.size) {
+	        case "AAsmall":
+	        case "AAAlarge":
+	            out = readability >= 4.5;
+	            break;
+	        case "AAlarge":
+	            out = readability >= 3;
+	            break;
+	        case "AAAsmall":
+	            out = readability >= 7;
+	            break;
+	    }
+	    return out;
+	
+	};
+	
+	// `mostReadable`
+	// Given a base color and a list of possible foreground or background
+	// colors for that base, returns the most readable color.
+	// Optionally returns Black or White if the most readable color is unreadable.
+	// *Example*
+	//    tinycolor.mostReadable(tinycolor.mostReadable("#123", ["#124", "#125"],{includeFallbackColors:false}).toHexString(); // "#112255"
+	//    tinycolor.mostReadable(tinycolor.mostReadable("#123", ["#124", "#125"],{includeFallbackColors:true}).toHexString();  // "#ffffff"
+	//    tinycolor.mostReadable("#a8015a", ["#faf3f3"],{includeFallbackColors:true,level:"AAA",size:"large"}).toHexString(); // "#faf3f3"
+	//    tinycolor.mostReadable("#a8015a", ["#faf3f3"],{includeFallbackColors:true,level:"AAA",size:"small"}).toHexString(); // "#ffffff"
+	tinycolor.mostReadable = function(baseColor, colorList, args) {
+	    var bestColor = null;
+	    var bestScore = 0;
+	    var readability;
+	    var includeFallbackColors, level, size ;
+	    args = args || {};
+	    includeFallbackColors = args.includeFallbackColors ;
+	    level = args.level;
+	    size = args.size;
+	
+	    for (var i= 0; i < colorList.length ; i++) {
+	        readability = tinycolor.readability(baseColor, colorList[i]);
+	        if (readability > bestScore) {
+	            bestScore = readability;
+	            bestColor = tinycolor(colorList[i]);
+	        }
+	    }
+	
+	    if (tinycolor.isReadable(baseColor, bestColor, {"level":level,"size":size}) || !includeFallbackColors) {
+	        return bestColor;
+	    }
+	    else {
+	        args.includeFallbackColors=false;
+	        return tinycolor.mostReadable(baseColor,["#fff", "#000"],args);
+	    }
+	};
+	
+	
+	// Big List of Colors
+	// ------------------
+	// <http://www.w3.org/TR/css3-color/#svg-color>
+	var names = tinycolor.names = {
+	    aliceblue: "f0f8ff",
+	    antiquewhite: "faebd7",
+	    aqua: "0ff",
+	    aquamarine: "7fffd4",
+	    azure: "f0ffff",
+	    beige: "f5f5dc",
+	    bisque: "ffe4c4",
+	    black: "000",
+	    blanchedalmond: "ffebcd",
+	    blue: "00f",
+	    blueviolet: "8a2be2",
+	    brown: "a52a2a",
+	    burlywood: "deb887",
+	    burntsienna: "ea7e5d",
+	    cadetblue: "5f9ea0",
+	    chartreuse: "7fff00",
+	    chocolate: "d2691e",
+	    coral: "ff7f50",
+	    cornflowerblue: "6495ed",
+	    cornsilk: "fff8dc",
+	    crimson: "dc143c",
+	    cyan: "0ff",
+	    darkblue: "00008b",
+	    darkcyan: "008b8b",
+	    darkgoldenrod: "b8860b",
+	    darkgray: "a9a9a9",
+	    darkgreen: "006400",
+	    darkgrey: "a9a9a9",
+	    darkkhaki: "bdb76b",
+	    darkmagenta: "8b008b",
+	    darkolivegreen: "556b2f",
+	    darkorange: "ff8c00",
+	    darkorchid: "9932cc",
+	    darkred: "8b0000",
+	    darksalmon: "e9967a",
+	    darkseagreen: "8fbc8f",
+	    darkslateblue: "483d8b",
+	    darkslategray: "2f4f4f",
+	    darkslategrey: "2f4f4f",
+	    darkturquoise: "00ced1",
+	    darkviolet: "9400d3",
+	    deeppink: "ff1493",
+	    deepskyblue: "00bfff",
+	    dimgray: "696969",
+	    dimgrey: "696969",
+	    dodgerblue: "1e90ff",
+	    firebrick: "b22222",
+	    floralwhite: "fffaf0",
+	    forestgreen: "228b22",
+	    fuchsia: "f0f",
+	    gainsboro: "dcdcdc",
+	    ghostwhite: "f8f8ff",
+	    gold: "ffd700",
+	    goldenrod: "daa520",
+	    gray: "808080",
+	    green: "008000",
+	    greenyellow: "adff2f",
+	    grey: "808080",
+	    honeydew: "f0fff0",
+	    hotpink: "ff69b4",
+	    indianred: "cd5c5c",
+	    indigo: "4b0082",
+	    ivory: "fffff0",
+	    khaki: "f0e68c",
+	    lavender: "e6e6fa",
+	    lavenderblush: "fff0f5",
+	    lawngreen: "7cfc00",
+	    lemonchiffon: "fffacd",
+	    lightblue: "add8e6",
+	    lightcoral: "f08080",
+	    lightcyan: "e0ffff",
+	    lightgoldenrodyellow: "fafad2",
+	    lightgray: "d3d3d3",
+	    lightgreen: "90ee90",
+	    lightgrey: "d3d3d3",
+	    lightpink: "ffb6c1",
+	    lightsalmon: "ffa07a",
+	    lightseagreen: "20b2aa",
+	    lightskyblue: "87cefa",
+	    lightslategray: "789",
+	    lightslategrey: "789",
+	    lightsteelblue: "b0c4de",
+	    lightyellow: "ffffe0",
+	    lime: "0f0",
+	    limegreen: "32cd32",
+	    linen: "faf0e6",
+	    magenta: "f0f",
+	    maroon: "800000",
+	    mediumaquamarine: "66cdaa",
+	    mediumblue: "0000cd",
+	    mediumorchid: "ba55d3",
+	    mediumpurple: "9370db",
+	    mediumseagreen: "3cb371",
+	    mediumslateblue: "7b68ee",
+	    mediumspringgreen: "00fa9a",
+	    mediumturquoise: "48d1cc",
+	    mediumvioletred: "c71585",
+	    midnightblue: "191970",
+	    mintcream: "f5fffa",
+	    mistyrose: "ffe4e1",
+	    moccasin: "ffe4b5",
+	    navajowhite: "ffdead",
+	    navy: "000080",
+	    oldlace: "fdf5e6",
+	    olive: "808000",
+	    olivedrab: "6b8e23",
+	    orange: "ffa500",
+	    orangered: "ff4500",
+	    orchid: "da70d6",
+	    palegoldenrod: "eee8aa",
+	    palegreen: "98fb98",
+	    paleturquoise: "afeeee",
+	    palevioletred: "db7093",
+	    papayawhip: "ffefd5",
+	    peachpuff: "ffdab9",
+	    peru: "cd853f",
+	    pink: "ffc0cb",
+	    plum: "dda0dd",
+	    powderblue: "b0e0e6",
+	    purple: "800080",
+	    rebeccapurple: "663399",
+	    red: "f00",
+	    rosybrown: "bc8f8f",
+	    royalblue: "4169e1",
+	    saddlebrown: "8b4513",
+	    salmon: "fa8072",
+	    sandybrown: "f4a460",
+	    seagreen: "2e8b57",
+	    seashell: "fff5ee",
+	    sienna: "a0522d",
+	    silver: "c0c0c0",
+	    skyblue: "87ceeb",
+	    slateblue: "6a5acd",
+	    slategray: "708090",
+	    slategrey: "708090",
+	    snow: "fffafa",
+	    springgreen: "00ff7f",
+	    steelblue: "4682b4",
+	    tan: "d2b48c",
+	    teal: "008080",
+	    thistle: "d8bfd8",
+	    tomato: "ff6347",
+	    turquoise: "40e0d0",
+	    violet: "ee82ee",
+	    wheat: "f5deb3",
+	    white: "fff",
+	    whitesmoke: "f5f5f5",
+	    yellow: "ff0",
+	    yellowgreen: "9acd32"
+	};
+	
+	// Make it easy to access colors via `hexNames[hex]`
+	var hexNames = tinycolor.hexNames = flip(names);
+	
+	
+	// Utilities
+	// ---------
+	
+	// `{ 'name1': 'val1' }` becomes `{ 'val1': 'name1' }`
+	function flip(o) {
+	    var flipped = { };
+	    for (var i in o) {
+	        if (o.hasOwnProperty(i)) {
+	            flipped[o[i]] = i;
+	        }
+	    }
+	    return flipped;
+	}
+	
+	// Return a valid alpha value [0,1] with all invalid values being set to 1
+	function boundAlpha(a) {
+	    a = parseFloat(a);
+	
+	    if (isNaN(a) || a < 0 || a > 1) {
+	        a = 1;
+	    }
+	
+	    return a;
+	}
+	
+	// Take input from [0, n] and return it as [0, 1]
+	function bound01(n, max) {
+	    if (isOnePointZero(n)) { n = "100%"; }
+	
+	    var processPercent = isPercentage(n);
+	    n = mathMin(max, mathMax(0, parseFloat(n)));
+	
+	    // Automatically convert percentage into number
+	    if (processPercent) {
+	        n = parseInt(n * max, 10) / 100;
+	    }
+	
+	    // Handle floating point rounding errors
+	    if ((math.abs(n - max) < 0.000001)) {
+	        return 1;
+	    }
+	
+	    // Convert into [0, 1] range if it isn't already
+	    return (n % max) / parseFloat(max);
+	}
+	
+	// Force a number between 0 and 1
+	function clamp01(val) {
+	    return mathMin(1, mathMax(0, val));
+	}
+	
+	// Parse a base-16 hex value into a base-10 integer
+	function parseIntFromHex(val) {
+	    return parseInt(val, 16);
+	}
+	
+	// Need to handle 1.0 as 100%, since once it is a number, there is no difference between it and 1
+	// <http://stackoverflow.com/questions/7422072/javascript-how-to-detect-number-as-a-decimal-including-1-0>
+	function isOnePointZero(n) {
+	    return typeof n == "string" && n.indexOf('.') != -1 && parseFloat(n) === 1;
+	}
+	
+	// Check to see if string passed in is a percentage
+	function isPercentage(n) {
+	    return typeof n === "string" && n.indexOf('%') != -1;
+	}
+	
+	// Force a hex value to have 2 characters
+	function pad2(c) {
+	    return c.length == 1 ? '0' + c : '' + c;
+	}
+	
+	// Replace a decimal with it's percentage value
+	function convertToPercentage(n) {
+	    if (n <= 1) {
+	        n = (n * 100) + "%";
+	    }
+	
+	    return n;
+	}
+	
+	// Converts a decimal to a hex value
+	function convertDecimalToHex(d) {
+	    return Math.round(parseFloat(d) * 255).toString(16);
+	}
+	// Converts a hex value to a decimal
+	function convertHexToDecimal(h) {
+	    return (parseIntFromHex(h) / 255);
+	}
+	
+	var matchers = (function() {
+	
+	    // <http://www.w3.org/TR/css3-values/#integers>
+	    var CSS_INTEGER = "[-\\+]?\\d+%?";
+	
+	    // <http://www.w3.org/TR/css3-values/#number-value>
+	    var CSS_NUMBER = "[-\\+]?\\d*\\.\\d+%?";
+	
+	    // Allow positive/negative integer/number.  Don't capture the either/or, just the entire outcome.
+	    var CSS_UNIT = "(?:" + CSS_NUMBER + ")|(?:" + CSS_INTEGER + ")";
+	
+	    // Actual matching.
+	    // Parentheses and commas are optional, but not required.
+	    // Whitespace can take the place of commas or opening paren
+	    var PERMISSIVE_MATCH3 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
+	    var PERMISSIVE_MATCH4 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
+	
+	    return {
+	        rgb: new RegExp("rgb" + PERMISSIVE_MATCH3),
+	        rgba: new RegExp("rgba" + PERMISSIVE_MATCH4),
+	        hsl: new RegExp("hsl" + PERMISSIVE_MATCH3),
+	        hsla: new RegExp("hsla" + PERMISSIVE_MATCH4),
+	        hsv: new RegExp("hsv" + PERMISSIVE_MATCH3),
+	        hsva: new RegExp("hsva" + PERMISSIVE_MATCH4),
+	        hex3: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
+	        hex6: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/,
+	        hex8: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/
+	    };
+	})();
+	
+	// `stringInputToObject`
+	// Permissive string parsing.  Take in a number of formats, and output an object
+	// based on detected format.  Returns `{ r, g, b }` or `{ h, s, l }` or `{ h, s, v}`
+	function stringInputToObject(color) {
+	
+	    color = color.replace(trimLeft,'').replace(trimRight, '').toLowerCase();
+	    var named = false;
+	    if (names[color]) {
+	        color = names[color];
+	        named = true;
+	    }
+	    else if (color == 'transparent') {
+	        return { r: 0, g: 0, b: 0, a: 0, format: "name" };
+	    }
+	
+	    // Try to match string input using regular expressions.
+	    // Keep most of the number bounding out of this function - don't worry about [0,1] or [0,100] or [0,360]
+	    // Just return an object and let the conversion functions handle that.
+	    // This way the result will be the same whether the tinycolor is initialized with string or object.
+	    var match;
+	    if ((match = matchers.rgb.exec(color))) {
+	        return { r: match[1], g: match[2], b: match[3] };
+	    }
+	    if ((match = matchers.rgba.exec(color))) {
+	        return { r: match[1], g: match[2], b: match[3], a: match[4] };
+	    }
+	    if ((match = matchers.hsl.exec(color))) {
+	        return { h: match[1], s: match[2], l: match[3] };
+	    }
+	    if ((match = matchers.hsla.exec(color))) {
+	        return { h: match[1], s: match[2], l: match[3], a: match[4] };
+	    }
+	    if ((match = matchers.hsv.exec(color))) {
+	        return { h: match[1], s: match[2], v: match[3] };
+	    }
+	    if ((match = matchers.hsva.exec(color))) {
+	        return { h: match[1], s: match[2], v: match[3], a: match[4] };
+	    }
+	    if ((match = matchers.hex8.exec(color))) {
+	        return {
+	            a: convertHexToDecimal(match[1]),
+	            r: parseIntFromHex(match[2]),
+	            g: parseIntFromHex(match[3]),
+	            b: parseIntFromHex(match[4]),
+	            format: named ? "name" : "hex8"
+	        };
+	    }
+	    if ((match = matchers.hex6.exec(color))) {
+	        return {
+	            r: parseIntFromHex(match[1]),
+	            g: parseIntFromHex(match[2]),
+	            b: parseIntFromHex(match[3]),
+	            format: named ? "name" : "hex"
+	        };
+	    }
+	    if ((match = matchers.hex3.exec(color))) {
+	        return {
+	            r: parseIntFromHex(match[1] + '' + match[1]),
+	            g: parseIntFromHex(match[2] + '' + match[2]),
+	            b: parseIntFromHex(match[3] + '' + match[3]),
+	            format: named ? "name" : "hex"
+	        };
+	    }
+	
+	    return false;
+	}
+	
+	function validateWCAG2Parms(parms) {
+	    // return valid WCAG2 parms for isReadable.
+	    // If input parms are invalid, return {"level":"AA", "size":"small"}
+	    var level, size;
+	    parms = parms || {"level":"AA", "size":"small"};
+	    level = (parms.level || "AA").toUpperCase();
+	    size = (parms.size || "small").toLowerCase();
+	    if (level !== "AA" && level !== "AAA") {
+	        level = "AA";
+	    }
+	    if (size !== "small" && size !== "large") {
+	        size = "small";
+	    }
+	    return {"level":level, "size":size};
+	}
+	
+	// Node: Export function
+	if (typeof module !== "undefined" && module.exports) {
+	    module.exports = tinycolor;
+	}
+	// AMD/requirejs: Define the module
+	else if (true) {
+	    !(__WEBPACK_AMD_DEFINE_RESULT__ = function () {return tinycolor;}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	}
+	// Browser: Expose to window
+	else {
+	    window.tinycolor = tinycolor;
+	}
+	
+	})();
+
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(10)
+	__vue_script__ = __webpack_require__(12)
+	__vue_template__ = __webpack_require__(13)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "C:\\Users\\cassio\\Documents\\GitHub\\vue-color\\src\\components\\common\\EditableInput.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(11);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c51ff9ca&file=EditableInput.vue!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../../node_modules/eslint-loader/index.js!./../../../node_modules/eslint-loader/index.js!./EditableInput.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c51ff9ca&file=EditableInput.vue!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../../node_modules/eslint-loader/index.js!./../../../node_modules/eslint-loader/index.js!./EditableInput.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".editable-input {\n  position: relative;\n}\n.editable-input .input {\n  padding: 0;\n  border: 0;\n  outline: none;\n}\n.editable-input .label {\n  text-transform: capitalize;\n}\n", "", {"version":3,"sources":["/./src/components/common/EditableInput.vue.style","/./src/components/common/EditableInput.vue"],"names":[],"mappings":"AACA;EACE,mBAAA;CCAD;ADCC;EACE,WAAA;EACA,UAAA;EACA,cAAA;CCCH;ADAC;EACE,2BAAA;CCEH","file":"EditableInput.vue","sourcesContent":["\r\n.editable-input\r\n  position relative\r\n  .input\r\n    padding 0\r\n    border 0\r\n    outline none\r\n  .label\r\n    text-transform capitalize\r\n",".editable-input {\n  position: relative;\n}\n.editable-input .input {\n  padding: 0;\n  border: 0;\n  outline: none;\n}\n.editable-input .label {\n  text-transform: capitalize;\n}\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 12 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  name: 'editableInput',
+	  props: {
+	    label: String,
+	    val: [String | Number],
+	    onChange: Function,
+	    max: Number,
+	    arrowOffset: {
+	      type: Number,
+	      default: 1
+	    }
+	  },
+	  filters: {
+	    maxFilter: {
+	      read: function read(val) {
+	        if (this.max && val > this.max) {
+	          return this.max;
+	        } else {
+	          return val;
+	        }
+	      },
+	      write: function write(val, oldVal) {
+	        return val;
+	      }
+	    }
+	  },
+	  methods: {
+	    handleChange: function handleChange(e) {
+	      var data = {};
+	      data[this.label] = this.val;
+	      this.onChange(data);
+	    },
+	    handleBlur: function handleBlur(e) {
+	      console.log(e);
+	    },
+	    handleKeyDown: function handleKeyDown(e) {
+	      var val = this.val;
+	      var number = Number(val);
+	
+	      if (number) {
+	        var amount = this.arrowOffset || 1;
+	
+	        if (e.keyCode === 38) {
+	          this.val = number + amount;
+	          e.preventDefault();
+	        }
+	
+	        if (e.keyCode === 40) {
+	          this.val = number - amount;
+	          e.preventDefault();
+	        }
+	
+	        this.handleChange();
+	      }
+	    },
+	    handleDrag: function handleDrag(e) {
+	      console.log(e);
+	    },
+	    handleMouseDown: function handleMouseDown(e) {
+	      console.log(e);
+	    }
+	  }
+	};
+
+/***/ },
+/* 13 */
+/***/ function(module, exports) {
+
+	module.exports = "\r\n  <div class=\"editable-input\">\r\n    <input class=\"input\" \r\n      v-model=\"val | maxFilter\"\r\n      @keydown=\"handleKeyDown\"\r\n      @input=\"handleChange\">\r\n    <span class=\"label\" @mousedown=\"handleMouseDown\">{{label}}</span>\r\n  </div>\r\n";
+
+/***/ },
+/* 14 */
+/***/ function(module, exports) {
+
+	module.exports = "\r\n  <div class=\"c-compact\">\r\n    <ul class=\"colors\">\r\n      <li class=\"color-item\" v-for=\"c in defaultColors\" \r\n        @click=\"handlerClick(c)\"\r\n        :class=\"{white: c === '#FFFFFF' }\"\r\n        :style=\"{background: c}\">\r\n        <div class=\"dot\" v-show=\"c === pick\"></div>\r\n      </li>\r\n    </ul>\r\n    <div class=\"fields\">\r\n      <div class=\"pick-color\" :style=\"{background: pick}\"></div>\r\n      <div class=\"col-hex\">\r\n        <ed-in label=\"hex\"\r\n        :val.sync=\"colors.hex\"\r\n        :style=\"{ borderColor: colors.hex }\"\r\n        :on-change=\"onChange\"></ed-in>\r\n      </div>\r\n      <div class=\"col-3\">\r\n        <ed-in label=\"r\" :val.sync=\"colors.rgba.r\" \r\n        :on-change=\"onChange\"></ed-in>\r\n      </div>\r\n      <div class=\"col-3\">\r\n        <ed-in label=\"g\" :val.sync=\"colors.rgba.g\" \r\n        :on-change=\"onChange\"></ed-in>\r\n      </div>\r\n      <div class=\"col-3\">\r\n        <ed-in label=\"b\" :val.sync=\"colors.rgba.b\"\r\n        :on-change=\"onChange\"></ed-in>\r\n      </div>\r\n    </div>\r\n  </div>\r\n";
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(16)
+	__vue_script__ = __webpack_require__(18)
+	__vue_template__ = __webpack_require__(19)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "C:\\Users\\cassio\\Documents\\GitHub\\vue-color\\src\\components\\Material.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(17);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0fb688ed&file=Material.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./Material.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0fb688ed&file=Material.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./Material.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".c-material {\n  width: 98px;\n  height: 98px;\n  padding: 16px;\n  font-family: \"Roboto\";\n  position: relative;\n  border-radius: 2px;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.16);\n}\n.c-material .hex {\n  border-bottom-width: 2px;\n  border-bottom-style: solid;\n}\n.c-material .split {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  margin-right: -10px;\n  padding-top: 11px;\n}\n.c-material .third {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  padding-right: 10px;\n}\n.c-material .input {\n  width: 100%;\n  margin-top: 12px;\n  font-size: 15px;\n  color: #333;\n  height: 30px;\n}\n.c-material .label {\n  position: absolute;\n  top: 0;\n  left: 0;\n  font-size: 11px;\n  color: #999;\n  text-transform: capitalize;\n}\n", "", {"version":3,"sources":["/./src/components/Material.vue.style","/./src/components/Material.vue"],"names":[],"mappings":"AACA;EACE,YAAA;EACA,aAAA;EACA,cAAA;EACA,sBAAA;EACA,mBAAA;EACA,mBAAA;EACA,oEAAA;CCAD;ADCC;EACE,yBAAA;EACA,2BAAA;CCCH;ADAC;EACE,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;EACA,oBAAA;EACA,kBAAA;CCEH;ADDC;EACE,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;EACA,oBAAA;CCGH;ADFC;EACE,YAAA;EACA,iBAAA;EACA,gBAAA;EACA,YAAA;EACA,aAAA;CCIH;ADHC;EACE,mBAAA;EACA,OAAA;EACA,QAAA;EACA,gBAAA;EACA,YAAA;EACA,2BAAA;CCKH","file":"Material.vue","sourcesContent":["\r\n.c-material\r\n  width 98px\r\n  height 98px\r\n  padding 16px\r\n  font-family \"Roboto\"\r\n  position relative\r\n  border-radius 2px\r\n  box-shadow 0 2px 10px rgba(0,0,0,.12), 0 2px 5px rgba(0,0,0,.16)\r\n  .hex\r\n    border-bottom-width 2px\r\n    border-bottom-style solid\r\n  .split\r\n    display flex\r\n    margin-right -10px\r\n    padding-top 11px\r\n  .third\r\n    flex 1\r\n    padding-right 10px\r\n  .input\r\n    width 100%\r\n    margin-top 12px\r\n    font-size 15px\r\n    color #333\r\n    height 30px\r\n  .label\r\n    position absolute\r\n    top 0\r\n    left 0\r\n    font-size 11px\r\n    color #999\r\n    text-transform capitalize\r\n",".c-material {\n  width: 98px;\n  height: 98px;\n  padding: 16px;\n  font-family: \"Roboto\";\n  position: relative;\n  border-radius: 2px;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.16);\n}\n.c-material .hex {\n  border-bottom-width: 2px;\n  border-bottom-style: solid;\n}\n.c-material .split {\n  display: flex;\n  margin-right: -10px;\n  padding-top: 11px;\n}\n.c-material .third {\n  flex: 1;\n  padding-right: 10px;\n}\n.c-material .input {\n  width: 100%;\n  margin-top: 12px;\n  font-size: 15px;\n  color: #333;\n  height: 30px;\n}\n.c-material .label {\n  position: absolute;\n  top: 0;\n  left: 0;\n  font-size: 11px;\n  color: #999;\n  text-transform: capitalize;\n}\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _EditableInput = __webpack_require__(9);
+	
+	var _EditableInput2 = _interopRequireDefault(_EditableInput);
+	
+	var _color = __webpack_require__(7);
+	
+	var _color2 = _interopRequireDefault(_color);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	  name: 'Material',
+	  mixins: [_color2.default],
+	  props: {},
+	  data: function data() {
+	    return {};
+	  },
+	
+	  components: {
+	    'ed-in': _EditableInput2.default
+	  },
+	  methods: {
+	    onChange: function onChange(data) {
+	      if (!data) {
+	        return;
+	      }
+	      if (data.hex) {
+	        this.isValidHex(data.hex) && this.colorChange({
+	          hex: data.hex,
+	          source: 'hex'
+	        });
+	      } else if (data.r || data.g || data.b) {
+	        this.colorChange({
+	          r: data.r || this.colors.rgba.r,
+	          g: data.g || this.colors.rgba.g,
+	          b: data.b || this.colors.rgba.b,
+	          a: data.a || this.colors.rgba.a,
+	          source: 'rgba'
+	        });
+	      }
+	    }
+	  }
+	};
+
+/***/ },
+/* 19 */
+/***/ function(module, exports) {
+
+	module.exports = "\r\n  \r\n  <div class=\"c-material\">\r\n    <ed-in class=\"hex\" label=\"hex\" :val.sync=\"colors.hex\"\r\n    :style=\"{ borderColor: colors.hex }\"\r\n    :on-change=\"onChange\"></ed-in>\r\n    <div class=\"split flexbox-fix\">\r\n      <div class=\"third\">\r\n        <ed-in label=\"r\" :val.sync=\"colors.rgba.r\" \r\n        :on-change=\"onChange\"></ed-in>\r\n      </div>\r\n      <div class=\"third\">\r\n        <ed-in label=\"g\" :val.sync=\"colors.rgba.g\" \r\n        :on-change=\"onChange\"></ed-in>\r\n      </div>\r\n      <div class=\"third\">\r\n        <ed-in label=\"b\" :val.sync=\"colors.rgba.b\"\r\n        :on-change=\"onChange\"></ed-in>\r\n      </div>\r\n    </div>  \r\n  </div>\r\n  \r\n";
+
+/***/ },
+/* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(21)
+	__vue_script__ = __webpack_require__(23)
+	__vue_template__ = __webpack_require__(29)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "C:\\Users\\cassio\\Documents\\GitHub\\vue-color\\src\\components\\Slider.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(22);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-302a8327&file=Slider.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./Slider.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-302a8327&file=Slider.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./Slider.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".c-slider {\n  position: relative;\n  width: 410px;\n}\n.c-slider .hue-warp {\n  height: 12px;\n  position: relative;\n}\n.c-slider .hue-warp .picker {\n  width: 14px;\n  height: 14px;\n  border-radius: 6px;\n  -webkit-transform: translate(-7px, -2px);\n          transform: translate(-7px, -2px);\n  background-color: #f8f8f8;\n  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);\n}\n.c-slider .swatches {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  margin-top: 20px;\n}\n.c-slider .swatches .swatch {\n  margin-right: 1px;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  width: 20%;\n}\n.c-slider .swatches .swatch:first-child .swatch-picker {\n  border-radius: 2px 0px 0px 2px;\n}\n.c-slider .swatches .swatch:last-child {\n  margin-right: 0;\n}\n.c-slider .swatches .swatch:last-child .swatch-picker {\n  border-radius: 0px 2px 2px 0px;\n}\n.c-slider .swatches .swatch-picker {\n  height: 12px;\n  cursor: pointer;\n}\n.c-slider .swatches .swatch-picker.active {\n  -webkit-transform: scaleY(1.8);\n          transform: scaleY(1.8);\n  border-radius: 3.6px/2px;\n}\n", "", {"version":3,"sources":["/./src/components/Slider.vue.style","/./src/components/Slider.vue"],"names":[],"mappings":"AACA;EACE,mBAAA;EACA,aAAA;CCAD;ADCC;EACE,aAAA;EACA,mBAAA;CCCH;ADAG;EACE,YAAA;EACA,aAAA;EACA,mBAAA;EACA,yCAAA;UAAA,iCAAA;EACA,0BAAA;EACA,yCAAA;CCEL;ADDC;EACE,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;EACA,iBAAA;CCGH;ADFG;EACE,kBAAA;EACA,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;EACA,WAAA;CCIL;ADFO;EACE,+BAAA;CCIT;ADHK;EACE,gBAAA;CCKP;ADJO;EACE,+BAAA;CCMT;ADLG;EACE,aAAA;EACA,gBAAA;CCOL;ADNK;EACE,+BAAA;UAAA,uBAAA;EACA,yBAAA;CCQP","file":"Slider.vue","sourcesContent":["\r\n.c-slider\r\n  position relative\r\n  width 410px\r\n  .hue-warp\r\n    height 12px\r\n    position relative\r\n    .picker\r\n      width 14px\r\n      height 14px\r\n      border-radius 6px\r\n      transform translate(-7px, -2px)\r\n      background-color rgb(248, 248, 248)\r\n      box-shadow 0 1px 4px 0 rgba(0, 0, 0, 0.37)    \r\n  .swatches\r\n    display flex\r\n    margin-top 20px\r\n    .swatch\r\n      margin-right 1px\r\n      flex 1\r\n      width 20%\r\n      &:first-child\r\n        .swatch-picker\r\n          border-radius 2px 0px 0px 2px        \r\n      &:last-child\r\n        margin-right 0\r\n        .swatch-picker\r\n          border-radius 0px 2px 2px 0px\r\n    .swatch-picker\r\n      height 12px\r\n      cursor pointer\r\n      &.active\r\n        transform scaleY(1.8)\r\n        border-radius: 3.6px/2px\r\n",".c-slider {\n  position: relative;\n  width: 410px;\n}\n.c-slider .hue-warp {\n  height: 12px;\n  position: relative;\n}\n.c-slider .hue-warp .picker {\n  width: 14px;\n  height: 14px;\n  border-radius: 6px;\n  transform: translate(-7px, -2px);\n  background-color: #f8f8f8;\n  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);\n}\n.c-slider .swatches {\n  display: flex;\n  margin-top: 20px;\n}\n.c-slider .swatches .swatch {\n  margin-right: 1px;\n  flex: 1;\n  width: 20%;\n}\n.c-slider .swatches .swatch:first-child .swatch-picker {\n  border-radius: 2px 0px 0px 2px;\n}\n.c-slider .swatches .swatch:last-child {\n  margin-right: 0;\n}\n.c-slider .swatches .swatch:last-child .swatch-picker {\n  border-radius: 0px 2px 2px 0px;\n}\n.c-slider .swatches .swatch-picker {\n  height: 12px;\n  cursor: pointer;\n}\n.c-slider .swatches .swatch-picker.active {\n  transform: scaleY(1.8);\n  border-radius: 3.6px/2px;\n}\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _color = __webpack_require__(7);
+	
+	var _color2 = _interopRequireDefault(_color);
+	
+	var _Hue = __webpack_require__(24);
+	
+	var _Hue2 = _interopRequireDefault(_Hue);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	  name: 'Slider',
+	  mixins: [_color2.default],
+	  props: {
+	    direction: String
+	  },
+	  components: {
+	    hue: _Hue2.default
+	  },
+	  computed: {
+	    activeOffset: function activeOffset() {
+	      if (Math.round(this.colors.hsl.s * 100) / 100 === 0.50) {
+	        return Math.round(this.colors.hsl.l * 100) / 100;
+	      }
+	      return 0;
+	    }
+	  },
+	  data: function data() {
+	    return {
+	      swatches: ['.80', '.65', '.50', '.35', '.20']
+	    };
+	  },
+	
+	  methods: {
+	    hueChange: function hueChange(data) {
+	      this.colorChange(data);
+	    },
+	    handleSwClick: function handleSwClick(index, offset) {
+	      this.colorChange({
+	        h: this.colors.hsl.h,
+	        s: 0.5,
+	        l: offset,
+	        source: 'hsl'
+	      });
+	    }
+	  }
+	};
+
+/***/ },
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(25)
+	__vue_script__ = __webpack_require__(27)
+	__vue_template__ = __webpack_require__(28)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "C:\\Users\\cassio\\Documents\\GitHub\\vue-color\\src\\components\\common\\Hue.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(26);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2af020e6&file=Hue.vue!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../../node_modules/eslint-loader/index.js!./../../../node_modules/eslint-loader/index.js!./Hue.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2af020e6&file=Hue.vue!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../../node_modules/eslint-loader/index.js!./../../../node_modules/eslint-loader/index.js!./Hue.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 26 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".c-hue {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n  border-radius: 2px;\n}\n.c-hue.horizontal {\n  background: -webkit-linear-gradient(left, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n  background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n}\n.c-hue.vertical {\n  background: -webkit-linear-gradient(bottom, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n  background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n}\n.c-hue .container {\n  margin: 0 2px;\n  position: relative;\n  height: 100%;\n}\n.c-hue .pointer {\n  z-index: 2;\n  position: absolute;\n}\n.c-hue .picker {\n  margin-top: 1px;\n  width: 4px;\n  border-radius: 1px;\n  height: 8px;\n  box-shadow: 0 0 2px rgba(0,0,0,0.6);\n  background: #fff;\n  -webkit-transform: translateX(-2px);\n          transform: translateX(-2px);\n}\n", "", {"version":3,"sources":["/./src/components/common/Hue.vue.style","/./src/components/common/Hue.vue"],"names":[],"mappings":"AACA;EACE,mBAAA;EACA,SAAA;EACA,WAAA;EACA,YAAA;EACA,UAAA;EACA,mBAAA;CCAD;ADCC;EACE,gHAAA;EAAA,4GAAA;CCCH;ADAC;EACE,kHAAA;EAAA,0GAAA;CCEH;ADDC;EACE,cAAA;EACA,mBAAA;EACA,aAAA;CCGH;ADFC;EACE,WAAA;EACA,mBAAA;CCIH;ADHC;EACE,gBAAA;EACA,WAAA;EACA,mBAAA;EACA,YAAA;EACA,oCAAA;EACA,iBAAA;EACA,oCAAA;UAAA,4BAAA;CCKH","file":"Hue.vue","sourcesContent":["\r\n.c-hue\r\n  position absolute\r\n  top 0px\r\n  right 0px\r\n  bottom 0px\r\n  left 0px\r\n  border-radius 2px\r\n  &.horizontal\r\n    background linear-gradient(to right, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%)\r\n  &.vertical\r\n    background linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%)\r\n  .container\r\n    margin 0 2px\r\n    position relative\r\n    height 100%\r\n  .pointer\r\n    z-index 2\r\n    position absolute\r\n  .picker\r\n    margin-top 1px\r\n    width 4px\r\n    border-radius 1px\r\n    height 8px\r\n    box-shadow 0 0 2px rgba(0, 0, 0, .6)\r\n    background #fff\r\n    transform translateX(-2px)\r\n",".c-hue {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n  border-radius: 2px;\n}\n.c-hue.horizontal {\n  background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n}\n.c-hue.vertical {\n  background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n}\n.c-hue .container {\n  margin: 0 2px;\n  position: relative;\n  height: 100%;\n}\n.c-hue .pointer {\n  z-index: 2;\n  position: absolute;\n}\n.c-hue .picker {\n  margin-top: 1px;\n  width: 4px;\n  border-radius: 1px;\n  height: 8px;\n  box-shadow: 0 0 2px rgba(0,0,0,0.6);\n  background: #fff;\n  transform: translateX(-2px);\n}\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 27 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  name: 'Hue',
+	  props: {
+	    colors: Object,
+	    onChange: Function,
+	    direction: {
+	      type: String,
+	
+	      default: 'horizontal'
+	    }
+	  },
+	  computed: {
+	    pointerTop: function pointerTop() {
+	      if (this.direction === 'vertical') {
+	        return -(this.colors.hsl.h * 100 / 360) + 100 + '%';
+	      } else {
+	        return 0;
+	      }
+	    },
+	    pointerLeft: function pointerLeft() {
+	      if (this.direction === 'vertical') {
+	        return 0;
+	      } else {
+	        return this.colors.hsl.h * 100 / 360 + '%';
+	      }
+	    }
+	  },
+	  methods: {
+	    handleChange: function handleChange(e, skip) {
+	      !skip && e.preventDefault();
+	
+	      var container = this.$els.container;
+	      var containerWidth = container.clientWidth;
+	      var containerHeight = container.clientHeight;
+	      var left = (e.pageX || e.touches[0].pageX) - (container.getBoundingClientRect().left + window.pageXOffset);
+	      var top = (e.pageY || e.touches[0].pageY) - (container.getBoundingClientRect().top + window.pageYOffset);
+	      var h;
+	      var percent;
+	
+	      if (this.direction === 'vertical') {
+	        if (top < 0) {
+	          h = 359;
+	        } else if (top > containerHeight) {
+	          h = 0;
+	        } else {
+	          percent = -(top * 100 / containerHeight) + 100;
+	          h = 360 * percent / 100;
+	        }
+	
+	        if (this.colors.hsl.h !== h) {
+	          this.onChange({
+	            h: h,
+	            s: this.colors.hsl.s,
+	            l: this.colors.hsl.l,
+	            a: this.colors.hsl.a,
+	            source: 'hsl'
+	          });
+	        }
+	      } else {
+	        if (left < 0) {
+	          h = 0;
+	        } else if (left > containerWidth) {
+	          h = 359;
+	        } else {
+	          percent = left * 100 / containerWidth;
+	          h = 360 * percent / 100;
+	        }
+	
+	        if (this.colors.hsl.h !== h) {
+	          this.onChange({
+	            h: h,
+	            s: this.colors.hsl.s,
+	            l: this.colors.hsl.l,
+	            a: this.colors.hsl.a,
+	            source: 'hsl'
+	          });
+	        }
+	      }
+	    },
+	    handleMouseDown: function handleMouseDown(e) {
+	      this.handleChange(e, true);
+	      window.addEventListener('mousemove', this.handleChange);
+	      window.addEventListener('mouseup', this.handleMouseUp);
+	    },
+	    handleMouseUp: function handleMouseUp(e) {
+	      this.unbindEventListeners();
+	    },
+	    unbindEventListeners: function unbindEventListeners() {
+	      window.removeEventListener('mousemove', this.handleChange);
+	      window.removeEventListener('mouseup', this.handleMouseUp);
+	    }
+	  }
+	};
+
+/***/ },
+/* 28 */
+/***/ function(module, exports) {
+
+	module.exports = "\r\n  <div class=\"c-hue {{direction}}\">\r\n    <div class=\"container\" v-el:container\r\n      @mousedown=\"handleMouseDown\"\r\n      @touchmove=\"handleChange\"\r\n      @touchstart=\"handleChange\">\r\n      <div class=\"pointer\" :style=\"{top: pointerTop, left: pointerLeft}\">\r\n        <slot><div class=\"picker\"></div></slot>\r\n      </div>  \r\n    </div>\r\n  </div>\r\n";
+
+/***/ },
+/* 29 */
+/***/ function(module, exports) {
+
+	module.exports = "\r\n  <div class=\"c-slider\">\r\n    <div class=\"hue-warp\">\r\n      <hue :colors.sync=\"colors\" :on-change=\"hueChange\"></hue>\r\n    </div>\r\n    <div class=\"swatches\">\r\n      <div class=\"swatch\" v-for=\"offset in swatches\" data-index=\"{{$index}}\"\r\n        @click=\"handleSwClick($index, offset)\">\r\n        <div class=\"swatch-picker\"\r\n        :class=\"{active: offset == activeOffset}\"\r\n        :style=\"{background: 'hsl(' + colors.hsl.h + ', 50%, ' + (offset * 100) + '%)'}\"\r\n        ></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n";
+
+/***/ },
+/* 30 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(31)
+	__vue_script__ = __webpack_require__(33)
+	__vue_template__ = __webpack_require__(35)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "C:\\Users\\cassio\\Documents\\GitHub\\vue-color\\src\\components\\Swatches.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(32);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-54350c30&file=Swatches.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./Swatches.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-54350c30&file=Swatches.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./Swatches.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".c-swatches {\n  width: 320px;\n  height: 240px;\n  overflow-y: scroll;\n  background-color: #fff;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.16);\n}\n.c-swatches .box {\n  padding: 16px 0 6px 16px;\n  overflow: hidden;\n}\n.c-swatches .color-group {\n  padding-bottom: 10px;\n  width: 40px;\n  float: left;\n  margin-right: 10px;\n}\n.c-swatches .color-it {\n  width: 40px;\n  height: 24px;\n  cursor: pointer;\n  background: #880e4f;\n  margin-bottom: 1px;\n  overflow: hidden;\n  border-radius: 2px 2px 0 0;\n}\n.c-swatches .pick {\n  fill: #fff;\n  margin-left: 8px;\n  display: block;\n}\n", "", {"version":3,"sources":["/./src/components/Swatches.vue.style","/./src/components/Swatches.vue"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,cAAA;EACA,mBAAA;EACA,uBAAA;EACA,oEAAA;CCAD;ADCC;EACE,yBAAA;EACA,iBAAA;CCCH;ADAC;EACE,qBAAA;EACA,YAAA;EACA,YAAA;EACA,mBAAA;CCEH;ADDC;EACE,YAAA;EACA,aAAA;EACA,gBAAA;EACA,oBAAA;EACA,mBAAA;EACA,iBAAA;EAKA,2BAAA;CCGH;ADFC;EACE,WAAA;EACA,iBAAA;EACA,eAAA;CCIH","file":"Swatches.vue","sourcesContent":["\r\n.c-swatches\r\n  width 320px\r\n  height 240px\r\n  overflow-y scroll\r\n  background-color #fff\r\n  box-shadow 0 2px 10px rgba(0,0,0,.12), 0 2px 5px rgba(0,0,0,.16)\r\n  .box\r\n    padding 16px 0 6px 16px\r\n    overflow hidden\r\n  .color-group\r\n    padding-bottom 10px\r\n    width 40px\r\n    float left\r\n    margin-right 10px\r\n  .color-it\r\n    width 40px\r\n    height 24px\r\n    cursor pointer\r\n    background #880e4f\r\n    margin-bottom 1px\r\n    overflow hidden\r\n    -ms-border-radius 2px 2px 0 0\r\n    -moz-border-radius 2px 2px 0 0\r\n    -o-border-radius 2px 2px 0 0\r\n    -webkit-border-radius 2px 2px 0 0\r\n    border-radius 2px 2px 0 0\r\n  .pick\r\n    fill: rgb(255, 255, 255);\r\n    margin-left: 8px;\r\n    display: block;\r\n\r\n",".c-swatches {\n  width: 320px;\n  height: 240px;\n  overflow-y: scroll;\n  background-color: #fff;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.16);\n}\n.c-swatches .box {\n  padding: 16px 0 6px 16px;\n  overflow: hidden;\n}\n.c-swatches .color-group {\n  padding-bottom: 10px;\n  width: 40px;\n  float: left;\n  margin-right: 10px;\n}\n.c-swatches .color-it {\n  width: 40px;\n  height: 24px;\n  cursor: pointer;\n  background: #880e4f;\n  margin-bottom: 1px;\n  overflow: hidden;\n  -ms-border-radius: 2px 2px 0 0;\n  -moz-border-radius: 2px 2px 0 0;\n  -o-border-radius: 2px 2px 0 0;\n  -webkit-border-radius: 2px 2px 0 0;\n  border-radius: 2px 2px 0 0;\n}\n.c-swatches .pick {\n  fill: #fff;\n  margin-left: 8px;\n  display: block;\n}\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _materialColors = __webpack_require__(34);
+	
+	var _materialColors2 = _interopRequireDefault(_materialColors);
+	
+	var _color = __webpack_require__(7);
+	
+	var _color2 = _interopRequireDefault(_color);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var colorMap = ['red', 'pink', 'purple', 'deepPurple', 'indigo', 'blue', 'lightBlue', 'cyan', 'teal', 'green', 'lightGreen', 'lime', 'yellow', 'amber', 'orange', 'deepOrange', 'brown', 'blueGrey'];
+	var colorLevel = ['900', '700', '500', '300', '100'];
+	var defaultColors = function () {
+	  var colors = [];
+	  colorMap.forEach(function (type) {
+	    var typeColor = [];
+	    colorLevel.forEach(function (level) {
+	      typeColor.push(_materialColors2.default[type][level].toUpperCase());
+	    });
+	    colors.push(typeColor);
+	  });
+	  return colors;
+	}();
+	
+	exports.default = {
+	  name: 'Swatches',
+	  mixins: [_color2.default],
+	  computed: {
+	    pick: function pick() {
+	      return this.colors.hex;
+	    }
+	  },
+	  data: function data() {
+	    return {
+	      defaultColors: defaultColors
+	    };
+	  },
+	
+	  methods: {
+	    handlerClick: function handlerClick(c) {
+	      this.colorChange({
+	        hex: c,
+	        source: 'hex'
+	      });
+	    }
+	  }
+	
+	};
+
+/***/ },
+/* 34 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function(root, factory) {
+	  if (true) {
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if (typeof exports === 'object') {
+	    module.exports = factory();
+	  } else {
+	    root.materialColors = factory();
+	  }
+	})(this, function() {
+	  return {"red":{"50":"#ffebee","100":"#ffcdd2","200":"#ef9a9a","300":"#e57373","400":"#ef5350","500":"#f44336","600":"#e53935","700":"#d32f2f","800":"#c62828","900":"#b71c1c","a100":"#ff8a80","a200":"#ff5252","a400":"#ff1744","a700":"#d50000"},"pink":{"50":"#fce4ec","100":"#f8bbd0","200":"#f48fb1","300":"#f06292","400":"#ec407a","500":"#e91e63","600":"#d81b60","700":"#c2185b","800":"#ad1457","900":"#880e4f","a100":"#ff80ab","a200":"#ff4081","a400":"#f50057","a700":"#c51162"},"purple":{"50":"#f3e5f5","100":"#e1bee7","200":"#ce93d8","300":"#ba68c8","400":"#ab47bc","500":"#9c27b0","600":"#8e24aa","700":"#7b1fa2","800":"#6a1b9a","900":"#4a148c","a100":"#ea80fc","a200":"#e040fb","a400":"#d500f9","a700":"#aa00ff"},"deepPurple":{"50":"#ede7f6","100":"#d1c4e9","200":"#b39ddb","300":"#9575cd","400":"#7e57c2","500":"#673ab7","600":"#5e35b1","700":"#512da8","800":"#4527a0","900":"#311b92","a100":"#b388ff","a200":"#7c4dff","a400":"#651fff","a700":"#6200ea"},"indigo":{"50":"#e8eaf6","100":"#c5cae9","200":"#9fa8da","300":"#7986cb","400":"#5c6bc0","500":"#3f51b5","600":"#3949ab","700":"#303f9f","800":"#283593","900":"#1a237e","a100":"#8c9eff","a200":"#536dfe","a400":"#3d5afe","a700":"#304ffe"},"blue":{"50":"#e3f2fd","100":"#bbdefb","200":"#90caf9","300":"#64b5f6","400":"#42a5f5","500":"#2196f3","600":"#1e88e5","700":"#1976d2","800":"#1565c0","900":"#0d47a1","a100":"#82b1ff","a200":"#448aff","a400":"#2979ff","a700":"#2962ff"},"lightBlue":{"50":"#e1f5fe","100":"#b3e5fc","200":"#81d4fa","300":"#4fc3f7","400":"#29b6f6","500":"#03a9f4","600":"#039be5","700":"#0288d1","800":"#0277bd","900":"#01579b","a100":"#80d8ff","a200":"#40c4ff","a400":"#00b0ff","a700":"#0091ea"},"cyan":{"50":"#e0f7fa","100":"#b2ebf2","200":"#80deea","300":"#4dd0e1","400":"#26c6da","500":"#00bcd4","600":"#00acc1","700":"#0097a7","800":"#00838f","900":"#006064","a100":"#84ffff","a200":"#18ffff","a400":"#00e5ff","a700":"#00b8d4"},"teal":{"50":"#e0f2f1","100":"#b2dfdb","200":"#80cbc4","300":"#4db6ac","400":"#26a69a","500":"#009688","600":"#00897b","700":"#00796b","800":"#00695c","900":"#004d40","a100":"#a7ffeb","a200":"#64ffda","a400":"#1de9b6","a700":"#00bfa5"},"green":{"50":"#e8f5e9","100":"#c8e6c9","200":"#a5d6a7","300":"#81c784","400":"#66bb6a","500":"#4caf50","600":"#43a047","700":"#388e3c","800":"#2e7d32","900":"#1b5e20","a100":"#b9f6ca","a200":"#69f0ae","a400":"#00e676","a700":"#00c853"},"lightGreen":{"50":"#f1f8e9","100":"#dcedc8","200":"#c5e1a5","300":"#aed581","400":"#9ccc65","500":"#8bc34a","600":"#7cb342","700":"#689f38","800":"#558b2f","900":"#33691e","a100":"#ccff90","a200":"#b2ff59","a400":"#76ff03","a700":"#64dd17"},"lime":{"50":"#f9fbe7","100":"#f0f4c3","200":"#e6ee9c","300":"#dce775","400":"#d4e157","500":"#cddc39","600":"#c0ca33","700":"#afb42b","800":"#9e9d24","900":"#827717","a100":"#f4ff81","a200":"#eeff41","a400":"#c6ff00","a700":"#aeea00"},"yellow":{"50":"#fffde7","100":"#fff9c4","200":"#fff59d","300":"#fff176","400":"#ffee58","500":"#ffeb3b","600":"#fdd835","700":"#fbc02d","800":"#f9a825","900":"#f57f17","a100":"#ffff8d","a200":"#ffff00","a400":"#ffea00","a700":"#ffd600"},"amber":{"50":"#fff8e1","100":"#ffecb3","200":"#ffe082","300":"#ffd54f","400":"#ffca28","500":"#ffc107","600":"#ffb300","700":"#ffa000","800":"#ff8f00","900":"#ff6f00","a100":"#ffe57f","a200":"#ffd740","a400":"#ffc400","a700":"#ffab00"},"orange":{"50":"#fff3e0","100":"#ffe0b2","200":"#ffcc80","300":"#ffb74d","400":"#ffa726","500":"#ff9800","600":"#fb8c00","700":"#f57c00","800":"#ef6c00","900":"#e65100","a100":"#ffd180","a200":"#ffab40","a400":"#ff9100","a700":"#ff6d00"},"deepOrange":{"50":"#fbe9e7","100":"#ffccbc","200":"#ffab91","300":"#ff8a65","400":"#ff7043","500":"#ff5722","600":"#f4511e","700":"#e64a19","800":"#d84315","900":"#bf360c","a100":"#ff9e80","a200":"#ff6e40","a400":"#ff3d00","a700":"#dd2c00"},"brown":{"50":"#efebe9","100":"#d7ccc8","200":"#bcaaa4","300":"#a1887f","400":"#8d6e63","500":"#795548","600":"#6d4c41","700":"#5d4037","800":"#4e342e","900":"#3e2723"},"grey":{"50":"#fafafa","100":"#f5f5f5","200":"#eeeeee","300":"#e0e0e0","400":"#bdbdbd","500":"#9e9e9e","600":"#757575","700":"#616161","800":"#424242","900":"#212121"},"blueGrey":{"50":"#eceff1","100":"#cfd8dc","200":"#b0bec5","300":"#90a4ae","400":"#78909c","500":"#607d8b","600":"#546e7a","700":"#455a64","800":"#37474f","900":"#263238"},"white":"#ffffff","black":"#000000"};
+	});
+
+
+/***/ },
+/* 35 */
+/***/ function(module, exports) {
+
+	module.exports = "\r\n  <div class=\"c-swatches\" data-pick=\"{{pick}}\">\r\n    <div class=\"box\">\r\n      <div class=\"color-group\" v-for=\"group in defaultColors\">\r\n        <div class=\"color-it\" v-for=\"c in group\"\r\n          data-color=\"{{c}}\"\r\n          @click=\"handlerClick(c)\"\r\n          :style=\"{background: c}\">\r\n          <div class=\"pick\" v-show=\"c == pick\">\r\n            <svg style=\"width: 24px; height:24px;\" viewBox=\"0 0 24 24\">\r\n              <path d=\"M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z\" />\r\n            </svg>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n";
+
+/***/ },
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(37)
+	__vue_script__ = __webpack_require__(39)
+	__vue_template__ = __webpack_require__(57)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "C:\\Users\\cassio\\Documents\\GitHub\\vue-color\\src\\components\\Photoshop.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 37 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(38);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1d3f47d2&file=Photoshop.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./Photoshop.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1d3f47d2&file=Photoshop.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./Photoshop.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 38 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".c-photoshop {\n  background: #dcdcdc;\n  border-radius: 4px;\n  box-shadow: 0 0 0 1px rgba(0,0,0,0.25), 0 8px 16px rgba(0,0,0,0.15);\n  box-sizing: initial;\n  width: 513px;\n  font-family: Roboto;\n}\n.c-photoshop .head {\n  background-image: -webkit-linear-gradient(top, #f0f0f0 0%, #d4d4d4 100%);\n  background-image: linear-gradient(-180deg, #f0f0f0 0%, #d4d4d4 100%);\n  border-bottom: 1px solid #b1b1b1;\n  box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.2), inset 0 -1px 0 0 rgba(0,0,0,0.02);\n  height: 23px;\n  line-height: 24px;\n  border-radius: 4px 4px 0 0;\n  font-size: 13px;\n  color: #4d4d4d;\n  text-align: center;\n}\n.c-photoshop .body {\n  padding: 15px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n}\n.c-photoshop .saturation-wrap {\n  width: 256px;\n  height: 256px;\n  position: relative;\n  border: 2px solid #b3b3b3;\n  border-bottom: 2px solid #f0f0f0;\n  overflow: hidden;\n}\n.c-photoshop .saturation-wrap .circle {\n  width: 12px;\n  height: 12px;\n}\n.c-photoshop .hue-wrap {\n  position: relative;\n  height: 256px;\n  width: 19px;\n  margin-left: 10px;\n  border: 2px solid #b3b3b3;\n  border-bottom: 2px solid #f0f0f0;\n}\n.c-photoshop .hue-pointer {\n  position: relative;\n}\n.c-photoshop .hue-pointer .left,\n.c-photoshop .hue-pointer .right {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 5px 0 5px 8px;\n  border-color: transparent transparent transparent #555;\n}\n.c-photoshop .hue-pointer .left:after,\n.c-photoshop .hue-pointer .right:after {\n  content: \"\";\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 4px 0 4px 6px;\n  border-color: transparent transparent transparent #fff;\n  position: absolute;\n  top: 1px;\n  left: 1px;\n  -webkit-transform: translate(-8px, -5px);\n          transform: translate(-8px, -5px);\n}\n.c-photoshop .hue-pointer .left {\n  -webkit-transform: translate(-13px, -4px);\n          transform: translate(-13px, -4px);\n}\n.c-photoshop .hue-pointer .right {\n  -webkit-transform: translate(20px, -4px) rotate(180deg);\n          transform: translate(20px, -4px) rotate(180deg);\n}\n.c-photoshop .controls {\n  width: 180px;\n  margin-left: 10px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n}\n.c-photoshop .actions {\n  margin-left: 20px;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.c-photoshop .actions .ac-btn {\n  background-image: -webkit-linear-gradient(top, #fff 0%, #e6e6e6 100%);\n  background-image: linear-gradient(-180deg, #fff 0%, #e6e6e6 100%);\n  border: 1px solid #878787;\n  border-radius: 2px;\n  height: 20px;\n  box-shadow: 0 1px 0 0 #eaeaea;\n  font-size: 14px;\n  color: #000;\n  line-height: 20px;\n  text-align: center;\n  margin-bottom: 10px;\n}\n.c-photoshop .previews {\n  width: 60px;\n}\n.c-photoshop .previews .swatches {\n  border: 1px solid #b3b3b3;\n  border-bottom: 1px solid #f0f0f0;\n  margin-bottom: 2px;\n  margin-top: 1px;\n}\n.c-photoshop .previews .pr-color {\n  height: 34px;\n  box-shadow: inset 1px 0 0 #000, inset -1px 0 0 #000, inset 0 1px 0 #000;\n}\n.c-photoshop .previews .label {\n  font-size: 14px;\n  color: #000;\n  text-align: center;\n}\n.c-photoshop .fields {\n  padding-top: 5px;\n  padding-bottom: 9px;\n  width: 80px;\n  position: relative;\n}\n.c-photoshop .fields .divider {\n  height: 5px;\n}\n.c-photoshop .fields .input {\n  margin-left: 40%;\n  width: 40%;\n  height: 18px;\n  border: 1px solid #888;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), 0 1px 0 0 #ececec;\n  margin-bottom: 5px;\n  font-size: 13px;\n  padding-left: 3px;\n  margin-right: 10px;\n}\n.c-photoshop .fields .label {\n  top: 0;\n  left: 0;\n  width: 34px;\n  text-transform: uppercase;\n  font-size: 13px;\n  height: 18px;\n  line-height: 22px;\n  position: absolute;\n}\n.c-photoshop .fields .hex .input {\n  margin-left: 20%;\n  width: 80%;\n  height: 18px;\n  border: 1px solid #888;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), 0 1px 0 0 #ececec;\n  margin-bottom: 6px;\n  font-size: 13px;\n  padding-left: 3px;\n}\n.c-photoshop .fields .hex .label {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 14px;\n  text-transform: uppercase;\n  font-size: 13px;\n  height: 18px;\n  line-height: 22px;\n}\n", "", {"version":3,"sources":["/./src/components/Photoshop.vue.style","/./src/components/Photoshop.vue"],"names":[],"mappings":"AACA;EACE,oBAAA;EACA,mBAAA;EACA,oEAAA;EACA,oBAAA;EACA,aAAA;EACA,oBAAA;CCAD;ADCC;EACE,yEAAA;EAAA,qEAAA;EACA,iCAAA;EACA,qFAAA;EACA,aAAA;EACA,kBAAA;EACA,2BAAA;EACA,gBAAA;EACA,eAAA;EACA,mBAAA;CCCH;ADAC;EACE,cAAA;EACA,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;CCEH;ADDC;EACE,aAAA;EACA,cAAA;EACA,mBAAA;EACA,0BAAA;EACA,iCAAA;EACA,iBAAA;CCGH;ADFG;EACE,YAAA;EACA,aAAA;CCIL;ADHC;EACE,mBAAA;EACA,cAAA;EACA,YAAA;EACA,kBAAA;EACA,0BAAA;EACA,iCAAA;CCKH;ADJC;EACE,mBAAA;CCMH;ADLG;;EAEE,mBAAA;EACA,SAAA;EACA,UAAA;EACA,oBAAA;EACA,4BAAA;EACA,uDAAA;CCOL;ADNK;;EACE,YAAA;EACA,SAAA;EACA,UAAA;EACA,oBAAA;EACA,4BAAA;EACA,uDAAA;EACA,mBAAA;EACA,SAAA;EACA,UAAA;EACA,yCAAA;UAAA,iCAAA;CCSP;ADRG;EACE,0CAAA;UAAA,kCAAA;CCUL;ADTG;EACE,wDAAA;UAAA,gDAAA;CCWL;ADVC;EACE,aAAA;EACA,kBAAA;EACA,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;CCYH;ADXC;EACE,kBAAA;EACA,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;CCaH;ADZG;EACE,sEAAA;EAAA,kEAAA;EACA,0BAAA;EACA,mBAAA;EACA,aAAA;EACA,8BAAA;EACA,gBAAA;EACA,YAAA;EACA,kBAAA;EACA,mBAAA;EACA,oBAAA;CCcL;ADbC;EACE,YAAA;CCeH;ADdG;EACE,0BAAA;EACA,iCAAA;EACA,mBAAA;EACA,gBAAA;CCgBL;ADfG;EACE,aAAA;EACA,wEAAA;CCiBL;ADhBG;EACE,gBAAA;EACA,YAAA;EACA,mBAAA;CCkBL;ADhBC;EACE,iBAAA;EACA,oBAAA;EACA,YAAA;EACA,mBAAA;CCkBH;ADjBG;EACE,YAAA;CCmBL;ADlBG;EACE,iBAAA;EACA,WAAA;EACA,aAAA;EACA,uBAAA;EACA,+DAAA;EACA,mBAAA;EACA,gBAAA;EACA,kBAAA;EACA,mBAAA;CCoBL;ADnBG;EACE,OAAA;EACA,QAAA;EACA,YAAA;EACA,0BAAA;EACA,gBAAA;EACA,aAAA;EACA,kBAAA;EACA,mBAAA;CCqBL;ADnBK;EACE,iBAAA;EACA,WAAA;EACA,aAAA;EACA,uBAAA;EACA,+DAAA;EACA,mBAAA;EACA,gBAAA;EACA,kBAAA;CCqBP;ADpBK;EACE,mBAAA;EACA,OAAA;EACA,QAAA;EACA,YAAA;EACA,0BAAA;EACA,gBAAA;EACA,aAAA;EACA,kBAAA;CCsBP","file":"Photoshop.vue","sourcesContent":["\r\n.c-photoshop\r\n  background #DCDCDC\r\n  border-radius 4px\r\n  box-shadow 0 0 0 1px rgba(0,0,0,.25), 0 8px 16px rgba(0,0,0,.15)\r\n  box-sizing initial\r\n  width 513px\r\n  font-family Roboto\r\n  .head\r\n    background-image linear-gradient(-180deg, #F0F0F0 0%, #D4D4D4 100%)\r\n    border-bottom 1px solid #B1B1B1\r\n    box-shadow inset 0 1px 0 0 rgba(255,255,255,.2), inset 0 -1px 0 0 rgba(0,0,0,.02)\r\n    height 23px\r\n    line-height 24px\r\n    border-radius 4px 4px 0 0\r\n    font-size 13px\r\n    color #4D4D4D\r\n    text-align center\r\n  .body\r\n    padding 15px\r\n    display flex\r\n  .saturation-wrap\r\n    width 256px\r\n    height 256px\r\n    position relative\r\n    border 2px solid #B3B3B3\r\n    border-bottom 2px solid #F0F0F0\r\n    overflow hidden\r\n    .circle\r\n      width 12px\r\n      height 12px\r\n  .hue-wrap\r\n    position relative\r\n    height 256px\r\n    width 19px\r\n    margin-left 10px\r\n    border 2px solid #B3B3B3\r\n    border-bottom 2px solid #F0F0F0\r\n  .hue-pointer\r\n    position relative\r\n    .left\r\n    .right\r\n      position absolute\r\n      width 0\r\n      height 0\r\n      border-style solid\r\n      border-width 5px 0 5px 8px\r\n      border-color transparent transparent transparent #555\r\n      &:after\r\n        content \"\"\r\n        width 0\r\n        height 0\r\n        border-style solid\r\n        border-width 4px 0 4px 6px\r\n        border-color transparent transparent transparent #fff\r\n        position absolute\r\n        top 1px\r\n        left 1px\r\n        transform translate(-8px, -5px)\r\n    .left\r\n      transform translate(-13px, -4px)\r\n    .right\r\n      transform translate(20px, -4px) rotate(180deg)\r\n  .controls\r\n    width 180px\r\n    margin-left 10px\r\n    display flex\r\n  .actions\r\n    margin-left 20px\r\n    flex 1\r\n    .ac-btn\r\n      background-image linear-gradient(-180deg, #FFFFFF 0%, #E6E6E6 100%)\r\n      border 1px solid #878787\r\n      border-radius 2px\r\n      height 20px\r\n      box-shadow 0 1px 0 0 #EAEAEA\r\n      font-size 14px\r\n      color #000\r\n      line-height 20px\r\n      text-align center\r\n      margin-bottom 10px\r\n  .previews\r\n    width 60px\r\n    .swatches\r\n      border 1px solid #B3B3B3\r\n      border-bottom 1px solid #F0F0F0\r\n      margin-bottom 2px\r\n      margin-top 1px\r\n    .pr-color\r\n      height 34px\r\n      box-shadow inset 1px 0 0 #000, inset -1px 0 0 #000, inset 0 1px 0 #000\r\n    .label\r\n      font-size 14px\r\n      color #000\r\n      text-align center\r\n  \r\n  .fields\r\n    padding-top 5px\r\n    padding-bottom 9px\r\n    width 80px\r\n    position relative\r\n    .divider\r\n      height 5px\r\n    .input\r\n      margin-left 40%\r\n      width 40%\r\n      height 18px\r\n      border 1px solid #888888\r\n      box-shadow inset 0 1px 1px rgba(0,0,0,.1), 0 1px 0 0 #ECECEC\r\n      margin-bottom 5px\r\n      font-size 13px\r\n      padding-left 3px\r\n      margin-right 10px\r\n    .label\r\n      top 0\r\n      left 0\r\n      width 34px\r\n      text-transform uppercase\r\n      font-size 13px\r\n      height 18px\r\n      line-height 22px\r\n      position absolute\r\n    .hex \r\n      .input\r\n        margin-left 20%\r\n        width 80%\r\n        height 18px\r\n        border 1px solid #888888\r\n        box-shadow inset 0 1px 1px rgba(0,0,0,.1), 0 1px 0 0 #ECECEC\r\n        margin-bottom 6px\r\n        font-size 13px\r\n        padding-left 3px\r\n      .label\r\n        position absolute\r\n        top 0\r\n        left 0\r\n        width 14px\r\n        text-transform uppercase\r\n        font-size 13px\r\n        height 18px\r\n        line-height 22px\r\n",".c-photoshop {\n  background: #dcdcdc;\n  border-radius: 4px;\n  box-shadow: 0 0 0 1px rgba(0,0,0,0.25), 0 8px 16px rgba(0,0,0,0.15);\n  box-sizing: initial;\n  width: 513px;\n  font-family: Roboto;\n}\n.c-photoshop .head {\n  background-image: linear-gradient(-180deg, #f0f0f0 0%, #d4d4d4 100%);\n  border-bottom: 1px solid #b1b1b1;\n  box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.2), inset 0 -1px 0 0 rgba(0,0,0,0.02);\n  height: 23px;\n  line-height: 24px;\n  border-radius: 4px 4px 0 0;\n  font-size: 13px;\n  color: #4d4d4d;\n  text-align: center;\n}\n.c-photoshop .body {\n  padding: 15px;\n  display: flex;\n}\n.c-photoshop .saturation-wrap {\n  width: 256px;\n  height: 256px;\n  position: relative;\n  border: 2px solid #b3b3b3;\n  border-bottom: 2px solid #f0f0f0;\n  overflow: hidden;\n}\n.c-photoshop .saturation-wrap .circle {\n  width: 12px;\n  height: 12px;\n}\n.c-photoshop .hue-wrap {\n  position: relative;\n  height: 256px;\n  width: 19px;\n  margin-left: 10px;\n  border: 2px solid #b3b3b3;\n  border-bottom: 2px solid #f0f0f0;\n}\n.c-photoshop .hue-pointer {\n  position: relative;\n}\n.c-photoshop .hue-pointer .left,\n.c-photoshop .hue-pointer .right {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 5px 0 5px 8px;\n  border-color: transparent transparent transparent #555;\n}\n.c-photoshop .hue-pointer .left:after,\n.c-photoshop .hue-pointer .right:after {\n  content: \"\";\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 4px 0 4px 6px;\n  border-color: transparent transparent transparent #fff;\n  position: absolute;\n  top: 1px;\n  left: 1px;\n  transform: translate(-8px, -5px);\n}\n.c-photoshop .hue-pointer .left {\n  transform: translate(-13px, -4px);\n}\n.c-photoshop .hue-pointer .right {\n  transform: translate(20px, -4px) rotate(180deg);\n}\n.c-photoshop .controls {\n  width: 180px;\n  margin-left: 10px;\n  display: flex;\n}\n.c-photoshop .actions {\n  margin-left: 20px;\n  flex: 1;\n}\n.c-photoshop .actions .ac-btn {\n  background-image: linear-gradient(-180deg, #fff 0%, #e6e6e6 100%);\n  border: 1px solid #878787;\n  border-radius: 2px;\n  height: 20px;\n  box-shadow: 0 1px 0 0 #eaeaea;\n  font-size: 14px;\n  color: #000;\n  line-height: 20px;\n  text-align: center;\n  margin-bottom: 10px;\n}\n.c-photoshop .previews {\n  width: 60px;\n}\n.c-photoshop .previews .swatches {\n  border: 1px solid #b3b3b3;\n  border-bottom: 1px solid #f0f0f0;\n  margin-bottom: 2px;\n  margin-top: 1px;\n}\n.c-photoshop .previews .pr-color {\n  height: 34px;\n  box-shadow: inset 1px 0 0 #000, inset -1px 0 0 #000, inset 0 1px 0 #000;\n}\n.c-photoshop .previews .label {\n  font-size: 14px;\n  color: #000;\n  text-align: center;\n}\n.c-photoshop .fields {\n  padding-top: 5px;\n  padding-bottom: 9px;\n  width: 80px;\n  position: relative;\n}\n.c-photoshop .fields .divider {\n  height: 5px;\n}\n.c-photoshop .fields .input {\n  margin-left: 40%;\n  width: 40%;\n  height: 18px;\n  border: 1px solid #888;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), 0 1px 0 0 #ececec;\n  margin-bottom: 5px;\n  font-size: 13px;\n  padding-left: 3px;\n  margin-right: 10px;\n}\n.c-photoshop .fields .label {\n  top: 0;\n  left: 0;\n  width: 34px;\n  text-transform: uppercase;\n  font-size: 13px;\n  height: 18px;\n  line-height: 22px;\n  position: absolute;\n}\n.c-photoshop .fields .hex .input {\n  margin-left: 20%;\n  width: 80%;\n  height: 18px;\n  border: 1px solid #888;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), 0 1px 0 0 #ececec;\n  margin-bottom: 6px;\n  font-size: 13px;\n  padding-left: 3px;\n}\n.c-photoshop .fields .hex .label {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 14px;\n  text-transform: uppercase;\n  font-size: 13px;\n  height: 18px;\n  line-height: 22px;\n}\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 39 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _color = __webpack_require__(7);
+	
+	var _color2 = _interopRequireDefault(_color);
+	
+	var _EditableInput = __webpack_require__(9);
+	
+	var _EditableInput2 = _interopRequireDefault(_EditableInput);
+	
+	var _Saturation = __webpack_require__(40);
+	
+	var _Saturation2 = _interopRequireDefault(_Saturation);
+	
+	var _Hue = __webpack_require__(24);
+	
+	var _Hue2 = _interopRequireDefault(_Hue);
+	
+	var _Alpha = __webpack_require__(47);
+	
+	var _Alpha2 = _interopRequireDefault(_Alpha);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	  name: 'Photoshop',
+	  mixins: [_color2.default],
+	  props: {
+	    head: {
+	      type: String,
+	      default: 'Color Picker'
+	    }
+	  },
+	  components: {
+	    saturation: _Saturation2.default,
+	    hue: _Hue2.default,
+	    alpha: _Alpha2.default,
+	    'ed-in': _EditableInput2.default
+	  },
+	  data: function data() {
+	    return {
+	      currentColor: '#FFF'
+	    };
+	  },
+	  created: function created() {
+	    this.currentColor = this.colors.hex;
+	  },
+	
+	  methods: {
+	    childChange: function childChange(data) {
+	      this.colorChange(data);
+	    },
+	    inputChange: function inputChange(data) {
+	      if (!data) {
+	        return;
+	      }
+	      if (data['#']) {
+	        this.isValidHex(data['#']) && this.colorChange({
+	          hex: data['#'],
+	          source: 'hex'
+	        });
+	      } else if (data.r || data.g || data.b || data.a) {
+	        this.colorChange({
+	          r: data.r || this.colors.rgba.r,
+	          g: data.g || this.colors.rgba.g,
+	          b: data.b || this.colors.rgba.b,
+	          a: data.a || this.colors.rgba.a,
+	          source: 'rgba'
+	        });
+	      }
+	    },
+	    handleAccept: function handleAccept() {
+	      console.log('accept');
+	    },
+	    handleCancel: function handleCancel() {
+	      console.log('cancel');
+	    }
+	  }
+	
+	};
+
+/***/ },
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(41)
+	__vue_script__ = __webpack_require__(43)
+	__vue_template__ = __webpack_require__(46)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "C:\\Users\\cassio\\Documents\\GitHub\\vue-color\\src\\components\\common\\Saturation.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 41 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(42);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3356ea66&file=Saturation.vue!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../../node_modules/eslint-loader/index.js!./../../../node_modules/eslint-loader/index.js!./Saturation.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3356ea66&file=Saturation.vue!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../../node_modules/eslint-loader/index.js!./../../../node_modules/eslint-loader/index.js!./Saturation.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 42 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".white,\n.black,\n.saturation {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n}\n.saturation .white {\n  background: -webkit-linear-gradient(left, #fff, rgba(255,255,255,0));\n  background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n}\n.saturation .black {\n  background: -webkit-linear-gradient(bottom, #000, rgba(0,0,0,0));\n  background: linear-gradient(to top, #000, rgba(0,0,0,0));\n}\n.saturation .pointer {\n  position: absolute;\n}\n.saturation .circle {\n  cursor: head;\n  width: 4px;\n  height: 4px;\n  box-shadow: 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,0.3), 0 0 1px 2px rgba(0,0,0,0.4);\n  border-radius: 50%;\n  -webkit-transform: translate(-2px, -2px);\n          transform: translate(-2px, -2px);\n}\n", "", {"version":3,"sources":["/./src/components/common/Saturation.vue.style","/./src/components/common/Saturation.vue"],"names":[],"mappings":"AACA;;;EAGE,mBAAA;EACA,OAAA;EACA,QAAA;EACA,SAAA;EACA,UAAA;CCAD;ADGC;EACE,qEAAA;EAAA,iEAAA;CCDH;ADEC;EACE,iEAAA;EAAA,yDAAA;CCAH;ADCC;EACE,mBAAA;CCCH;ADAC;EACE,aAAA;EACA,WAAA;EACA,YAAA;EACA,6FAAA;EACA,mBAAA;EACA,yCAAA;UAAA,iCAAA;CCEH","file":"Saturation.vue","sourcesContent":["\r\n.white\r\n.black\r\n.saturation\r\n  position absolute\r\n  top 0\r\n  left 0\r\n  right 0\r\n  bottom 0\r\n  \r\n.saturation\r\n  .white \r\n    background linear-gradient(to right, #fff, rgba(255,255,255,0))\r\n  .black\r\n    background linear-gradient(to top, #000, rgba(0,0,0,0))\r\n  .pointer\r\n    position absolute\r\n  .circle\r\n    cursor head\r\n    width 4px\r\n    height 4px\r\n    box-shadow 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3), 0 0 1px 2px rgba(0,0,0,.4)\r\n    border-radius 50%\r\n    transform translate(-2px, -2px)\r\n",".white,\n.black,\n.saturation {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n}\n.saturation .white {\n  background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n}\n.saturation .black {\n  background: linear-gradient(to top, #000, rgba(0,0,0,0));\n}\n.saturation .pointer {\n  position: absolute;\n}\n.saturation .circle {\n  cursor: head;\n  width: 4px;\n  height: 4px;\n  box-shadow: 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,0.3), 0 0 1px 2px rgba(0,0,0,0.4);\n  border-radius: 50%;\n  transform: translate(-2px, -2px);\n}\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 43 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _lodash = __webpack_require__(44);
+	
+	var _lodash2 = _interopRequireDefault(_lodash);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	  name: 'Saturation',
+	  props: {
+	    colors: Object,
+	    onChange: Function
+	  },
+	  computed: {
+	    bgColor: function bgColor() {
+	      return 'hsl(' + this.colors.hsl.h + ',100%, 50%)';
+	    },
+	    pointerTop: function pointerTop() {
+	      return -(this.colors.hsv.v * 100) + 100 + '%';
+	    },
+	    pointerLeft: function pointerLeft() {
+	      return this.colors.hsv.s * 100 + '%';
+	    }
+	  },
+	  methods: {
+	    throttle: (0, _lodash2.default)(function (fn, data) {
+	      fn(data);
+	    }, 50),
+	    handleChange: function handleChange(e, skip) {
+	      !skip && e.preventDefault();
+	      var container = this.$els.container;
+	      var containerWidth = container.clientWidth;
+	      var containerHeight = container.clientHeight;
+	      var left = (e.pageX || e.touches[0].pageX) - (container.getBoundingClientRect().left + window.pageXOffset);
+	      var top = (e.pageY || e.touches[0].pageY) - (container.getBoundingClientRect().top + window.pageYOffset);
+	
+	      if (left < 0) {
+	        left = 0;
+	      } else if (left > containerWidth) {
+	        left = containerWidth;
+	      } else if (top < 0) {
+	        top = 0;
+	      } else if (top > containerHeight) {
+	        top = containerHeight;
+	      }
+	
+	      var saturation = left * 100 / containerWidth;
+	      var bright = -(top * 100 / containerHeight) + 100;
+	
+	      this.throttle(this.onChange, {
+	        h: this.colors.hsl.h,
+	        s: saturation,
+	        v: bright,
+	        a: this.colors.hsl.a,
+	        source: 'rgb'
+	      });
+	    },
+	    handleMouseDown: function handleMouseDown(e) {
+	      this.handleChange(e, true);
+	      window.addEventListener('mousemove', this.handleChange);
+	      window.addEventListener('mouseup', this.handleMouseUp);
+	    },
+	    handleMouseUp: function handleMouseUp(e) {
+	      this.unbindEventListeners();
+	    },
+	    unbindEventListeners: function unbindEventListeners() {
+	      window.removeEventListener('mousemove', this.handleChange);
+	      window.removeEventListener('mouseup', this.handleMouseUp);
+	    }
+	  }
+	};
+
+/***/ },
+/* 44 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * lodash 4.0.1 (Custom Build) <https://lodash.com/>
+	 * Build: `lodash modularize exports="npm" -o ./`
+	 * Copyright 2012-2016 The Dojo Foundation <http://dojofoundation.org/>
+	 * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+	 * Copyright 2009-2016 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+	 * Available under MIT license <https://lodash.com/license>
+	 */
+	var debounce = __webpack_require__(45);
+	
+	/** Used as the `TypeError` message for "Functions" methods. */
+	var FUNC_ERROR_TEXT = 'Expected a function';
+	
+	/**
+	 * Creates a throttled function that only invokes `func` at most once per
+	 * every `wait` milliseconds. The throttled function comes with a `cancel`
+	 * method to cancel delayed `func` invocations and a `flush` method to
+	 * immediately invoke them. Provide an options object to indicate whether
+	 * `func` should be invoked on the leading and/or trailing edge of the `wait`
+	 * timeout. The `func` is invoked with the last arguments provided to the
+	 * throttled function. Subsequent calls to the throttled function return the
+	 * result of the last `func` invocation.
+	 *
+	 * **Note:** If `leading` and `trailing` options are `true`, `func` is invoked
+	 * on the trailing edge of the timeout only if the throttled function is
+	 * invoked more than once during the `wait` timeout.
+	 *
+	 * See [David Corbacho's article](http://drupalmotion.com/article/debounce-and-throttle-visual-explanation)
+	 * for details over the differences between `_.throttle` and `_.debounce`.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @category Function
+	 * @param {Function} func The function to throttle.
+	 * @param {number} [wait=0] The number of milliseconds to throttle invocations to.
+	 * @param {Object} [options] The options object.
+	 * @param {boolean} [options.leading=true] Specify invoking on the leading
+	 *  edge of the timeout.
+	 * @param {boolean} [options.trailing=true] Specify invoking on the trailing
+	 *  edge of the timeout.
+	 * @returns {Function} Returns the new throttled function.
+	 * @example
+	 *
+	 * // Avoid excessively updating the position while scrolling.
+	 * jQuery(window).on('scroll', _.throttle(updatePosition, 100));
+	 *
+	 * // Invoke `renewToken` when the click event is fired, but not more than once every 5 minutes.
+	 * var throttled = _.throttle(renewToken, 300000, { 'trailing': false });
+	 * jQuery(element).on('click', throttled);
+	 *
+	 * // Cancel the trailing throttled invocation.
+	 * jQuery(window).on('popstate', throttled.cancel);
+	 */
+	function throttle(func, wait, options) {
+	  var leading = true,
+	      trailing = true;
+	
+	  if (typeof func != 'function') {
+	    throw new TypeError(FUNC_ERROR_TEXT);
+	  }
+	  if (isObject(options)) {
+	    leading = 'leading' in options ? !!options.leading : leading;
+	    trailing = 'trailing' in options ? !!options.trailing : trailing;
+	  }
+	  return debounce(func, wait, {
+	    'leading': leading,
+	    'maxWait': wait,
+	    'trailing': trailing
+	  });
+	}
+	
+	/**
+	 * Checks if `value` is the [language type](https://es5.github.io/#x8) of `Object`.
+	 * (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+	 *
+	 * @static
+	 * @memberOf _
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+	 * @example
+	 *
+	 * _.isObject({});
+	 * // => true
+	 *
+	 * _.isObject([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isObject(_.noop);
+	 * // => true
+	 *
+	 * _.isObject(null);
+	 * // => false
+	 */
+	function isObject(value) {
+	  var type = typeof value;
+	  return !!value && (type == 'object' || type == 'function');
+	}
+	
+	module.exports = throttle;
+
+
+/***/ },
+/* 45 */
+/***/ function(module, exports) {
+
+	/**
+	 * lodash 4.0.6 (Custom Build) <https://lodash.com/>
+	 * Build: `lodash modularize exports="npm" -o ./`
+	 * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+	 * Released under MIT license <https://lodash.com/license>
+	 * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+	 * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+	 */
+	
+	/** Used as the `TypeError` message for "Functions" methods. */
+	var FUNC_ERROR_TEXT = 'Expected a function';
+	
+	/** Used as references for various `Number` constants. */
+	var NAN = 0 / 0;
+	
+	/** `Object#toString` result references. */
+	var funcTag = '[object Function]',
+	    genTag = '[object GeneratorFunction]',
+	    symbolTag = '[object Symbol]';
+	
+	/** Used to match leading and trailing whitespace. */
+	var reTrim = /^\s+|\s+$/g;
+	
+	/** Used to detect bad signed hexadecimal string values. */
+	var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+	
+	/** Used to detect binary string values. */
+	var reIsBinary = /^0b[01]+$/i;
+	
+	/** Used to detect octal string values. */
+	var reIsOctal = /^0o[0-7]+$/i;
+	
+	/** Built-in method references without a dependency on `root`. */
+	var freeParseInt = parseInt;
+	
+	/** Used for built-in method references. */
+	var objectProto = Object.prototype;
+	
+	/**
+	 * Used to resolve the
+	 * [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
+	 * of values.
+	 */
+	var objectToString = objectProto.toString;
+	
+	/* Built-in method references for those with the same name as other `lodash` methods. */
+	var nativeMax = Math.max,
+	    nativeMin = Math.min;
+	
+	/**
+	 * Gets the timestamp of the number of milliseconds that have elapsed since
+	 * the Unix epoch (1 January 1970 00:00:00 UTC).
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 2.4.0
+	 * @type {Function}
+	 * @category Date
+	 * @returns {number} Returns the timestamp.
+	 * @example
+	 *
+	 * _.defer(function(stamp) {
+	 *   console.log(_.now() - stamp);
+	 * }, _.now());
+	 * // => Logs the number of milliseconds it took for the deferred function to be invoked.
+	 */
+	var now = Date.now;
+	
+	/**
+	 * Creates a debounced function that delays invoking `func` until after `wait`
+	 * milliseconds have elapsed since the last time the debounced function was
+	 * invoked. The debounced function comes with a `cancel` method to cancel
+	 * delayed `func` invocations and a `flush` method to immediately invoke them.
+	 * Provide an options object to indicate whether `func` should be invoked on
+	 * the leading and/or trailing edge of the `wait` timeout. The `func` is invoked
+	 * with the last arguments provided to the debounced function. Subsequent calls
+	 * to the debounced function return the result of the last `func` invocation.
+	 *
+	 * **Note:** If `leading` and `trailing` options are `true`, `func` is invoked
+	 * on the trailing edge of the timeout only if the debounced function is
+	 * invoked more than once during the `wait` timeout.
+	 *
+	 * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
+	 * for details over the differences between `_.debounce` and `_.throttle`.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Function
+	 * @param {Function} func The function to debounce.
+	 * @param {number} [wait=0] The number of milliseconds to delay.
+	 * @param {Object} [options={}] The options object.
+	 * @param {boolean} [options.leading=false]
+	 *  Specify invoking on the leading edge of the timeout.
+	 * @param {number} [options.maxWait]
+	 *  The maximum time `func` is allowed to be delayed before it's invoked.
+	 * @param {boolean} [options.trailing=true]
+	 *  Specify invoking on the trailing edge of the timeout.
+	 * @returns {Function} Returns the new debounced function.
+	 * @example
+	 *
+	 * // Avoid costly calculations while the window size is in flux.
+	 * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
+	 *
+	 * // Invoke `sendMail` when clicked, debouncing subsequent calls.
+	 * jQuery(element).on('click', _.debounce(sendMail, 300, {
+	 *   'leading': true,
+	 *   'trailing': false
+	 * }));
+	 *
+	 * // Ensure `batchLog` is invoked once after 1 second of debounced calls.
+	 * var debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });
+	 * var source = new EventSource('/stream');
+	 * jQuery(source).on('message', debounced);
+	 *
+	 * // Cancel the trailing debounced invocation.
+	 * jQuery(window).on('popstate', debounced.cancel);
+	 */
+	function debounce(func, wait, options) {
+	  var lastArgs,
+	      lastThis,
+	      maxWait,
+	      result,
+	      timerId,
+	      lastCallTime = 0,
+	      lastInvokeTime = 0,
+	      leading = false,
+	      maxing = false,
+	      trailing = true;
+	
+	  if (typeof func != 'function') {
+	    throw new TypeError(FUNC_ERROR_TEXT);
+	  }
+	  wait = toNumber(wait) || 0;
+	  if (isObject(options)) {
+	    leading = !!options.leading;
+	    maxing = 'maxWait' in options;
+	    maxWait = maxing ? nativeMax(toNumber(options.maxWait) || 0, wait) : maxWait;
+	    trailing = 'trailing' in options ? !!options.trailing : trailing;
+	  }
+	
+	  function invokeFunc(time) {
+	    var args = lastArgs,
+	        thisArg = lastThis;
+	
+	    lastArgs = lastThis = undefined;
+	    lastInvokeTime = time;
+	    result = func.apply(thisArg, args);
+	    return result;
+	  }
+	
+	  function leadingEdge(time) {
+	    // Reset any `maxWait` timer.
+	    lastInvokeTime = time;
+	    // Start the timer for the trailing edge.
+	    timerId = setTimeout(timerExpired, wait);
+	    // Invoke the leading edge.
+	    return leading ? invokeFunc(time) : result;
+	  }
+	
+	  function remainingWait(time) {
+	    var timeSinceLastCall = time - lastCallTime,
+	        timeSinceLastInvoke = time - lastInvokeTime,
+	        result = wait - timeSinceLastCall;
+	
+	    return maxing ? nativeMin(result, maxWait - timeSinceLastInvoke) : result;
+	  }
+	
+	  function shouldInvoke(time) {
+	    var timeSinceLastCall = time - lastCallTime,
+	        timeSinceLastInvoke = time - lastInvokeTime;
+	
+	    // Either this is the first call, activity has stopped and we're at the
+	    // trailing edge, the system time has gone backwards and we're treating
+	    // it as the trailing edge, or we've hit the `maxWait` limit.
+	    return (!lastCallTime || (timeSinceLastCall >= wait) ||
+	      (timeSinceLastCall < 0) || (maxing && timeSinceLastInvoke >= maxWait));
+	  }
+	
+	  function timerExpired() {
+	    var time = now();
+	    if (shouldInvoke(time)) {
+	      return trailingEdge(time);
+	    }
+	    // Restart the timer.
+	    timerId = setTimeout(timerExpired, remainingWait(time));
+	  }
+	
+	  function trailingEdge(time) {
+	    clearTimeout(timerId);
+	    timerId = undefined;
+	
+	    // Only invoke if we have `lastArgs` which means `func` has been
+	    // debounced at least once.
+	    if (trailing && lastArgs) {
+	      return invokeFunc(time);
+	    }
+	    lastArgs = lastThis = undefined;
+	    return result;
+	  }
+	
+	  function cancel() {
+	    if (timerId !== undefined) {
+	      clearTimeout(timerId);
+	    }
+	    lastCallTime = lastInvokeTime = 0;
+	    lastArgs = lastThis = timerId = undefined;
+	  }
+	
+	  function flush() {
+	    return timerId === undefined ? result : trailingEdge(now());
+	  }
+	
+	  function debounced() {
+	    var time = now(),
+	        isInvoking = shouldInvoke(time);
+	
+	    lastArgs = arguments;
+	    lastThis = this;
+	    lastCallTime = time;
+	
+	    if (isInvoking) {
+	      if (timerId === undefined) {
+	        return leadingEdge(lastCallTime);
+	      }
+	      if (maxing) {
+	        // Handle invocations in a tight loop.
+	        clearTimeout(timerId);
+	        timerId = setTimeout(timerExpired, wait);
+	        return invokeFunc(lastCallTime);
+	      }
+	    }
+	    if (timerId === undefined) {
+	      timerId = setTimeout(timerExpired, wait);
+	    }
+	    return result;
+	  }
+	  debounced.cancel = cancel;
+	  debounced.flush = flush;
+	  return debounced;
+	}
+	
+	/**
+	 * Checks if `value` is classified as a `Function` object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is correctly classified,
+	 *  else `false`.
+	 * @example
+	 *
+	 * _.isFunction(_);
+	 * // => true
+	 *
+	 * _.isFunction(/abc/);
+	 * // => false
+	 */
+	function isFunction(value) {
+	  // The use of `Object#toString` avoids issues with the `typeof` operator
+	  // in Safari 8 which returns 'object' for typed array and weak map constructors,
+	  // and PhantomJS 1.9 which returns 'function' for `NodeList` instances.
+	  var tag = isObject(value) ? objectToString.call(value) : '';
+	  return tag == funcTag || tag == genTag;
+	}
+	
+	/**
+	 * Checks if `value` is the
+	 * [language type](http://www.ecma-international.org/ecma-262/6.0/#sec-ecmascript-language-types)
+	 * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+	 * @example
+	 *
+	 * _.isObject({});
+	 * // => true
+	 *
+	 * _.isObject([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isObject(_.noop);
+	 * // => true
+	 *
+	 * _.isObject(null);
+	 * // => false
+	 */
+	function isObject(value) {
+	  var type = typeof value;
+	  return !!value && (type == 'object' || type == 'function');
+	}
+	
+	/**
+	 * Checks if `value` is object-like. A value is object-like if it's not `null`
+	 * and has a `typeof` result of "object".
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+	 * @example
+	 *
+	 * _.isObjectLike({});
+	 * // => true
+	 *
+	 * _.isObjectLike([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isObjectLike(_.noop);
+	 * // => false
+	 *
+	 * _.isObjectLike(null);
+	 * // => false
+	 */
+	function isObjectLike(value) {
+	  return !!value && typeof value == 'object';
+	}
+	
+	/**
+	 * Checks if `value` is classified as a `Symbol` primitive or object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is correctly classified,
+	 *  else `false`.
+	 * @example
+	 *
+	 * _.isSymbol(Symbol.iterator);
+	 * // => true
+	 *
+	 * _.isSymbol('abc');
+	 * // => false
+	 */
+	function isSymbol(value) {
+	  return typeof value == 'symbol' ||
+	    (isObjectLike(value) && objectToString.call(value) == symbolTag);
+	}
+	
+	/**
+	 * Converts `value` to a number.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to process.
+	 * @returns {number} Returns the number.
+	 * @example
+	 *
+	 * _.toNumber(3);
+	 * // => 3
+	 *
+	 * _.toNumber(Number.MIN_VALUE);
+	 * // => 5e-324
+	 *
+	 * _.toNumber(Infinity);
+	 * // => Infinity
+	 *
+	 * _.toNumber('3');
+	 * // => 3
+	 */
+	function toNumber(value) {
+	  if (typeof value == 'number') {
+	    return value;
+	  }
+	  if (isSymbol(value)) {
+	    return NAN;
+	  }
+	  if (isObject(value)) {
+	    var other = isFunction(value.valueOf) ? value.valueOf() : value;
+	    value = isObject(other) ? (other + '') : other;
+	  }
+	  if (typeof value != 'string') {
+	    return value === 0 ? value : +value;
+	  }
+	  value = value.replace(reTrim, '');
+	  var isBinary = reIsBinary.test(value);
+	  return (isBinary || reIsOctal.test(value))
+	    ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
+	    : (reIsBadHex.test(value) ? NAN : +value);
+	}
+	
+	module.exports = debounce;
+
+
+/***/ },
+/* 46 */
+/***/ function(module, exports) {
+
+	module.exports = "\r\n  <div class=\"saturation\" \r\n    :style=\"{background: bgColor}\"\r\n    v-el:container\r\n    @mousedown=\"handleMouseDown\">\r\n    <div class=\"white\"></div>\r\n    <div class=\"black\"></div>\r\n    <div class=\"pointer\" :style=\"{top: pointerTop, left: pointerLeft}\">\r\n      <slot><div class=\"circle\"></div></slot>\r\n    </div>\r\n  </div>\r\n";
+
+/***/ },
+/* 47 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(48)
+	__vue_script__ = __webpack_require__(50)
+	__vue_template__ = __webpack_require__(56)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "C:\\Users\\cassio\\Documents\\GitHub\\vue-color\\src\\components\\common\\Alpha.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 48 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(49);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5b165db3&file=Alpha.vue!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../../node_modules/eslint-loader/index.js!./../../../node_modules/eslint-loader/index.js!./Alpha.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5b165db3&file=Alpha.vue!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../../node_modules/eslint-loader/index.js!./../../../node_modules/eslint-loader/index.js!./Alpha.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 49 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".c-alpha {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n.c-alpha .checkboard-wrap {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n  overflow: hidden;\n}\n.c-alpha .gradient {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n.c-alpha .container {\n  position: relative;\n  z-index: 2;\n  height: 100%;\n  margin: 0 3px;\n}\n.c-alpha .pointer {\n  z-index: 2;\n  position: absolute;\n}\n.c-alpha .picker {\n  width: 4px;\n  border-radius: 1px;\n  height: 8px;\n  box-shadow: 0 0 2px rgba(0,0,0,0.6);\n  background: #fff;\n  margin-top: 1px;\n  -webkit-transform: translateX(-2px);\n          transform: translateX(-2px);\n}\n", "", {"version":3,"sources":["/./src/components/common/Alpha.vue.style","/./src/components/common/Alpha.vue"],"names":[],"mappings":"AACA;EACE,mBAAA;EACA,SAAA;EACA,WAAA;EACA,YAAA;EACA,UAAA;CCAD;ADCC;EACE,mBAAA;EACA,SAAA;EACA,WAAA;EACA,YAAA;EACA,UAAA;EACA,iBAAA;CCCH;ADAC;EACE,mBAAA;EACA,SAAA;EACA,WAAA;EACA,YAAA;EACA,UAAA;CCEH;ADDC;EACE,mBAAA;EACA,WAAA;EACA,aAAA;EACA,cAAA;CCGH;ADFC;EACE,WAAA;EACA,mBAAA;CCIH;ADHC;EACE,WAAA;EACA,mBAAA;EACA,YAAA;EACA,oCAAA;EACA,iBAAA;EACA,gBAAA;EACA,oCAAA;UAAA,4BAAA;CCKH","file":"Alpha.vue","sourcesContent":["\r\n.c-alpha\r\n  position absolute\r\n  top 0px\r\n  right 0px\r\n  bottom 0px\r\n  left 0px\r\n  .checkboard-wrap\r\n    position absolute\r\n    top 0px\r\n    right 0px\r\n    bottom 0px\r\n    left 0px\r\n    overflow hidden\r\n  .gradient\r\n    position absolute\r\n    top 0px\r\n    right 0px\r\n    bottom 0px\r\n    left 0px\r\n  .container\r\n    position relative\r\n    z-index 2\r\n    height 100%\r\n    margin 0 3px\r\n  .pointer\r\n    z-index 2\r\n    position absolute\r\n  .picker\r\n    width 4px\r\n    border-radius 1px\r\n    height 8px\r\n    box-shadow 0 0 2px rgba(0, 0, 0, .6)\r\n    background #fff\r\n    margin-top 1px\r\n    transform translateX(-2px)\r\n",".c-alpha {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n.c-alpha .checkboard-wrap {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n  overflow: hidden;\n}\n.c-alpha .gradient {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n.c-alpha .container {\n  position: relative;\n  z-index: 2;\n  height: 100%;\n  margin: 0 3px;\n}\n.c-alpha .pointer {\n  z-index: 2;\n  position: absolute;\n}\n.c-alpha .picker {\n  width: 4px;\n  border-radius: 1px;\n  height: 8px;\n  box-shadow: 0 0 2px rgba(0,0,0,0.6);\n  background: #fff;\n  margin-top: 1px;\n  transform: translateX(-2px);\n}\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 50 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _Checkboard = __webpack_require__(51);
+	
+	var _Checkboard2 = _interopRequireDefault(_Checkboard);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	  name: 'Alpha',
+	  props: {
+	    colors: Object,
+	    onChange: Function
+	  },
+	  components: {
+	    checkboard: _Checkboard2.default
+	  },
+	  computed: {
+	    gradientColor: function gradientColor() {
+	      var rgba = this.colors.rgba;
+	      var rgbStr = [rgba.r, rgba.g, rgba.b].join(',');
+	      return 'linear-gradient(to right, rgba(' + rgbStr + ', 0) 0%, rgba(' + rgbStr + ', 1) 100%)';
+	    }
+	  },
+	  methods: {
+	    handleChange: function handleChange(e, skip) {
+	      !skip && e.preventDefault();
+	      var container = this.$els.container;
+	      var containerWidth = container.clientWidth;
+	      var left = (e.pageX || e.touches[0].pageX) - (container.getBoundingClientRect().left + window.pageXOffset);
+	
+	      var a;
+	      if (left < 0) {
+	        a = 0;
+	      } else if (left > containerWidth) {
+	        a = 1;
+	      } else {
+	        a = Math.round(left * 100 / containerWidth) / 100;
+	      }
+	
+	      if (this.colors.a !== a) {
+	        this.onChange({
+	          h: this.colors.hsl.h,
+	          s: this.colors.hsl.s,
+	          l: this.colors.hsl.l,
+	          a: a,
+	          source: 'rgba'
+	        });
+	      }
+	    },
+	    handleMouseDown: function handleMouseDown(e) {
+	      this.handleChange(e, true);
+	      window.addEventListener('mousemove', this.handleChange);
+	      window.addEventListener('mouseup', this.handleMouseUp);
+	    },
+	    handleMouseUp: function handleMouseUp() {
+	      this.unbindEventListeners();
+	    },
+	    unbindEventListeners: function unbindEventListeners() {
+	      window.removeEventListener('mousemove', this.handleChange);
+	      window.removeEventListener('mouseup', this.handleMouseUp);
+	    }
+	  }
+	};
+
+/***/ },
+/* 51 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(52)
+	__vue_script__ = __webpack_require__(54)
+	__vue_template__ = __webpack_require__(55)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "C:\\Users\\cassio\\Documents\\GitHub\\vue-color\\src\\components\\common\\Checkboard.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 52 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(53);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c267d04e&file=Checkboard.vue!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../../node_modules/eslint-loader/index.js!./../../../node_modules/eslint-loader/index.js!./Checkboard.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c267d04e&file=Checkboard.vue!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../../node_modules/eslint-loader/index.js!./../../../node_modules/eslint-loader/index.js!./Checkboard.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 53 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".c-checkboard {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n", "", {"version":3,"sources":["/./src/components/common/Checkboard.vue.style","/./src/components/common/Checkboard.vue"],"names":[],"mappings":"AACA;EACE,mBAAA;EACA,SAAA;EACA,WAAA;EACA,YAAA;EACA,UAAA;CCAD","file":"Checkboard.vue","sourcesContent":["\r\n.c-checkboard{\r\n  position absolute\r\n  top 0px\r\n  right 0px\r\n  bottom 0px\r\n  left 0px\r\n}\r\n",".c-checkboard {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 54 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _checkboardCache = {};
+	
+	exports.default = {
+	  name: 'Checkboard',
+	  props: {
+	    size: {
+	      type: [Number | String],
+	      default: 8
+	    },
+	    white: {
+	      type: String,
+	      default: '#fff'
+	    },
+	    grey: {
+	      type: String,
+	      default: '#e6e6e6'
+	    }
+	  },
+	  computed: {
+	    bgStyle: function bgStyle() {
+	      return 'url(' + getCheckboard(this.white, this.grey, this.size) + ') center left';
+	    }
+	  }
+	};
+	
+	
+	function renderCheckboard(c1, c2, size) {
+	  if (typeof document === 'undefined') {
+	    return null;
+	  }
+	  var canvas = document.createElement('canvas');
+	  canvas.width = canvas.height = size * 2;
+	  var ctx = canvas.getContext('2d');
+	
+	  if (!ctx) {
+	    return null;
+	  }
+	  ctx.fillStyle = c1;
+	  ctx.fillRect(0, 0, canvas.width, canvas.height);
+	  ctx.fillStyle = c2;
+	  ctx.fillRect(0, 0, size, size);
+	  ctx.translate(size, size);
+	  ctx.fillRect(0, 0, size, size);
+	  return canvas.toDataURL();
+	}
+	
+	function getCheckboard(c1, c2, size) {
+	  var key = c1 + ',' + c2 + ',' + size;
+	
+	  if (_checkboardCache[key]) {
+	    return _checkboardCache[key];
+	  } else {
+	    var checkboard = renderCheckboard(c1, c2, size);
+	    _checkboardCache[key] = checkboard;
+	    return checkboard;
+	  }
+	}
+
+/***/ },
+/* 55 */
+/***/ function(module, exports) {
+
+	module.exports = "\r\n  <div class=\"c-checkboard\" :style=\"{background:  bgStyle}\"></div>\r\n";
+
+/***/ },
+/* 56 */
+/***/ function(module, exports) {
+
+	module.exports = "\r\n  <div class=\"c-alpha\">\r\n    <div class=\"checkboard-wrap\">\r\n      <checkboard></checkboard>\r\n    </div>\r\n    <div class=\"gradient\" :style=\"{background: gradientColor}\"></div>\r\n    <div class=\"container\" v-el:container\r\n        @mousedown=\"handleMouseDown\"\r\n        @touchmove=\"handleChange\"\r\n        @touchstart=\"handleChange\">\r\n      <div class=\"pointer\" :style=\"{left: colors.a * 100 + '%'}\">\r\n        <slot><div class=\"picker\"></div></slot>\r\n      </div>\r\n    </div>\r\n  </div>\r\n";
+
+/***/ },
+/* 57 */
+/***/ function(module, exports) {
+
+	module.exports = "\r\n  <div class=\"c-photoshop\">\r\n    <div class=\"head\">{{head}}</div>\r\n    <div class=\"body\">\r\n      <div class=\"saturation-wrap\">\r\n        <saturation :colors.sync=\"colors\" :on-change=\"childChange\"></saturation>\r\n      </div>\r\n      <div class=\"hue-wrap\">\r\n        <hue :colors.sync=\"colors\" :on-change=\"childChange\" direction=\"vertical\">\r\n          <div class=\"hue-pointer\">\r\n            <i class=\"left\"></i><i class=\"right\"></i>\r\n          </div>\r\n        </hue>  \r\n      </div>\r\n      <div class=\"controls\">\r\n        <div class=\"previews\">\r\n          <div class=\"label\">new</div>\r\n          <div class=\"swatches\">\r\n            <div class=\"pr-color\" :style=\"{background: colors.hex}\"></div>\r\n            <div class=\"pr-color\" :style=\"{background: currentColor}\"></div>\r\n          </div>\r\n          <div class=\"label\">current</div>\r\n        </div>\r\n        <div class=\"actions\">\r\n          <div class=\"ac-btn\" @click=\"handleAccept\">OK</div>\r\n          <div class=\"ac-btn\" @click=\"handleCancel\">Cancel</div>\r\n          <div class=\"fields\">\r\n            <!-- hsla -->\r\n            <ed-in label=\"h\" :val.sync=\"colors.hsl.h\" \r\n              :on-change=\"inputChange\"></ed-in>\r\n            <ed-in label=\"s\" :val.sync=\"colors.hsl.s\"\r\n              :on-change=\"inputChange\"></ed-in>\r\n            <ed-in label=\"v\" :val.sync=\"colors.hsl.l\"\r\n              :on-change=\"inputChange\"></ed-in>\r\n            <div class=\"divider\"></div>\r\n            <!-- rgba -->\r\n            <ed-in label=\"r\" :val.sync=\"colors.rgba.r\" \r\n              :on-change=\"inputChange\"></ed-in>\r\n            <ed-in label=\"g\" :val.sync=\"colors.rgba.g\" \r\n              :on-change=\"inputChange\"></ed-in>\r\n            <ed-in label=\"b\" :val.sync=\"colors.rgba.b\"\r\n              :on-change=\"inputChange\"></ed-in>\r\n            <div class=\"divider\"></div>\r\n            <!-- hex -->\r\n            <ed-in label=\"#\" class=\"hex\"\r\n              :val.sync=\"colors.hex\"\r\n              :on-change=\"inputChange\"></ed-in>    \r\n          </div>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n";
+
+/***/ },
+/* 58 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(59)
+	__vue_script__ = __webpack_require__(61)
+	__vue_template__ = __webpack_require__(62)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "C:\\Users\\cassio\\Documents\\GitHub\\vue-color\\src\\components\\Sketch.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 59 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(60);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-46ce7872&file=Sketch.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./Sketch.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-46ce7872&file=Sketch.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./Sketch.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 60 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".c-sketch {\n  position: relative;\n  width: 200px;\n  padding: 10px 10px 0;\n  box-sizing: initial;\n  background: #fff;\n  border-radius: 4px;\n  box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 8px 16px rgba(0,0,0,0.15);\n}\n.c-sketch .saturation-wrap {\n  width: 100%;\n  padding-bottom: 75%;\n  position: relative;\n  overflow: hidden;\n}\n.c-sketch .controls {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n}\n.c-sketch .controls .sliders {\n  padding: 4px 0;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.c-sketch .controls .hue-wrap {\n  position: relative;\n  height: 10px;\n}\n.c-sketch .controls .alpha-wrap {\n  position: relative;\n  height: 10px;\n  margin-top: 4px;\n  overflow: hidden;\n}\n.c-sketch .controls .color-wrap {\n  width: 24px;\n  height: 24px;\n  position: relative;\n  margin-top: 4px;\n  margin-left: 4px;\n  border-radius: 3px;\n}\n.c-sketch .controls .active-color {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border-radius: 2px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15), inset 0 0 4px rgba(0,0,0,0.25);\n  z-index: 2;\n}\n.c-sketch .field {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  padding-top: 4px;\n}\n.c-sketch .field .single {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  padding-left: 6px;\n}\n.c-sketch .field .double {\n  -webkit-box-flex: 2;\n  -webkit-flex: 2;\n      -ms-flex: 2;\n          flex: 2;\n}\n.c-sketch .field .input {\n  width: 80%;\n  padding: 4px 10% 3px;\n  border: none;\n  box-shadow: inset 0 0 0 1px #ccc;\n  font-size: 11px;\n}\n.c-sketch .field .label {\n  display: block;\n  text-align: center;\n  font-size: 11px;\n  color: #222;\n  padding-top: 3px;\n  padding-bottom: 4px;\n  text-transform: capitalize;\n}\n.c-sketch .presets {\n  margin-right: -10px;\n  margin-left: -10px;\n  padding-left: 10px;\n  padding-top: 10px;\n  border-top: 1px solid #eee;\n}\n.c-sketch .presets .presets-color {\n  border-radius: 3px;\n  overflow: hidden;\n  position: relative;\n  display: inline-block;\n  margin: 0 10px 10px 0;\n  vertical-align: top;\n  cursor: pointer;\n  width: 16px;\n  height: 16px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);\n}\n", "", {"version":3,"sources":["/./src/components/Sketch.vue.style","/./src/components/Sketch.vue"],"names":[],"mappings":"AACA;EACE,mBAAA;EACA,aAAA;EACA,qBAAA;EACA,oBAAA;EACA,iBAAA;EACA,mBAAA;EACA,oEAAA;CCAD;ADCC;EACE,YAAA;EACA,oBAAA;EACA,mBAAA;EACA,iBAAA;CCCH;ADAC;EACE,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;CCEH;ADDG;EACE,eAAA;EACA,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;CCGL;ADFG;EACE,mBAAA;EACA,aAAA;CCIL;ADHG;EACE,mBAAA;EACA,aAAA;EACA,gBAAA;EACA,iBAAA;CCKL;ADJG;EACE,YAAA;EACA,aAAA;EACA,mBAAA;EACA,gBAAA;EACA,iBAAA;EACA,mBAAA;CCML;ADLG;EACE,mBAAA;EACA,OAAA;EACA,QAAA;EACA,SAAA;EACA,UAAA;EACA,mBAAA;EACA,6EAAA;EACA,WAAA;CCOL;ADNC;EACE,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;EACA,iBAAA;CCQH;ADPG;EACE,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;EACA,kBAAA;CCSL;ADRG;EACE,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;CCUL;ADTG;EACE,WAAA;EACA,qBAAA;EACA,aAAA;EACA,iCAAA;EACA,gBAAA;CCWL;ADVG;EACE,eAAA;EACA,mBAAA;EACA,gBAAA;EACA,YAAA;EACA,iBAAA;EACA,oBAAA;EACA,2BAAA;CCYL;ADXC;EACE,oBAAA;EACA,mBAAA;EACA,mBAAA;EACA,kBAAA;EACA,2BAAA;CCaH;ADZG;EACE,mBAAA;EACA,iBAAA;EACA,mBAAA;EACA,sBAAA;EACA,sBAAA;EACA,oBAAA;EACA,gBAAA;EACA,YAAA;EACA,aAAA;EACA,6CAAA;CCcL","file":"Sketch.vue","sourcesContent":["\r\n.c-sketch\r\n  position relative\r\n  width 200px\r\n  padding 10px 10px 0\r\n  box-sizing initial\r\n  background #fff\r\n  border-radius 4px\r\n  box-shadow 0 0 0 1px rgba(0,0,0,.15), 0 8px 16px rgba(0,0,0,.15)\r\n  .saturation-wrap\r\n    width 100%\r\n    padding-bottom 75%\r\n    position relative\r\n    overflow hidden\r\n  .controls\r\n    display flex\r\n    .sliders\r\n      padding 4px 0\r\n      flex 1\r\n    .hue-wrap\r\n      position relative\r\n      height 10px\r\n    .alpha-wrap\r\n      position relative\r\n      height 10px\r\n      margin-top 4px\r\n      overflow hidden\r\n    .color-wrap\r\n      width 24px\r\n      height 24px\r\n      position relative\r\n      margin-top 4px\r\n      margin-left 4px\r\n      border-radius 3px\r\n    .active-color\r\n      position absolute\r\n      top 0\r\n      left 0\r\n      right 0\r\n      bottom 0\r\n      border-radius 2px\r\n      box-shadow inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)\r\n      z-index 2\r\n  .field\r\n    display flex\r\n    padding-top 4px\r\n    .single\r\n      flex 1\r\n      padding-left 6px\r\n    .double\r\n      flex 2\r\n    .input\r\n      width 80%\r\n      padding 4px 10% 3px\r\n      border none\r\n      box-shadow inset 0 0 0 1px #ccc\r\n      font-size 11px\r\n    .label\r\n      display block\r\n      text-align center\r\n      font-size 11px\r\n      color #222\r\n      padding-top 3px\r\n      padding-bottom 4px\r\n      text-transform capitalize\r\n  .presets\r\n    margin-right -10px\r\n    margin-left -10px\r\n    padding-left 10px\r\n    padding-top 10px\r\n    border-top 1px solid #eee\r\n    .presets-color\r\n      border-radius 3px\r\n      overflow hidden\r\n      position relative\r\n      display inline-block\r\n      margin 0 10px 10px 0\r\n      vertical-align top\r\n      cursor pointer\r\n      width 16px\r\n      height 16px\r\n      box-shadow inset 0 0 0 1px rgba(0,0,0,.15)\r\n",".c-sketch {\n  position: relative;\n  width: 200px;\n  padding: 10px 10px 0;\n  box-sizing: initial;\n  background: #fff;\n  border-radius: 4px;\n  box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 8px 16px rgba(0,0,0,0.15);\n}\n.c-sketch .saturation-wrap {\n  width: 100%;\n  padding-bottom: 75%;\n  position: relative;\n  overflow: hidden;\n}\n.c-sketch .controls {\n  display: flex;\n}\n.c-sketch .controls .sliders {\n  padding: 4px 0;\n  flex: 1;\n}\n.c-sketch .controls .hue-wrap {\n  position: relative;\n  height: 10px;\n}\n.c-sketch .controls .alpha-wrap {\n  position: relative;\n  height: 10px;\n  margin-top: 4px;\n  overflow: hidden;\n}\n.c-sketch .controls .color-wrap {\n  width: 24px;\n  height: 24px;\n  position: relative;\n  margin-top: 4px;\n  margin-left: 4px;\n  border-radius: 3px;\n}\n.c-sketch .controls .active-color {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border-radius: 2px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15), inset 0 0 4px rgba(0,0,0,0.25);\n  z-index: 2;\n}\n.c-sketch .field {\n  display: flex;\n  padding-top: 4px;\n}\n.c-sketch .field .single {\n  flex: 1;\n  padding-left: 6px;\n}\n.c-sketch .field .double {\n  flex: 2;\n}\n.c-sketch .field .input {\n  width: 80%;\n  padding: 4px 10% 3px;\n  border: none;\n  box-shadow: inset 0 0 0 1px #ccc;\n  font-size: 11px;\n}\n.c-sketch .field .label {\n  display: block;\n  text-align: center;\n  font-size: 11px;\n  color: #222;\n  padding-top: 3px;\n  padding-bottom: 4px;\n  text-transform: capitalize;\n}\n.c-sketch .presets {\n  margin-right: -10px;\n  margin-left: -10px;\n  padding-left: 10px;\n  padding-top: 10px;\n  border-top: 1px solid #eee;\n}\n.c-sketch .presets .presets-color {\n  border-radius: 3px;\n  overflow: hidden;\n  position: relative;\n  display: inline-block;\n  margin: 0 10px 10px 0;\n  vertical-align: top;\n  cursor: pointer;\n  width: 16px;\n  height: 16px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);\n}\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 61 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _color = __webpack_require__(7);
+	
+	var _color2 = _interopRequireDefault(_color);
+	
+	var _EditableInput = __webpack_require__(9);
+	
+	var _EditableInput2 = _interopRequireDefault(_EditableInput);
+	
+	var _Saturation = __webpack_require__(40);
+	
+	var _Saturation2 = _interopRequireDefault(_Saturation);
+	
+	var _Hue = __webpack_require__(24);
+	
+	var _Hue2 = _interopRequireDefault(_Hue);
+	
+	var _Alpha = __webpack_require__(47);
+	
+	var _Alpha2 = _interopRequireDefault(_Alpha);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var presetColors = ['#D0021B', '#F5A623', '#F8E71C', '#8B572A', '#7ED321', '#417505', '#BD10E0', '#9013FE', '#4A90E2', '#50E3C2', '#B8E986', '#000000', '#4A4A4A', '#9B9B9B', '#FFFFFF'];
+	
+	exports.default = {
+	  name: 'Sketch',
+	  mixins: [_color2.default],
+	  components: {
+	    saturation: _Saturation2.default,
+	    hue: _Hue2.default,
+	    alpha: _Alpha2.default,
+	    'ed-in': _EditableInput2.default
+	  },
+	  data: function data() {
+	    return {
+	      presetColors: presetColors
+	    };
+	  },
+	
+	  computed: {
+	    activeColor: function activeColor() {
+	      var rgba = this.colors.rgba;
+	      return 'rgba(' + [rgba.r, rgba.g, rgba.b, rgba.a].join(',') + ')';
+	    }
+	  },
+	  methods: {
+	    handlePreset: function handlePreset(c) {
+	      this.colorChange({
+	        hex: c,
+	        source: 'hex'
+	      });
+	    },
+	    childChange: function childChange(data) {
+	      this.colorChange(data);
+	    },
+	    inputChange: function inputChange(data) {
+	      if (!data) {
+	        return;
+	      }
+	      if (data.hex) {
+	        this.isValidHex(data.hex) && this.colorChange({
+	          hex: data.hex,
+	          source: 'hex'
+	        });
+	      } else if (data.r || data.g || data.b || data.a) {
+	        this.colorChange({
+	          r: data.r || this.colors.rgba.r,
+	          g: data.g || this.colors.rgba.g,
+	          b: data.b || this.colors.rgba.b,
+	          a: data.a || this.colors.rgba.a,
+	          source: 'rgba'
+	        });
+	      }
+	    }
+	  }
+	};
+
+/***/ },
+/* 62 */
+/***/ function(module, exports) {
+
+	module.exports = "\r\n  <div class=\"c-sketch\">\r\n    <div class=\"saturation-wrap\">\r\n      <saturation :colors.sync=\"colors\" :on-change=\"childChange\"></saturation>\r\n    </div>\r\n    <div class=\"controls\">\r\n      <div class=\"sliders\">\r\n        <div class=\"hue-wrap\">\r\n          <hue :colors.sync=\"colors\" :on-change=\"childChange\"></hue>  \r\n        </div>\r\n        <div class=\"alpha-wrap\">\r\n          <alpha :colors.sync=\"colors\" :on-change=\"childChange\"></alpha>\r\n        </div>\r\n      </div>\r\n      <div class=\"color-wrap\">\r\n        <div class=\"active-color\" :style=\"{background: activeColor}\"></div>\r\n      </div>\r\n    </div>\r\n    <div class=\"field\">\r\n      <!-- rgba -->\r\n      <div class=\"double\">\r\n        <ed-in label=\"hex\"\r\n        :val.sync=\"colors.hex\"\r\n        :on-change=\"inputChange\"></ed-in>  \r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"r\" :val.sync=\"colors.rgba.r\" \r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"g\" :val.sync=\"colors.rgba.g\" \r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"b\" :val.sync=\"colors.rgba.b\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"a\" :val.sync=\"colors.a\" :arrow-offset=\"0.01\" :max=\"1\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n    </div>\r\n    <div class=\"presets\">\r\n      <div class=\"presets-color\"\r\n        v-for=\"c in presetColors\"\r\n        :style=\"{background: c}\"\r\n        @click=\"handlePreset(c)\"\r\n        >\r\n      </div>\r\n    </div>\r\n  </div>\r\n";
+
+/***/ },
+/* 63 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(64)
+	__vue_script__ = __webpack_require__(66)
+	__vue_template__ = __webpack_require__(67)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "C:\\Users\\cassio\\Documents\\GitHub\\vue-color\\src\\components\\CmykSketch.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 64 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(65);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2f6d2b8e&file=CmykSketch.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./CmykSketch.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2f6d2b8e&file=CmykSketch.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./CmykSketch.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 65 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".c-sketch {\n  position: relative;\n  width: 200px;\n  padding: 10px 10px 0;\n  box-sizing: initial;\n  background: #fff;\n  border-radius: 4px;\n  box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 8px 16px rgba(0,0,0,0.15);\n}\n.c-sketch .saturation-wrap {\n  width: 100%;\n  padding-bottom: 75%;\n  position: relative;\n  overflow: hidden;\n}\n.c-sketch .controls {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n}\n.c-sketch .controls .sliders {\n  padding: 4px 0;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.c-sketch .controls .hue-wrap {\n  position: relative;\n  height: 10px;\n}\n.c-sketch .controls .alpha-wrap {\n  position: relative;\n  height: 10px;\n  margin-top: 4px;\n  overflow: hidden;\n}\n.c-sketch .controls .color-wrap {\n  width: 24px;\n  height: 24px;\n  position: relative;\n  margin-top: 4px;\n  margin-left: 4px;\n  border-radius: 3px;\n}\n.c-sketch .controls .active-color {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border-radius: 2px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15), inset 0 0 4px rgba(0,0,0,0.25);\n  z-index: 2;\n}\n.c-sketch .field {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  padding-top: 4px;\n}\n.c-sketch .field .single {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  padding-left: 6px;\n}\n.c-sketch .field .double {\n  -webkit-box-flex: 2;\n  -webkit-flex: 2;\n      -ms-flex: 2;\n          flex: 2;\n}\n.c-sketch .field .input {\n  width: 80%;\n  padding: 4px 10% 3px;\n  border: none;\n  box-shadow: inset 0 0 0 1px #ccc;\n  font-size: 11px;\n}\n.c-sketch .field .label {\n  display: block;\n  text-align: center;\n  font-size: 11px;\n  color: #222;\n  padding-top: 3px;\n  padding-bottom: 4px;\n  text-transform: capitalize;\n}\n.c-sketch .presets {\n  margin-right: -10px;\n  margin-left: -10px;\n  padding-left: 10px;\n  padding-top: 10px;\n  border-top: 1px solid #eee;\n}\n.c-sketch .presets .presets-color {\n  border-radius: 3px;\n  overflow: hidden;\n  position: relative;\n  display: inline-block;\n  margin: 0 10px 10px 0;\n  vertical-align: top;\n  cursor: pointer;\n  width: 16px;\n  height: 16px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);\n}\n", "", {"version":3,"sources":["/./src/components/CmykSketch.vue.style","/./src/components/CmykSketch.vue"],"names":[],"mappings":"AACA;EACE,mBAAA;EACA,aAAA;EACA,qBAAA;EACA,oBAAA;EACA,iBAAA;EACA,mBAAA;EACA,oEAAA;CCAD;ADCC;EACE,YAAA;EACA,oBAAA;EACA,mBAAA;EACA,iBAAA;CCCH;ADAC;EACE,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;CCEH;ADDG;EACE,eAAA;EACA,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;CCGL;ADFG;EACE,mBAAA;EACA,aAAA;CCIL;ADHG;EACE,mBAAA;EACA,aAAA;EACA,gBAAA;EACA,iBAAA;CCKL;ADJG;EACE,YAAA;EACA,aAAA;EACA,mBAAA;EACA,gBAAA;EACA,iBAAA;EACA,mBAAA;CCML;ADLG;EACE,mBAAA;EACA,OAAA;EACA,QAAA;EACA,SAAA;EACA,UAAA;EACA,mBAAA;EACA,6EAAA;EACA,WAAA;CCOL;ADNC;EACE,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;EACA,iBAAA;CCQH;ADPG;EACE,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;EACA,kBAAA;CCSL;ADRG;EACE,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;CCUL;ADTG;EACE,WAAA;EACA,qBAAA;EACA,aAAA;EACA,iCAAA;EACA,gBAAA;CCWL;ADVG;EACE,eAAA;EACA,mBAAA;EACA,gBAAA;EACA,YAAA;EACA,iBAAA;EACA,oBAAA;EACA,2BAAA;CCYL;ADXC;EACE,oBAAA;EACA,mBAAA;EACA,mBAAA;EACA,kBAAA;EACA,2BAAA;CCaH;ADZG;EACE,mBAAA;EACA,iBAAA;EACA,mBAAA;EACA,sBAAA;EACA,sBAAA;EACA,oBAAA;EACA,gBAAA;EACA,YAAA;EACA,aAAA;EACA,6CAAA;CCcL","file":"CmykSketch.vue","sourcesContent":["\r\n.c-sketch\r\n  position relative\r\n  width 200px\r\n  padding 10px 10px 0\r\n  box-sizing initial\r\n  background #fff\r\n  border-radius 4px\r\n  box-shadow 0 0 0 1px rgba(0,0,0,.15), 0 8px 16px rgba(0,0,0,.15)\r\n  .saturation-wrap\r\n    width 100%\r\n    padding-bottom 75%\r\n    position relative\r\n    overflow hidden\r\n  .controls\r\n    display flex\r\n    .sliders\r\n      padding 4px 0\r\n      flex 1\r\n    .hue-wrap\r\n      position relative\r\n      height 10px\r\n    .alpha-wrap\r\n      position relative\r\n      height 10px\r\n      margin-top 4px\r\n      overflow hidden\r\n    .color-wrap\r\n      width 24px\r\n      height 24px\r\n      position relative\r\n      margin-top 4px\r\n      margin-left 4px\r\n      border-radius 3px\r\n    .active-color\r\n      position absolute\r\n      top 0\r\n      left 0\r\n      right 0\r\n      bottom 0\r\n      border-radius 2px\r\n      box-shadow inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)\r\n      z-index 2\r\n  .field\r\n    display flex\r\n    padding-top 4px\r\n    .single\r\n      flex 1\r\n      padding-left 6px\r\n    .double\r\n      flex 2\r\n    .input\r\n      width 80%\r\n      padding 4px 10% 3px\r\n      border none\r\n      box-shadow inset 0 0 0 1px #ccc\r\n      font-size 11px\r\n    .label\r\n      display block\r\n      text-align center\r\n      font-size 11px\r\n      color #222\r\n      padding-top 3px\r\n      padding-bottom 4px\r\n      text-transform capitalize\r\n  .presets\r\n    margin-right -10px\r\n    margin-left -10px\r\n    padding-left 10px\r\n    padding-top 10px\r\n    border-top 1px solid #eee\r\n    .presets-color\r\n      border-radius 3px\r\n      overflow hidden\r\n      position relative\r\n      display inline-block\r\n      margin 0 10px 10px 0\r\n      vertical-align top\r\n      cursor pointer\r\n      width 16px\r\n      height 16px\r\n      box-shadow inset 0 0 0 1px rgba(0,0,0,.15)\r\n",".c-sketch {\n  position: relative;\n  width: 200px;\n  padding: 10px 10px 0;\n  box-sizing: initial;\n  background: #fff;\n  border-radius: 4px;\n  box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 8px 16px rgba(0,0,0,0.15);\n}\n.c-sketch .saturation-wrap {\n  width: 100%;\n  padding-bottom: 75%;\n  position: relative;\n  overflow: hidden;\n}\n.c-sketch .controls {\n  display: flex;\n}\n.c-sketch .controls .sliders {\n  padding: 4px 0;\n  flex: 1;\n}\n.c-sketch .controls .hue-wrap {\n  position: relative;\n  height: 10px;\n}\n.c-sketch .controls .alpha-wrap {\n  position: relative;\n  height: 10px;\n  margin-top: 4px;\n  overflow: hidden;\n}\n.c-sketch .controls .color-wrap {\n  width: 24px;\n  height: 24px;\n  position: relative;\n  margin-top: 4px;\n  margin-left: 4px;\n  border-radius: 3px;\n}\n.c-sketch .controls .active-color {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border-radius: 2px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15), inset 0 0 4px rgba(0,0,0,0.25);\n  z-index: 2;\n}\n.c-sketch .field {\n  display: flex;\n  padding-top: 4px;\n}\n.c-sketch .field .single {\n  flex: 1;\n  padding-left: 6px;\n}\n.c-sketch .field .double {\n  flex: 2;\n}\n.c-sketch .field .input {\n  width: 80%;\n  padding: 4px 10% 3px;\n  border: none;\n  box-shadow: inset 0 0 0 1px #ccc;\n  font-size: 11px;\n}\n.c-sketch .field .label {\n  display: block;\n  text-align: center;\n  font-size: 11px;\n  color: #222;\n  padding-top: 3px;\n  padding-bottom: 4px;\n  text-transform: capitalize;\n}\n.c-sketch .presets {\n  margin-right: -10px;\n  margin-left: -10px;\n  padding-left: 10px;\n  padding-top: 10px;\n  border-top: 1px solid #eee;\n}\n.c-sketch .presets .presets-color {\n  border-radius: 3px;\n  overflow: hidden;\n  position: relative;\n  display: inline-block;\n  margin: 0 10px 10px 0;\n  vertical-align: top;\n  cursor: pointer;\n  width: 16px;\n  height: 16px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);\n}\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 66 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _color = __webpack_require__(7);
+	
+	var _color2 = _interopRequireDefault(_color);
+	
+	var _EditableInput = __webpack_require__(9);
+	
+	var _EditableInput2 = _interopRequireDefault(_EditableInput);
+	
+	var _Saturation = __webpack_require__(40);
+	
+	var _Saturation2 = _interopRequireDefault(_Saturation);
+	
+	var _Hue = __webpack_require__(24);
+	
+	var _Hue2 = _interopRequireDefault(_Hue);
+	
+	var _Alpha = __webpack_require__(47);
+	
+	var _Alpha2 = _interopRequireDefault(_Alpha);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var presetColors = ['#D0021B', '#F5A623', '#F8E71C', '#8B572A', '#7ED321', '#417505', '#BD10E0', '#9013FE', '#4A90E2', '#50E3C2', '#B8E986', '#000000', '#4A4A4A', '#9B9B9B', '#FFFFFF'];
+	
+	exports.default = {
+	  name: 'CmykSketch',
+	  mixins: [_color2.default],
+	  components: {
+	    saturation: _Saturation2.default,
+	    hue: _Hue2.default,
+	    alpha: _Alpha2.default,
+	    'ed-in': _EditableInput2.default
+	  },
+	  data: function data() {
+	    return {
+	      presetColors: presetColors
+	    };
+	  },
+	
+	  computed: {
+	    activeColor: function activeColor() {
+	      var rgba = this.colors.rgba;
+	      return 'rgba(' + [rgba.r, rgba.g, rgba.b, rgba.a].join(',') + ')';
+	    }
+	  },
+	  methods: {
+	    handlePreset: function handlePreset(c) {
+	      this.colorChange({
+	        hex: c,
+	        source: 'hex'
+	      });
+	    },
+	    childChange: function childChange(data) {
+	      this.colorChange(data);
+	    },
+	    inputChange: function inputChange(data) {
+	      if (!data) {
+	        return;
+	      }
+	      if (data.hex) {
+	        this.isValidHex(data.hex) && this.colorChange({
+	          hex: data.hex,
+	          source: 'hex'
+	        });
+	      } else if (data.r || data.g || data.b || data.a) {
+	        this.colorChange({
+	          r: data.r || this.colors.rgba.r,
+	          g: data.g || this.colors.rgba.g,
+	          b: data.b || this.colors.rgba.b,
+	          a: data.a || this.colors.rgba.a,
+	          source: 'rgba'
+	        });
+	      }
+	    }
+	  }
+	};
+
+/***/ },
+/* 67 */
+/***/ function(module, exports) {
+
+	module.exports = "\r\n  <div class=\"c-sketch\">\r\n    <div class=\"saturation-wrap\">\r\n      <saturation :colors.sync=\"colors\" :on-change=\"childChange\"></saturation>\r\n    </div>\r\n    <div class=\"controls\">\r\n      <div class=\"sliders\">\r\n        <div class=\"hue-wrap\">\r\n          <hue :colors.sync=\"colors\" :on-change=\"childChange\"></hue>\r\n        </div>\r\n        <div class=\"alpha-wrap\">\r\n          <alpha :colors.sync=\"colors\" :on-change=\"childChange\"></alpha>\r\n        </div>\r\n      </div>\r\n      <div class=\"color-wrap\">\r\n        <div class=\"active-color\" :style=\"{background: activeColor}\"></div>\r\n      </div>\r\n    </div>\r\n    <div class=\"field\">\r\n      <!-- rgba -->\r\n      <div class=\"double\">\r\n        <ed-in label=\"hex\"\r\n        :val.sync=\"colors.hex\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"r\" :val.sync=\"colors.rgba.r\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"g\" :val.sync=\"colors.rgba.g\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"b\" :val.sync=\"colors.rgba.b\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"a\" :val.sync=\"colors.a\" :arrow-offset=\"0.01\" :max=\"1\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n    </div>\r\n    <div class=\"field\">\r\n      <!-- CMYK -->\r\n      <div class=\"double\">\r\n        <ed-in label=\"name\"\r\n        :val.sync=\"colors.name\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"C\" :val.sync=\"colors.cmyk.c\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"M\" :val.sync=\"colors.cmyk.m\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"Y\" :val.sync=\"colors.cmyk.y\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"K\" :val.sync=\"colors.cmyk.k\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n    </div>\r\n    <div class=\"field\">\r\n      <div class=\"double\">\r\n        <ed-in label=\"Spot Color Name\" :val.sync=\"colors.spotColorName\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <label for=\"is_spot_color\">Is spot color</label>\r\n        <input type=\"checkbox\" name=\"is_spot_color\" v-model=\"colors.isSpotColor\">\r\n      </div>\r\n    </div>\r\n    <div class=\"field\">\r\n      <button type=\"button\" name=\"delete_color\" class=\"delete-button text-error\">Delete</button>\r\n    </div>\r\n  </div>\r\n";
+
+/***/ },
+/* 68 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(69)
+	__vue_script__ = __webpack_require__(71)
+	__vue_template__ = __webpack_require__(72)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "C:\\Users\\cassio\\Documents\\GitHub\\vue-color\\src\\components\\Chrome.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 69 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(70);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-d77f2f80&file=Chrome.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./Chrome.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-d77f2f80&file=Chrome.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./Chrome.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 70 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".c-chrome {\n  background: #fff;\n  border-radius: 2px;\n  box-shadow: 0 0 2px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.3);\n  box-sizing: initial;\n  width: 225px;\n  font-family: Menlo;\n}\n.c-chrome .chrome-body {\n  padding: 16px 16px 12px;\n}\n.c-chrome .saturation-wrap {\n  width: 100%;\n  padding-bottom: 55%;\n  position: relative;\n  border-radius: 2px 2px 0 0;\n  overflow: hidden;\n}\n.c-chrome .saturation-wrap .circle {\n  width: 12px;\n  height: 12px;\n}\n.c-chrome .controls {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n}\n.c-chrome .controls .c-hue,\n.c-chrome .controls .c-alpha {\n  border-radius: 2px;\n}\n.c-chrome .controls .color-wrap {\n  width: 32px;\n}\n.c-chrome .controls .active-color {\n  margin-top: 6px;\n  width: 16px;\n  height: 16px;\n  border-radius: 8px;\n  position: relative;\n  overflow: hidden;\n}\n.c-chrome .controls .sliders {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.c-chrome .controls .sliders .picker {\n  width: 12px;\n  height: 12px;\n  border-radius: 6px;\n  -webkit-transform: translate(-6px, -2px);\n          transform: translate(-6px, -2px);\n  background-color: #f8f8f8;\n  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);\n}\n.c-chrome .controls .hue-wrap {\n  position: relative;\n  height: 10px;\n  margin-bottom: 8px;\n}\n.c-chrome .controls .alpha-wrap {\n  position: relative;\n  height: 10px;\n}\n.c-chrome .fields-wrap {\n  padding-top: 16px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n}\n.c-chrome .fields {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  margin-left: -6px;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.c-chrome .field {\n  padding-left: 6px;\n  width: 100%;\n}\n.c-chrome .toggle-btn {\n  width: 32px;\n  text-align: right;\n  position: relative;\n}\n.c-chrome .icon {\n  margin-right: -4px;\n  margin-top: 12px;\n  cursor: pointer;\n  position: relative;\n  z-index: 2;\n}\n.c-chrome .icon-highlight {\n  position: absolute;\n  width: 24px;\n  height: 28px;\n  background: #eee;\n  border-radius: 4px;\n  top: 10px;\n  left: 12px;\n}\n.c-chrome .fields .input {\n  font-size: 11px;\n  color: #333;\n  width: 100%;\n  border-rradius: 2px;\n  border: none;\n  box-shadow: inset 0 0 0 1px #dadada;\n  height: 21px;\n  text-align: center;\n}\n.c-chrome .fields .label {\n  text-transform: uppercase;\n  font-size: 11px;\n  line-height: 11px;\n  color: #969696;\n  text-align: center;\n  display: block;\n  margin-top: 12px;\n}\n", "", {"version":3,"sources":["/./src/components/Chrome.vue.style","/./src/components/Chrome.vue"],"names":[],"mappings":"AACA;EACE,iBAAA;EACA,mBAAA;EACA,+DAAA;EACA,oBAAA;EACA,aAAA;EACA,mBAAA;CCAD;ADCC;EACE,wBAAA;CCCH;ADAC;EACE,YAAA;EACA,oBAAA;EACA,mBAAA;EACA,2BAAA;EACA,iBAAA;CCEH;ADDG;EACE,YAAA;EACA,aAAA;CCGL;ADFC;EACE,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;CCIH;ADHG;;EAEE,mBAAA;CCKL;ADJG;EACE,YAAA;CCML;ADLG;EACE,gBAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;EACA,mBAAA;EACA,iBAAA;CCOL;ADNG;EACE,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;CCQL;ADPK;EACE,YAAA;EACA,aAAA;EACA,mBAAA;EACA,yCAAA;UAAA,iCAAA;EACA,0BAAA;EACA,yCAAA;CCSP;ADRG;EACE,mBAAA;EACA,aAAA;EACA,mBAAA;CCUL;ADTG;EACE,mBAAA;EACA,aAAA;CCWL;ADVC;EACE,kBAAA;EACA,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;CCYH;ADXC;EACE,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;EACA,kBAAA;EACA,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;CCaH;ADZC;EACE,kBAAA;EACA,YAAA;CCcH;ADbC;EACE,YAAA;EACA,kBAAA;EACA,mBAAA;CCeH;ADdC;EACE,mBAAA;EACA,iBAAA;EACA,gBAAA;EACA,mBAAA;EACA,WAAA;CCgBH;ADfC;EACE,mBAAA;EACA,YAAA;EACA,aAAA;EACA,iBAAA;EACA,mBAAA;EACA,UAAA;EACA,WAAA;CCiBH;ADdG;EACE,gBAAA;EACA,YAAA;EACA,YAAA;EACA,oBAAA;EACA,aAAA;EACA,oCAAA;EACA,aAAA;EACA,mBAAA;CCgBL;ADfG;EACE,0BAAA;EACA,gBAAA;EACA,kBAAA;EACA,eAAA;EACA,mBAAA;EACA,eAAA;EACA,iBAAA;CCiBL","file":"Chrome.vue","sourcesContent":["\r\n.c-chrome\r\n  background #fff\r\n  border-radius 2px\r\n  box-shadow 0 0 2px rgba(0,0,0,.3), 0 4px 8px rgba(0,0,0,.3)\r\n  box-sizing initial\r\n  width 225px\r\n  font-family Menlo\r\n  .chrome-body\r\n    padding 16px 16px 12px\r\n  .saturation-wrap\r\n    width 100%\r\n    padding-bottom 55%\r\n    position relative\r\n    border-radius 2px 2px 0 0\r\n    overflow hidden\r\n    .circle\r\n      width 12px\r\n      height 12px\r\n  .controls\r\n    display flex\r\n    .c-hue\r\n    .c-alpha\r\n      border-radius 2px\r\n    .color-wrap\r\n      width 32px\r\n    .active-color\r\n      margin-top 6px\r\n      width 16px\r\n      height 16px\r\n      border-radius 8px\r\n      position relative\r\n      overflow hidden\r\n    .sliders\r\n      flex 1\r\n      .picker\r\n        width 12px\r\n        height 12px\r\n        border-radius 6px\r\n        transform translate(-6px, -2px)\r\n        background-color rgb(248, 248, 248)\r\n        box-shadow 0 1px 4px 0 rgba(0, 0, 0, 0.37)\r\n    .hue-wrap\r\n      position relative\r\n      height 10px\r\n      margin-bottom 8px\r\n    .alpha-wrap\r\n      position relative\r\n      height 10px\r\n  .fields-wrap\r\n    padding-top 16px\r\n    display flex\r\n  .fields\r\n    display flex\r\n    margin-left -6px\r\n    flex 1\r\n  .field\r\n    padding-left 6px\r\n    width 100%\r\n  .toggle-btn\r\n    width 32px\r\n    text-align right\r\n    position relative\r\n  .icon\r\n    margin-right -4px\r\n    margin-top 12px\r\n    cursor pointer\r\n    position relative\r\n    z-index 2\r\n  .icon-highlight\r\n    position absolute\r\n    width 24px\r\n    height 28px\r\n    background #eee\r\n    border-radius 4px\r\n    top 10px\r\n    left 12px\r\n  \r\n  .fields\r\n    .input\r\n      font-size 11px\r\n      color #333\r\n      width 100%\r\n      border-rradius 2px\r\n      border none\r\n      box-shadow inset 0 0 0 1px #dadada\r\n      height 21px\r\n      text-align center\r\n    .label\r\n      text-transform uppercase\r\n      font-size 11px\r\n      line-height 11px\r\n      color #969696\r\n      text-align center\r\n      display block\r\n      margin-top 12px\r\n\r\n",".c-chrome {\n  background: #fff;\n  border-radius: 2px;\n  box-shadow: 0 0 2px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.3);\n  box-sizing: initial;\n  width: 225px;\n  font-family: Menlo;\n}\n.c-chrome .chrome-body {\n  padding: 16px 16px 12px;\n}\n.c-chrome .saturation-wrap {\n  width: 100%;\n  padding-bottom: 55%;\n  position: relative;\n  border-radius: 2px 2px 0 0;\n  overflow: hidden;\n}\n.c-chrome .saturation-wrap .circle {\n  width: 12px;\n  height: 12px;\n}\n.c-chrome .controls {\n  display: flex;\n}\n.c-chrome .controls .c-hue,\n.c-chrome .controls .c-alpha {\n  border-radius: 2px;\n}\n.c-chrome .controls .color-wrap {\n  width: 32px;\n}\n.c-chrome .controls .active-color {\n  margin-top: 6px;\n  width: 16px;\n  height: 16px;\n  border-radius: 8px;\n  position: relative;\n  overflow: hidden;\n}\n.c-chrome .controls .sliders {\n  flex: 1;\n}\n.c-chrome .controls .sliders .picker {\n  width: 12px;\n  height: 12px;\n  border-radius: 6px;\n  transform: translate(-6px, -2px);\n  background-color: #f8f8f8;\n  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);\n}\n.c-chrome .controls .hue-wrap {\n  position: relative;\n  height: 10px;\n  margin-bottom: 8px;\n}\n.c-chrome .controls .alpha-wrap {\n  position: relative;\n  height: 10px;\n}\n.c-chrome .fields-wrap {\n  padding-top: 16px;\n  display: flex;\n}\n.c-chrome .fields {\n  display: flex;\n  margin-left: -6px;\n  flex: 1;\n}\n.c-chrome .field {\n  padding-left: 6px;\n  width: 100%;\n}\n.c-chrome .toggle-btn {\n  width: 32px;\n  text-align: right;\n  position: relative;\n}\n.c-chrome .icon {\n  margin-right: -4px;\n  margin-top: 12px;\n  cursor: pointer;\n  position: relative;\n  z-index: 2;\n}\n.c-chrome .icon-highlight {\n  position: absolute;\n  width: 24px;\n  height: 28px;\n  background: #eee;\n  border-radius: 4px;\n  top: 10px;\n  left: 12px;\n}\n.c-chrome .fields .input {\n  font-size: 11px;\n  color: #333;\n  width: 100%;\n  border-rradius: 2px;\n  border: none;\n  box-shadow: inset 0 0 0 1px #dadada;\n  height: 21px;\n  text-align: center;\n}\n.c-chrome .fields .label {\n  text-transform: uppercase;\n  font-size: 11px;\n  line-height: 11px;\n  color: #969696;\n  text-align: center;\n  display: block;\n  margin-top: 12px;\n}\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 71 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _color = __webpack_require__(7);
+	
+	var _color2 = _interopRequireDefault(_color);
+	
+	var _EditableInput = __webpack_require__(9);
+	
+	var _EditableInput2 = _interopRequireDefault(_EditableInput);
+	
+	var _Saturation = __webpack_require__(40);
+	
+	var _Saturation2 = _interopRequireDefault(_Saturation);
+	
+	var _Hue = __webpack_require__(24);
+	
+	var _Hue2 = _interopRequireDefault(_Hue);
+	
+	var _Alpha = __webpack_require__(47);
+	
+	var _Alpha2 = _interopRequireDefault(_Alpha);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	  name: 'Chrome',
+	  mixins: [_color2.default],
+	  props: {},
+	  components: {
+	    saturation: _Saturation2.default,
+	    hue: _Hue2.default,
+	    alpha: _Alpha2.default,
+	    'ed-in': _EditableInput2.default
+	  },
+	  data: function data() {
+	    return {
+	      fields: ['hex', 'rgba', 'hsla'],
+	      fieldsIndex: 0,
+	      highlight: false
+	    };
+	  },
+	
+	  computed: {
+	    activeColor: function activeColor() {
+	      var rgba = this.colors.rgba;
+	      return 'rgba(' + [rgba.r, rgba.g, rgba.b, rgba.a].join(',') + ')';
+	    }
+	  },
+	  methods: {
+	    handlePreset: function handlePreset(c) {
+	      this.colorChange({
+	        hex: c,
+	        source: 'hex'
+	      });
+	    },
+	    childChange: function childChange(data) {
+	      this.colorChange(data);
+	    },
+	    inputChange: function inputChange(data) {
+	      if (!data) {
+	        return;
+	      }
+	      if (data.hex) {
+	        this.isValidHex(data.hex) && this.colorChange({
+	          hex: data.hex,
+	          source: 'hex'
+	        });
+	      } else if (data.r || data.g || data.b || data.a) {
+	        this.colorChange({
+	          r: data.r || this.colors.rgba.r,
+	          g: data.g || this.colors.rgba.g,
+	          b: data.b || this.colors.rgba.b,
+	          a: data.a || this.colors.rgba.a,
+	          source: 'rgba'
+	        });
+	      }
+	    },
+	    toggleViews: function toggleViews() {
+	      if (this.fieldsIndex >= 2) {
+	        this.fieldsIndex = 0;
+	        return;
+	      }
+	      this.fieldsIndex = 0;
+	    },
+	    showHighlight: function showHighlight() {
+	      this.highlight = true;
+	    },
+	    hideHighlight: function hideHighlight() {
+	      this.highlight = false;
+	    }
+	  }
+	};
+
+/***/ },
+/* 72 */
+/***/ function(module, exports) {
+
+	module.exports = "\r\n  <div class=\"c-chrome\">\r\n    <div class=\"saturation-wrap\">\r\n      <saturation :colors.sync=\"colors\" :on-change=\"childChange\"></saturation>\r\n    </div>\r\n    <div class=\"chrome-body\">\r\n      <div class=\"controls\">\r\n        <div class=\"color-wrap\">\r\n          <div class=\"active-color\" :style=\"{background: activeColor}\"></div>\r\n        </div>\r\n\r\n        <div class=\"sliders\">\r\n          <div class=\"hue-wrap\">\r\n            <hue :colors.sync=\"colors\" :on-change=\"childChange\"></hue>  \r\n          </div>\r\n          <div class=\"alpha-wrap\">\r\n            <alpha :colors.sync=\"colors\" :on-change=\"childChange\"></alpha>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      \r\n      <div class=\"fields-wrap\">\r\n        <div class=\"fields\" v-show=\"fieldsIndex === 0\">\r\n          <!-- hex -->\r\n          <div class=\"field\">\r\n            <ed-in label=\"hex\"\r\n            :val.sync=\"colors.hex\"\r\n            :on-change=\"inputChange\"></ed-in>  \r\n          </div>\r\n        </div>\r\n        <div class=\"fields\" v-show=\"fieldsIndex === 1\">\r\n          <!-- rgba -->\r\n          <div class=\"field\">\r\n            <ed-in label=\"r\" :val.sync=\"colors.rgba.r\" \r\n            :on-change=\"inputChange\"></ed-in>\r\n          </div>\r\n          <div class=\"field\">\r\n            <ed-in label=\"g\" :val.sync=\"colors.rgba.g\" \r\n            :on-change=\"inputChange\"></ed-in>\r\n          </div>\r\n          <div class=\"field\">\r\n            <ed-in label=\"b\" :val.sync=\"colors.rgba.b\"\r\n            :on-change=\"inputChange\"></ed-in>\r\n          </div>\r\n          <div class=\"field\">\r\n            <ed-in label=\"a\" :val.sync=\"colors.a\" :arrow-offset=\"0.01\" :max=\"1\"\r\n            :on-change=\"inputChange\"></ed-in>\r\n          </div>\r\n        </div>\r\n        <div class=\"fields\" v-show=\"fieldsIndex === 2\">\r\n          <!-- hsla -->\r\n          <div class=\"field\">\r\n            <ed-in label=\"h\" :val.sync=\"colors.hsl.h\" \r\n            :on-change=\"inputChange\"></ed-in>\r\n          </div>\r\n          <div class=\"field\"> \r\n            <ed-in label=\"s\" :val.sync=\"colors.hsl.s\"\r\n            :on-change=\"inputChange\"></ed-in>\r\n          </div>\r\n          <div class=\"field\">\r\n            <ed-in label=\"l\" :val.sync=\"colors.hsl.l\"\r\n            :on-change=\"inputChange\"></ed-in>\r\n          </div>\r\n          <div class=\"field\">\r\n            <ed-in label=\"a\" :val.sync=\"colors.a\" :arrow-offset=\"0.01\" :max=\"1\"\r\n            :on-change=\"inputChange\"></ed-in>\r\n          </div>\r\n        </div>\r\n        <!-- btn -->\r\n        <div class=\"toggle-btn\">\r\n          <div class=\"icon\" @click=\"toggleViews\">\r\n            <svg style=\"width:24px; height:24px\" viewBox=\"0 0 24 24\" \r\n              @mouseover=\"showHighlight\" \r\n              @mouseenter=\"showHighlight\" \r\n              @mouseout=\"hideHighlight\">\r\n              <path fill=\"#333\" d=\"M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z\" />\r\n            </svg>\r\n          </div>\r\n          <div class=\"icon-highlight\" v-show=\"highlight\"></div>\r\n        </div>\r\n        <!-- btn -->\r\n      </div>      \r\n    </div>\r\n  </div>\r\n";
+
+/***/ }
+/******/ ])
+});
+;
+//# sourceMappingURL=vue-color.js.map

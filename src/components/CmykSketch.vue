@@ -70,11 +70,12 @@
         :on-change="inputChange"></ed-in>
       </div>
       <div class="single">
+        <label for="is_spot_color">Is spot color</label>
         <input type="checkbox" name="is_spot_color" v-model="colors.isSpotColor">
       </div>
     </div>
     <div class="field">
-      <button type="button" name="delete_color" class="danger">Delete</button>
+      <button type="button" name="delete_color" class="delete-button text-error">Delete</button>
     </div>
   </div>
 </template>
