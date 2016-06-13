@@ -589,28 +589,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function _convertRGBToCMYK(rgba) {
-	  var r = rgba.r;
-	  var g = rgba.g;
-	  var b = rgba.b;
-	
-	  r = _changeRange(r);
-	  g = _changeRange(g);
-	  b = _changeRange(b);
-	
-	  var k = 1 - Math.max(r, b, b);
-	  var c = (1 - r - k) / (1 - k);
-	  var m = (1 - g - k) / (1 - k);
-	  var y = (1 - b - k) / (1 - k);
-	
-	  return { c: c, m: m, y: y, k: k };
-	
-	  function _changeRange(colorValue) {
-	    var MAX_COLOR_VALUE = 255;
-	    return colorValue / MAX_COLOR_VALUE;
-	  }
-	}
-	
 	function _colorChange(data, oldHue) {
 	  if (data.a && data.a > 1) {
 	    data.a = 1;
@@ -621,7 +599,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hsv = color.toHsv();
 	  var rgba = color.toRgb();
 	
-	  var cmyk = _convertRGBToCMYK(rgba);
 	  if (hsl.s === 0) {
 	    hsl.h = oldHue || 0;
 	    hsv.h = oldHue || 0;
@@ -633,8 +610,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    hsv: hsv,
 	    oldHue: data.h || oldHue || hsl.h,
 	    source: data.source,
-	    a: data.a || 1,
-	    cmyk: cmyk
+	    a: data.a || 1
 	  };
 	}
 	
@@ -2772,7 +2748,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, ".white,\n.black,\n.saturation {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n}\n.saturation .white {\n  background: -webkit-linear-gradient(left, #fff, rgba(255,255,255,0));\n  background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n}\n.saturation .black {\n  background: -webkit-linear-gradient(bottom, #000, rgba(0,0,0,0));\n  background: linear-gradient(to top, #000, rgba(0,0,0,0));\n}\n.saturation .pointer {\n  position: absolute;\n}\n.saturation .circle {\n  cursor: head;\n  width: 4px;\n  height: 4px;\n  box-shadow: 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,0.3), 0 0 1px 2px rgba(0,0,0,0.4);\n  border-radius: 50%;\n  -webkit-transform: translate(-2px, -2px);\n          transform: translate(-2px, -2px);\n}\n", "", {"version":3,"sources":["/./src/components/common/Saturation.vue.style","/./src/components/common/Saturation.vue"],"names":[],"mappings":"AACA;;;EAGE,mBAAA;EACA,OAAA;EACA,QAAA;EACA,SAAA;EACA,UAAA;CCAD;ADGC;EACE,qEAAA;EAAA,iEAAA;CCDH;ADEC;EACE,iEAAA;EAAA,yDAAA;CCAH;ADCC;EACE,mBAAA;CCCH;ADAC;EACE,aAAA;EACA,WAAA;EACA,YAAA;EACA,6FAAA;EACA,mBAAA;EACA,yCAAA;UAAA,iCAAA;CCEH","file":"Saturation.vue","sourcesContent":["\r\n.white\r\n.black\r\n.saturation\r\n  position absolute\r\n  top 0\r\n  left 0\r\n  right 0\r\n  bottom 0\r\n  \r\n.saturation\r\n  .white \r\n    background linear-gradient(to right, #fff, rgba(255,255,255,0))\r\n  .black\r\n    background linear-gradient(to top, #000, rgba(0,0,0,0))\r\n  .pointer\r\n    position absolute\r\n  .circle\r\n    cursor head\r\n    width 4px\r\n    height 4px\r\n    box-shadow 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3), 0 0 1px 2px rgba(0,0,0,.4)\r\n    border-radius 50%\r\n    transform translate(-2px, -2px)\r\n",".white,\n.black,\n.saturation {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n}\n.saturation .white {\n  background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n}\n.saturation .black {\n  background: linear-gradient(to top, #000, rgba(0,0,0,0));\n}\n.saturation .pointer {\n  position: absolute;\n}\n.saturation .circle {\n  cursor: head;\n  width: 4px;\n  height: 4px;\n  box-shadow: 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,0.3), 0 0 1px 2px rgba(0,0,0,0.4);\n  border-radius: 50%;\n  transform: translate(-2px, -2px);\n}\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, ".white,\n.black,\n.saturation {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n}\n.saturation .white {\n  background: -webkit-linear-gradient(left, #fff, rgba(255,255,255,0));\n  background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n}\n.saturation .black {\n  background: -webkit-linear-gradient(bottom, #000, rgba(0,0,0,0));\n  background: linear-gradient(to top, #000, rgba(0,0,0,0));\n}\n.saturation .pointer {\n  position: absolute;\n}\n.saturation .circle {\n  cursor: head;\n  width: 4px;\n  height: 4px;\n  box-shadow: 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,0.3), 0 0 1px 2px rgba(0,0,0,0.4);\n  border-radius: 50%;\n  -webkit-transform: translate(-2px, -2px);\n          transform: translate(-2px, -2px);\n}\n", "", {"version":3,"sources":["/./src/components/common/Saturation.vue.style","/./src/components/common/Saturation.vue"],"names":[],"mappings":"AACA;;;EAGE,mBAAA;EACA,OAAA;EACA,QAAA;EACA,SAAA;EACA,UAAA;CCAD;ADGC;EACE,qEAAA;EAAA,iEAAA;CCDH;ADEC;EACE,iEAAA;EAAA,yDAAA;CCAH;ADCC;EACE,mBAAA;CCCH;ADAC;EACE,aAAA;EACA,WAAA;EACA,YAAA;EACA,6FAAA;EACA,mBAAA;EACA,yCAAA;UAAA,iCAAA;CCEH","file":"Saturation.vue","sourcesContent":["\r\n.white\r\n.black\r\n.saturation\r\n  position absolute\r\n  top 0\r\n  left 0\r\n  right 0\r\n  bottom 0\r\n\r\n.saturation\r\n  .white\r\n    background linear-gradient(to right, #fff, rgba(255,255,255,0))\r\n  .black\r\n    background linear-gradient(to top, #000, rgba(0,0,0,0))\r\n  .pointer\r\n    position absolute\r\n  .circle\r\n    cursor head\r\n    width 4px\r\n    height 4px\r\n    box-shadow 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3), 0 0 1px 2px rgba(0,0,0,.4)\r\n    border-radius 50%\r\n    transform translate(-2px, -2px)\r\n",".white,\n.black,\n.saturation {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n}\n.saturation .white {\n  background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n}\n.saturation .black {\n  background: linear-gradient(to top, #000, rgba(0,0,0,0));\n}\n.saturation .pointer {\n  position: absolute;\n}\n.saturation .circle {\n  cursor: head;\n  width: 4px;\n  height: 4px;\n  box-shadow: 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,0.3), 0 0 1px 2px rgba(0,0,0,0.4);\n  border-radius: 50%;\n  transform: translate(-2px, -2px);\n}\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -2839,7 +2815,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        h: this.colors.hsl.h,
 	        s: saturation,
 	        v: bright,
-	        a: this.colors.hsl.a,
+	        a: this.colors.hsl.a || 1,
 	        source: 'rgb'
 	      });
 	    },
@@ -3368,7 +3344,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 46 */
 /***/ function(module, exports) {
 
-	module.exports = "\r\n  <div class=\"saturation\" \r\n    :style=\"{background: bgColor}\"\r\n    v-el:container\r\n    @mousedown=\"handleMouseDown\">\r\n    <div class=\"white\"></div>\r\n    <div class=\"black\"></div>\r\n    <div class=\"pointer\" :style=\"{top: pointerTop, left: pointerLeft}\">\r\n      <slot><div class=\"circle\"></div></slot>\r\n    </div>\r\n  </div>\r\n";
+	module.exports = "\r\n  <div class=\"saturation\"\r\n    :style=\"{background: bgColor}\"\r\n    v-el:container\r\n    @mousedown=\"handleMouseDown\">\r\n    <div class=\"white\"></div>\r\n    <div class=\"black\"></div>\r\n    <div class=\"pointer\" :style=\"{top: pointerTop, left: pointerLeft}\">\r\n      <slot><div class=\"circle\"></div></slot>\r\n    </div>\r\n  </div>\r\n";
 
 /***/ },
 /* 47 */
