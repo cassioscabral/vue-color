@@ -8,9 +8,9 @@
         <div class="hue-wrap">
           <hue :colors.sync="colors" :on-change="childChange"></hue>
         </div>
-        <div class="alpha-wrap">
+        <!-- <div class="alpha-wrap">
           <alpha :colors.sync="colors" :on-change="childChange"></alpha>
-        </div>
+        </div> -->
       </div>
       <div class="color-wrap">
         <div class="active-color" :style="{background: activeColor}"></div>
@@ -47,7 +47,7 @@
         :val.sync="colors.name"
         :on-change="inputChange"></ed-in>
       </div>
-      <div class="single">
+      <!-- <div class="single">
         <ed-in label="C" :val.sync="colors.cmyk.c"
         :on-change="inputChange"></ed-in>
       </div>
@@ -62,7 +62,7 @@
       <div class="single">
         <ed-in label="K" :val.sync="colors.cmyk.k"
         :on-change="inputChange"></ed-in>
-      </div>
+      </div> -->
     </div>
     <div class="field">
       <div class="double">

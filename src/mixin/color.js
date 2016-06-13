@@ -20,6 +20,9 @@ import tinycolor from 'tinycolor2'
 // }
 
 function _colorChange (data, oldHue) {
+  if (!data) {
+    return
+  }
   if (data.a && data.a > 1) {
     data.a = 1
   }
