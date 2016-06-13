@@ -1,5 +1,5 @@
 <template>
-  <div class="saturation" 
+  <div class="saturation"
     :style="{background: bgColor}"
     v-el:container
     @mousedown="handleMouseDown">
@@ -60,7 +60,7 @@ export default {
         h: this.colors.hsl.h,
         s: saturation,
         v: bright,
-        a: this.colors.hsl.a,
+        a: this.colors.hsl.a || 1,
         source: 'rgb'
       })
     },
@@ -89,9 +89,9 @@ export default {
   left 0
   right 0
   bottom 0
-  
+
 .saturation
-  .white 
+  .white
     background linear-gradient(to right, #fff, rgba(255,255,255,0))
   .black
     background linear-gradient(to top, #000, rgba(0,0,0,0))

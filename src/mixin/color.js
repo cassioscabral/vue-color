@@ -1,23 +1,23 @@
 import tinycolor from 'tinycolor2'
 
-function _convertRGBToCMYK (rgba) {
-  let {r, g, b} = rgba
-  r = _changeRange(r) // R'
-  g = _changeRange(g) // G'
-  b = _changeRange(b) // B'
-
-  let k = 1 - Math.max(r, b, b)   // K = 1-max(R', G', B')
-  let c = (1 - r - k) / (1 - k)   // C = (1-R'-K) / (1-K)
-  let m = (1 - g - k) / (1 - k)   // M = (1-G'-K) / (1-K)
-  let y = (1 - b - k) / (1 - k)   // Y = (1-B'-K) / (1-K)
-
-  return {c, m, y, k}
-
-  function _changeRange (colorValue) {
-    const MAX_COLOR_VALUE = 255
-    return colorValue / MAX_COLOR_VALUE // returns value between 0..1
-  }
-}
+// function _convertRGBToCMYK (rgba) {
+//   let {r, g, b} = rgba
+//   r = _changeRange(r) // R'
+//   g = _changeRange(g) // G'
+//   b = _changeRange(b) // B'
+//
+//   let k = 1 - Math.max(r, b, b)   // K = 1-max(R', G', B')
+//   let c = (1 - r - k) / (1 - k)   // C = (1-R'-K) / (1-K)
+//   let m = (1 - g - k) / (1 - k)   // M = (1-G'-K) / (1-K)
+//   let y = (1 - b - k) / (1 - k)   // Y = (1-B'-K) / (1-K)
+//
+//   return {c, m, y, k}
+//
+//   function _changeRange (colorValue) {
+//     const MAX_COLOR_VALUE = 255
+//     return colorValue / MAX_COLOR_VALUE // returns value between 0..1
+//   }
+// }
 
 function _colorChange (data, oldHue) {
   if (data.a && data.a > 1) {
@@ -29,7 +29,7 @@ function _colorChange (data, oldHue) {
   let hsv = color.toHsv()
   let rgba = color.toRgb()
 
-  let cmyk = _convertRGBToCMYK(rgba)
+  // let cmyk = _convertRGBToCMYK(rgba)
   if (hsl.s === 0) {
     hsl.h = oldHue || 0
     hsv.h = oldHue || 0
@@ -41,8 +41,7 @@ function _colorChange (data, oldHue) {
     hsv: hsv,
     oldHue: data.h || oldHue || hsl.h,
     source: data.source,
-    a: data.a || 1,
-    cmyk: cmyk
+    a: data.a || 1
   }
 }
 
