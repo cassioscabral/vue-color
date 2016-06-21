@@ -60,55 +60,55 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _Compact2 = _interopRequireDefault(_Compact);
 	
-	var _Material = __webpack_require__(15);
+	var _Material = __webpack_require__(14);
 	
 	var _Material2 = _interopRequireDefault(_Material);
 	
-	var _Slider = __webpack_require__(20);
+	var _Slider = __webpack_require__(19);
 	
 	var _Slider2 = _interopRequireDefault(_Slider);
 	
-	var _Swatches = __webpack_require__(30);
+	var _Swatches = __webpack_require__(29);
 	
 	var _Swatches2 = _interopRequireDefault(_Swatches);
 	
-	var _Photoshop = __webpack_require__(36);
+	var _Photoshop = __webpack_require__(35);
 	
 	var _Photoshop2 = _interopRequireDefault(_Photoshop);
 	
-	var _Sketch = __webpack_require__(58);
+	var _Sketch = __webpack_require__(57);
 	
 	var _Sketch2 = _interopRequireDefault(_Sketch);
 	
-	var _CmykSketch = __webpack_require__(63);
+	var _CmykSketch = __webpack_require__(62);
 	
 	var _CmykSketch2 = _interopRequireDefault(_CmykSketch);
 	
-	var _Chrome = __webpack_require__(68);
+	var _Chrome = __webpack_require__(67);
 	
 	var _Chrome2 = _interopRequireDefault(_Chrome);
 	
-	var _Alpha = __webpack_require__(47);
+	var _Alpha = __webpack_require__(46);
 	
 	var _Alpha2 = _interopRequireDefault(_Alpha);
 	
-	var _Checkboard = __webpack_require__(51);
+	var _Checkboard = __webpack_require__(50);
 	
 	var _Checkboard2 = _interopRequireDefault(_Checkboard);
 	
-	var _EditableInput = __webpack_require__(9);
+	var _EditableInput = __webpack_require__(8);
 	
 	var _EditableInput2 = _interopRequireDefault(_EditableInput);
 	
-	var _Hue = __webpack_require__(24);
+	var _Hue = __webpack_require__(23);
 	
 	var _Hue2 = _interopRequireDefault(_Hue);
 	
-	var _Saturation = __webpack_require__(40);
+	var _Saturation = __webpack_require__(39);
 	
 	var _Saturation2 = _interopRequireDefault(_Saturation);
 	
-	var _color = __webpack_require__(7);
+	var _color = __webpack_require__(6);
 	
 	var _color2 = _interopRequireDefault(_color);
 	
@@ -139,8 +139,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var __vue_script__, __vue_template__
 	__webpack_require__(2)
-	__vue_script__ = __webpack_require__(6)
-	__vue_template__ = __webpack_require__(14)
+	__vue_script__ = __webpack_require__(5)
+	__vue_template__ = __webpack_require__(13)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -163,10 +163,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(3);
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ac420c66&file=Compact.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./Compact.vue\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
+	var update = __webpack_require__(4)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -183,77 +183,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 3 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".c-compact {\n  padding-top: 5px;\n  padding-left: 5px;\n  width: 240px;\n  border-radius: 2px;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.16);\n}\n.c-compact .colors {\n  overflow: hidden;\n  padding: 0;\n  margin: 0;\n}\n.c-compact .color-item {\n  list-style: none;\n  width: 15px;\n  height: 15px;\n  float: left;\n  margin-right: 5px;\n  margin-bottom: 5px;\n  position: relative;\n  cursor: pointer;\n}\n.c-compact .color-item.white {\n  box-shadow: inset 0 0 0 1px #ddd;\n}\n.c-compact .color-item.white .dot {\n  background: #000;\n}\n.c-compact .dot {\n  position: absolute;\n  top: 5px;\n  right: 5px;\n  bottom: 5px;\n  left: 5px;\n  border-radius: 50%;\n  opacity: 1;\n  background: #fff;\n}\n.c-compact .fields {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  position: relative;\n  padding-bottom: 6px;\n  padding-right: 5px;\n  position: relative;\n}\n.c-compact .fields .pick-color {\n  position: absolute;\n  top: 6px;\n  left: 5px;\n  height: 9px;\n  width: 9px;\n}\n.c-compact .fields .col-hex {\n  -webkit-box-flex: 2;\n  -webkit-flex: 2;\n      -ms-flex: 2;\n          flex: 2;\n}\n.c-compact .fields .col-hex .input {\n  width: 80%;\n  padding-left: 20%;\n}\n.c-compact .fields .col-hex .label {\n  display: none;\n}\n.c-compact .fields .col-3 {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.c-compact .fields .input {\n  width: 70%;\n  padding-left: 30%;\n  background: none;\n  font-size: 12px;\n  color: #333;\n  height: 16px;\n}\n.c-compact .fields .label {\n  position: absolute;\n  top: 3px;\n  left: 0;\n  line-height: 16px;\n  text-transform: uppercase;\n  font-size: 12px;\n  color: #999;\n}\n", "", {"version":3,"sources":["/./src/components/Compact.vue.style","/./src/components/Compact.vue"],"names":[],"mappings":"AACA;EACE,iBAAA;EACA,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,oEAAA;CCAD;ADCC;EACE,iBAAA;EACA,WAAA;EACA,UAAA;CCCH;ADAC;EACE,iBAAA;EACA,YAAA;EACA,aAAA;EACA,YAAA;EACA,kBAAA;EACA,mBAAA;EACA,mBAAA;EACA,gBAAA;CCEH;ADDG;EACE,iCAAA;CCGL;ADFK;EACE,iBAAA;CCIP;ADHC;EACE,mBAAA;EACA,SAAA;EACA,WAAA;EACA,YAAA;EACA,UAAA;EACA,mBAAA;EACA,WAAA;EACA,iBAAA;CCKH;ADJC;EACE,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;EACA,mBAAA;EACA,oBAAA;EACA,mBAAA;EACA,mBAAA;CCMH;ADLG;EACE,mBAAA;EACA,SAAA;EACA,UAAA;EACA,YAAA;EACA,WAAA;CCOL;ADNG;EACE,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;CCQL;ADPK;EACE,WAAA;EACA,kBAAA;CCSP;ADRK;EACE,cAAA;CCUP;ADTG;EACE,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;CCWL;ADVG;EACE,WAAA;EACA,kBAAA;EACA,iBAAA;EACA,gBAAA;EACA,YAAA;EACA,aAAA;CCYL;ADXG;EACE,mBAAA;EACA,SAAA;EACA,QAAA;EACA,kBAAA;EACA,0BAAA;EACA,gBAAA;EACA,YAAA;CCaL","file":"Compact.vue","sourcesContent":["\r\n.c-compact\r\n  padding-top 5px\r\n  padding-left 5px\r\n  width 240px\r\n  border-radius 2px\r\n  box-shadow 0 2px 10px rgba(0,0,0,.12), 0 2px 5px rgba(0,0,0,.16)\r\n  .colors\r\n    overflow hidden\r\n    padding 0\r\n    margin 0\r\n  .color-item\r\n    list-style none\r\n    width 15px\r\n    height 15px\r\n    float left\r\n    margin-right 5px\r\n    margin-bottom 5px\r\n    position relative\r\n    cursor pointer\r\n    &.white\r\n      box-shadow inset 0 0 0 1px #ddd\r\n      .dot\r\n        background #000      \r\n  .dot\r\n    position absolute\r\n    top 5px\r\n    right 5px\r\n    bottom 5px\r\n    left 5px\r\n    border-radius 50%\r\n    opacity 1\r\n    background #fff\r\n  .fields\r\n    display flex\r\n    position relative\r\n    padding-bottom 6px\r\n    padding-right 5px\r\n    position relative\r\n    .pick-color\r\n      position absolute\r\n      top 6px\r\n      left 5px\r\n      height 9px\r\n      width 9px\r\n    .col-hex\r\n      flex 2\r\n      .input\r\n        width 80%\r\n        padding-left 20%  \r\n      .label\r\n        display none\r\n    .col-3\r\n      flex 1\r\n    .input\r\n      width 70%\r\n      padding-left 30%\r\n      background none\r\n      font-size 12px\r\n      color #333\r\n      height 16px\r\n    .label\r\n      position absolute\r\n      top 3px\r\n      left 0\r\n      line-height 16px\r\n      text-transform uppercase\r\n      font-size 12px\r\n      color #999\r\n",".c-compact {\n  padding-top: 5px;\n  padding-left: 5px;\n  width: 240px;\n  border-radius: 2px;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.16);\n}\n.c-compact .colors {\n  overflow: hidden;\n  padding: 0;\n  margin: 0;\n}\n.c-compact .color-item {\n  list-style: none;\n  width: 15px;\n  height: 15px;\n  float: left;\n  margin-right: 5px;\n  margin-bottom: 5px;\n  position: relative;\n  cursor: pointer;\n}\n.c-compact .color-item.white {\n  box-shadow: inset 0 0 0 1px #ddd;\n}\n.c-compact .color-item.white .dot {\n  background: #000;\n}\n.c-compact .dot {\n  position: absolute;\n  top: 5px;\n  right: 5px;\n  bottom: 5px;\n  left: 5px;\n  border-radius: 50%;\n  opacity: 1;\n  background: #fff;\n}\n.c-compact .fields {\n  display: flex;\n  position: relative;\n  padding-bottom: 6px;\n  padding-right: 5px;\n  position: relative;\n}\n.c-compact .fields .pick-color {\n  position: absolute;\n  top: 6px;\n  left: 5px;\n  height: 9px;\n  width: 9px;\n}\n.c-compact .fields .col-hex {\n  flex: 2;\n}\n.c-compact .fields .col-hex .input {\n  width: 80%;\n  padding-left: 20%;\n}\n.c-compact .fields .col-hex .label {\n  display: none;\n}\n.c-compact .fields .col-3 {\n  flex: 1;\n}\n.c-compact .fields .input {\n  width: 70%;\n  padding-left: 30%;\n  background: none;\n  font-size: 12px;\n  color: #333;\n  height: 16px;\n}\n.c-compact .fields .label {\n  position: absolute;\n  top: 3px;\n  left: 0;\n  line-height: 16px;\n  text-transform: uppercase;\n  font-size: 12px;\n  color: #999;\n}\n"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
-
-/***/ },
+/* 3 */,
 /* 4 */
-/***/ function(module, exports) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	// css base code, injected by the css-loader
-	module.exports = function() {
-		var list = [];
-	
-		// return the list of modules as css string
-		list.toString = function toString() {
-			var result = [];
-			for(var i = 0; i < this.length; i++) {
-				var item = this[i];
-				if(item[2]) {
-					result.push("@media " + item[2] + "{" + item[1] + "}");
-				} else {
-					result.push(item[1]);
-				}
-			}
-			return result.join("");
-		};
-	
-		// import a list of modules into the list
-		list.i = function(modules, mediaQuery) {
-			if(typeof modules === "string")
-				modules = [[null, modules, ""]];
-			var alreadyImportedModules = {};
-			for(var i = 0; i < this.length; i++) {
-				var id = this[i][0];
-				if(typeof id === "number")
-					alreadyImportedModules[id] = true;
-			}
-			for(i = 0; i < modules.length; i++) {
-				var item = modules[i];
-				// skip already imported module
-				// this implementation is not 100% perfect for weird media query combinations
-				//  when a module is imported multiple times with different media queries.
-				//  I hope this will never occur (Hey this way we have smaller bundles)
-				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-					if(mediaQuery && !item[2]) {
-						item[2] = mediaQuery;
-					} else if(mediaQuery) {
-						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-					}
-					list.push(item);
-				}
-			}
-		};
-		return list;
-	};
-
-
-/***/ },
-/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -505,7 +436,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 6 */
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -514,11 +445,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _color = __webpack_require__(7);
+	var _color = __webpack_require__(6);
 	
 	var _color2 = _interopRequireDefault(_color);
 	
-	var _EditableInput = __webpack_require__(9);
+	var _EditableInput = __webpack_require__(8);
 	
 	var _EditableInput2 = _interopRequireDefault(_EditableInput);
 	
@@ -574,7 +505,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 7 */
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -583,7 +514,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _tinycolor = __webpack_require__(8);
+	var _tinycolor = __webpack_require__(7);
 	
 	var _tinycolor2 = _interopRequireDefault(_tinycolor);
 	
@@ -655,7 +586,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 8 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;// TinyColor v1.3.0
@@ -1827,13 +1758,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 9 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(10)
-	__vue_script__ = __webpack_require__(12)
-	__vue_template__ = __webpack_require__(13)
+	__webpack_require__(9)
+	__vue_script__ = __webpack_require__(11)
+	__vue_template__ = __webpack_require__(12)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -1850,16 +1781,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 10 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(11);
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c51ff9ca&file=EditableInput.vue!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../../node_modules/eslint-loader/index.js!./../../../node_modules/eslint-loader/index.js!./EditableInput.vue\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
+	var update = __webpack_require__(4)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1876,21 +1807,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
+/* 10 */,
 /* 11 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".editable-input {\n  position: relative;\n}\n.editable-input .input {\n  padding: 0;\n  border: 0;\n  outline: none;\n}\n.editable-input .label {\n  text-transform: capitalize;\n}\n", "", {"version":3,"sources":["/./src/components/common/EditableInput.vue.style","/./src/components/common/EditableInput.vue"],"names":[],"mappings":"AACA;EACE,mBAAA;CCAD;ADCC;EACE,WAAA;EACA,UAAA;EACA,cAAA;CCCH;ADAC;EACE,2BAAA;CCEH","file":"EditableInput.vue","sourcesContent":["\r\n.editable-input\r\n  position relative\r\n  .input\r\n    padding 0\r\n    border 0\r\n    outline none\r\n  .label\r\n    text-transform capitalize\r\n",".editable-input {\n  position: relative;\n}\n.editable-input .input {\n  padding: 0;\n  border: 0;\n  outline: none;\n}\n.editable-input .label {\n  text-transform: capitalize;\n}\n"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
-
-/***/ },
-/* 12 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1963,25 +1881,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 13 */
+/* 12 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n  <div class=\"editable-input\">\r\n    <input class=\"input\" \r\n      v-model=\"val | maxFilter\"\r\n      @keydown=\"handleKeyDown\"\r\n      @input=\"handleChange\">\r\n    <span class=\"label\" @mousedown=\"handleMouseDown\">{{label}}</span>\r\n  </div>\r\n";
 
 /***/ },
-/* 14 */
+/* 13 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n  <div class=\"c-compact\">\r\n    <ul class=\"colors\">\r\n      <li class=\"color-item\" v-for=\"c in defaultColors\" \r\n        @click=\"handlerClick(c)\"\r\n        :class=\"{white: c === '#FFFFFF' }\"\r\n        :style=\"{background: c}\">\r\n        <div class=\"dot\" v-show=\"c === pick\"></div>\r\n      </li>\r\n    </ul>\r\n    <div class=\"fields\">\r\n      <div class=\"pick-color\" :style=\"{background: pick}\"></div>\r\n      <div class=\"col-hex\">\r\n        <ed-in label=\"hex\"\r\n        :val.sync=\"colors.hex\"\r\n        :style=\"{ borderColor: colors.hex }\"\r\n        :on-change=\"onChange\"></ed-in>\r\n      </div>\r\n      <div class=\"col-3\">\r\n        <ed-in label=\"r\" :val.sync=\"colors.rgba.r\" \r\n        :on-change=\"onChange\"></ed-in>\r\n      </div>\r\n      <div class=\"col-3\">\r\n        <ed-in label=\"g\" :val.sync=\"colors.rgba.g\" \r\n        :on-change=\"onChange\"></ed-in>\r\n      </div>\r\n      <div class=\"col-3\">\r\n        <ed-in label=\"b\" :val.sync=\"colors.rgba.b\"\r\n        :on-change=\"onChange\"></ed-in>\r\n      </div>\r\n    </div>\r\n  </div>\r\n";
 
 /***/ },
-/* 15 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(16)
-	__vue_script__ = __webpack_require__(18)
-	__vue_template__ = __webpack_require__(19)
+	__webpack_require__(15)
+	__vue_script__ = __webpack_require__(17)
+	__vue_template__ = __webpack_require__(18)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -1998,16 +1916,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 16 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(17);
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0fb688ed&file=Material.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./Material.vue\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
+	var update = __webpack_require__(4)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -2024,21 +1942,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
+/* 16 */,
 /* 17 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".c-material {\n  width: 98px;\n  height: 98px;\n  padding: 16px;\n  font-family: \"Roboto\";\n  position: relative;\n  border-radius: 2px;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.16);\n}\n.c-material .hex {\n  border-bottom-width: 2px;\n  border-bottom-style: solid;\n}\n.c-material .split {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  margin-right: -10px;\n  padding-top: 11px;\n}\n.c-material .third {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  padding-right: 10px;\n}\n.c-material .input {\n  width: 100%;\n  margin-top: 12px;\n  font-size: 15px;\n  color: #333;\n  height: 30px;\n}\n.c-material .label {\n  position: absolute;\n  top: 0;\n  left: 0;\n  font-size: 11px;\n  color: #999;\n  text-transform: capitalize;\n}\n", "", {"version":3,"sources":["/./src/components/Material.vue.style","/./src/components/Material.vue"],"names":[],"mappings":"AACA;EACE,YAAA;EACA,aAAA;EACA,cAAA;EACA,sBAAA;EACA,mBAAA;EACA,mBAAA;EACA,oEAAA;CCAD;ADCC;EACE,yBAAA;EACA,2BAAA;CCCH;ADAC;EACE,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;EACA,oBAAA;EACA,kBAAA;CCEH;ADDC;EACE,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;EACA,oBAAA;CCGH;ADFC;EACE,YAAA;EACA,iBAAA;EACA,gBAAA;EACA,YAAA;EACA,aAAA;CCIH;ADHC;EACE,mBAAA;EACA,OAAA;EACA,QAAA;EACA,gBAAA;EACA,YAAA;EACA,2BAAA;CCKH","file":"Material.vue","sourcesContent":["\r\n.c-material\r\n  width 98px\r\n  height 98px\r\n  padding 16px\r\n  font-family \"Roboto\"\r\n  position relative\r\n  border-radius 2px\r\n  box-shadow 0 2px 10px rgba(0,0,0,.12), 0 2px 5px rgba(0,0,0,.16)\r\n  .hex\r\n    border-bottom-width 2px\r\n    border-bottom-style solid\r\n  .split\r\n    display flex\r\n    margin-right -10px\r\n    padding-top 11px\r\n  .third\r\n    flex 1\r\n    padding-right 10px\r\n  .input\r\n    width 100%\r\n    margin-top 12px\r\n    font-size 15px\r\n    color #333\r\n    height 30px\r\n  .label\r\n    position absolute\r\n    top 0\r\n    left 0\r\n    font-size 11px\r\n    color #999\r\n    text-transform capitalize\r\n",".c-material {\n  width: 98px;\n  height: 98px;\n  padding: 16px;\n  font-family: \"Roboto\";\n  position: relative;\n  border-radius: 2px;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.16);\n}\n.c-material .hex {\n  border-bottom-width: 2px;\n  border-bottom-style: solid;\n}\n.c-material .split {\n  display: flex;\n  margin-right: -10px;\n  padding-top: 11px;\n}\n.c-material .third {\n  flex: 1;\n  padding-right: 10px;\n}\n.c-material .input {\n  width: 100%;\n  margin-top: 12px;\n  font-size: 15px;\n  color: #333;\n  height: 30px;\n}\n.c-material .label {\n  position: absolute;\n  top: 0;\n  left: 0;\n  font-size: 11px;\n  color: #999;\n  text-transform: capitalize;\n}\n"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
-
-/***/ },
-/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2047,11 +1952,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _EditableInput = __webpack_require__(9);
+	var _EditableInput = __webpack_require__(8);
 	
 	var _EditableInput2 = _interopRequireDefault(_EditableInput);
 	
-	var _color = __webpack_require__(7);
+	var _color = __webpack_require__(6);
 	
 	var _color2 = _interopRequireDefault(_color);
 	
@@ -2092,19 +1997,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 19 */
+/* 18 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n  \r\n  <div class=\"c-material\">\r\n    <ed-in class=\"hex\" label=\"hex\" :val.sync=\"colors.hex\"\r\n    :style=\"{ borderColor: colors.hex }\"\r\n    :on-change=\"onChange\"></ed-in>\r\n    <div class=\"split flexbox-fix\">\r\n      <div class=\"third\">\r\n        <ed-in label=\"r\" :val.sync=\"colors.rgba.r\" \r\n        :on-change=\"onChange\"></ed-in>\r\n      </div>\r\n      <div class=\"third\">\r\n        <ed-in label=\"g\" :val.sync=\"colors.rgba.g\" \r\n        :on-change=\"onChange\"></ed-in>\r\n      </div>\r\n      <div class=\"third\">\r\n        <ed-in label=\"b\" :val.sync=\"colors.rgba.b\"\r\n        :on-change=\"onChange\"></ed-in>\r\n      </div>\r\n    </div>  \r\n  </div>\r\n  \r\n";
 
 /***/ },
-/* 20 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(21)
-	__vue_script__ = __webpack_require__(23)
-	__vue_template__ = __webpack_require__(29)
+	__webpack_require__(20)
+	__vue_script__ = __webpack_require__(22)
+	__vue_template__ = __webpack_require__(28)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -2121,16 +2026,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 21 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(22);
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-302a8327&file=Slider.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./Slider.vue\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
+	var update = __webpack_require__(4)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -2147,21 +2052,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
+/* 21 */,
 /* 22 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".c-slider {\n  position: relative;\n  width: 410px;\n}\n.c-slider .hue-warp {\n  height: 12px;\n  position: relative;\n}\n.c-slider .hue-warp .picker {\n  width: 14px;\n  height: 14px;\n  border-radius: 6px;\n  -webkit-transform: translate(-7px, -2px);\n          transform: translate(-7px, -2px);\n  background-color: #f8f8f8;\n  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);\n}\n.c-slider .swatches {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  margin-top: 20px;\n}\n.c-slider .swatches .swatch {\n  margin-right: 1px;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  width: 20%;\n}\n.c-slider .swatches .swatch:first-child .swatch-picker {\n  border-radius: 2px 0px 0px 2px;\n}\n.c-slider .swatches .swatch:last-child {\n  margin-right: 0;\n}\n.c-slider .swatches .swatch:last-child .swatch-picker {\n  border-radius: 0px 2px 2px 0px;\n}\n.c-slider .swatches .swatch-picker {\n  height: 12px;\n  cursor: pointer;\n}\n.c-slider .swatches .swatch-picker.active {\n  -webkit-transform: scaleY(1.8);\n          transform: scaleY(1.8);\n  border-radius: 3.6px/2px;\n}\n", "", {"version":3,"sources":["/./src/components/Slider.vue.style","/./src/components/Slider.vue"],"names":[],"mappings":"AACA;EACE,mBAAA;EACA,aAAA;CCAD;ADCC;EACE,aAAA;EACA,mBAAA;CCCH;ADAG;EACE,YAAA;EACA,aAAA;EACA,mBAAA;EACA,yCAAA;UAAA,iCAAA;EACA,0BAAA;EACA,yCAAA;CCEL;ADDC;EACE,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;EACA,iBAAA;CCGH;ADFG;EACE,kBAAA;EACA,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;EACA,WAAA;CCIL;ADFO;EACE,+BAAA;CCIT;ADHK;EACE,gBAAA;CCKP;ADJO;EACE,+BAAA;CCMT;ADLG;EACE,aAAA;EACA,gBAAA;CCOL;ADNK;EACE,+BAAA;UAAA,uBAAA;EACA,yBAAA;CCQP","file":"Slider.vue","sourcesContent":["\r\n.c-slider\r\n  position relative\r\n  width 410px\r\n  .hue-warp\r\n    height 12px\r\n    position relative\r\n    .picker\r\n      width 14px\r\n      height 14px\r\n      border-radius 6px\r\n      transform translate(-7px, -2px)\r\n      background-color rgb(248, 248, 248)\r\n      box-shadow 0 1px 4px 0 rgba(0, 0, 0, 0.37)    \r\n  .swatches\r\n    display flex\r\n    margin-top 20px\r\n    .swatch\r\n      margin-right 1px\r\n      flex 1\r\n      width 20%\r\n      &:first-child\r\n        .swatch-picker\r\n          border-radius 2px 0px 0px 2px        \r\n      &:last-child\r\n        margin-right 0\r\n        .swatch-picker\r\n          border-radius 0px 2px 2px 0px\r\n    .swatch-picker\r\n      height 12px\r\n      cursor pointer\r\n      &.active\r\n        transform scaleY(1.8)\r\n        border-radius: 3.6px/2px\r\n",".c-slider {\n  position: relative;\n  width: 410px;\n}\n.c-slider .hue-warp {\n  height: 12px;\n  position: relative;\n}\n.c-slider .hue-warp .picker {\n  width: 14px;\n  height: 14px;\n  border-radius: 6px;\n  transform: translate(-7px, -2px);\n  background-color: #f8f8f8;\n  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);\n}\n.c-slider .swatches {\n  display: flex;\n  margin-top: 20px;\n}\n.c-slider .swatches .swatch {\n  margin-right: 1px;\n  flex: 1;\n  width: 20%;\n}\n.c-slider .swatches .swatch:first-child .swatch-picker {\n  border-radius: 2px 0px 0px 2px;\n}\n.c-slider .swatches .swatch:last-child {\n  margin-right: 0;\n}\n.c-slider .swatches .swatch:last-child .swatch-picker {\n  border-radius: 0px 2px 2px 0px;\n}\n.c-slider .swatches .swatch-picker {\n  height: 12px;\n  cursor: pointer;\n}\n.c-slider .swatches .swatch-picker.active {\n  transform: scaleY(1.8);\n  border-radius: 3.6px/2px;\n}\n"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
-
-/***/ },
-/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2170,11 +2062,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _color = __webpack_require__(7);
+	var _color = __webpack_require__(6);
 	
 	var _color2 = _interopRequireDefault(_color);
 	
-	var _Hue = __webpack_require__(24);
+	var _Hue = __webpack_require__(23);
 	
 	var _Hue2 = _interopRequireDefault(_Hue);
 	
@@ -2219,13 +2111,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 24 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(25)
-	__vue_script__ = __webpack_require__(27)
-	__vue_template__ = __webpack_require__(28)
+	__webpack_require__(24)
+	__vue_script__ = __webpack_require__(26)
+	__vue_template__ = __webpack_require__(27)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -2242,16 +2134,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 25 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(26);
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2af020e6&file=Hue.vue!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../../node_modules/eslint-loader/index.js!./../../../node_modules/eslint-loader/index.js!./Hue.vue\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
+	var update = __webpack_require__(4)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -2268,21 +2160,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
+/* 25 */,
 /* 26 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".c-hue {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n  border-radius: 2px;\n}\n.c-hue.horizontal {\n  background: -webkit-linear-gradient(left, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n  background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n}\n.c-hue.vertical {\n  background: -webkit-linear-gradient(bottom, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n  background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n}\n.c-hue .container {\n  margin: 0 2px;\n  position: relative;\n  height: 100%;\n}\n.c-hue .pointer {\n  z-index: 2;\n  position: absolute;\n}\n.c-hue .picker {\n  margin-top: 1px;\n  width: 4px;\n  border-radius: 1px;\n  height: 8px;\n  box-shadow: 0 0 2px rgba(0,0,0,0.6);\n  background: #fff;\n  -webkit-transform: translateX(-2px);\n          transform: translateX(-2px);\n}\n", "", {"version":3,"sources":["/./src/components/common/Hue.vue.style","/./src/components/common/Hue.vue"],"names":[],"mappings":"AACA;EACE,mBAAA;EACA,SAAA;EACA,WAAA;EACA,YAAA;EACA,UAAA;EACA,mBAAA;CCAD;ADCC;EACE,gHAAA;EAAA,4GAAA;CCCH;ADAC;EACE,kHAAA;EAAA,0GAAA;CCEH;ADDC;EACE,cAAA;EACA,mBAAA;EACA,aAAA;CCGH;ADFC;EACE,WAAA;EACA,mBAAA;CCIH;ADHC;EACE,gBAAA;EACA,WAAA;EACA,mBAAA;EACA,YAAA;EACA,oCAAA;EACA,iBAAA;EACA,oCAAA;UAAA,4BAAA;CCKH","file":"Hue.vue","sourcesContent":["\r\n.c-hue\r\n  position absolute\r\n  top 0px\r\n  right 0px\r\n  bottom 0px\r\n  left 0px\r\n  border-radius 2px\r\n  &.horizontal\r\n    background linear-gradient(to right, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%)\r\n  &.vertical\r\n    background linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%)\r\n  .container\r\n    margin 0 2px\r\n    position relative\r\n    height 100%\r\n  .pointer\r\n    z-index 2\r\n    position absolute\r\n  .picker\r\n    margin-top 1px\r\n    width 4px\r\n    border-radius 1px\r\n    height 8px\r\n    box-shadow 0 0 2px rgba(0, 0, 0, .6)\r\n    background #fff\r\n    transform translateX(-2px)\r\n",".c-hue {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n  border-radius: 2px;\n}\n.c-hue.horizontal {\n  background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n}\n.c-hue.vertical {\n  background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n}\n.c-hue .container {\n  margin: 0 2px;\n  position: relative;\n  height: 100%;\n}\n.c-hue .pointer {\n  z-index: 2;\n  position: absolute;\n}\n.c-hue .picker {\n  margin-top: 1px;\n  width: 4px;\n  border-radius: 1px;\n  height: 8px;\n  box-shadow: 0 0 2px rgba(0,0,0,0.6);\n  background: #fff;\n  transform: translateX(-2px);\n}\n"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
-
-/***/ },
-/* 27 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -2385,25 +2264,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 28 */
+/* 27 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n  <div class=\"c-hue {{direction}}\">\r\n    <div class=\"container\" v-el:container\r\n      @mousedown=\"handleMouseDown\"\r\n      @touchmove=\"handleChange\"\r\n      @touchstart=\"handleChange\">\r\n      <div class=\"pointer\" :style=\"{top: pointerTop, left: pointerLeft}\">\r\n        <slot><div class=\"picker\"></div></slot>\r\n      </div>  \r\n    </div>\r\n  </div>\r\n";
 
 /***/ },
-/* 29 */
+/* 28 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n  <div class=\"c-slider\">\r\n    <div class=\"hue-warp\">\r\n      <hue :colors.sync=\"colors\" :on-change=\"hueChange\"></hue>\r\n    </div>\r\n    <div class=\"swatches\">\r\n      <div class=\"swatch\" v-for=\"offset in swatches\" data-index=\"{{$index}}\"\r\n        @click=\"handleSwClick($index, offset)\">\r\n        <div class=\"swatch-picker\"\r\n        :class=\"{active: offset == activeOffset}\"\r\n        :style=\"{background: 'hsl(' + colors.hsl.h + ', 50%, ' + (offset * 100) + '%)'}\"\r\n        ></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n";
 
 /***/ },
-/* 30 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(31)
-	__vue_script__ = __webpack_require__(33)
-	__vue_template__ = __webpack_require__(35)
+	__webpack_require__(30)
+	__vue_script__ = __webpack_require__(32)
+	__vue_template__ = __webpack_require__(34)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -2420,16 +2299,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 31 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(32);
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-54350c30&file=Swatches.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./Swatches.vue\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
+	var update = __webpack_require__(4)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -2446,21 +2325,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
+/* 31 */,
 /* 32 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".c-swatches {\n  width: 320px;\n  height: 240px;\n  overflow-y: scroll;\n  background-color: #fff;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.16);\n}\n.c-swatches .box {\n  padding: 16px 0 6px 16px;\n  overflow: hidden;\n}\n.c-swatches .color-group {\n  padding-bottom: 10px;\n  width: 40px;\n  float: left;\n  margin-right: 10px;\n}\n.c-swatches .color-it {\n  width: 40px;\n  height: 24px;\n  cursor: pointer;\n  background: #880e4f;\n  margin-bottom: 1px;\n  overflow: hidden;\n  border-radius: 2px 2px 0 0;\n}\n.c-swatches .pick {\n  fill: #fff;\n  margin-left: 8px;\n  display: block;\n}\n", "", {"version":3,"sources":["/./src/components/Swatches.vue.style","/./src/components/Swatches.vue"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,cAAA;EACA,mBAAA;EACA,uBAAA;EACA,oEAAA;CCAD;ADCC;EACE,yBAAA;EACA,iBAAA;CCCH;ADAC;EACE,qBAAA;EACA,YAAA;EACA,YAAA;EACA,mBAAA;CCEH;ADDC;EACE,YAAA;EACA,aAAA;EACA,gBAAA;EACA,oBAAA;EACA,mBAAA;EACA,iBAAA;EAKA,2BAAA;CCGH;ADFC;EACE,WAAA;EACA,iBAAA;EACA,eAAA;CCIH","file":"Swatches.vue","sourcesContent":["\r\n.c-swatches\r\n  width 320px\r\n  height 240px\r\n  overflow-y scroll\r\n  background-color #fff\r\n  box-shadow 0 2px 10px rgba(0,0,0,.12), 0 2px 5px rgba(0,0,0,.16)\r\n  .box\r\n    padding 16px 0 6px 16px\r\n    overflow hidden\r\n  .color-group\r\n    padding-bottom 10px\r\n    width 40px\r\n    float left\r\n    margin-right 10px\r\n  .color-it\r\n    width 40px\r\n    height 24px\r\n    cursor pointer\r\n    background #880e4f\r\n    margin-bottom 1px\r\n    overflow hidden\r\n    -ms-border-radius 2px 2px 0 0\r\n    -moz-border-radius 2px 2px 0 0\r\n    -o-border-radius 2px 2px 0 0\r\n    -webkit-border-radius 2px 2px 0 0\r\n    border-radius 2px 2px 0 0\r\n  .pick\r\n    fill: rgb(255, 255, 255);\r\n    margin-left: 8px;\r\n    display: block;\r\n\r\n",".c-swatches {\n  width: 320px;\n  height: 240px;\n  overflow-y: scroll;\n  background-color: #fff;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.16);\n}\n.c-swatches .box {\n  padding: 16px 0 6px 16px;\n  overflow: hidden;\n}\n.c-swatches .color-group {\n  padding-bottom: 10px;\n  width: 40px;\n  float: left;\n  margin-right: 10px;\n}\n.c-swatches .color-it {\n  width: 40px;\n  height: 24px;\n  cursor: pointer;\n  background: #880e4f;\n  margin-bottom: 1px;\n  overflow: hidden;\n  -ms-border-radius: 2px 2px 0 0;\n  -moz-border-radius: 2px 2px 0 0;\n  -o-border-radius: 2px 2px 0 0;\n  -webkit-border-radius: 2px 2px 0 0;\n  border-radius: 2px 2px 0 0;\n}\n.c-swatches .pick {\n  fill: #fff;\n  margin-left: 8px;\n  display: block;\n}\n"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
-
-/***/ },
-/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2469,11 +2335,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _materialColors = __webpack_require__(34);
+	var _materialColors = __webpack_require__(33);
 	
 	var _materialColors2 = _interopRequireDefault(_materialColors);
 	
-	var _color = __webpack_require__(7);
+	var _color = __webpack_require__(6);
 	
 	var _color2 = _interopRequireDefault(_color);
 	
@@ -2519,7 +2385,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 34 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function(root, factory) {
@@ -2536,19 +2402,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 35 */
+/* 34 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n  <div class=\"c-swatches\" data-pick=\"{{pick}}\">\r\n    <div class=\"box\">\r\n      <div class=\"color-group\" v-for=\"group in defaultColors\">\r\n        <div class=\"color-it\" v-for=\"c in group\"\r\n          data-color=\"{{c}}\"\r\n          @click=\"handlerClick(c)\"\r\n          :style=\"{background: c}\">\r\n          <div class=\"pick\" v-show=\"c == pick\">\r\n            <svg style=\"width: 24px; height:24px;\" viewBox=\"0 0 24 24\">\r\n              <path d=\"M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z\" />\r\n            </svg>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n";
 
 /***/ },
-/* 36 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(37)
-	__vue_script__ = __webpack_require__(39)
-	__vue_template__ = __webpack_require__(57)
+	__webpack_require__(36)
+	__vue_script__ = __webpack_require__(38)
+	__vue_template__ = __webpack_require__(56)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -2565,16 +2431,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 37 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(38);
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1d3f47d2&file=Photoshop.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./Photoshop.vue\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
+	var update = __webpack_require__(4)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -2591,21 +2457,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
+/* 37 */,
 /* 38 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".c-photoshop {\n  background: #dcdcdc;\n  border-radius: 4px;\n  box-shadow: 0 0 0 1px rgba(0,0,0,0.25), 0 8px 16px rgba(0,0,0,0.15);\n  box-sizing: initial;\n  width: 513px;\n  font-family: Roboto;\n}\n.c-photoshop .head {\n  background-image: -webkit-linear-gradient(top, #f0f0f0 0%, #d4d4d4 100%);\n  background-image: linear-gradient(-180deg, #f0f0f0 0%, #d4d4d4 100%);\n  border-bottom: 1px solid #b1b1b1;\n  box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.2), inset 0 -1px 0 0 rgba(0,0,0,0.02);\n  height: 23px;\n  line-height: 24px;\n  border-radius: 4px 4px 0 0;\n  font-size: 13px;\n  color: #4d4d4d;\n  text-align: center;\n}\n.c-photoshop .body {\n  padding: 15px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n}\n.c-photoshop .saturation-wrap {\n  width: 256px;\n  height: 256px;\n  position: relative;\n  border: 2px solid #b3b3b3;\n  border-bottom: 2px solid #f0f0f0;\n  overflow: hidden;\n}\n.c-photoshop .saturation-wrap .circle {\n  width: 12px;\n  height: 12px;\n}\n.c-photoshop .hue-wrap {\n  position: relative;\n  height: 256px;\n  width: 19px;\n  margin-left: 10px;\n  border: 2px solid #b3b3b3;\n  border-bottom: 2px solid #f0f0f0;\n}\n.c-photoshop .hue-pointer {\n  position: relative;\n}\n.c-photoshop .hue-pointer .left,\n.c-photoshop .hue-pointer .right {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 5px 0 5px 8px;\n  border-color: transparent transparent transparent #555;\n}\n.c-photoshop .hue-pointer .left:after,\n.c-photoshop .hue-pointer .right:after {\n  content: \"\";\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 4px 0 4px 6px;\n  border-color: transparent transparent transparent #fff;\n  position: absolute;\n  top: 1px;\n  left: 1px;\n  -webkit-transform: translate(-8px, -5px);\n          transform: translate(-8px, -5px);\n}\n.c-photoshop .hue-pointer .left {\n  -webkit-transform: translate(-13px, -4px);\n          transform: translate(-13px, -4px);\n}\n.c-photoshop .hue-pointer .right {\n  -webkit-transform: translate(20px, -4px) rotate(180deg);\n          transform: translate(20px, -4px) rotate(180deg);\n}\n.c-photoshop .controls {\n  width: 180px;\n  margin-left: 10px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n}\n.c-photoshop .actions {\n  margin-left: 20px;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.c-photoshop .actions .ac-btn {\n  background-image: -webkit-linear-gradient(top, #fff 0%, #e6e6e6 100%);\n  background-image: linear-gradient(-180deg, #fff 0%, #e6e6e6 100%);\n  border: 1px solid #878787;\n  border-radius: 2px;\n  height: 20px;\n  box-shadow: 0 1px 0 0 #eaeaea;\n  font-size: 14px;\n  color: #000;\n  line-height: 20px;\n  text-align: center;\n  margin-bottom: 10px;\n}\n.c-photoshop .previews {\n  width: 60px;\n}\n.c-photoshop .previews .swatches {\n  border: 1px solid #b3b3b3;\n  border-bottom: 1px solid #f0f0f0;\n  margin-bottom: 2px;\n  margin-top: 1px;\n}\n.c-photoshop .previews .pr-color {\n  height: 34px;\n  box-shadow: inset 1px 0 0 #000, inset -1px 0 0 #000, inset 0 1px 0 #000;\n}\n.c-photoshop .previews .label {\n  font-size: 14px;\n  color: #000;\n  text-align: center;\n}\n.c-photoshop .fields {\n  padding-top: 5px;\n  padding-bottom: 9px;\n  width: 80px;\n  position: relative;\n}\n.c-photoshop .fields .divider {\n  height: 5px;\n}\n.c-photoshop .fields .input {\n  margin-left: 40%;\n  width: 40%;\n  height: 18px;\n  border: 1px solid #888;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), 0 1px 0 0 #ececec;\n  margin-bottom: 5px;\n  font-size: 13px;\n  padding-left: 3px;\n  margin-right: 10px;\n}\n.c-photoshop .fields .label {\n  top: 0;\n  left: 0;\n  width: 34px;\n  text-transform: uppercase;\n  font-size: 13px;\n  height: 18px;\n  line-height: 22px;\n  position: absolute;\n}\n.c-photoshop .fields .hex .input {\n  margin-left: 20%;\n  width: 80%;\n  height: 18px;\n  border: 1px solid #888;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), 0 1px 0 0 #ececec;\n  margin-bottom: 6px;\n  font-size: 13px;\n  padding-left: 3px;\n}\n.c-photoshop .fields .hex .label {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 14px;\n  text-transform: uppercase;\n  font-size: 13px;\n  height: 18px;\n  line-height: 22px;\n}\n", "", {"version":3,"sources":["/./src/components/Photoshop.vue.style","/./src/components/Photoshop.vue"],"names":[],"mappings":"AACA;EACE,oBAAA;EACA,mBAAA;EACA,oEAAA;EACA,oBAAA;EACA,aAAA;EACA,oBAAA;CCAD;ADCC;EACE,yEAAA;EAAA,qEAAA;EACA,iCAAA;EACA,qFAAA;EACA,aAAA;EACA,kBAAA;EACA,2BAAA;EACA,gBAAA;EACA,eAAA;EACA,mBAAA;CCCH;ADAC;EACE,cAAA;EACA,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;CCEH;ADDC;EACE,aAAA;EACA,cAAA;EACA,mBAAA;EACA,0BAAA;EACA,iCAAA;EACA,iBAAA;CCGH;ADFG;EACE,YAAA;EACA,aAAA;CCIL;ADHC;EACE,mBAAA;EACA,cAAA;EACA,YAAA;EACA,kBAAA;EACA,0BAAA;EACA,iCAAA;CCKH;ADJC;EACE,mBAAA;CCMH;ADLG;;EAEE,mBAAA;EACA,SAAA;EACA,UAAA;EACA,oBAAA;EACA,4BAAA;EACA,uDAAA;CCOL;ADNK;;EACE,YAAA;EACA,SAAA;EACA,UAAA;EACA,oBAAA;EACA,4BAAA;EACA,uDAAA;EACA,mBAAA;EACA,SAAA;EACA,UAAA;EACA,yCAAA;UAAA,iCAAA;CCSP;ADRG;EACE,0CAAA;UAAA,kCAAA;CCUL;ADTG;EACE,wDAAA;UAAA,gDAAA;CCWL;ADVC;EACE,aAAA;EACA,kBAAA;EACA,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;CCYH;ADXC;EACE,kBAAA;EACA,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;CCaH;ADZG;EACE,sEAAA;EAAA,kEAAA;EACA,0BAAA;EACA,mBAAA;EACA,aAAA;EACA,8BAAA;EACA,gBAAA;EACA,YAAA;EACA,kBAAA;EACA,mBAAA;EACA,oBAAA;CCcL;ADbC;EACE,YAAA;CCeH;ADdG;EACE,0BAAA;EACA,iCAAA;EACA,mBAAA;EACA,gBAAA;CCgBL;ADfG;EACE,aAAA;EACA,wEAAA;CCiBL;ADhBG;EACE,gBAAA;EACA,YAAA;EACA,mBAAA;CCkBL;ADhBC;EACE,iBAAA;EACA,oBAAA;EACA,YAAA;EACA,mBAAA;CCkBH;ADjBG;EACE,YAAA;CCmBL;ADlBG;EACE,iBAAA;EACA,WAAA;EACA,aAAA;EACA,uBAAA;EACA,+DAAA;EACA,mBAAA;EACA,gBAAA;EACA,kBAAA;EACA,mBAAA;CCoBL;ADnBG;EACE,OAAA;EACA,QAAA;EACA,YAAA;EACA,0BAAA;EACA,gBAAA;EACA,aAAA;EACA,kBAAA;EACA,mBAAA;CCqBL;ADnBK;EACE,iBAAA;EACA,WAAA;EACA,aAAA;EACA,uBAAA;EACA,+DAAA;EACA,mBAAA;EACA,gBAAA;EACA,kBAAA;CCqBP;ADpBK;EACE,mBAAA;EACA,OAAA;EACA,QAAA;EACA,YAAA;EACA,0BAAA;EACA,gBAAA;EACA,aAAA;EACA,kBAAA;CCsBP","file":"Photoshop.vue","sourcesContent":["\r\n.c-photoshop\r\n  background #DCDCDC\r\n  border-radius 4px\r\n  box-shadow 0 0 0 1px rgba(0,0,0,.25), 0 8px 16px rgba(0,0,0,.15)\r\n  box-sizing initial\r\n  width 513px\r\n  font-family Roboto\r\n  .head\r\n    background-image linear-gradient(-180deg, #F0F0F0 0%, #D4D4D4 100%)\r\n    border-bottom 1px solid #B1B1B1\r\n    box-shadow inset 0 1px 0 0 rgba(255,255,255,.2), inset 0 -1px 0 0 rgba(0,0,0,.02)\r\n    height 23px\r\n    line-height 24px\r\n    border-radius 4px 4px 0 0\r\n    font-size 13px\r\n    color #4D4D4D\r\n    text-align center\r\n  .body\r\n    padding 15px\r\n    display flex\r\n  .saturation-wrap\r\n    width 256px\r\n    height 256px\r\n    position relative\r\n    border 2px solid #B3B3B3\r\n    border-bottom 2px solid #F0F0F0\r\n    overflow hidden\r\n    .circle\r\n      width 12px\r\n      height 12px\r\n  .hue-wrap\r\n    position relative\r\n    height 256px\r\n    width 19px\r\n    margin-left 10px\r\n    border 2px solid #B3B3B3\r\n    border-bottom 2px solid #F0F0F0\r\n  .hue-pointer\r\n    position relative\r\n    .left\r\n    .right\r\n      position absolute\r\n      width 0\r\n      height 0\r\n      border-style solid\r\n      border-width 5px 0 5px 8px\r\n      border-color transparent transparent transparent #555\r\n      &:after\r\n        content \"\"\r\n        width 0\r\n        height 0\r\n        border-style solid\r\n        border-width 4px 0 4px 6px\r\n        border-color transparent transparent transparent #fff\r\n        position absolute\r\n        top 1px\r\n        left 1px\r\n        transform translate(-8px, -5px)\r\n    .left\r\n      transform translate(-13px, -4px)\r\n    .right\r\n      transform translate(20px, -4px) rotate(180deg)\r\n  .controls\r\n    width 180px\r\n    margin-left 10px\r\n    display flex\r\n  .actions\r\n    margin-left 20px\r\n    flex 1\r\n    .ac-btn\r\n      background-image linear-gradient(-180deg, #FFFFFF 0%, #E6E6E6 100%)\r\n      border 1px solid #878787\r\n      border-radius 2px\r\n      height 20px\r\n      box-shadow 0 1px 0 0 #EAEAEA\r\n      font-size 14px\r\n      color #000\r\n      line-height 20px\r\n      text-align center\r\n      margin-bottom 10px\r\n  .previews\r\n    width 60px\r\n    .swatches\r\n      border 1px solid #B3B3B3\r\n      border-bottom 1px solid #F0F0F0\r\n      margin-bottom 2px\r\n      margin-top 1px\r\n    .pr-color\r\n      height 34px\r\n      box-shadow inset 1px 0 0 #000, inset -1px 0 0 #000, inset 0 1px 0 #000\r\n    .label\r\n      font-size 14px\r\n      color #000\r\n      text-align center\r\n  \r\n  .fields\r\n    padding-top 5px\r\n    padding-bottom 9px\r\n    width 80px\r\n    position relative\r\n    .divider\r\n      height 5px\r\n    .input\r\n      margin-left 40%\r\n      width 40%\r\n      height 18px\r\n      border 1px solid #888888\r\n      box-shadow inset 0 1px 1px rgba(0,0,0,.1), 0 1px 0 0 #ECECEC\r\n      margin-bottom 5px\r\n      font-size 13px\r\n      padding-left 3px\r\n      margin-right 10px\r\n    .label\r\n      top 0\r\n      left 0\r\n      width 34px\r\n      text-transform uppercase\r\n      font-size 13px\r\n      height 18px\r\n      line-height 22px\r\n      position absolute\r\n    .hex \r\n      .input\r\n        margin-left 20%\r\n        width 80%\r\n        height 18px\r\n        border 1px solid #888888\r\n        box-shadow inset 0 1px 1px rgba(0,0,0,.1), 0 1px 0 0 #ECECEC\r\n        margin-bottom 6px\r\n        font-size 13px\r\n        padding-left 3px\r\n      .label\r\n        position absolute\r\n        top 0\r\n        left 0\r\n        width 14px\r\n        text-transform uppercase\r\n        font-size 13px\r\n        height 18px\r\n        line-height 22px\r\n",".c-photoshop {\n  background: #dcdcdc;\n  border-radius: 4px;\n  box-shadow: 0 0 0 1px rgba(0,0,0,0.25), 0 8px 16px rgba(0,0,0,0.15);\n  box-sizing: initial;\n  width: 513px;\n  font-family: Roboto;\n}\n.c-photoshop .head {\n  background-image: linear-gradient(-180deg, #f0f0f0 0%, #d4d4d4 100%);\n  border-bottom: 1px solid #b1b1b1;\n  box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.2), inset 0 -1px 0 0 rgba(0,0,0,0.02);\n  height: 23px;\n  line-height: 24px;\n  border-radius: 4px 4px 0 0;\n  font-size: 13px;\n  color: #4d4d4d;\n  text-align: center;\n}\n.c-photoshop .body {\n  padding: 15px;\n  display: flex;\n}\n.c-photoshop .saturation-wrap {\n  width: 256px;\n  height: 256px;\n  position: relative;\n  border: 2px solid #b3b3b3;\n  border-bottom: 2px solid #f0f0f0;\n  overflow: hidden;\n}\n.c-photoshop .saturation-wrap .circle {\n  width: 12px;\n  height: 12px;\n}\n.c-photoshop .hue-wrap {\n  position: relative;\n  height: 256px;\n  width: 19px;\n  margin-left: 10px;\n  border: 2px solid #b3b3b3;\n  border-bottom: 2px solid #f0f0f0;\n}\n.c-photoshop .hue-pointer {\n  position: relative;\n}\n.c-photoshop .hue-pointer .left,\n.c-photoshop .hue-pointer .right {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 5px 0 5px 8px;\n  border-color: transparent transparent transparent #555;\n}\n.c-photoshop .hue-pointer .left:after,\n.c-photoshop .hue-pointer .right:after {\n  content: \"\";\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 4px 0 4px 6px;\n  border-color: transparent transparent transparent #fff;\n  position: absolute;\n  top: 1px;\n  left: 1px;\n  transform: translate(-8px, -5px);\n}\n.c-photoshop .hue-pointer .left {\n  transform: translate(-13px, -4px);\n}\n.c-photoshop .hue-pointer .right {\n  transform: translate(20px, -4px) rotate(180deg);\n}\n.c-photoshop .controls {\n  width: 180px;\n  margin-left: 10px;\n  display: flex;\n}\n.c-photoshop .actions {\n  margin-left: 20px;\n  flex: 1;\n}\n.c-photoshop .actions .ac-btn {\n  background-image: linear-gradient(-180deg, #fff 0%, #e6e6e6 100%);\n  border: 1px solid #878787;\n  border-radius: 2px;\n  height: 20px;\n  box-shadow: 0 1px 0 0 #eaeaea;\n  font-size: 14px;\n  color: #000;\n  line-height: 20px;\n  text-align: center;\n  margin-bottom: 10px;\n}\n.c-photoshop .previews {\n  width: 60px;\n}\n.c-photoshop .previews .swatches {\n  border: 1px solid #b3b3b3;\n  border-bottom: 1px solid #f0f0f0;\n  margin-bottom: 2px;\n  margin-top: 1px;\n}\n.c-photoshop .previews .pr-color {\n  height: 34px;\n  box-shadow: inset 1px 0 0 #000, inset -1px 0 0 #000, inset 0 1px 0 #000;\n}\n.c-photoshop .previews .label {\n  font-size: 14px;\n  color: #000;\n  text-align: center;\n}\n.c-photoshop .fields {\n  padding-top: 5px;\n  padding-bottom: 9px;\n  width: 80px;\n  position: relative;\n}\n.c-photoshop .fields .divider {\n  height: 5px;\n}\n.c-photoshop .fields .input {\n  margin-left: 40%;\n  width: 40%;\n  height: 18px;\n  border: 1px solid #888;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), 0 1px 0 0 #ececec;\n  margin-bottom: 5px;\n  font-size: 13px;\n  padding-left: 3px;\n  margin-right: 10px;\n}\n.c-photoshop .fields .label {\n  top: 0;\n  left: 0;\n  width: 34px;\n  text-transform: uppercase;\n  font-size: 13px;\n  height: 18px;\n  line-height: 22px;\n  position: absolute;\n}\n.c-photoshop .fields .hex .input {\n  margin-left: 20%;\n  width: 80%;\n  height: 18px;\n  border: 1px solid #888;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), 0 1px 0 0 #ececec;\n  margin-bottom: 6px;\n  font-size: 13px;\n  padding-left: 3px;\n}\n.c-photoshop .fields .hex .label {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 14px;\n  text-transform: uppercase;\n  font-size: 13px;\n  height: 18px;\n  line-height: 22px;\n}\n"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
-
-/***/ },
-/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2614,23 +2467,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _color = __webpack_require__(7);
+	var _color = __webpack_require__(6);
 	
 	var _color2 = _interopRequireDefault(_color);
 	
-	var _EditableInput = __webpack_require__(9);
+	var _EditableInput = __webpack_require__(8);
 	
 	var _EditableInput2 = _interopRequireDefault(_EditableInput);
 	
-	var _Saturation = __webpack_require__(40);
+	var _Saturation = __webpack_require__(39);
 	
 	var _Saturation2 = _interopRequireDefault(_Saturation);
 	
-	var _Hue = __webpack_require__(24);
+	var _Hue = __webpack_require__(23);
 	
 	var _Hue2 = _interopRequireDefault(_Hue);
 	
-	var _Alpha = __webpack_require__(47);
+	var _Alpha = __webpack_require__(46);
 	
 	var _Alpha2 = _interopRequireDefault(_Alpha);
 	
@@ -2694,13 +2547,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 40 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(41)
-	__vue_script__ = __webpack_require__(43)
-	__vue_template__ = __webpack_require__(46)
+	__webpack_require__(40)
+	__vue_script__ = __webpack_require__(42)
+	__vue_template__ = __webpack_require__(45)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -2717,16 +2570,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 41 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(42);
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3356ea66&file=Saturation.vue!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../../node_modules/eslint-loader/index.js!./../../../node_modules/eslint-loader/index.js!./Saturation.vue\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
+	var update = __webpack_require__(4)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -2743,21 +2596,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
+/* 41 */,
 /* 42 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".white,\n.black,\n.saturation {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n}\n.saturation .white {\n  background: -webkit-linear-gradient(left, #fff, rgba(255,255,255,0));\n  background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n}\n.saturation .black {\n  background: -webkit-linear-gradient(bottom, #000, rgba(0,0,0,0));\n  background: linear-gradient(to top, #000, rgba(0,0,0,0));\n}\n.saturation .pointer {\n  position: absolute;\n}\n.saturation .circle {\n  cursor: head;\n  width: 4px;\n  height: 4px;\n  box-shadow: 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,0.3), 0 0 1px 2px rgba(0,0,0,0.4);\n  border-radius: 50%;\n  -webkit-transform: translate(-2px, -2px);\n          transform: translate(-2px, -2px);\n}\n", "", {"version":3,"sources":["/./src/components/common/Saturation.vue.style","/./src/components/common/Saturation.vue"],"names":[],"mappings":"AACA;;;EAGE,mBAAA;EACA,OAAA;EACA,QAAA;EACA,SAAA;EACA,UAAA;CCAD;ADGC;EACE,qEAAA;EAAA,iEAAA;CCDH;ADEC;EACE,iEAAA;EAAA,yDAAA;CCAH;ADCC;EACE,mBAAA;CCCH;ADAC;EACE,aAAA;EACA,WAAA;EACA,YAAA;EACA,6FAAA;EACA,mBAAA;EACA,yCAAA;UAAA,iCAAA;CCEH","file":"Saturation.vue","sourcesContent":["\r\n.white\r\n.black\r\n.saturation\r\n  position absolute\r\n  top 0\r\n  left 0\r\n  right 0\r\n  bottom 0\r\n\r\n.saturation\r\n  .white\r\n    background linear-gradient(to right, #fff, rgba(255,255,255,0))\r\n  .black\r\n    background linear-gradient(to top, #000, rgba(0,0,0,0))\r\n  .pointer\r\n    position absolute\r\n  .circle\r\n    cursor head\r\n    width 4px\r\n    height 4px\r\n    box-shadow 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3), 0 0 1px 2px rgba(0,0,0,.4)\r\n    border-radius 50%\r\n    transform translate(-2px, -2px)\r\n",".white,\n.black,\n.saturation {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n}\n.saturation .white {\n  background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n}\n.saturation .black {\n  background: linear-gradient(to top, #000, rgba(0,0,0,0));\n}\n.saturation .pointer {\n  position: absolute;\n}\n.saturation .circle {\n  cursor: head;\n  width: 4px;\n  height: 4px;\n  box-shadow: 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,0.3), 0 0 1px 2px rgba(0,0,0,0.4);\n  border-radius: 50%;\n  transform: translate(-2px, -2px);\n}\n"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
-
-/***/ },
-/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2766,7 +2606,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _lodash = __webpack_require__(44);
+	var _lodash = __webpack_require__(43);
 	
 	var _lodash2 = _interopRequireDefault(_lodash);
 	
@@ -2838,7 +2678,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 44 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2849,7 +2689,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Copyright 2009-2016 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <https://lodash.com/license>
 	 */
-	var debounce = __webpack_require__(45);
+	var debounce = __webpack_require__(44);
 	
 	/** Used as the `TypeError` message for "Functions" methods. */
 	var FUNC_ERROR_TEXT = 'Expected a function';
@@ -2944,7 +2784,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 45 */
+/* 44 */
 /***/ function(module, exports) {
 
 	/**
@@ -3344,19 +3184,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 46 */
+/* 45 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n  <div class=\"saturation\"\r\n    :style=\"{background: bgColor}\"\r\n    v-el:container\r\n    @mousedown=\"handleMouseDown\">\r\n    <div class=\"white\"></div>\r\n    <div class=\"black\"></div>\r\n    <div class=\"pointer\" :style=\"{top: pointerTop, left: pointerLeft}\">\r\n      <slot><div class=\"circle\"></div></slot>\r\n    </div>\r\n  </div>\r\n";
 
 /***/ },
-/* 47 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(48)
-	__vue_script__ = __webpack_require__(50)
-	__vue_template__ = __webpack_require__(56)
+	__webpack_require__(47)
+	__vue_script__ = __webpack_require__(49)
+	__vue_template__ = __webpack_require__(55)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -3373,16 +3213,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 48 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(49);
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5b165db3&file=Alpha.vue!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../../node_modules/eslint-loader/index.js!./../../../node_modules/eslint-loader/index.js!./Alpha.vue\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
+	var update = __webpack_require__(4)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -3399,21 +3239,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
+/* 48 */,
 /* 49 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".c-alpha {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n.c-alpha .checkboard-wrap {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n  overflow: hidden;\n}\n.c-alpha .gradient {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n.c-alpha .container {\n  position: relative;\n  z-index: 2;\n  height: 100%;\n  margin: 0 3px;\n}\n.c-alpha .pointer {\n  z-index: 2;\n  position: absolute;\n}\n.c-alpha .picker {\n  width: 4px;\n  border-radius: 1px;\n  height: 8px;\n  box-shadow: 0 0 2px rgba(0,0,0,0.6);\n  background: #fff;\n  margin-top: 1px;\n  -webkit-transform: translateX(-2px);\n          transform: translateX(-2px);\n}\n", "", {"version":3,"sources":["/./src/components/common/Alpha.vue.style","/./src/components/common/Alpha.vue"],"names":[],"mappings":"AACA;EACE,mBAAA;EACA,SAAA;EACA,WAAA;EACA,YAAA;EACA,UAAA;CCAD;ADCC;EACE,mBAAA;EACA,SAAA;EACA,WAAA;EACA,YAAA;EACA,UAAA;EACA,iBAAA;CCCH;ADAC;EACE,mBAAA;EACA,SAAA;EACA,WAAA;EACA,YAAA;EACA,UAAA;CCEH;ADDC;EACE,mBAAA;EACA,WAAA;EACA,aAAA;EACA,cAAA;CCGH;ADFC;EACE,WAAA;EACA,mBAAA;CCIH;ADHC;EACE,WAAA;EACA,mBAAA;EACA,YAAA;EACA,oCAAA;EACA,iBAAA;EACA,gBAAA;EACA,oCAAA;UAAA,4BAAA;CCKH","file":"Alpha.vue","sourcesContent":["\r\n.c-alpha\r\n  position absolute\r\n  top 0px\r\n  right 0px\r\n  bottom 0px\r\n  left 0px\r\n  .checkboard-wrap\r\n    position absolute\r\n    top 0px\r\n    right 0px\r\n    bottom 0px\r\n    left 0px\r\n    overflow hidden\r\n  .gradient\r\n    position absolute\r\n    top 0px\r\n    right 0px\r\n    bottom 0px\r\n    left 0px\r\n  .container\r\n    position relative\r\n    z-index 2\r\n    height 100%\r\n    margin 0 3px\r\n  .pointer\r\n    z-index 2\r\n    position absolute\r\n  .picker\r\n    width 4px\r\n    border-radius 1px\r\n    height 8px\r\n    box-shadow 0 0 2px rgba(0, 0, 0, .6)\r\n    background #fff\r\n    margin-top 1px\r\n    transform translateX(-2px)\r\n",".c-alpha {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n.c-alpha .checkboard-wrap {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n  overflow: hidden;\n}\n.c-alpha .gradient {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n.c-alpha .container {\n  position: relative;\n  z-index: 2;\n  height: 100%;\n  margin: 0 3px;\n}\n.c-alpha .pointer {\n  z-index: 2;\n  position: absolute;\n}\n.c-alpha .picker {\n  width: 4px;\n  border-radius: 1px;\n  height: 8px;\n  box-shadow: 0 0 2px rgba(0,0,0,0.6);\n  background: #fff;\n  margin-top: 1px;\n  transform: translateX(-2px);\n}\n"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
-
-/***/ },
-/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3422,7 +3249,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _Checkboard = __webpack_require__(51);
+	var _Checkboard = __webpack_require__(50);
 	
 	var _Checkboard2 = _interopRequireDefault(_Checkboard);
 	
@@ -3486,13 +3313,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 51 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(52)
-	__vue_script__ = __webpack_require__(54)
-	__vue_template__ = __webpack_require__(55)
+	__webpack_require__(51)
+	__vue_script__ = __webpack_require__(53)
+	__vue_template__ = __webpack_require__(54)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -3509,16 +3336,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 52 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(53);
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c267d04e&file=Checkboard.vue!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../../node_modules/eslint-loader/index.js!./../../../node_modules/eslint-loader/index.js!./Checkboard.vue\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
+	var update = __webpack_require__(4)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -3535,21 +3362,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
+/* 52 */,
 /* 53 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".c-checkboard {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n", "", {"version":3,"sources":["/./src/components/common/Checkboard.vue.style","/./src/components/common/Checkboard.vue"],"names":[],"mappings":"AACA;EACE,mBAAA;EACA,SAAA;EACA,WAAA;EACA,YAAA;EACA,UAAA;CCAD","file":"Checkboard.vue","sourcesContent":["\r\n.c-checkboard{\r\n  position absolute\r\n  top 0px\r\n  right 0px\r\n  bottom 0px\r\n  left 0px\r\n}\r\n",".c-checkboard {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
-
-/***/ },
-/* 54 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -3617,31 +3431,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 55 */
+/* 54 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n  <div class=\"c-checkboard\" :style=\"{background:  bgStyle}\"></div>\r\n";
 
 /***/ },
-/* 56 */
+/* 55 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n  <div class=\"c-alpha\">\r\n    <div class=\"checkboard-wrap\">\r\n      <checkboard></checkboard>\r\n    </div>\r\n    <div class=\"gradient\" :style=\"{background: gradientColor}\"></div>\r\n    <div class=\"container\" v-el:container\r\n        @mousedown=\"handleMouseDown\"\r\n        @touchmove=\"handleChange\"\r\n        @touchstart=\"handleChange\">\r\n      <div class=\"pointer\" :style=\"{left: colors.a * 100 + '%'}\">\r\n        <slot><div class=\"picker\"></div></slot>\r\n      </div>\r\n    </div>\r\n  </div>\r\n";
 
 /***/ },
-/* 57 */
+/* 56 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n  <div class=\"c-photoshop\">\r\n    <div class=\"head\">{{head}}</div>\r\n    <div class=\"body\">\r\n      <div class=\"saturation-wrap\">\r\n        <saturation :colors.sync=\"colors\" :on-change=\"childChange\"></saturation>\r\n      </div>\r\n      <div class=\"hue-wrap\">\r\n        <hue :colors.sync=\"colors\" :on-change=\"childChange\" direction=\"vertical\">\r\n          <div class=\"hue-pointer\">\r\n            <i class=\"left\"></i><i class=\"right\"></i>\r\n          </div>\r\n        </hue>  \r\n      </div>\r\n      <div class=\"controls\">\r\n        <div class=\"previews\">\r\n          <div class=\"label\">new</div>\r\n          <div class=\"swatches\">\r\n            <div class=\"pr-color\" :style=\"{background: colors.hex}\"></div>\r\n            <div class=\"pr-color\" :style=\"{background: currentColor}\"></div>\r\n          </div>\r\n          <div class=\"label\">current</div>\r\n        </div>\r\n        <div class=\"actions\">\r\n          <div class=\"ac-btn\" @click=\"handleAccept\">OK</div>\r\n          <div class=\"ac-btn\" @click=\"handleCancel\">Cancel</div>\r\n          <div class=\"fields\">\r\n            <!-- hsla -->\r\n            <ed-in label=\"h\" :val.sync=\"colors.hsl.h\" \r\n              :on-change=\"inputChange\"></ed-in>\r\n            <ed-in label=\"s\" :val.sync=\"colors.hsl.s\"\r\n              :on-change=\"inputChange\"></ed-in>\r\n            <ed-in label=\"v\" :val.sync=\"colors.hsl.l\"\r\n              :on-change=\"inputChange\"></ed-in>\r\n            <div class=\"divider\"></div>\r\n            <!-- rgba -->\r\n            <ed-in label=\"r\" :val.sync=\"colors.rgba.r\" \r\n              :on-change=\"inputChange\"></ed-in>\r\n            <ed-in label=\"g\" :val.sync=\"colors.rgba.g\" \r\n              :on-change=\"inputChange\"></ed-in>\r\n            <ed-in label=\"b\" :val.sync=\"colors.rgba.b\"\r\n              :on-change=\"inputChange\"></ed-in>\r\n            <div class=\"divider\"></div>\r\n            <!-- hex -->\r\n            <ed-in label=\"#\" class=\"hex\"\r\n              :val.sync=\"colors.hex\"\r\n              :on-change=\"inputChange\"></ed-in>    \r\n          </div>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n";
 
 /***/ },
-/* 58 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(59)
-	__vue_script__ = __webpack_require__(61)
-	__vue_template__ = __webpack_require__(62)
+	__webpack_require__(58)
+	__vue_script__ = __webpack_require__(60)
+	__vue_template__ = __webpack_require__(61)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -3658,16 +3472,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 59 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(60);
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-46ce7872&file=Sketch.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./Sketch.vue\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
+	var update = __webpack_require__(4)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -3684,21 +3498,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
+/* 59 */,
 /* 60 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".c-sketch {\n  position: relative;\n  width: 200px;\n  padding: 10px 10px 0;\n  box-sizing: initial;\n  background: #fff;\n  border-radius: 4px;\n  box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 8px 16px rgba(0,0,0,0.15);\n}\n.c-sketch .saturation-wrap {\n  width: 100%;\n  padding-bottom: 75%;\n  position: relative;\n  overflow: hidden;\n}\n.c-sketch .controls {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n}\n.c-sketch .controls .sliders {\n  padding: 4px 0;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.c-sketch .controls .hue-wrap {\n  position: relative;\n  height: 10px;\n}\n.c-sketch .controls .alpha-wrap {\n  position: relative;\n  height: 10px;\n  margin-top: 4px;\n  overflow: hidden;\n}\n.c-sketch .controls .color-wrap {\n  width: 24px;\n  height: 24px;\n  position: relative;\n  margin-top: 4px;\n  margin-left: 4px;\n  border-radius: 3px;\n}\n.c-sketch .controls .active-color {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border-radius: 2px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15), inset 0 0 4px rgba(0,0,0,0.25);\n  z-index: 2;\n}\n.c-sketch .field {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  padding-top: 4px;\n}\n.c-sketch .field .single {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  padding-left: 6px;\n}\n.c-sketch .field .double {\n  -webkit-box-flex: 2;\n  -webkit-flex: 2;\n      -ms-flex: 2;\n          flex: 2;\n}\n.c-sketch .field .input {\n  width: 80%;\n  padding: 4px 10% 3px;\n  border: none;\n  box-shadow: inset 0 0 0 1px #ccc;\n  font-size: 11px;\n}\n.c-sketch .field .label {\n  display: block;\n  text-align: center;\n  font-size: 11px;\n  color: #222;\n  padding-top: 3px;\n  padding-bottom: 4px;\n  text-transform: capitalize;\n}\n.c-sketch .presets {\n  margin-right: -10px;\n  margin-left: -10px;\n  padding-left: 10px;\n  padding-top: 10px;\n  border-top: 1px solid #eee;\n}\n.c-sketch .presets .presets-color {\n  border-radius: 3px;\n  overflow: hidden;\n  position: relative;\n  display: inline-block;\n  margin: 0 10px 10px 0;\n  vertical-align: top;\n  cursor: pointer;\n  width: 16px;\n  height: 16px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);\n}\n", "", {"version":3,"sources":["/./src/components/Sketch.vue.style","/./src/components/Sketch.vue"],"names":[],"mappings":"AACA;EACE,mBAAA;EACA,aAAA;EACA,qBAAA;EACA,oBAAA;EACA,iBAAA;EACA,mBAAA;EACA,oEAAA;CCAD;ADCC;EACE,YAAA;EACA,oBAAA;EACA,mBAAA;EACA,iBAAA;CCCH;ADAC;EACE,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;CCEH;ADDG;EACE,eAAA;EACA,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;CCGL;ADFG;EACE,mBAAA;EACA,aAAA;CCIL;ADHG;EACE,mBAAA;EACA,aAAA;EACA,gBAAA;EACA,iBAAA;CCKL;ADJG;EACE,YAAA;EACA,aAAA;EACA,mBAAA;EACA,gBAAA;EACA,iBAAA;EACA,mBAAA;CCML;ADLG;EACE,mBAAA;EACA,OAAA;EACA,QAAA;EACA,SAAA;EACA,UAAA;EACA,mBAAA;EACA,6EAAA;EACA,WAAA;CCOL;ADNC;EACE,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;EACA,iBAAA;CCQH;ADPG;EACE,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;EACA,kBAAA;CCSL;ADRG;EACE,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;CCUL;ADTG;EACE,WAAA;EACA,qBAAA;EACA,aAAA;EACA,iCAAA;EACA,gBAAA;CCWL;ADVG;EACE,eAAA;EACA,mBAAA;EACA,gBAAA;EACA,YAAA;EACA,iBAAA;EACA,oBAAA;EACA,2BAAA;CCYL;ADXC;EACE,oBAAA;EACA,mBAAA;EACA,mBAAA;EACA,kBAAA;EACA,2BAAA;CCaH;ADZG;EACE,mBAAA;EACA,iBAAA;EACA,mBAAA;EACA,sBAAA;EACA,sBAAA;EACA,oBAAA;EACA,gBAAA;EACA,YAAA;EACA,aAAA;EACA,6CAAA;CCcL","file":"Sketch.vue","sourcesContent":["\r\n.c-sketch\r\n  position relative\r\n  width 200px\r\n  padding 10px 10px 0\r\n  box-sizing initial\r\n  background #fff\r\n  border-radius 4px\r\n  box-shadow 0 0 0 1px rgba(0,0,0,.15), 0 8px 16px rgba(0,0,0,.15)\r\n  .saturation-wrap\r\n    width 100%\r\n    padding-bottom 75%\r\n    position relative\r\n    overflow hidden\r\n  .controls\r\n    display flex\r\n    .sliders\r\n      padding 4px 0\r\n      flex 1\r\n    .hue-wrap\r\n      position relative\r\n      height 10px\r\n    .alpha-wrap\r\n      position relative\r\n      height 10px\r\n      margin-top 4px\r\n      overflow hidden\r\n    .color-wrap\r\n      width 24px\r\n      height 24px\r\n      position relative\r\n      margin-top 4px\r\n      margin-left 4px\r\n      border-radius 3px\r\n    .active-color\r\n      position absolute\r\n      top 0\r\n      left 0\r\n      right 0\r\n      bottom 0\r\n      border-radius 2px\r\n      box-shadow inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)\r\n      z-index 2\r\n  .field\r\n    display flex\r\n    padding-top 4px\r\n    .single\r\n      flex 1\r\n      padding-left 6px\r\n    .double\r\n      flex 2\r\n    .input\r\n      width 80%\r\n      padding 4px 10% 3px\r\n      border none\r\n      box-shadow inset 0 0 0 1px #ccc\r\n      font-size 11px\r\n    .label\r\n      display block\r\n      text-align center\r\n      font-size 11px\r\n      color #222\r\n      padding-top 3px\r\n      padding-bottom 4px\r\n      text-transform capitalize\r\n  .presets\r\n    margin-right -10px\r\n    margin-left -10px\r\n    padding-left 10px\r\n    padding-top 10px\r\n    border-top 1px solid #eee\r\n    .presets-color\r\n      border-radius 3px\r\n      overflow hidden\r\n      position relative\r\n      display inline-block\r\n      margin 0 10px 10px 0\r\n      vertical-align top\r\n      cursor pointer\r\n      width 16px\r\n      height 16px\r\n      box-shadow inset 0 0 0 1px rgba(0,0,0,.15)\r\n",".c-sketch {\n  position: relative;\n  width: 200px;\n  padding: 10px 10px 0;\n  box-sizing: initial;\n  background: #fff;\n  border-radius: 4px;\n  box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 8px 16px rgba(0,0,0,0.15);\n}\n.c-sketch .saturation-wrap {\n  width: 100%;\n  padding-bottom: 75%;\n  position: relative;\n  overflow: hidden;\n}\n.c-sketch .controls {\n  display: flex;\n}\n.c-sketch .controls .sliders {\n  padding: 4px 0;\n  flex: 1;\n}\n.c-sketch .controls .hue-wrap {\n  position: relative;\n  height: 10px;\n}\n.c-sketch .controls .alpha-wrap {\n  position: relative;\n  height: 10px;\n  margin-top: 4px;\n  overflow: hidden;\n}\n.c-sketch .controls .color-wrap {\n  width: 24px;\n  height: 24px;\n  position: relative;\n  margin-top: 4px;\n  margin-left: 4px;\n  border-radius: 3px;\n}\n.c-sketch .controls .active-color {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border-radius: 2px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15), inset 0 0 4px rgba(0,0,0,0.25);\n  z-index: 2;\n}\n.c-sketch .field {\n  display: flex;\n  padding-top: 4px;\n}\n.c-sketch .field .single {\n  flex: 1;\n  padding-left: 6px;\n}\n.c-sketch .field .double {\n  flex: 2;\n}\n.c-sketch .field .input {\n  width: 80%;\n  padding: 4px 10% 3px;\n  border: none;\n  box-shadow: inset 0 0 0 1px #ccc;\n  font-size: 11px;\n}\n.c-sketch .field .label {\n  display: block;\n  text-align: center;\n  font-size: 11px;\n  color: #222;\n  padding-top: 3px;\n  padding-bottom: 4px;\n  text-transform: capitalize;\n}\n.c-sketch .presets {\n  margin-right: -10px;\n  margin-left: -10px;\n  padding-left: 10px;\n  padding-top: 10px;\n  border-top: 1px solid #eee;\n}\n.c-sketch .presets .presets-color {\n  border-radius: 3px;\n  overflow: hidden;\n  position: relative;\n  display: inline-block;\n  margin: 0 10px 10px 0;\n  vertical-align: top;\n  cursor: pointer;\n  width: 16px;\n  height: 16px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);\n}\n"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
-
-/***/ },
-/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3707,23 +3508,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _color = __webpack_require__(7);
+	var _color = __webpack_require__(6);
 	
 	var _color2 = _interopRequireDefault(_color);
 	
-	var _EditableInput = __webpack_require__(9);
+	var _EditableInput = __webpack_require__(8);
 	
 	var _EditableInput2 = _interopRequireDefault(_EditableInput);
 	
-	var _Saturation = __webpack_require__(40);
+	var _Saturation = __webpack_require__(39);
 	
 	var _Saturation2 = _interopRequireDefault(_Saturation);
 	
-	var _Hue = __webpack_require__(24);
+	var _Hue = __webpack_require__(23);
 	
 	var _Hue2 = _interopRequireDefault(_Hue);
 	
-	var _Alpha = __webpack_require__(47);
+	var _Alpha = __webpack_require__(46);
 	
 	var _Alpha2 = _interopRequireDefault(_Alpha);
 	
@@ -3785,19 +3586,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 62 */
+/* 61 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n  <div class=\"c-sketch\">\r\n    <div class=\"saturation-wrap\">\r\n      <saturation :colors.sync=\"colors\" :on-change=\"childChange\"></saturation>\r\n    </div>\r\n    <div class=\"controls\">\r\n      <div class=\"sliders\">\r\n        <div class=\"hue-wrap\">\r\n          <hue :colors.sync=\"colors\" :on-change=\"childChange\"></hue>  \r\n        </div>\r\n        <div class=\"alpha-wrap\">\r\n          <alpha :colors.sync=\"colors\" :on-change=\"childChange\"></alpha>\r\n        </div>\r\n      </div>\r\n      <div class=\"color-wrap\">\r\n        <div class=\"active-color\" :style=\"{background: activeColor}\"></div>\r\n      </div>\r\n    </div>\r\n    <div class=\"field\">\r\n      <!-- rgba -->\r\n      <div class=\"double\">\r\n        <ed-in label=\"hex\"\r\n        :val.sync=\"colors.hex\"\r\n        :on-change=\"inputChange\"></ed-in>  \r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"r\" :val.sync=\"colors.rgba.r\" \r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"g\" :val.sync=\"colors.rgba.g\" \r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"b\" :val.sync=\"colors.rgba.b\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"a\" :val.sync=\"colors.a\" :arrow-offset=\"0.01\" :max=\"1\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n    </div>\r\n    <div class=\"presets\">\r\n      <div class=\"presets-color\"\r\n        v-for=\"c in presetColors\"\r\n        :style=\"{background: c}\"\r\n        @click=\"handlePreset(c)\"\r\n        >\r\n      </div>\r\n    </div>\r\n  </div>\r\n";
 
 /***/ },
-/* 63 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(64)
-	__vue_script__ = __webpack_require__(66)
-	__vue_template__ = __webpack_require__(67)
+	__webpack_require__(63)
+	__vue_script__ = __webpack_require__(65)
+	__vue_template__ = __webpack_require__(66)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -3814,16 +3615,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 64 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(65);
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2f6d2b8e&file=CmykSketch.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./CmykSketch.vue\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
+	var update = __webpack_require__(4)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -3840,21 +3641,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
+/* 64 */,
 /* 65 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".c-sketch {\n  position: relative;\n  width: 200px;\n  padding: 10px 10px 0;\n  box-sizing: initial;\n  background: #fff;\n  border-radius: 4px;\n  box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 8px 16px rgba(0,0,0,0.15);\n}\n.c-sketch .saturation-wrap {\n  width: 100%;\n  padding-bottom: 75%;\n  position: relative;\n  overflow: hidden;\n}\n.c-sketch .controls {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n}\n.c-sketch .controls .sliders {\n  padding: 4px 0;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.c-sketch .controls .hue-wrap {\n  position: relative;\n  height: 10px;\n}\n.c-sketch .controls .alpha-wrap {\n  position: relative;\n  height: 10px;\n  margin-top: 4px;\n  overflow: hidden;\n}\n.c-sketch .controls .color-wrap {\n  width: 24px;\n  height: 24px;\n  position: relative;\n  margin-top: 4px;\n  margin-left: 4px;\n  border-radius: 3px;\n}\n.c-sketch .controls .active-color {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border-radius: 2px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15), inset 0 0 4px rgba(0,0,0,0.25);\n  z-index: 2;\n}\n.c-sketch .field {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  padding-top: 4px;\n}\n.c-sketch .field .single {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  padding-left: 6px;\n}\n.c-sketch .field .double {\n  -webkit-box-flex: 2;\n  -webkit-flex: 2;\n      -ms-flex: 2;\n          flex: 2;\n}\n.c-sketch .field .input {\n  width: 80%;\n  padding: 4px 10% 3px;\n  border: none;\n  box-shadow: inset 0 0 0 1px #ccc;\n  font-size: 11px;\n}\n.c-sketch .field .label {\n  display: block;\n  text-align: center;\n  font-size: 11px;\n  color: #222;\n  padding-top: 3px;\n  padding-bottom: 4px;\n  text-transform: capitalize;\n}\n.c-sketch .presets {\n  margin-right: -10px;\n  margin-left: -10px;\n  padding-left: 10px;\n  padding-top: 10px;\n  border-top: 1px solid #eee;\n}\n.c-sketch .presets .presets-color {\n  border-radius: 3px;\n  overflow: hidden;\n  position: relative;\n  display: inline-block;\n  margin: 0 10px 10px 0;\n  vertical-align: top;\n  cursor: pointer;\n  width: 16px;\n  height: 16px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);\n}\n", "", {"version":3,"sources":["/./src/components/CmykSketch.vue.style","/./src/components/CmykSketch.vue"],"names":[],"mappings":"AACA;EACE,mBAAA;EACA,aAAA;EACA,qBAAA;EACA,oBAAA;EACA,iBAAA;EACA,mBAAA;EACA,oEAAA;CCAD;ADCC;EACE,YAAA;EACA,oBAAA;EACA,mBAAA;EACA,iBAAA;CCCH;ADAC;EACE,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;CCEH;ADDG;EACE,eAAA;EACA,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;CCGL;ADFG;EACE,mBAAA;EACA,aAAA;CCIL;ADHG;EACE,mBAAA;EACA,aAAA;EACA,gBAAA;EACA,iBAAA;CCKL;ADJG;EACE,YAAA;EACA,aAAA;EACA,mBAAA;EACA,gBAAA;EACA,iBAAA;EACA,mBAAA;CCML;ADLG;EACE,mBAAA;EACA,OAAA;EACA,QAAA;EACA,SAAA;EACA,UAAA;EACA,mBAAA;EACA,6EAAA;EACA,WAAA;CCOL;ADNC;EACE,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;EACA,iBAAA;CCQH;ADPG;EACE,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;EACA,kBAAA;CCSL;ADRG;EACE,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;CCUL;ADTG;EACE,WAAA;EACA,qBAAA;EACA,aAAA;EACA,iCAAA;EACA,gBAAA;CCWL;ADVG;EACE,eAAA;EACA,mBAAA;EACA,gBAAA;EACA,YAAA;EACA,iBAAA;EACA,oBAAA;EACA,2BAAA;CCYL;ADXC;EACE,oBAAA;EACA,mBAAA;EACA,mBAAA;EACA,kBAAA;EACA,2BAAA;CCaH;ADZG;EACE,mBAAA;EACA,iBAAA;EACA,mBAAA;EACA,sBAAA;EACA,sBAAA;EACA,oBAAA;EACA,gBAAA;EACA,YAAA;EACA,aAAA;EACA,6CAAA;CCcL","file":"CmykSketch.vue","sourcesContent":["\r\n.c-sketch\r\n  position relative\r\n  width 200px\r\n  padding 10px 10px 0\r\n  box-sizing initial\r\n  background #fff\r\n  border-radius 4px\r\n  box-shadow 0 0 0 1px rgba(0,0,0,.15), 0 8px 16px rgba(0,0,0,.15)\r\n  .saturation-wrap\r\n    width 100%\r\n    padding-bottom 75%\r\n    position relative\r\n    overflow hidden\r\n  .controls\r\n    display flex\r\n    .sliders\r\n      padding 4px 0\r\n      flex 1\r\n    .hue-wrap\r\n      position relative\r\n      height 10px\r\n    .alpha-wrap\r\n      position relative\r\n      height 10px\r\n      margin-top 4px\r\n      overflow hidden\r\n    .color-wrap\r\n      width 24px\r\n      height 24px\r\n      position relative\r\n      margin-top 4px\r\n      margin-left 4px\r\n      border-radius 3px\r\n    .active-color\r\n      position absolute\r\n      top 0\r\n      left 0\r\n      right 0\r\n      bottom 0\r\n      border-radius 2px\r\n      box-shadow inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)\r\n      z-index 2\r\n  .field\r\n    display flex\r\n    padding-top 4px\r\n    .single\r\n      flex 1\r\n      padding-left 6px\r\n    .double\r\n      flex 2\r\n    .input\r\n      width 80%\r\n      padding 4px 10% 3px\r\n      border none\r\n      box-shadow inset 0 0 0 1px #ccc\r\n      font-size 11px\r\n    .label\r\n      display block\r\n      text-align center\r\n      font-size 11px\r\n      color #222\r\n      padding-top 3px\r\n      padding-bottom 4px\r\n      text-transform capitalize\r\n  .presets\r\n    margin-right -10px\r\n    margin-left -10px\r\n    padding-left 10px\r\n    padding-top 10px\r\n    border-top 1px solid #eee\r\n    .presets-color\r\n      border-radius 3px\r\n      overflow hidden\r\n      position relative\r\n      display inline-block\r\n      margin 0 10px 10px 0\r\n      vertical-align top\r\n      cursor pointer\r\n      width 16px\r\n      height 16px\r\n      box-shadow inset 0 0 0 1px rgba(0,0,0,.15)\r\n",".c-sketch {\n  position: relative;\n  width: 200px;\n  padding: 10px 10px 0;\n  box-sizing: initial;\n  background: #fff;\n  border-radius: 4px;\n  box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 8px 16px rgba(0,0,0,0.15);\n}\n.c-sketch .saturation-wrap {\n  width: 100%;\n  padding-bottom: 75%;\n  position: relative;\n  overflow: hidden;\n}\n.c-sketch .controls {\n  display: flex;\n}\n.c-sketch .controls .sliders {\n  padding: 4px 0;\n  flex: 1;\n}\n.c-sketch .controls .hue-wrap {\n  position: relative;\n  height: 10px;\n}\n.c-sketch .controls .alpha-wrap {\n  position: relative;\n  height: 10px;\n  margin-top: 4px;\n  overflow: hidden;\n}\n.c-sketch .controls .color-wrap {\n  width: 24px;\n  height: 24px;\n  position: relative;\n  margin-top: 4px;\n  margin-left: 4px;\n  border-radius: 3px;\n}\n.c-sketch .controls .active-color {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border-radius: 2px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15), inset 0 0 4px rgba(0,0,0,0.25);\n  z-index: 2;\n}\n.c-sketch .field {\n  display: flex;\n  padding-top: 4px;\n}\n.c-sketch .field .single {\n  flex: 1;\n  padding-left: 6px;\n}\n.c-sketch .field .double {\n  flex: 2;\n}\n.c-sketch .field .input {\n  width: 80%;\n  padding: 4px 10% 3px;\n  border: none;\n  box-shadow: inset 0 0 0 1px #ccc;\n  font-size: 11px;\n}\n.c-sketch .field .label {\n  display: block;\n  text-align: center;\n  font-size: 11px;\n  color: #222;\n  padding-top: 3px;\n  padding-bottom: 4px;\n  text-transform: capitalize;\n}\n.c-sketch .presets {\n  margin-right: -10px;\n  margin-left: -10px;\n  padding-left: 10px;\n  padding-top: 10px;\n  border-top: 1px solid #eee;\n}\n.c-sketch .presets .presets-color {\n  border-radius: 3px;\n  overflow: hidden;\n  position: relative;\n  display: inline-block;\n  margin: 0 10px 10px 0;\n  vertical-align: top;\n  cursor: pointer;\n  width: 16px;\n  height: 16px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);\n}\n"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
-
-/***/ },
-/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3863,23 +3651,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _color = __webpack_require__(7);
+	var _color = __webpack_require__(6);
 	
 	var _color2 = _interopRequireDefault(_color);
 	
-	var _EditableInput = __webpack_require__(9);
+	var _EditableInput = __webpack_require__(8);
 	
 	var _EditableInput2 = _interopRequireDefault(_EditableInput);
 	
-	var _Saturation = __webpack_require__(40);
+	var _Saturation = __webpack_require__(39);
 	
 	var _Saturation2 = _interopRequireDefault(_Saturation);
 	
-	var _Hue = __webpack_require__(24);
+	var _Hue = __webpack_require__(23);
 	
 	var _Hue2 = _interopRequireDefault(_Hue);
 	
-	var _Alpha = __webpack_require__(47);
+	var _Alpha = __webpack_require__(46);
 	
 	var _Alpha2 = _interopRequireDefault(_Alpha);
 	
@@ -3941,19 +3729,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 67 */
+/* 66 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n  <div class=\"c-sketch\">\r\n    <div class=\"saturation-wrap\">\r\n      <saturation :colors.sync=\"colors\" :on-change=\"childChange\"></saturation>\r\n    </div>\r\n    <div class=\"controls\">\r\n      <div class=\"sliders\">\r\n        <div class=\"hue-wrap\">\r\n          <hue :colors.sync=\"colors\" :on-change=\"childChange\"></hue>\r\n        </div>\r\n        <!-- <div class=\"alpha-wrap\">\r\n          <alpha :colors.sync=\"colors\" :on-change=\"childChange\"></alpha>\r\n        </div> -->\r\n      </div>\r\n      <div class=\"color-wrap\">\r\n        <div class=\"active-color\" :style=\"{background: activeColor}\"></div>\r\n      </div>\r\n    </div>\r\n    <div class=\"field\">\r\n      <!-- rgba -->\r\n      <div class=\"double\">\r\n        <ed-in label=\"hex\"\r\n        :val.sync=\"colors.hex\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"r\" :val.sync=\"colors.rgba.r\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"g\" :val.sync=\"colors.rgba.g\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"b\" :val.sync=\"colors.rgba.b\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"a\" :val.sync=\"colors.a\" :arrow-offset=\"0.01\" :max=\"1\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n    </div>\r\n    <div class=\"field\">\r\n      <!-- CMYK -->\r\n      <div class=\"double\">\r\n        <ed-in label=\"name\"\r\n        :val.sync=\"colors.name\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <!-- <div class=\"single\">\r\n        <ed-in label=\"C\" :val.sync=\"colors.cmyk.c\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"M\" :val.sync=\"colors.cmyk.m\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"Y\" :val.sync=\"colors.cmyk.y\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <ed-in label=\"K\" :val.sync=\"colors.cmyk.k\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div> -->\r\n    </div>\r\n    <div class=\"field\">\r\n      <div class=\"double\">\r\n        <ed-in label=\"Spot Color Name\" :val.sync=\"colors.spotColorName\"\r\n        :on-change=\"inputChange\"></ed-in>\r\n      </div>\r\n      <div class=\"single\">\r\n        <label for=\"is_spot_color\">Is spot color</label>\r\n        <input type=\"checkbox\" name=\"is_spot_color\" v-model=\"colors.isSpotColor\">\r\n      </div>\r\n    </div>\r\n    <div class=\"field\">\r\n      <button type=\"button\" name=\"delete_color\" class=\"delete-button text-error\">Delete</button>\r\n    </div>\r\n  </div>\r\n";
 
 /***/ },
-/* 68 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(69)
-	__vue_script__ = __webpack_require__(71)
-	__vue_template__ = __webpack_require__(72)
+	__webpack_require__(68)
+	__vue_script__ = __webpack_require__(70)
+	__vue_template__ = __webpack_require__(71)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
@@ -3970,16 +3758,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 69 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(70);
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-d77f2f80&file=Chrome.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./../../node_modules/eslint-loader/index.js!./../../node_modules/eslint-loader/index.js!./Chrome.vue\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
+	var update = __webpack_require__(4)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -3996,21 +3784,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
+/* 69 */,
 /* 70 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".c-chrome {\n  background: #fff;\n  border-radius: 2px;\n  box-shadow: 0 0 2px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.3);\n  box-sizing: initial;\n  width: 225px;\n  font-family: Menlo;\n}\n.c-chrome .chrome-body {\n  padding: 16px 16px 12px;\n}\n.c-chrome .saturation-wrap {\n  width: 100%;\n  padding-bottom: 55%;\n  position: relative;\n  border-radius: 2px 2px 0 0;\n  overflow: hidden;\n}\n.c-chrome .saturation-wrap .circle {\n  width: 12px;\n  height: 12px;\n}\n.c-chrome .controls {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n}\n.c-chrome .controls .c-hue,\n.c-chrome .controls .c-alpha {\n  border-radius: 2px;\n}\n.c-chrome .controls .color-wrap {\n  width: 32px;\n}\n.c-chrome .controls .active-color {\n  margin-top: 6px;\n  width: 16px;\n  height: 16px;\n  border-radius: 8px;\n  position: relative;\n  overflow: hidden;\n}\n.c-chrome .controls .sliders {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.c-chrome .controls .sliders .picker {\n  width: 12px;\n  height: 12px;\n  border-radius: 6px;\n  -webkit-transform: translate(-6px, -2px);\n          transform: translate(-6px, -2px);\n  background-color: #f8f8f8;\n  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);\n}\n.c-chrome .controls .hue-wrap {\n  position: relative;\n  height: 10px;\n  margin-bottom: 8px;\n}\n.c-chrome .controls .alpha-wrap {\n  position: relative;\n  height: 10px;\n}\n.c-chrome .fields-wrap {\n  padding-top: 16px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n}\n.c-chrome .fields {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  margin-left: -6px;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.c-chrome .field {\n  padding-left: 6px;\n  width: 100%;\n}\n.c-chrome .toggle-btn {\n  width: 32px;\n  text-align: right;\n  position: relative;\n}\n.c-chrome .icon {\n  margin-right: -4px;\n  margin-top: 12px;\n  cursor: pointer;\n  position: relative;\n  z-index: 2;\n}\n.c-chrome .icon-highlight {\n  position: absolute;\n  width: 24px;\n  height: 28px;\n  background: #eee;\n  border-radius: 4px;\n  top: 10px;\n  left: 12px;\n}\n.c-chrome .fields .input {\n  font-size: 11px;\n  color: #333;\n  width: 100%;\n  border-rradius: 2px;\n  border: none;\n  box-shadow: inset 0 0 0 1px #dadada;\n  height: 21px;\n  text-align: center;\n}\n.c-chrome .fields .label {\n  text-transform: uppercase;\n  font-size: 11px;\n  line-height: 11px;\n  color: #969696;\n  text-align: center;\n  display: block;\n  margin-top: 12px;\n}\n", "", {"version":3,"sources":["/./src/components/Chrome.vue.style","/./src/components/Chrome.vue"],"names":[],"mappings":"AACA;EACE,iBAAA;EACA,mBAAA;EACA,+DAAA;EACA,oBAAA;EACA,aAAA;EACA,mBAAA;CCAD;ADCC;EACE,wBAAA;CCCH;ADAC;EACE,YAAA;EACA,oBAAA;EACA,mBAAA;EACA,2BAAA;EACA,iBAAA;CCEH;ADDG;EACE,YAAA;EACA,aAAA;CCGL;ADFC;EACE,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;CCIH;ADHG;;EAEE,mBAAA;CCKL;ADJG;EACE,YAAA;CCML;ADLG;EACE,gBAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;EACA,mBAAA;EACA,iBAAA;CCOL;ADNG;EACE,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;CCQL;ADPK;EACE,YAAA;EACA,aAAA;EACA,mBAAA;EACA,yCAAA;UAAA,iCAAA;EACA,0BAAA;EACA,yCAAA;CCSP;ADRG;EACE,mBAAA;EACA,aAAA;EACA,mBAAA;CCUL;ADTG;EACE,mBAAA;EACA,aAAA;CCWL;ADVC;EACE,kBAAA;EACA,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;CCYH;ADXC;EACE,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;EACA,kBAAA;EACA,oBAAA;EAAA,gBAAA;MAAA,YAAA;UAAA,QAAA;CCaH;ADZC;EACE,kBAAA;EACA,YAAA;CCcH;ADbC;EACE,YAAA;EACA,kBAAA;EACA,mBAAA;CCeH;ADdC;EACE,mBAAA;EACA,iBAAA;EACA,gBAAA;EACA,mBAAA;EACA,WAAA;CCgBH;ADfC;EACE,mBAAA;EACA,YAAA;EACA,aAAA;EACA,iBAAA;EACA,mBAAA;EACA,UAAA;EACA,WAAA;CCiBH;ADdG;EACE,gBAAA;EACA,YAAA;EACA,YAAA;EACA,oBAAA;EACA,aAAA;EACA,oCAAA;EACA,aAAA;EACA,mBAAA;CCgBL;ADfG;EACE,0BAAA;EACA,gBAAA;EACA,kBAAA;EACA,eAAA;EACA,mBAAA;EACA,eAAA;EACA,iBAAA;CCiBL","file":"Chrome.vue","sourcesContent":["\r\n.c-chrome\r\n  background #fff\r\n  border-radius 2px\r\n  box-shadow 0 0 2px rgba(0,0,0,.3), 0 4px 8px rgba(0,0,0,.3)\r\n  box-sizing initial\r\n  width 225px\r\n  font-family Menlo\r\n  .chrome-body\r\n    padding 16px 16px 12px\r\n  .saturation-wrap\r\n    width 100%\r\n    padding-bottom 55%\r\n    position relative\r\n    border-radius 2px 2px 0 0\r\n    overflow hidden\r\n    .circle\r\n      width 12px\r\n      height 12px\r\n  .controls\r\n    display flex\r\n    .c-hue\r\n    .c-alpha\r\n      border-radius 2px\r\n    .color-wrap\r\n      width 32px\r\n    .active-color\r\n      margin-top 6px\r\n      width 16px\r\n      height 16px\r\n      border-radius 8px\r\n      position relative\r\n      overflow hidden\r\n    .sliders\r\n      flex 1\r\n      .picker\r\n        width 12px\r\n        height 12px\r\n        border-radius 6px\r\n        transform translate(-6px, -2px)\r\n        background-color rgb(248, 248, 248)\r\n        box-shadow 0 1px 4px 0 rgba(0, 0, 0, 0.37)\r\n    .hue-wrap\r\n      position relative\r\n      height 10px\r\n      margin-bottom 8px\r\n    .alpha-wrap\r\n      position relative\r\n      height 10px\r\n  .fields-wrap\r\n    padding-top 16px\r\n    display flex\r\n  .fields\r\n    display flex\r\n    margin-left -6px\r\n    flex 1\r\n  .field\r\n    padding-left 6px\r\n    width 100%\r\n  .toggle-btn\r\n    width 32px\r\n    text-align right\r\n    position relative\r\n  .icon\r\n    margin-right -4px\r\n    margin-top 12px\r\n    cursor pointer\r\n    position relative\r\n    z-index 2\r\n  .icon-highlight\r\n    position absolute\r\n    width 24px\r\n    height 28px\r\n    background #eee\r\n    border-radius 4px\r\n    top 10px\r\n    left 12px\r\n  \r\n  .fields\r\n    .input\r\n      font-size 11px\r\n      color #333\r\n      width 100%\r\n      border-rradius 2px\r\n      border none\r\n      box-shadow inset 0 0 0 1px #dadada\r\n      height 21px\r\n      text-align center\r\n    .label\r\n      text-transform uppercase\r\n      font-size 11px\r\n      line-height 11px\r\n      color #969696\r\n      text-align center\r\n      display block\r\n      margin-top 12px\r\n\r\n",".c-chrome {\n  background: #fff;\n  border-radius: 2px;\n  box-shadow: 0 0 2px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.3);\n  box-sizing: initial;\n  width: 225px;\n  font-family: Menlo;\n}\n.c-chrome .chrome-body {\n  padding: 16px 16px 12px;\n}\n.c-chrome .saturation-wrap {\n  width: 100%;\n  padding-bottom: 55%;\n  position: relative;\n  border-radius: 2px 2px 0 0;\n  overflow: hidden;\n}\n.c-chrome .saturation-wrap .circle {\n  width: 12px;\n  height: 12px;\n}\n.c-chrome .controls {\n  display: flex;\n}\n.c-chrome .controls .c-hue,\n.c-chrome .controls .c-alpha {\n  border-radius: 2px;\n}\n.c-chrome .controls .color-wrap {\n  width: 32px;\n}\n.c-chrome .controls .active-color {\n  margin-top: 6px;\n  width: 16px;\n  height: 16px;\n  border-radius: 8px;\n  position: relative;\n  overflow: hidden;\n}\n.c-chrome .controls .sliders {\n  flex: 1;\n}\n.c-chrome .controls .sliders .picker {\n  width: 12px;\n  height: 12px;\n  border-radius: 6px;\n  transform: translate(-6px, -2px);\n  background-color: #f8f8f8;\n  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);\n}\n.c-chrome .controls .hue-wrap {\n  position: relative;\n  height: 10px;\n  margin-bottom: 8px;\n}\n.c-chrome .controls .alpha-wrap {\n  position: relative;\n  height: 10px;\n}\n.c-chrome .fields-wrap {\n  padding-top: 16px;\n  display: flex;\n}\n.c-chrome .fields {\n  display: flex;\n  margin-left: -6px;\n  flex: 1;\n}\n.c-chrome .field {\n  padding-left: 6px;\n  width: 100%;\n}\n.c-chrome .toggle-btn {\n  width: 32px;\n  text-align: right;\n  position: relative;\n}\n.c-chrome .icon {\n  margin-right: -4px;\n  margin-top: 12px;\n  cursor: pointer;\n  position: relative;\n  z-index: 2;\n}\n.c-chrome .icon-highlight {\n  position: absolute;\n  width: 24px;\n  height: 28px;\n  background: #eee;\n  border-radius: 4px;\n  top: 10px;\n  left: 12px;\n}\n.c-chrome .fields .input {\n  font-size: 11px;\n  color: #333;\n  width: 100%;\n  border-rradius: 2px;\n  border: none;\n  box-shadow: inset 0 0 0 1px #dadada;\n  height: 21px;\n  text-align: center;\n}\n.c-chrome .fields .label {\n  text-transform: uppercase;\n  font-size: 11px;\n  line-height: 11px;\n  color: #969696;\n  text-align: center;\n  display: block;\n  margin-top: 12px;\n}\n"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
-
-/***/ },
-/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4019,23 +3794,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _color = __webpack_require__(7);
+	var _color = __webpack_require__(6);
 	
 	var _color2 = _interopRequireDefault(_color);
 	
-	var _EditableInput = __webpack_require__(9);
+	var _EditableInput = __webpack_require__(8);
 	
 	var _EditableInput2 = _interopRequireDefault(_EditableInput);
 	
-	var _Saturation = __webpack_require__(40);
+	var _Saturation = __webpack_require__(39);
 	
 	var _Saturation2 = _interopRequireDefault(_Saturation);
 	
-	var _Hue = __webpack_require__(24);
+	var _Hue = __webpack_require__(23);
 	
 	var _Hue2 = _interopRequireDefault(_Hue);
 	
-	var _Alpha = __webpack_require__(47);
+	var _Alpha = __webpack_require__(46);
 	
 	var _Alpha2 = _interopRequireDefault(_Alpha);
 	
@@ -4111,7 +3886,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 72 */
+/* 71 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n  <div class=\"c-chrome\">\r\n    <div class=\"saturation-wrap\">\r\n      <saturation :colors.sync=\"colors\" :on-change=\"childChange\"></saturation>\r\n    </div>\r\n    <div class=\"chrome-body\">\r\n      <div class=\"controls\">\r\n        <div class=\"color-wrap\">\r\n          <div class=\"active-color\" :style=\"{background: activeColor}\"></div>\r\n        </div>\r\n\r\n        <div class=\"sliders\">\r\n          <div class=\"hue-wrap\">\r\n            <hue :colors.sync=\"colors\" :on-change=\"childChange\"></hue>  \r\n          </div>\r\n          <div class=\"alpha-wrap\">\r\n            <alpha :colors.sync=\"colors\" :on-change=\"childChange\"></alpha>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      \r\n      <div class=\"fields-wrap\">\r\n        <div class=\"fields\" v-show=\"fieldsIndex === 0\">\r\n          <!-- hex -->\r\n          <div class=\"field\">\r\n            <ed-in label=\"hex\"\r\n            :val.sync=\"colors.hex\"\r\n            :on-change=\"inputChange\"></ed-in>  \r\n          </div>\r\n        </div>\r\n        <div class=\"fields\" v-show=\"fieldsIndex === 1\">\r\n          <!-- rgba -->\r\n          <div class=\"field\">\r\n            <ed-in label=\"r\" :val.sync=\"colors.rgba.r\" \r\n            :on-change=\"inputChange\"></ed-in>\r\n          </div>\r\n          <div class=\"field\">\r\n            <ed-in label=\"g\" :val.sync=\"colors.rgba.g\" \r\n            :on-change=\"inputChange\"></ed-in>\r\n          </div>\r\n          <div class=\"field\">\r\n            <ed-in label=\"b\" :val.sync=\"colors.rgba.b\"\r\n            :on-change=\"inputChange\"></ed-in>\r\n          </div>\r\n          <div class=\"field\">\r\n            <ed-in label=\"a\" :val.sync=\"colors.a\" :arrow-offset=\"0.01\" :max=\"1\"\r\n            :on-change=\"inputChange\"></ed-in>\r\n          </div>\r\n        </div>\r\n        <div class=\"fields\" v-show=\"fieldsIndex === 2\">\r\n          <!-- hsla -->\r\n          <div class=\"field\">\r\n            <ed-in label=\"h\" :val.sync=\"colors.hsl.h\" \r\n            :on-change=\"inputChange\"></ed-in>\r\n          </div>\r\n          <div class=\"field\"> \r\n            <ed-in label=\"s\" :val.sync=\"colors.hsl.s\"\r\n            :on-change=\"inputChange\"></ed-in>\r\n          </div>\r\n          <div class=\"field\">\r\n            <ed-in label=\"l\" :val.sync=\"colors.hsl.l\"\r\n            :on-change=\"inputChange\"></ed-in>\r\n          </div>\r\n          <div class=\"field\">\r\n            <ed-in label=\"a\" :val.sync=\"colors.a\" :arrow-offset=\"0.01\" :max=\"1\"\r\n            :on-change=\"inputChange\"></ed-in>\r\n          </div>\r\n        </div>\r\n        <!-- btn -->\r\n        <div class=\"toggle-btn\">\r\n          <div class=\"icon\" @click=\"toggleViews\">\r\n            <svg style=\"width:24px; height:24px\" viewBox=\"0 0 24 24\" \r\n              @mouseover=\"showHighlight\" \r\n              @mouseenter=\"showHighlight\" \r\n              @mouseout=\"hideHighlight\">\r\n              <path fill=\"#333\" d=\"M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z\" />\r\n            </svg>\r\n          </div>\r\n          <div class=\"icon-highlight\" v-show=\"highlight\"></div>\r\n        </div>\r\n        <!-- btn -->\r\n      </div>      \r\n    </div>\r\n  </div>\r\n";

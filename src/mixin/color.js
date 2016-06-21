@@ -53,7 +53,6 @@ export default {
     colors: Object
   },
   created () {
-    // console.log(this.colors)
     /*
       Enforce the colorChange in case only HEX value is given.
       Guarantees that HEX value is uppercase and other values such
